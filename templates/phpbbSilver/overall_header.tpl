@@ -9,12 +9,13 @@
 	<meta property="og:type" content="website">
 	<title>{PAGE_TITLE}</title>
 	<link rel="image_src" href="forumweb.jpg">
-	<link rel="stylesheet" href="templates/phpbbSilver/{T_HEAD_STYLESHEET}" type="text/css">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link href="panel.php?rss" rel="alternate" type="application/rss+xml" title="{SITENAME}">
 	<!-- BEGIN rssrow -->
 	<link href="{rssrow.HREF}" rel="alternate" type="application/rss+xml" title="{rssrow.TITLE}">
 	<!-- END rssrow -->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/modernizr-2.0.6.min.js"></script>
 	<!-- BEGIN switch_autodetect_version -->
 	<script>
 	if (screen && screen.width && screen.width < 800 && !/[?&]mobile([=&]|$)/.test(window.location.search)) window.location.href = window.location.protocol + '//' + window.location.hostname + window.location.pathname + window.location.search + (window.location.search == '' ? '?' : '&') + 'mobile' + (screen.height < 480 ? '=mini' : '') + window.location.hash;
@@ -24,7 +25,7 @@
 <body>
 
 	<header id="top" role="banner">
-		<h1><a href="{U_INDEX}"><img src="templates/phpbbSilver/images/logo.jpg" alt="Forumweb.pl - Przyjazne forum webmasterskie" title="Forumweb.pl - Przyjazne forum webmasterskie"></a></h1>
+		<h1><a href="{U_INDEX}"><img src="templates/phpbbSilver/images/logo.png" alt="Forumweb.pl - Przyjazne forum webmasterskie" title="Forumweb.pl - Przyjazne forum webmasterskie"></a></h1>
 		<div class="sites">Oficjalne forum serwisu: <a href="http://kurshtml.edu.pl">kurshtml.edu.pl</a></div>
 		 <nav id="nav-main">
 		 	<ul>
