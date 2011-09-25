@@ -23,8 +23,8 @@
 </head>
 <body>
 
-	<header id="top">
-		<h1><a href="{U_INDEX}"><img src="templates/phpbbSilver/images/logo.png" alt="Forumweb.pl - Przyjazne forum webmasterskie" title="Forumweb.pl - Przyjazne forum webmasterskie"></a></h1>
+	<header id="top" role="banner">
+		<h1><a href="{U_INDEX}"><img src="templates/phpbbSilver/images/logo.jpg" alt="Forumweb.pl - Przyjazne forum webmasterskie" title="Forumweb.pl - Przyjazne forum webmasterskie"></a></h1>
 		<div class="sites">Oficjalne forum serwisu: <a href="http://kurshtml.edu.pl">kurshtml.edu.pl</a></div>
 		 <nav id="nav-main">
 		 	<ul>
