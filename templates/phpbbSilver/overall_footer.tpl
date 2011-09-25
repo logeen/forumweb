@@ -22,7 +22,7 @@
 </table>
 
 {ADMIN_LINK}
-<div style="margin-top: 30px">
+<footer style="margin-top: 30px">
 <span class="copyright">
 <!--
 	We request you retain the full copyright notice below including the link to www.phpbb.com.
@@ -41,14 +41,14 @@ Uruchamianie kodu dziêki <a href="http://sphere-research.com" class="copyright">
 <a name="bot"></a>
 
 <div style="font-size: 8pt"><a href="http://www.phpbb-graph.com"><font>Style created freely by Cyber-MX</font></a> <b style="color: red; font-size: 9pt">::</b> Modified by logeen <b style="color: red; font-size: 9pt">::</b> <strong>Sponsor: <a href="http://pactum.pl">Biuro&nbsp;Rachunkowe</a></strong></div>
-</div>
+</footer>
 </td></tr></table> </td></tr></table>
 		</td>
 	</tr>
 </table>
 <!-- BEGIN switch_notifications -->
-<script type="text/javascript" src="{NOTIFIER_JS}"></script>
-<script type="text/javascript">
+<script src="{NOTIFIER_JS}"></script>
+<script>
 <!--
 new Notifier('{U_NOTIFICATIONS}', '{USER_LAST_NOTIFICATION}', {NOTIFICATIONS_JSON});
 //-->
