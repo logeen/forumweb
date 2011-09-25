@@ -7,7 +7,7 @@
 <meta name="title" content="{META_TITLE}">
 <meta property="og:title" content="{META_TITLE}">
 <meta property="og:type" content="website">
-<title>{PAGE_TITLE}</title>
+<title>{PAGE_TITLE} - test</title>
 <link rel="image_src" href="forumweb.jpg">
 <link rel="stylesheet" href="templates/phpbbSilver/{T_HEAD_STYLESHEET}" type="text/css">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
