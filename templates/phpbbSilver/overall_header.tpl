@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl" class="no-js">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset={S_CONTENT_ENCODING}">
-	<meta http-equiv="Content-Style-Type" content="text/css">
+	<script>(function(h,a){h[a]=h[a].replace(/\bno-js\b/,'js')})(document.documentElement,'className'))</script>
+	<meta charset="{S_CONTENT_ENCODING}">
 	{META}{META_ROBOTS}
 	<meta name="title" content="{META_TITLE}">
 	<meta property="og:title" content="{META_TITLE}">
@@ -51,15 +51,15 @@
 				<!-- END switch_ban_list -->
 		 	</ul>
 		 </nav>
-		 <fieldset id="search">
+		 <form action="http://www.google.pl/search" method="get" style="margin: 0; text-align: right; margin-right: 10px">
+			<fieldset id="search">
 		 	<legend>{L_SEARCH}</legend>
-			 <form action="http://www.google.pl/search" method="get" style="margin: 0; text-align: right; margin-right: 10px">
-				<input type="hidden" name="ie" value="iso-8859-2" />
-				<input type="hidden" name="sitesearch" value="www.forumweb.pl" />
-				<input type="search" name="q" />
+				<input type="hidden" name="ie" value="iso-8859-2">
+				<input type="hidden" name="sitesearch" value="www.forumweb.pl">
+				<input type="search" name="q">
 				<button>{L_SEARCH}</button>
+			</fieldset>
 			</form>
-		 </fieldset>
 	</header>
 
 	<section id="top-ad">
