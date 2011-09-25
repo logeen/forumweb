@@ -1,0 +1,11 @@
+/* TEAM */
+	Admin:Logeen
+
+	THAT GUY: Comandeer
+	Contact:vepomoc [at] gmail.com
+	From:Świętochłowice, Poland
+
+/* SITE */
+	Last update:2011/09/25
+	Language:Polish
+	Doctype:HTML5
