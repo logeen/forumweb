@@ -1,8 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html dir="{S_CONTENT_DIRECTION}">
+<!DOCTYPE html>
+<html lang="pl" dir="{S_CONTENT_DIRECTION}">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset={S_CONTENT_ENCODING}">
-<meta http-equiv="Content-Style-Type" content="text/css">
+<meta charset="{S_CONTENT_ENCODING}">
 <meta name="Robots" content="noindex, follow">
 {META}
 <title>{SITENAME} :: {PAGE_TITLE}</title>
@@ -15,5 +14,4 @@ td.rowpic { background-image: url(templates/phpbbSilver/images/{T_TH_CLASS3}); b
 -->
 </style>
 </head>
-<body bgcolor="{T_BODY_BGCOLOR}" text="{T_BODY_TEXT}" link="{T_BODY_LINK}" vlink="{T_BODY_VLINK}"> 
-<a name="top"></a>
+<body id="top">
