@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl" class="no-js">
 <head>
-	<script>(function(h,a){h[a]=h[a].replace(/\bno-js\b/,'js')})(document.documentElement,'className'))</script>
+	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
 	<meta charset="{S_CONTENT_ENCODING}">
 	{META}{META_ROBOTS}
 	<meta name="title" content="{META_TITLE}">
