@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="pl" class="no-js">
 <head>
-	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
 	<meta charset="{S_CONTENT_ENCODING}">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	{META}{META_ROBOTS}
 	<meta name="title" content="{META_TITLE}">
 	<meta property="og:title" content="{META_TITLE}">
 	<meta property="og:type" content="website">
 	<title>{PAGE_TITLE}</title>
+	<!-- Mobile viewport optimized -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="image_src" href="forumweb.jpg">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link href="panel.php?rss" rel="alternate" type="application/rss+xml" title="{SITENAME}">
 	<!-- BEGIN rssrow -->
 	<link href="{rssrow.HREF}" rel="alternate" type="application/rss+xml" title="{rssrow.TITLE}">
 	<!-- END rssrow -->
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/modernizr-2.0.6.min.js"></script>
+	<link rel="stylesheet" href="templates/phpbbSilver/css/style.css">
+	<script src="templates/phpbbSilver/js/modernizr-2.0.6.min.js"></script>
 	<!-- BEGIN switch_autodetect_version -->
 	<script>
 	if (screen && screen.width && screen.width < 800 && !/[?&]mobile([=&]|$)/.test(window.location.search)) window.location.href = window.location.protocol + '//' + window.location.hostname + window.location.pathname + window.location.search + (window.location.search == '' ? '?' : '&') + 'mobile' + (screen.height < 480 ? '=mini' : '') + window.location.hash;
@@ -75,7 +77,6 @@
 		<!-- Tutaj bêdzie zawarto¶æ, ale jak na razie trzeba oczy¶ciæ co nie co wiêc zostawiam tabelkê -->
 
 
-	</div>
 
 
 <table    >

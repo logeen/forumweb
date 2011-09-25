@@ -22,7 +22,7 @@
 </table>
 
 {ADMIN_LINK}
-<footer >
+<footer id="footer">
 <span class="copyright">
 <!--
 	We request you retain the full copyright notice below including the link to www.phpbb.com.
@@ -46,6 +46,13 @@ Uruchamianie kodu dziêki <a href="http://sphere-research.com" class="copyright">
 		</td>
 	</tr>
 </table>
+
+
+
+</div> <!-- #content -->
+
+
+
 <!-- BEGIN switch_notifications -->
 <script src="{NOTIFIER_JS}"></script>
 <script>
@@ -57,13 +64,11 @@ new Notifier('{U_NOTIFICATIONS}', '{USER_LAST_NOTIFICATION}', {NOTIFICATIONS_JSO
 <div id="linkor"><!--<a href="http://tekstowo.info">Teksty piosenek</a> <a href="http://www.laff.pl">Darmowe fora</a>--> {LINKOR}
 </div>
 
-<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-1.6.2.min.js"><\/script>')</script>
 
-<!-- scripts concatenated and minified via ant build script-->
-<script defer src="js/plugins.js"></script>
-<script defer src="js/script.js"></script>
+<script defer src="templates/phpbbSilver/js/plugins.js"></script>
+<script defer src="templates/phpbbSilver/js/script.js"></script>
 
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <table id="content"    >
 <tr>
 <td class="nav" v><h1><a class="maintitle" href="{U_VIEW_FORUM}">{FORUM_NAME}</a></h1>
