@@ -1,16 +1,16 @@
  
-<table class="forumline" width="100%" cellspacing="1" cellpadding="4" border="0">
+<table class="forumline"    >
 	<tr> 
 		
-<th height="28" class="thHead">{L_PREVIEW}</th>
+<th  class="thHead">{L_PREVIEW}</th>
 	</tr>
 	<tr> 
 		
-<td class="row1"><img src="templates/phpbbSilver/images/icon_minipost.gif" alt="{L_POST}" width="12" height="9" /><span class="postdetails">{L_POSTED}: 
+<td class="row1"><img src="templates/phpbbSilver/images/icon_minipost.gif" alt="{L_POST}"   /><span class="postdetails">{L_POSTED}: 
 {POST_DATE} &nbsp;&nbsp;&nbsp; {L_POST_SUBJECT}: {POST_SUBJECT}</span></td>
 	</tr>
 	<tr> 
-		<td class="row1"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<td class="row1"><table    >
 			<tr>
 				<td>
 					<span class="postbody">{MESSAGE}</span>
@@ -19,11 +19,11 @@
 		</table></td>
 	</tr>
 	<tr> 
-		<td class="spaceRow" height="1"><img src="templates/phpbbSilver/images/spacer.gif" width="1" height="1" /></td>
+		<td class="spaceRow" ><img src="templates/phpbbSilver/images/spacer.gif"   /></td>
 	</tr>
 </table>
 
-<br clear="all" />
+<br  />
 <script type="text/javascript">
 <!--
 var foldbox_lang = {

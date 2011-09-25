@@ -5,27 +5,27 @@
 
 {ERROR_BOX}
 
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
+<table    >
 <tr> 
 <td class="nav"><a href="{U_INDEX}">{L_INDEX}</a></td>
 </tr>
 </table>
 
-<table border="0" cellpadding="3" cellspacing="1" width="100%" class="forumline">
+<table     class="forumline">
 <tr id="info0"> 
-<th class="thhead" colspan="2" height="28"><a href="#info0">{L_REGISTRATION_INFO}</a></th>
+<th class="thhead" colspan="2" ><a href="#info0">{L_REGISTRATION_INFO}</a></th>
 </tr>
 <tr> 
 <td class="row2" colspan="2"><span class="gensmall">{L_ITEMS_REQUIRED}</span></td>
 </tr>
 <tr> 
-<td class="row1" width="38%">{L_USERNAME}: *</td>
-<td class="row2" width="62%"> 
+<td class="row1" >{L_USERNAME}: *</td>
+<td class="row2" > 
 <!-- BEGIN switch_username_change -->
-<input type="text" class="post" style="width:200px" name="username" size="25" maxlength="25" value="{USERNAME}" />
+<input type="text" class="post"  name="username" size="25" maxlength="25" value="{USERNAME}" />
 <!-- END switch_username_change -->
 <!-- BEGIN switch_no_username_change -->
-<input type="text" class="post" style="width:200px" name="username" size="25" maxlength="25" value="{USERNAME}" readonly="readonly" /><br />
+<input type="text" class="post"  name="username" size="25" maxlength="25" value="{USERNAME}" readonly="readonly" /><br />
 <span class="gensmall">{L_USERNAME_CHANGE_EXPLAIN}</span>
 <!-- END switch_no_username_change -->
 </td>
@@ -33,7 +33,7 @@
 <tr> 
 <td class="row1">{L_EMAIL_ADDRESS}: *</td>
 <td class="row2"> 
-<input type="text" class="post" style="width:200px" name="email" size="25" maxlength="255" value="{EMAIL}" />
+<input type="text" class="post"  name="email" size="25" maxlength="255" value="{EMAIL}" />
 </td>
 </tr>
 <!-- BEGIN switch_edit_profile -->
@@ -41,7 +41,7 @@
 <td class="row1">{L_CURRENT_PASSWORD}: *<br />
 <span class="gensmall">{L_CONFIRM_PASSWORD_EXPLAIN}</span></td>
 <td class="row2"> 
-<input type="password" class="post" style="width: 200px" name="cur_password" size="25" maxlength="100" value="{CUR_PASSWORD}" />
+<input type="password" class="post"  name="cur_password" size="25" maxlength="100" value="{CUR_PASSWORD}" />
 </td>
 </tr>
 <!-- END switch_edit_profile -->
@@ -49,110 +49,110 @@
 <td class="row1">{L_NEW_PASSWORD}: *<br />
 <span class="gensmall">{L_PASSWORD_IF_CHANGED}</span></td>
 <td class="row2"> 
-<input type="password" class="post" style="width: 200px" name="new_password" size="25" maxlength="100" value="{NEW_PASSWORD}" />
+<input type="password" class="post"  name="new_password" size="25" maxlength="100" value="{NEW_PASSWORD}" />
 </td>
 </tr>
 <tr> 
 <td class="row1">{L_CONFIRM_PASSWORD}: * <br />
 <span class="gensmall">{L_PASSWORD_CONFIRM_IF_CHANGED}</span></td>
 <td class="row2"> 
-<input type="password" class="post" style="width: 200px" name="password_confirm" size="25" maxlength="100" value="{PASSWORD_CONFIRM}" />
+<input type="password" class="post"  name="password_confirm" size="25" maxlength="100" value="{PASSWORD_CONFIRM}" />
 </td>
 </tr>
 	<!-- Visual Confirmation -->
 	<!-- BEGIN switch_confirm -->
 	<tr>
-		<td class="row1" colspan="2" align="center"><span class="gensmall">{L_CONFIRM_CODE_IMPAIRED}</span><br /><br />{CONFIRM_IMG}<br /><br /></td>
+		<td class="row1" colspan="2" ><span class="gensmall">{L_CONFIRM_CODE_IMPAIRED}</span><br /><br />{CONFIRM_IMG}<br /><br /></td>
 	</tr>
 	<tr> 
 	  <td class="row1"><span class="gen">{L_CONFIRM_CODE}: * </span><br /><span class="gensmall">{L_CONFIRM_CODE_EXPLAIN}</span></td>
-	  <td class="row2"><div><big><strong style="color: red">{L_CONFIRM_CODE_INFORMATION}</strong></big></div><input type="text" class="post" style="width: 200px" name="confirm_code" size="6" maxlength="6" value="" /></td>
+	  <td class="row2"><div><big><strong >{L_CONFIRM_CODE_INFORMATION}</strong></big></div><input type="text" class="post"  name="confirm_code" size="6" maxlength="6" value="" /></td>
 	</tr>
 	<!-- END switch_confirm -->
 <tr> 
-<td class="catsides" colspan="2" height="28">&nbsp;</td>
+<td class="catsides" colspan="2" >&nbsp;</td>
 </tr>
 <tr id="info1"> 
-<th class="thsides" colspan="2" height="28"><a href="#info1">{L_PROFILE_INFO}</a></th>
+<th class="thsides" colspan="2" ><a href="#info1">{L_PROFILE_INFO}</a></th>
 </tr>
 <tr> 
 <td class="row2" colspan="2"><span class="gensmall">{L_PROFILE_INFO_NOTICE}</span></td>
 </tr>
 <tr> 
-<td class="row1" width="38%">{L_ICQ_NUMBER}:</td>
+<td class="row1" >{L_ICQ_NUMBER}:</td>
 <td class="row2"> 
-<input type="text" name="icq" class="post" style="width: 100px"  size="10" maxlength="15" value="{ICQ}" />
+<input type="text" name="icq" class="post"   size="10" maxlength="15" value="{ICQ}" />
 </td>
 </tr>
 <tr>
 <td class="row1">{L_GG}:</td>
 <td class="row2"> 
-<input type="text" class="post" style="width: 150px"  name="gg" size="20" maxlength="255" value="{GG}" />
+<input type="text" class="post"   name="gg" size="20" maxlength="255" value="{GG}" />
 </td>
 </tr>
 <tr>
 <td class="row1">{L_TLEN}:</td>
 <td class="row2"> 
-<input type="text" class="post" style="width: 150px"  name="tlen" size="20" maxlength="255" value="{TLEN}" />
+<input type="text" class="post"   name="tlen" size="20" maxlength="255" value="{TLEN}" />
 </td>
 </tr>
 <tr>
 <td class="row1">{L_JABBER}:</td>
 <td class="row2"> 
-<input type="text" class="post" style="width: 150px"  name="jabber" size="20" maxlength="255" value="{JABBER}" />
+<input type="text" class="post"   name="jabber" size="20" maxlength="255" value="{JABBER}" />
 </td>
 </tr>
 <tr>
 <td class="row1">{L_SKYPE}:</td>
 <td class="row2"> 
-<input type="text" class="post" style="width: 150px"  name="skype" size="20" maxlength="255" value="{SKYPE}" />
+<input type="text" class="post"   name="skype" size="20" maxlength="255" value="{SKYPE}" />
 </td>
 </tr>
 <tr> 
 <td class="row1">{L_AIM}:</td>
 <td class="row2"> 
-<input type="text" class="post" style="width: 150px"  name="aim" size="20" maxlength="255" value="{AIM}" />
+<input type="text" class="post"   name="aim" size="20" maxlength="255" value="{AIM}" />
 </td>
 </tr>
 <td class="row1">{L_MESSENGER}:</td>
 <td class="row2"> 
-<input type="text" class="post" style="width: 150px"  name="msn" size="20" maxlength="255" value="{MSN}" />
+<input type="text" class="post"   name="msn" size="20" maxlength="255" value="{MSN}" />
 </td>
 </tr>
 <tr>
 <td class="row1">{L_YAHOO}:</td>
 <td class="row2"> 
-<input type="text" class="post" style="width: 150px"  name="yim" size="20" maxlength="255" value="{YIM}" />
+<input type="text" class="post"   name="yim" size="20" maxlength="255" value="{YIM}" />
 </td>
 </tr>
 <tr>
 <td class="row1">{L_FACEBOOK}:<div class="gensmall">{L_FACEBOOK_EXPLAIN}</div></td>
 <td class="row2"> 
-<input type="text" class="post" style="width: 150px"  name="facebook" size="20" maxlength="255" value="{FACEBOOK}" />
+<input type="text" class="post"   name="facebook" size="20" maxlength="255" value="{FACEBOOK}" />
 </td>
 </tr>
 <tr> 
 <td class="row1">{L_WEBSITE}:</td>
 <td class="row2"> 
-<input type="text" class="post" style="width: 200px"  name="website" size="25" maxlength="255" value="{WEBSITE}" />
+<input type="text" class="post"   name="website" size="25" maxlength="255" value="{WEBSITE}" />
 </td>
 </tr>
 <tr> 
 <td class="row1">{L_LOCATION}:</td>
 <td class="row2"> 
-<input type="text" class="post" style="width: 200px"  name="location" size="25" maxlength="100" value="{LOCATION}" />
+<input type="text" class="post"   name="location" size="25" maxlength="100" value="{LOCATION}" />
 </td>
 </tr>
 <tr> 
 <td class="row1">{L_OCCUPATION}:</td>
 <td class="row2"> 
-<input type="text" class="post" style="width: 200px"  name="occupation" size="25" maxlength="100" value="{OCCUPATION}" />
+<input type="text" class="post"   name="occupation" size="25" maxlength="100" value="{OCCUPATION}" />
 </td>
 </tr>
 <tr> 
 <td class="row1">{L_INTERESTS}:</td>
 <td class="row2"> 
-<input type="text" class="post" style="width: 200px"  name="interests" size="35" maxlength="150" value="{INTERESTS}" />
+<input type="text" class="post"   name="interests" size="35" maxlength="150" value="{INTERESTS}" />
 </td>
 </tr>
 <!-- Start add - Gender MOD -->
@@ -190,17 +190,17 @@ function maxlength(el, maxSize)
 }
 //-->
 </script>
-<textarea name="signature" style="width: 300px" rows="6" cols="30" class="post" onfocus="maxlength(this, {MAX_SIG_CHARS})">{SIGNATURE}</textarea>
+<textarea name="signature"  rows="6" cols="30" class="post" onfocus="maxlength(this, {MAX_SIG_CHARS})">{SIGNATURE}</textarea>
 </td>
 </tr>
 <tr> 
-<td class="catSides" colspan="2" height="28">&nbsp;</td>
+<td class="catSides" colspan="2" >&nbsp;</td>
 </tr>
 <tr id="info2"> 
-<th class="thsides" colspan="2" height="28"><a href="#info2">{L_PREFERENCES}</a></th>
+<th class="thsides" colspan="2" ><a href="#info2">{L_PREFERENCES}</a></th>
 </tr>
 <tr> 
-<td class="row1" width="38%">{L_PUBLIC_VIEW_EMAIL}:</td>
+<td class="row1" >{L_PUBLIC_VIEW_EMAIL}:</td>
 <td class="row2"> 
 <input type="radio" id="label__viewemail__1" name="viewemail" value="1" {VIEW_EMAIL_YES} />
 <label for="label__viewemail__1">{L_YES}</label>&nbsp;&nbsp; 
@@ -379,17 +379,17 @@ function maxlength(el, maxSize)
 </tr>
 <!-- BEGIN switch_avatar_block -->
 <tr> 
-<td class="catsides" colspan="2" height="28">&nbsp;</td>
+<td class="catsides" colspan="2" >&nbsp;</td>
 </tr>
 <tr id="info3"> 
-<th class="thsides" colspan="2" height="28"><a href="#info3">{L_AVATAR_PANEL}</a></th>
+<th class="thsides" colspan="2" ><a href="#info3">{L_AVATAR_PANEL}</a></th>
 </tr>
 <tr> 
 <td class="row1" colspan="2"> 
-<table width="70%" cellspacing="2" cellpadding="0" border="0" align="center">
+<table     >
 <tr> 
-<td width="65%" class="gensmall">{L_AVATAR_EXPLAIN}</td>
-<td align="center" class="gensmall">{L_CURRENT_IMAGE}<br />
+<td  class="gensmall">{L_AVATAR_EXPLAIN}</td>
+<td  class="gensmall">{L_CURRENT_IMAGE}<br />
 {AVATAR}<br />
 <input type="checkbox" id="label__avatardel" name="avatardel" />
 &nbsp;<label for="label__avatardel">{L_DELETE_AVATAR}</label></td>
@@ -402,7 +402,7 @@ function maxlength(el, maxSize)
 <td class="row1">{L_UPLOAD_AVATAR_FILE}:</td>
 <td class="row2"> 
 <input type="hidden" name="MAX_FILE_SIZE" value="{AVATAR_SIZE}" />
-<input type="file" name="avatar" class="post" style="width:200px" />
+<input type="file" name="avatar" class="post"  />
 </td>
 </tr>
 <!-- END switch_avatar_local_upload -->
@@ -411,7 +411,7 @@ function maxlength(el, maxSize)
 <td class="row1">{L_UPLOAD_AVATAR_URL}:<br />
 <span class="gensmall">{L_UPLOAD_AVATAR_URL_EXPLAIN}</span></td>
 <td class="row2"> 
-<input type="text" name="avatarurl" size="40" class="post" style="width:200px" />
+<input type="text" name="avatarurl" size="40" class="post"  />
 </td>
 </tr>
 <!-- END switch_avatar_remote_upload -->
@@ -420,7 +420,7 @@ function maxlength(el, maxSize)
 <td class="row1">{L_LINK_REMOTE_AVATAR}:<br />
 <span class="gensmall">{L_LINK_REMOTE_AVATAR_EXPLAIN}</span></td>
 <td class="row2"> 
-<input type="text" name="avatarremoteurl" size="40" class="post" style="width:200px" />
+<input type="text" name="avatarremoteurl" size="40" class="post"  />
 </td>
 </tr>
 <!-- END switch_avatar_remote_link -->
@@ -434,7 +434,7 @@ function maxlength(el, maxSize)
 <!-- END switch_avatar_local_gallery -->
 <!-- END switch_avatar_block -->
 <tr class="tfoot"> 
-<td class="catbottom" colspan="2" align="center" height="28">{S_HIDDEN_FIELDS} 
+<td class="catbottom" colspan="2"  >{S_HIDDEN_FIELDS} 
 <input type="submit" name="submit" value="{L_SUBMIT}" class="mainoption" />
 &nbsp;&nbsp; 
 <input type="reset" value="{L_RESET}" name="reset" class="liteoption" />
@@ -446,13 +446,13 @@ function maxlength(el, maxSize)
 
 <!-- BEGIN switch_user_logged_in -->
 <form method="post" name="post" action="{U_BLOCK_USER}">
-<table border="0" cellpadding="3" cellspacing="1" width="100%" class="forumline">
+<table     class="forumline">
 <tr id="info4">
-	<th class="thHead" align="center" colspan="2"><a href="#info4">{BLOCK_USERS}</a></th>
+	<th class="thHead"  colspan="2"><a href="#info4">{BLOCK_USERS}</a></th>
 </tr>
 <tr>
-	<td class="row1" width="38%"><span class="gen">{L_BLOCK_USERS_LIST}:</span></td>
-	<td class="row2" width="62%"><span class="gen"><a href = "{U_BLOCK_USERS_LIST}" onclick="javascript:window.open('{U_BLOCK_USERS_LIST}', '_phpbbsearch', 'HEIGHT=250,resizable=yes,WIDTH=600');return false;" class="mainmenu">{L_BLOCK_USERS_LIST}</a></span></td>
+	<td class="row1" ><span class="gen">{L_BLOCK_USERS_LIST}:</span></td>
+	<td class="row2" ><span class="gen"><a href = "{U_BLOCK_USERS_LIST}" onclick="javascript:window.open('{U_BLOCK_USERS_LIST}', '_phpbbsearch', 'HEIGHT=250,resizable=yes,WIDTH=600');return false;" class="mainmenu">{L_BLOCK_USERS_LIST}</a></span></td>
 </tr>
 <tr>
 	<td class="row1"> <span class="gen">{L_NICK_BLOCK_USER}:</span> * </td>
@@ -466,11 +466,11 @@ function maxlength(el, maxSize)
 	</td>
 </tr>
 <tr id="block_pm">
-	<td class="row1" valign="top"> <span class="gen">{L_BLOCK_DESCRIPTION}:</span><br /> <span class="gensmall">{L_BLOCK_DESCRIPTION_INFO}</span> </td>
-	<td class="row2"> <textarea name="blockdesc" style="width: 300px"  rows="6" cols="30" class="post"></textarea> </td>
+	<td class="row1" v> <span class="gen">{L_BLOCK_DESCRIPTION}:</span><br /> <span class="gensmall">{L_BLOCK_DESCRIPTION_INFO}</span> </td>
+	<td class="row2"> <textarea name="blockdesc"   rows="6" cols="30" class="post"></textarea> </td>
 </tr>
 <tr>
-	<td class="catBottom" colspan="2" align="center" height="28"><input type="submit" name="submituser" value="{L_BLOCK}" class="mainoption" />&nbsp;&nbsp;<input type="reset" value="{L_RESET}" name="reset" class="liteoption" /></td>
+	<td class="catBottom" colspan="2"  ><input type="submit" name="submituser" value="{L_BLOCK}" class="mainoption" />&nbsp;&nbsp;<input type="reset" value="{L_RESET}" name="reset" class="liteoption" /></td>
 </tr>
 </table>
 </form>
@@ -510,7 +510,7 @@ for (var i = 0, item; (item = document.getElementById('info' + i)); ++i) {
 </script>
 <!-- END switch_add_profile -->
 
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
+<table    >
 <tr> 
 <td class="nav"><a href="{U_INDEX}">{L_INDEX}</a></td>
 </tr>

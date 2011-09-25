@@ -15,87 +15,87 @@ var no_text_selected = '{L_NO_TEXT_SELECTED}';
 <input type="hidden" name="sid" value="{quick_reply.SID}" />
 <input type="hidden" name="screen" value="" />
 <input type="hidden" name="client" value="" />
-<table border="0" cellpadding="3" cellspacing="1" width="100%" class="forumline">
+<table     class="forumline">
 	<tr>
-		<th class="thHead" colspan="2" height="25"><b>{L_QUICK_REPLY}</b></th>
+		<th class="thHead" colspan="2" ><b>{L_QUICK_REPLY}</b></th>
 	</tr>
 	<!-- BEGIN user_logged_out -->
 	<tr>
-		<td class="row1" align="left" valign="middle"><span class="gen"><b>{L_CONFIRM_CODE}</b></span></td>
-		<td class="row2" width="100%" valign="middle"><table><tr><td><input type="text" class="post" name="confirm_code" size="5" /></td><td style="padding: 0 2px 0 10px"><img id="confirm_code_img" src="confirm_code.png.php" alt="" style="border: 1px solid #000; vertical-align: middle" /></td><td><input type="button" class="button" value="{L_REFRESH}" onclick="document.getElementById('confirm_code_img').src = 'confirm_code.png.php?' + escape(new Date())" /></td></tr></table></td>
+		<td class="row1"  v><span class="gen"><b>{L_CONFIRM_CODE}</b></span></td>
+		<td class="row2"  v><table><tr><td><input type="text" class="post" name="confirm_code" size="5" /></td><td ><img id="confirm_code_img" src="confirm_code.png.php" alt=""  /></td><td><input type="button" class="button" value="{L_REFRESH}" onclick="document.getElementById('confirm_code_img').src = 'confirm_code.png.php?' + escape(new Date())" /></td></tr></table></td>
 	</tr>
 	<tr>
-		<td class="row1" align="left" valign="middle"><span class="gen"><b>{L_USERNAME}</b></span></td>
-		<td class="row2" width="100%" valign="middle"><input type="text" class="post" tabindex="1" name="username" size="25" maxlength="25" /></td>
+		<td class="row1"  v><span class="gen"><b>{L_USERNAME}</b></span></td>
+		<td class="row2"  v><input type="text" class="post" tabindex="1" name="username" size="25" maxlength="25" /></td>
 	</tr>
 	<!-- END user_logged_out -->
 	<tr>
-		<td class="row1" valign="middle"><span class="gen"><b>{L_SUBJECT}</b></span></td>
-		<td class="row2" valign="middle"><input type="text" name="subject" size="60" maxlength="60" class="post" style="width:450px" value="{quick_reply.MESSAGE_SUBJECT}" /></td>
+		<td class="row1" v><span class="gen"><b>{L_SUBJECT}</b></span></td>
+		<td class="row2" v><input type="text" name="subject" size="60" maxlength="60" class="post"  value="{quick_reply.MESSAGE_SUBJECT}" /></td>
 	</tr>
 	<tr>
-		<td class="row1" align="center" valign="top" width="90"><div style="width: 90px">
+		<td class="row1"  v ><div >
 			<!-- BEGIN smilies -->
-			<img style="margin: 1px; cursor: pointer" src="{quick_reply.smilies.URL}" border="0" onclick="if (!editor.insertText(' {quick_reply.smilies.CODE} ')) emoticon(' {quick_reply.smilies.CODE} ');" alt="{quick_reply.smilies.DESC}" title="{quick_reply.smilies.DESC}" />
+			<img  src="{quick_reply.smilies.URL}"  onclick="if (!editor.insertText(' {quick_reply.smilies.CODE} ')) emoticon(' {quick_reply.smilies.CODE} ');" alt="{quick_reply.smilies.DESC}" title="{quick_reply.smilies.DESC}" />
 			<!-- END smilies -->
 			<br />
 			<span	class="nav">&nbsp;<a href="{U_MORE_SMILIES}" onclick="window.open('{U_MORE_SMILIES}', '_phpbbsmilies', 'HEIGHT=300,resizable=yes,scrollbars=yes,width=250');return false;" target="_phpbbsmilies" class="nav">{L_MORE_SMILIES}</a>&nbsp;</span>
 		</div></td>
-		<td class="row2" valign="top">
-			<table width="100%" cellspacing="0" cellpadding="0">
+		<td class="row2" v>
+			<table   >
 				<tr>
-					<td valign="top" width="450"><textarea name="message" rows="15" cols="80" tabindex="3" class="post" style="width:100%" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);"></textarea></td>
-					<td valign="top" style="padding-left: 5px; padding-right: 5px" nowrap>
-						<table width="160" cellspacing="0" cellpadding="1">
+					<td v ><textarea name="message" rows="15" cols="80" tabindex="3" class="post"  onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);"></textarea></td>
+					<td v  >
+						<table   >
 							<tr>
-								<td width="33%"><button type="button" class="button" accesskey="b" name="addbbcode0" style="width: 50px" onClick="if (!editor.insert('b')) bbstyle(0)"><span style="font-weight: bold">B</span><span id="addbbcode1" style="display: none">*</span></button></td>
-								<td width="33%"><button type="button" class="button" accesskey="i" name="addbbcode2" style="width: 50px" onClick="if (!editor.insert('i')) bbstyle(2)"><span style="font-style: italic">I</span><span id="addbbcode3" style="display: none">*</span></button></td>
-								<td width="33%"><button type="button" class="button" accesskey="u" name="addbbcode4" style="width: 50px" onClick="if (!editor.insert('u')) bbstyle(4)"><span style="text-decoration: underline">U</span><span id="addbbcode5" style="display: none">*</span></button></td>
+								<td ><button type="button" class="button" accesskey="b" name="addbbcode0"  onClick="if (!editor.insert('b')) bbstyle(0)"><span >B</span><span id="addbbcode1" >*</span></button></td>
+								<td ><button type="button" class="button" accesskey="i" name="addbbcode2"  onClick="if (!editor.insert('i')) bbstyle(2)"><span >I</span><span id="addbbcode3" >*</span></button></td>
+								<td ><button type="button" class="button" accesskey="u" name="addbbcode4"  onClick="if (!editor.insert('u')) bbstyle(4)"><span >U</span><span id="addbbcode5" >*</span></button></td>
 							</tr>
 							<tr>
-								<td width="33%"><button type="button" class="button" accesskey="s" name="addbbcode1" style="width: 50px" onClick="if (!editor.insert('s')) bbstyle(18)"><span style="text-decoration: line-through">S</span><span id="addbbcode19" style="display: none">*</span></button></td>
-								<td width="33%"><button type="button" class="button" name="addbbcode3" style="width: 50px" onClick="if (!editor.insert('sup')) bbstyle(20)">A<span style="font-size: 10px; position: relative; bottom: 0.5em">n</span><span id="addbbcode21" style="display: none">*</span></button></td>
-								<td width="33%"><button type="button" class="button" name="addbbcode5" style="width: 50px" onClick="if (!editor.insert('sub')) bbstyle(22)">A<span style="font-size: 10px; position: relative; top: 0.2em">n</span><span id="addbbcode23" style="display: none">*</span></button></td>
+								<td ><button type="button" class="button" accesskey="s" name="addbbcode1"  onClick="if (!editor.insert('s')) bbstyle(18)"><span >S</span><span id="addbbcode19" >*</span></button></td>
+								<td ><button type="button" class="button" name="addbbcode3"  onClick="if (!editor.insert('sup')) bbstyle(20)">A<span >n</span><span id="addbbcode21" >*</span></button></td>
+								<td ><button type="button" class="button" name="addbbcode5"  onClick="if (!editor.insert('sub')) bbstyle(22)">A<span >n</span><span id="addbbcode23" >*</span></button></td>
 							</tr>
 							<tr>
-								<td width="33%"><button type="button" class="button" accesskey="t" name="addbbcode28" style="width: 50px" onClick="if (!editor.insert('tt')) bbstyle(28)"><tt>TT</tt><span id="addbbcode29" style="display: none">*</span></button></td>
-								<td width="33%"><button type="button" class="button" accesskey="q" name="addbbcode6" style="width: 50px" onClick="if (!editor.insert('quote')) bbstyle(6)">Quote<span id="addbbcode7" style="display: none">*</span></button></td>
-								<td width="33%"><button type="button" class="button" accesskey="c" name="addbbcode8" style="width: 50px" onClick="if (!editor.insert('code')) bbstyle(8)">Code<span id="addbbcode9" style="display: none">*</span></button></td>
+								<td ><button type="button" class="button" accesskey="t" name="addbbcode28"  onClick="if (!editor.insert('tt')) bbstyle(28)"><tt>TT</tt><span id="addbbcode29" >*</span></button></td>
+								<td ><button type="button" class="button" accesskey="q" name="addbbcode6"  onClick="if (!editor.insert('quote')) bbstyle(6)">Quote<span id="addbbcode7" >*</span></button></td>
+								<td ><button type="button" class="button" accesskey="c" name="addbbcode8"  onClick="if (!editor.insert('code')) bbstyle(8)">Code<span id="addbbcode9" >*</span></button></td>
 							</tr>
 							<tr>
-								<td width="33%"><button type="button" class="button" accesskey="l" name="addbbcode10" style="width: 50px" onClick="if (!editor.insert('ul')) bbstyle(10)">List<span id="addbbcode11" style="display: none">*</span></button></td>
-								<td width="33%"><button type="button" class="button" accesskey="o" name="addbbcode12" style="width: 50px" onClick="if (!editor.insert('ol')) bbstyle(12)">List=<span id="addbbcode13" style="display: none">*</span></button></td>
-								<td width="33%"><button type="button" class="button" accesskey="8" style="width: 50px" onClick="if (!editor.isActive()) emoticon('[*]')">*</button></td>
+								<td ><button type="button" class="button" accesskey="l" name="addbbcode10"  onClick="if (!editor.insert('ul')) bbstyle(10)">List<span id="addbbcode11" >*</span></button></td>
+								<td ><button type="button" class="button" accesskey="o" name="addbbcode12"  onClick="if (!editor.insert('ol')) bbstyle(12)">List=<span id="addbbcode13" >*</span></button></td>
+								<td ><button type="button" class="button" accesskey="8"  onClick="if (!editor.isActive()) emoticon('[*]')">*</button></td>
 							</tr>
 							<tr>
-								<td width="33%"><button type="button" class="button" accesskey="p" name="addbbcode14" style="width: 50px" onClick="if (!editor.insert('img')) bbstyle(14)">Img<span id="addbbcode15" style="display: none">*</span></button></td>
-								<td width="33%"><button type="button" class="button" accesskey="w" name="addbbcode16" style="width: 50px" onClick="if (!editor.insert('a')) bbstyle(16)">URL<span id="addbbcode17" style="display: none">*</span></button></td>
-								<td width="33%"><button type="button" class="button" accesskey="m" name="addbbcode26" style="width: 50px" onClick="if (!editor.insert('email')) bbstyle(26)">Email<span id="addbbcode27" style="display: none">*</span></button></td>
+								<td ><button type="button" class="button" accesskey="p" name="addbbcode14"  onClick="if (!editor.insert('img')) bbstyle(14)">Img<span id="addbbcode15" >*</span></button></td>
+								<td ><button type="button" class="button" accesskey="w" name="addbbcode16"  onClick="if (!editor.insert('a')) bbstyle(16)">URL<span id="addbbcode17" >*</span></button></td>
+								<td ><button type="button" class="button" accesskey="m" name="addbbcode26"  onClick="if (!editor.insert('email')) bbstyle(26)">Email<span id="addbbcode27" >*</span></button></td>
 							</tr>
 							<tr>
-								<td colspan="3" nowrap="nowrap"><input type="button" name="quoteselected" class="button" style="width: 158px" value="{L_QUOTE_SELECTED}" onclick="quoteSelection()" onmouseover="if (document.getSelection) selectedText = document.getSelection()" /> <button type="button" class="button" accesskey="r" name="addbbcode25" style="width: 30px" onClick="if (!editor.insert('rem')) bbstyle(24)">//<span id="addbbcode25" style="display: none">*</span></button></td>
+								<td colspan="3" =""><input type="button" name="quoteselected" class="button"  value="{L_QUOTE_SELECTED}" onclick="quoteSelection()" onmouseover="if (document.getSelection) selectedText = document.getSelection()" /> <button type="button" class="button" accesskey="r" name="addbbcode25"  onClick="if (!editor.insert('rem')) bbstyle(24)">//<span id="addbbcode25" >*</span></button></td>
 							</tr>
 							<tr>
-								<td colspan="3"><select name="addbbcode24" style="width: 100%" onChange="if (!editor.insert('color', this.value)) bbfontstyle('[color=' + this.options[this.selectedIndex].value + ']', '[/color]'); this.selectedIndex = 0">
-									<option style="color:{T_BODY_TEXT}; background-color: {T_TD_COLOR1}" value="{T_BODY_TEXT}" class="genmed">{L_COLOR_DEFAULT}</option>
-									<option style="color:darkred; background-color: {T_TD_COLOR1}" value="darkred" class="genmed">{L_COLOR_DARK_RED}</option>
-									<option style="color:red; background-color: {T_TD_COLOR1}" value="red" class="genmed">{L_COLOR_RED}</option>
-									<option style="color:orange; background-color: {T_TD_COLOR1}" value="orange" class="genmed">{L_COLOR_ORANGE}</option>
-									<option style="color:brown; background-color: {T_TD_COLOR1}" value="brown" class="genmed">{L_COLOR_BROWN}</option>
-									<option style="color:yellow; background-color: {T_TD_COLOR1}" value="yellow" class="genmed">{L_COLOR_YELLOW}</option>
-									<option style="color:green; background-color: {T_TD_COLOR1}" value="green" class="genmed">{L_COLOR_GREEN}</option>
-									<option style="color:olive; background-color: {T_TD_COLOR1}" value="olive" class="genmed">{L_COLOR_OLIVE}</option>
-									<option style="color:cyan; background-color: {T_TD_COLOR1}" value="cyan" class="genmed">{L_COLOR_CYAN}</option>
-									<option style="color:blue; background-color: {T_TD_COLOR1}" value="blue" class="genmed">{L_COLOR_BLUE}</option>
-									<option style="color:darkblue; background-color: {T_TD_COLOR1}" value="darkblue" class="genmed">{L_COLOR_DARK_BLUE}</option>
-									<option style="color:indigo; background-color: {T_TD_COLOR1}" value="indigo" class="genmed">{L_COLOR_INDIGO}</option>
-									<option style="color:violet; background-color: {T_TD_COLOR1}" value="violet" class="genmed">{L_COLOR_VIOLET}</option>
-									<option style="color:white; background-color: {T_TD_COLOR1}" value="white" class="genmed">{L_COLOR_WHITE}</option>
-									<option style="color:black; background-color: {T_TD_COLOR1}" value="black" class="genmed">{L_COLOR_BLACK}</option>
+								<td colspan="3"><select name="addbbcode24"  onChange="if (!editor.insert('color', this.value)) bbfontstyle('[color=' + this.options[this.selectedIndex].value + ']', '[/color]'); this.selectedIndex = 0">
+									<option  value="{T_BODY_TEXT}" class="genmed">{L_COLOR_DEFAULT}</option>
+									<option  value="darkred" class="genmed">{L_COLOR_DARK_RED}</option>
+									<option  value="red" class="genmed">{L_COLOR_RED}</option>
+									<option  value="orange" class="genmed">{L_COLOR_ORANGE}</option>
+									<option  value="brown" class="genmed">{L_COLOR_BROWN}</option>
+									<option  value="yellow" class="genmed">{L_COLOR_YELLOW}</option>
+									<option  value="green" class="genmed">{L_COLOR_GREEN}</option>
+									<option  value="olive" class="genmed">{L_COLOR_OLIVE}</option>
+									<option  value="cyan" class="genmed">{L_COLOR_CYAN}</option>
+									<option  value="blue" class="genmed">{L_COLOR_BLUE}</option>
+									<option  value="darkblue" class="genmed">{L_COLOR_DARK_BLUE}</option>
+									<option  value="indigo" class="genmed">{L_COLOR_INDIGO}</option>
+									<option  value="violet" class="genmed">{L_COLOR_VIOLET}</option>
+									<option  value="white" class="genmed">{L_COLOR_WHITE}</option>
+									<option  value="black" class="genmed">{L_COLOR_BLACK}</option>
 								</select></td>
 							</tr>
 							<tr>
-								<td colspan="3"><select name="addbbcode26" style="width: 100%" onChange="if (this.selectedIndex) if (!editor.insert('size', this.value)) bbfontstyle('[size=' + this.options[this.selectedIndex].value + ']', '[/size]'); this.selectedIndex = 0">
+								<td colspan="3"><select name="addbbcode26"  onChange="if (this.selectedIndex) if (!editor.insert('size', this.value)) bbfontstyle('[size=' + this.options[this.selectedIndex].value + ']', '[/size]'); this.selectedIndex = 0">
 									<option value="0" class="genmed">{L_FONT_SIZE}</option>
 									<option value="7" class="genmed">{L_FONT_TINY}</option>
 									<option value="9" class="genmed">{L_FONT_SMALL}</option>
@@ -156,15 +156,15 @@ var no_text_selected = '{L_NO_TEXT_SELECTED}';
 								</select><br /><input type="checkbox" id="label__short_code" name="short_code" /> <label for="label__short_code">{L_SHORT_CODE}</label></td>
 							</tr>
 							<tr>
-								<td colspan="3" style="text-align: center">
-									<table width="100%">
+								<td colspan="3" >
+									<table >
 										<tr>
-											<td style="text-align: left"><script type="text/javascript">
+											<td ><script type="text/javascript">
 											<!--
 											if (document.post.message.rows) document.write("<a id=\"roll\" href=\"javascript:void(0)\" style=\"text-decoration: none; font-weight: bold\" onclick=\"if (document.post.message.rows < 30) { if (Editor.isSupported()) editor.getElement().style.height = '450px'; document.post.message.rows = 30; document.post.message.parentNode.width = '100%'; if (document.getElementById && document.getElementById('roll').innerHTML) setTimeout('document.getElementById(\\'roll\\').innerHTML = \\'&nbsp;&nbsp;&laquo;&nbsp;&nbsp;\\'', 1); } else { if (Editor.isSupported()) editor.getElement().style.height = '240px'; document.post.message.rows = 15; document.post.message.parentNode.width = 450; if (document.getElementById && document.getElementById('roll').innerHTML) setTimeout('document.getElementById(\\'roll\\').innerHTML = \\'&nbsp;&nbsp;&raquo;&nbsp;&nbsp;\\'', 1); } return false\">&nbsp;&nbsp;&raquo;&nbsp;&nbsp;<"+"/a>");
 											//-->
 											</script>&nbsp;</td>
-											<td style="text-align: right"><span class="genmed"><a id="closeTags" href="javascript:bbstyle(-1)" onclick="if (editor.isActive()) return false">{L_BBCODE_CLOSE_TAGS}</a></span></td>
+											<td ><span class="genmed"><a id="closeTags" href="javascript:bbstyle(-1)" onclick="if (editor.isActive()) return false">{L_BBCODE_CLOSE_TAGS}</a></span></td>
 										</tr>
 									</table>
 								</td>
@@ -176,9 +176,9 @@ var no_text_selected = '{L_NO_TEXT_SELECTED}';
 		</td>
 	</tr>
 	<tr>
-		<td class="row1"><div style="width: 90px"><span class="gensmall">{L_HIDE_PANEL_IN_PROFILE}&nbsp;</span></div></td>
-		<td class="row2" valign="top">
-			<table cellspacing="0" cellpadding="0">
+		<td class="row1"><div ><span class="gensmall">{L_HIDE_PANEL_IN_PROFILE}&nbsp;</span></div></td>
+		<td class="row2" v>
+			<table  >
 				<tr><td><input type="checkbox" id="label__quick_quote" name="quick_quote" /> <label for="label__quick_quote">{L_QUOTE_LAST_MESSAGE}</label></td></tr>
 				<!-- BEGIN user_logged_in -->
 				<tr><td><input type="checkbox" id="label__attach_sig" name="attach_sig" {quick_reply.user_logged_in.ATTACH_SIGNATURE} /> <label for="label__attach_sig">{L_ATTACH_SIGNATURE}</label></td></tr>
@@ -188,7 +188,7 @@ var no_text_selected = '{L_NO_TEXT_SELECTED}';
 		</td>
 	</tr>
 	<tr>
-		<td class="catBottom" align="center" height="28" colspan="2">
+		<td class="catBottom"   colspan="2">
 			<input type="hidden" name="mode" value="reply" />
 			<input type="hidden" name="t" value="{quick_reply.TOPIC_ID}" />
 			<input type="submit" name="preview" class="liteoption" value="{L_PREVIEW}" />

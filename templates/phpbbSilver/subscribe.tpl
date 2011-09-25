@@ -72,12 +72,12 @@ function addSidebar(SidebarTag, Title, URL) {
 </script>
 
 <form action="{S_SUBSCRIBE_ACTION}" name="sidebar">
-<table align="center" cellpadding="2" cellspacing="1" border="0" class="forumline">
+<table     class="forumline">
 <tr>
-<th colspan="2" align="center" valign="middle" height="28" class="thtop">{L_ADD_SIDEBAR_RSS}</th>
+<th colspan="2"  v  class="thtop">{L_ADD_SIDEBAR_RSS}</th>
 </tr>
 <tr>
-<td align="right" valign="middle" class="row2"><b class="genmed">{L_TOPICS_NUMBER}:</b></td>
+<td  v class="row2"><b class="genmed">{L_TOPICS_NUMBER}:</b></td>
 <td class="row1"><select name="n">
 <option value="3" {S_N_3_SELECTED}>3</option>
 <option value="5" {S_N_5_SELECTED}>5</option>
@@ -90,7 +90,7 @@ function addSidebar(SidebarTag, Title, URL) {
 </select></td>
 </tr>
 <tr>
-<td align="right" valign="middle" class="row2"><b class="genmed">{L_CHARACTERS_NUMBER}:</b></td>
+<td  v class="row2"><b class="genmed">{L_CHARACTERS_NUMBER}:</b></td>
 <td class="row1"><select name="m">
 <option value="10" {S_M_10_SELECTED}>10</option>
 <option value="15" {S_M_15_SELECTED}>15</option>
@@ -103,7 +103,7 @@ function addSidebar(SidebarTag, Title, URL) {
 </select></td>
 </tr>
 <tr>
-<td align="right" valign="middle" class="row2"><b class="genmed">{L_RSS_CONTENT_LENGTH}:</b></td>
+<td  v class="row2"><b class="genmed">{L_RSS_CONTENT_LENGTH}:</b></td>
 <td class="row1"><select name="t">
 <option value="10" {S_T_10_SELECTED}>10</option>
 <option value="25" {S_T_20_SELECTED}>20</option>
@@ -117,7 +117,7 @@ function addSidebar(SidebarTag, Title, URL) {
 </select></td>
 </tr>
 <tr>
-<td align="right" valign="middle" class="row2"><b class="genmed">{L_REFRESH_TIME}:</b></td>
+<td  v class="row2"><b class="genmed">{L_REFRESH_TIME}:</b></td>
 <td class="row1"><select name="s">
 <option value="300" {S_S_300_SELECTED}>5</option>
 <option value="420" {S_S_420_SELECTED}>7</option>
@@ -131,15 +131,15 @@ function addSidebar(SidebarTag, Title, URL) {
 </select></td>
 </tr>
 <tr>
-<td align="right" valign="middle" class="row2"><b class="genmed"><label for="label__l">{L_DONT_LOG}:</label></b></td>
+<td  v class="row2"><b class="genmed"><label for="label__l">{L_DONT_LOG}:</label></b></td>
 <td class="row1"><input type="checkbox" id="label__l" name="l" value="1" {S_L_CHECKED} /></td>
 </tr>
 <tr>
-<td align="right" valign="middle" class="row2"><b class="genmed"><label for="label__topics">{L_ONLY_TOPICS}:</label></b></td>
+<td  v class="row2"><b class="genmed"><label for="label__topics">{L_ONLY_TOPICS}:</label></b></td>
 <td class="row1"><input type="checkbox" id="label__topics" name="topics" value="1" {S_TOPICS_CHECKED} /></td>
 </tr>
 <tr>
-<td align="right" valign="top" class="row2"><b class="genmed">{L_ONLY_SELECTED_FORUMS}:</b></td>
+<td  v class="row2"><b class="genmed">{L_ONLY_SELECTED_FORUMS}:</b></td>
 <td class="row1 genmed">
 <!-- BEGIN catrow -->
 <b>{catrow.CAT_TITLE}:</b>
@@ -150,7 +150,7 @@ function addSidebar(SidebarTag, Title, URL) {
 </td>
 </tr>
 <tr>
-<td colspan="2" align="center" valign="middle" class="row2 catbottom">[&nbsp;<a href="javascript:void(0)" onclick="addSidebar(this, panel_title, make_URL('panel.php'))"><b>{L_ADD_SIDEBAR}</b></a>&nbsp;]&nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" name="rss" value="{L_ADD_RSS}" onclick="window.open(make_URL('panel.php?rss'), 'rss'); return true" /></td>
+<td colspan="2"  v class="row2 catbottom">[&nbsp;<a href="javascript:void(0)" onclick="addSidebar(this, panel_title, make_URL('panel.php'))"><b>{L_ADD_SIDEBAR}</b></a>&nbsp;]&nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" name="rss" value="{L_ADD_RSS}" onclick="window.open(make_URL('panel.php?rss'), 'rss'); return true" /></td>
 </tr>
 </table>
 {S_HIDDEN_FIELDS}

@@ -9,12 +9,12 @@ function jump_to_inbox()
 //-->
 </script>
 
-<table width="100%" border="0" cellspacing="0" cellpadding="10" align="center">
+<table     >
 <tr> 
 <td class="bodyline"> 
-<table width="100%" border="0" cellspacing="1" cellpadding="4" class="forumline">
+<table     class="forumline">
 <tr> 
-<td valign="top" class="row1" align="center"><br />
+<td v class="row1" ><br />
 <span class="genmed">{L_MESSAGE}<br />
 <br />
 <a href="javascript:window.close();">{L_CLOSE_WINDOW}</a></span><br />

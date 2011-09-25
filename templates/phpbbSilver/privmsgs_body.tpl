@@ -11,7 +11,7 @@
 		}
 	}
 </script>
-<table cellspacing="2" cellpadding="2" border="0" align="center">
+<table    >
 <tr> 
 <td>{INBOX_IMG}</td>
 <td class="cattitle">{INBOX} &nbsp;</td>
@@ -23,56 +23,56 @@
 <td class="cattitle">{SAVEBOX} &nbsp;</td>
 </tr>
 </table>
-<br clear="all" />
+<br  />
 
 <form method="post" name="privmsg_list" action="{S_PRIVMSGS_ACTION}">
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
+<table    >
 <tr> 
 <td>{POST_PM_IMG}</td>
-<td class="nav" width="100%">&nbsp;<a href="{U_INDEX}">{L_INDEX}</a></td>
-	  <td class="gensmall" align="right" nowrap>{L_DISPLAY_MESSAGES}: 
+<td class="nav" >&nbsp;<a href="{U_INDEX}">{L_INDEX}</a></td>
+	  <td class="gensmall"  >{L_DISPLAY_MESSAGES}: 
 		<select name="msgdays">{S_SELECT_MSG_DAYS}</select>
 		<input type="submit" value="{L_GO}" name="submit_msgdays" class="liteoption" />
 		</td>
 	</tr>
   </table>
-<table border="0" cellpadding="2" cellspacing="1" width="100%" class="forumline">
+<table     class="forumline">
 <tr> 
-<th height="28" class="thcornerl" nowrap>&nbsp;{L_FLAG}&nbsp;</th>
-	  <th width="55%" class="thtop" nowrap>&nbsp;{L_SUBJECT}&nbsp;</th>
-	  <th width="20%" class="thtop" nowrap>&nbsp;{L_FROM_OR_TO}&nbsp;</th>
-	  <th width="15%" class="thtop" nowrap>&nbsp;{L_DATE}&nbsp;</th>
-	  <th width="5%" class="thcornerr" nowrap>&nbsp;{L_MARK}&nbsp;</th>
+<th  class="thcornerl" >&nbsp;{L_FLAG}&nbsp;</th>
+	  <th  class="thtop" >&nbsp;{L_SUBJECT}&nbsp;</th>
+	  <th  class="thtop" >&nbsp;{L_FROM_OR_TO}&nbsp;</th>
+	  <th  class="thtop" >&nbsp;{L_DATE}&nbsp;</th>
+	  <th  class="thcornerr" >&nbsp;{L_MARK}&nbsp;</th>
 	</tr>
 	<!-- BEGIN listrow -->
 	<tr> 
-<td class="{listrow.ROW_CLASS}" align="center" height="34"><a href="{listrow.U_PRIVMSG_FOLDER}"><img src="{listrow.PRIVMSG_FOLDER_IMG}" width="33" height="25" alt="{listrow.L_PRIVMSG_FOLDER_ALT}" title="{listrow.L_PRIVMSG_FOLDER_ALT}" border="0" /></a></td>
+<td class="{listrow.ROW_CLASS}"  ><a href="{listrow.U_PRIVMSG_FOLDER}"><img src="{listrow.PRIVMSG_FOLDER_IMG}"   alt="{listrow.L_PRIVMSG_FOLDER_ALT}" title="{listrow.L_PRIVMSG_FOLDER_ALT}"  /></a></td>
 <td class="{listrow.ROW_CLASS}">&nbsp;<a href="{listrow.U_READ}" class="topictitle">{listrow.SUBJECT}</a></td>
-<td width="20%" align="center" class="{listrow.ROW_CLASS}">&nbsp;<a href="{listrow.U_FROM_USER_PROFILE}" class="name">{listrow.FROM}</a></td>
-<td width="15%" align="center" class="{listrow.ROW_CLASS}"><span class="postdetails">{listrow.DATE}</span></td>
-<td width="5%" align="center" class="{listrow.ROW_CLASS}"><span class="postdetails"> 
+<td   class="{listrow.ROW_CLASS}">&nbsp;<a href="{listrow.U_FROM_USER_PROFILE}" class="name">{listrow.FROM}</a></td>
+<td   class="{listrow.ROW_CLASS}"><span class="postdetails">{listrow.DATE}</span></td>
+<td   class="{listrow.ROW_CLASS}"><span class="postdetails"> 
 <input type="checkbox" name="mark[]2" value="{listrow.S_MARK_ID}" />
 </span></td>
 </tr>
 <!-- END listrow -->
 <!-- BEGIN switch_no_messages -->
 <tr> 
-<td class="row1" colspan="5" align="center"><span class="gen">{L_NO_MESSAGES}</span></td>
+<td class="row1" colspan="5" ><span class="gen">{L_NO_MESSAGES}</span></td>
 	</tr>
 <!-- END switch_no_messages -->
 	<tr> 
-	  <td class="catbottom" colspan="5" height="28" align="right"> {S_HIDDEN_FIELDS} 
+	  <td class="catbottom" colspan="5"  > {S_HIDDEN_FIELDS} 
 		<input type="submit" name="save" value="{L_SAVE_MARKED}" class="mainoption" />&nbsp; 
 		<input type="submit" name="delete" value="{L_DELETE_MARKED}" class="liteoption" />	&nbsp; 
 		<input type="submit" name="deleteall" value="{L_DELETE_ALL}" class="liteoption" />
 	  </td>
 	</tr>
   </table>
-<table width="100%" cellspacing="2" border="0" cellpadding="2">
+<table    >
 <tr> 
 <td>{POST_PM_IMG}</td>
-<td class="nav" width="100%">&nbsp;<a href="{U_INDEX}">{L_INDEX}</a></td>
-<td class="gensmall" align="right" valign="top" nowrap><strong> 
+<td class="nav" >&nbsp;<a href="{U_INDEX}">{L_INDEX}</a></td>
+<td class="gensmall"  v ><strong> 
 <!-- BEGIN switch_box_size_notice -->
 {BOX_SIZE_STATUS} :: 
 <!-- END switch_box_size_notice -->
@@ -83,8 +83,8 @@
 </tr>
 </table>
 </form>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table    >
 <tr> 
-<td valign="top">{JUMPBOX}</td>
+<td v>{JUMPBOX}</td>
 </tr>
 </table>

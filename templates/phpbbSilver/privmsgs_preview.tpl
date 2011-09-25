@@ -1,11 +1,11 @@
 
-<table border="0" cellpadding="3" cellspacing="1" width="100%" class="forumline">
+<table     class="forumline">
 <tr> 
-<th class="thhead" colspan="2" height="28">{L_PREVIEW}</th>
+<th class="thhead" colspan="2" >{L_PREVIEW}</th>
 </tr>
 <tr> 
 <td class="row2"><span class="genmed">{L_FROM}:</span></td>
-<td width="100%" class="row2"><span class="genmed">{MESSAGE_FROM}</span></td>
+<td  class="row2"><span class="genmed">{MESSAGE_FROM}</span></td>
 </tr>
 <tr> 
 <td class="row2"><span class="genmed">{L_TO}:</span></td>
@@ -20,11 +20,11 @@
 <td class="row2"><span class="genmed">{POST_SUBJECT}</span></td>
 </tr>
 <tr> 
-<td valign="top" colspan="2" class="row1"><span class="postbody">{MESSAGE}</span></td>
+<td v colspan="2" class="row1"><span class="postbody">{MESSAGE}</span></td>
 </tr>
 </table>
 
-<br clear="all" />
+<br  />
 <script type="text/javascript">
 <!--
 var foldbox_lang = {

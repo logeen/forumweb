@@ -1,12 +1,12 @@
 
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
+<table    >
 <tr>
 <td class="nav"><a href="{U_INDEX}">{L_INDEX}</a></td>
 </tr>
 </table>
-<table class="forumline" width="100%" cellspacing="1" cellpadding="3" border="0">
+<table class="forumline"    >
 <tr>
-<th class="thhead" height="28">{L_FAQ_TITLE}</th>
+<th class="thhead" >{L_FAQ_TITLE}</th>
 </tr>
 <tr>
 <td class="row1"> 
@@ -20,29 +20,29 @@
 </td>
 </tr>
 <tr>
-<td class="catbottom" height="28">&nbsp;</td>
+<td class="catbottom" >&nbsp;</td>
 </tr>
 </table>
-<br clear="all" />
+<br  />
 <!-- BEGIN faq_block -->
-<table class="forumline" width="100%" cellspacing="1" cellpadding="3" border="0">
+<table class="forumline"    >
 <tr>
-<td class="cathead" height="28" align="center"><span class="cattitle">{faq_block.BLOCK_TITLE}</span></td>
+<td class="cathead"  ><span class="cattitle">{faq_block.BLOCK_TITLE}</span></td>
 </tr>
 <!-- BEGIN faq_row -->
 <tr> 
-<td class="{faq_block.faq_row.ROW_CLASS}" align="left" valign="top"><a name="{faq_block.faq_row.U_FAQ_ID}"></a><span class="gen">{faq_block.faq_row.FAQ_QUESTION}</span><br />
+<td class="{faq_block.faq_row.ROW_CLASS}"  v><a name="{faq_block.faq_row.U_FAQ_ID}"></a><span class="gen">{faq_block.faq_row.FAQ_QUESTION}</span><br />
 <span class="postbody">{faq_block.faq_row.FAQ_ANSWER}<br />
 <a href="#Top" class="gensmall">{L_BACK_TO_TOP}</a></span></td>
 </tr>
 <tr>
-<td class="spacerow" height="1"><img src="templates/phpbbSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+<td class="spacerow" ><img src="templates/phpbbSilver/images/spacer.gif" alt=""   /></td>
 </tr>
 <!-- END faq_row -->
 </table>
-<br clear="all" />
+<br  />
 <!-- END faq_block -->
-<table width="100%" cellspacing="0" border="0" cellpadding="2">
+<table    >
 <tr> 
 <td class="nav"><a href="{U_INDEX}">{L_INDEX}</a></td>
 </tr>

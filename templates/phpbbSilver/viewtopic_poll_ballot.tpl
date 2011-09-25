@@ -1,15 +1,15 @@
 <tr> 
-<th class="thhead" colspan="2" height="28">{L_POLL}</th>
+<th class="thhead" colspan="2" >{L_POLL}</th>
 </tr>
 			<tr>
-				<td class="row2" colspan="2"><br clear="all" /><form method="POST" action="{S_POLL_ACTION}">
-<table cellspacing="0" cellpadding="4" border="0" align="center">
+				<td class="row2" colspan="2"><br  /><form method="POST" action="{S_POLL_ACTION}">
+<table    >
 <tr> 
-<td align="center" class="gen">{POLL_QUESTION}</td>
+<td  class="gen">{POLL_QUESTION}</td>
 </tr>
 <tr> 
-<td align="center"> 
-<table cellspacing="0" cellpadding="2" border="0">
+<td > 
+<table   >
 <!-- BEGIN poll_option -->
 <tr> 
 <td> 
@@ -22,12 +22,12 @@
 </td>
 </tr>
 <tr> 
-<td align="center"> 
+<td > 
 <input type="submit" name="submit" value="{L_SUBMIT_VOTE}" class="liteoption" />
 </td>
 </tr>
 <tr> 
-<td align="center" class="gensmall"><strong><a href="{U_VIEW_RESULTS}">{L_VIEW_RESULTS}</a></strong></td>
+<td  class="gensmall"><strong><a href="{U_VIEW_RESULTS}">{L_VIEW_RESULTS}</a></strong></td>
 </tr>
 </table>
 {S_HIDDEN_FIELDS}</form></td>

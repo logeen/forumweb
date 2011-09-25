@@ -1,5 +1,5 @@
 
-<div class="copyright" align="center"><br />
+<div class="copyright" ><br />
 <!--
 	We request you retain the full copyright notice below including the link to www.phpbb.com.
 	This not only gives respect to the large amount of time given freely by the developers

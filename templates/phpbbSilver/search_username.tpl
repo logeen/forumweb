@@ -11,15 +11,15 @@ function refresh_username(selected_username)
 </script>
 
 <form method="post" name="search" action="{S_SEARCH_ACTION}">
-<table width="100%" border="0" cellspacing="0" cellpadding="10" align="center">
+<table     >
 <tr> 
 <td class="forumline"> 
-<table width="100%" class="forumline" cellpadding="3" cellspacing="1" border="0">
+<table  class="forumline"   >
 <tr> 
-<th class="thhead" height="28">{L_SEARCH_USERNAME}</th>
+<th class="thhead" >{L_SEARCH_USERNAME}</th>
 </tr>
 <tr> 
-<td valign="top" class="row1">
+<td v class="row1">
 <span class="genmed"><br />
 <input type="text" name="search_username" value="{USERNAME}" class="post" />
 &nbsp; 
@@ -35,7 +35,7 @@ function refresh_username(selected_username)
 <br />
 <!-- END switch_select_name -->
 <br />
-<div align="center" class="genmed">
+<div  class="genmed">
 <a href="javascript:window.close();">{L_CLOSE_WINDOW}</a></div>
 </td>
 </tr>

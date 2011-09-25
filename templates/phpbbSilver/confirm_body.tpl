@@ -1,15 +1,15 @@
  
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
+<table    >
 <tr> 
 <td class="nav"><a href="{U_INDEX}">{L_INDEX}</a></td>
 </tr>
 </table>
-<table class="forumline" width="100%" cellspacing="1" cellpadding="3" border="0">
+<table class="forumline"    >
 <tr> 
-<th class="thHead" height="28">{MESSAGE_TITLE}</th>
+<th class="thHead" >{MESSAGE_TITLE}</th>
 </tr>
 <tr> 
-<td class="row1" align="center"> 
+<td class="row1" > 
 <form action="{S_CONFIRM_ACTION}" method="post">
 <span class="gen"><br />
 {MESSAGE_TEXT}<br />
@@ -23,7 +23,7 @@
 </td>
 </tr>
 <tr>
-<td class="catbottom" align="center" height="28">&nbsp;</td>
+<td class="catbottom"  >&nbsp;</td>
 </tr>
 </table>
-<br clear="all" />
+<br  />

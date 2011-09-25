@@ -52,7 +52,7 @@
 				<!-- END switch_ban_list -->
 		 	</ul>
 		 </nav>
-		 <form action="http://www.google.pl/search" method="get" style="margin: 0; text-align: right; margin-right: 10px">
+		 <form action="http://www.google.pl/search" method="get" >
 			<fieldset id="search">
 		 	<legend>{L_SEARCH}</legend>
 				<input type="hidden" name="ie" value="iso-8859-2">
@@ -78,6 +78,6 @@
 	</div>
 
 
-<table width="100%" border="0" cellspacing="0" cellpadding="10">
+<table    >
 <tr>
-<td align="center">
+<td >

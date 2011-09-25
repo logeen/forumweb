@@ -1,5 +1,5 @@
 
-<table cellspacing="2" cellpadding="2" border="0">
+<table   >
 <tr> 
 <td>{INBOX_IMG}</td>
 <td class="cattitle">{INBOX} &nbsp;</td>
@@ -12,18 +12,18 @@
 </tr>
 </table>
 
-<br clear="all" />
+<br  />
 
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
+<table    >
 <tr> 
 <td>{REPLY_PM_IMG}</td>
-<td width="100%" class="nav">&nbsp;<a href="{U_INDEX}">{L_INDEX}</a></td>
+<td  class="nav">&nbsp;<a href="{U_INDEX}">{L_INDEX}</a></td>
 </tr>
 </table>
 
-<table id="content" border="0" cellpadding="3" cellspacing="1" width="100%" class="forumline">
+<table id="content"     class="forumline">
 <tr> 
-<th colspan="3" class="thhead" nowrap height="28">{BOX_NAME} :: {L_MESSAGE}</th>
+<th colspan="3" class="thhead"  >{BOX_NAME} :: {L_MESSAGE}</th>
 </tr>
 <tr> 
 <td class="row2"><span class="genmed">{L_FROM}:</span></td>
@@ -39,38 +39,38 @@
 </tr>
 <tr> 
 <td class="row2"><span class="genmed">{L_SUBJECT}:</span></td>
-<td width="100%" class="row2"><span class="genmed">{POST_SUBJECT}</span></td>
-<td nowrap class="row2" align="right">&nbsp;{QUICK_QUOTE_IMG} {QUOTE_PM_IMG} {EDIT_PM_IMG}</td>
+<td  class="row2"><span class="genmed">{POST_SUBJECT}</span></td>
+<td  class="row2" >&nbsp;{QUICK_QUOTE_IMG} {QUOTE_PM_IMG} {EDIT_PM_IMG}</td>
 </tr>
 <tr> 
-<td valign="top" colspan="3" class="row1"><span class="postbody">{MESSAGE}</span></td>
+<td v colspan="3" class="row1"><span class="postbody">{MESSAGE}</span></td>
 </tr>
 <tr> 
-<td height="28" valign="bottom" colspan="3" class="row1"> 
-<table cellspacing="0" cellpadding="0" border="0" height="18">
+<td  v colspan="3" class="row1"> 
+<table    >
 <tr> 
-<td nowrap>{PROFILE_IMG} {PM_IMG} {EMAIL_IMG} {WWW_IMG} {AIM_IMG} {YIM_IMG} {MSN_IMG} 
+<td >{PROFILE_IMG} {PM_IMG} {EMAIL_IMG} {WWW_IMG} {AIM_IMG} {YIM_IMG} {MSN_IMG} 
 {ICQ_IMG}</td>
 </tr>
 </table>
 </td>
 </tr>
 <tr> 
-<td class="catbottom" colspan="3" align="right"><form method="post" action="{S_PRIVMSGS_ACTION}" style="margin: 0">{S_HIDDEN_FIELDS} 
+<td class="catbottom" colspan="3" ><form method="post" action="{S_PRIVMSGS_ACTION}" >{S_HIDDEN_FIELDS} 
 <input type="submit" name="save" value="{L_SAVE_MSG}" class="liteoption" />
 &nbsp; 
 <input type="submit" name="delete" value="{L_DELETE_MSG}" class="liteoption" /></form></td>
 </tr>
 </table>
   
-<table width="100%" cellspacing="2" border="0" cellpadding="2">
+<table    >
 <tr> 
 <td>{REPLY_PM_IMG}</td>
-<td width="100%" class="nav">&nbsp;<a href="{U_INDEX}">{L_INDEX}</a></td>
+<td  class="nav">&nbsp;<a href="{U_INDEX}">{L_INDEX}</a></td>
 </tr>
 </table>
 {QUICKREPLY_OUTPUT}
-<table width="100%" cellspacing="0" border="0" cellpadding="0">
+<table    >
 <tr> 
 <td>{JUMPBOX}</td>
 </tr>

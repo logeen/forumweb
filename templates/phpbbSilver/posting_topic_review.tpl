@@ -19,32 +19,32 @@ function topic_review_open()
 topic_review_open.opened = false;
 //-->
 </script>
-<table border="0" cellpadding="3" cellspacing="1" width="100%" class="forumline">
+<table     class="forumline">
 	<tr> 
 		
-<td class="cathead" height="28" align="center"><span class="cattitle">{L_TOPIC_REVIEW}</span></td>
+<td class="cathead"  ><span class="cattitle">{L_TOPIC_REVIEW}</span></td>
 	</tr>
 	<tr>
-		<td class="row1" align="center"><input type="button" onclick="topic_review_open(); return false" id="topic_review_open_button" value="{L_SHOW}" /><iframe id="topic_review" width="100%" height="300" style="display: none">
+		<td class="row1" ><input type="button" onclick="topic_review_open(); return false" id="topic_review_open_button" value="{L_SHOW}" /><iframe id="topic_review"   >
 <!-- END switch_inline_mode -->
 <!-- BEGIN switch_iframe_mode -->
-<table border="0" cellpadding="3" cellspacing="1" width="100%" class="forumline">
+<table     class="forumline">
 	<tr>
 		
-<th class="thcornerl" width="22%" height="28">{L_AUTHOR}</th>
+<th class="thcornerl"  >{L_AUTHOR}</th>
 		<th class="thcornerr">{L_MESSAGE}</th>
 	</tr>
 	<!-- BEGIN postrow -->
 	<tr>
 		
-<td width="22%" valign="top" class="{switch_iframe_mode.postrow.ROW_CLASS}"><span class="name"><a name="{switch_iframe_mode.postrow.U_POST_ID}"></a><strong>{switch_iframe_mode.postrow.POSTER_NAME}</strong></span><br />
-<img src="templates/phpbbSilver/images/spacer.gif" alt="" width="150" height="1" /></td>
+<td  v class="{switch_iframe_mode.postrow.ROW_CLASS}"><span class="name"><a name="{switch_iframe_mode.postrow.U_POST_ID}"></a><strong>{switch_iframe_mode.postrow.POSTER_NAME}</strong></span><br />
+<img src="templates/phpbbSilver/images/spacer.gif" alt=""   /></td>
 		
-<td class="{switch_iframe_mode.postrow.ROW_CLASS}" valign="top">
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<td class="{switch_iframe_mode.postrow.ROW_CLASS}" v>
+<table    >
 			<tr> 
 				
-<td width="100%"><img src="{switch_iframe_mode.postrow.MINI_POST_IMG}" width="12" height="9" alt="{switch_iframe_mode.postrow.L_MINI_POST_ALT}" title="{switch_iframe_mode.postrow.L_MINI_POST_ALT}" border="0" /><span class="postdetails">{L_POSTED}: 
+<td ><img src="{switch_iframe_mode.postrow.MINI_POST_IMG}"   alt="{switch_iframe_mode.postrow.L_MINI_POST_ALT}" title="{switch_iframe_mode.postrow.L_MINI_POST_ALT}"  /><span class="postdetails">{L_POSTED}: 
 {switch_iframe_mode.postrow.POST_DATE}</span></td>
 			</tr>
 			<tr> 
@@ -56,7 +56,7 @@ topic_review_open.opened = false;
 		</table></td>
 	</tr>
 	<tr> 
-		<td colspan="2" height="1" class="spacerow"><img src="templates/phpbbSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+		<td colspan="2"  class="spacerow"><img src="templates/phpbbSilver/images/spacer.gif" alt=""   /></td>
 	</tr>
 	 <!-- END postrow -->
 </table>

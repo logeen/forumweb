@@ -1,34 +1,34 @@
 
-<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<table    >
 <tr>
-<td class="nav" valign="top"><h1><a class="maintitle" href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a></h1>
-<div class="gensmall" style="color:red; font-weight:normal">{MODERATOR}</div>{S_TOPIC_ADMIN}
+<td class="nav" v><h1><a class="maintitle" href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a></h1>
+<div class="gensmall" >{MODERATOR}</div>{S_TOPIC_ADMIN}
 {PAGINATION}</td>
-<td class="gensmall" align="right" valign="bottom"><a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a><br />
+<td class="gensmall"  v><a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a><br />
 <a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a><br />
 <strong>{S_WATCH_TOPIC}</strong></td>
 </tr>
 </table>
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
+<table    >
 <tr> 
-<td nowrap><a href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}" border="0" alt="{L_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}" height="25" width="82" /></a></td>
-<td width="100%">
+<td ><a href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}"  alt="{L_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}"   /></a></td>
+<td >
 <!-- BEGIN switch_auth_public -->
-<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.forumweb.pl%2Fviewtopic.php%3Ft={TOPIC_ID}&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=recommend&amp;colorscheme=light&amp;height=21&amp;ref=recommend" scrolling="no" frameborder="0" style="border:0; overflow:hidden; width:110px; height:21px; vertical-align:bottom; float:right" allowTransparency="true"></iframe> 
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.forumweb.pl%2Fviewtopic.php%3Ft={TOPIC_ID}&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=recommend&amp;colorscheme=light&amp;height=21&amp;ref=recommend" scrolling="no" frame  allowTransparency="true"></iframe> 
 <!-- END switch_auth_public -->
 <span class="nav">&nbsp;<a href="{U_INDEX}" class="nav">{L_INDEX}</a> 
 &raquo; <a href="{U_VIEW_FORUM}" class="nav"><strong>{FORUM_NAME}</strong></a></span></td>
 </tr>
 </table>
-<table class="forumline" width="100%" cellspacing="1" cellpadding="3" border="0">
+<table class="forumline"    >
 {POLL_DISPLAY} 
 <tr> 
-<th class="thleft" width="150" height="28" nowrap>{L_AUTHOR}</th>
-<th class="thright" nowrap height="28" width="100%">{L_MESSAGE}</th>
+<th class="thleft"   >{L_AUTHOR}</th>
+<th class="thright"   >{L_MESSAGE}</th>
 </tr>
 <!-- BEGIN postrow -->
 <tr id="post{postrow.U_POST_ID}_0">
-<td valign="top" class="post_content {postrow.ROW_CLASS}"><span class="name"><a name="{postrow.U_POST_ID}"></a><strong><span style="cursor: pointer" onclick="if (document.post &amp;&amp; document.post.message) { if (!editor || !editor.insert('b', null, '{postrow.POSTER_NAME}')) emoticon('[b]{postrow.POSTER_NAME}[/b]'); window.location.href = '#post'; }" title="{postrow.L_INSERT_AUTHOR_QUOTE}">{postrow.POSTER_NAME}</span></strong></span>
+<td v class="post_content {postrow.ROW_CLASS}"><span class="name"><a name="{postrow.U_POST_ID}"></a><strong><span  onclick="if (document.post &amp;&amp; document.post.message) { if (!editor || !editor.insert('b', null, '{postrow.POSTER_NAME}')) emoticon('[b]{postrow.POSTER_NAME}[/b]'); window.location.href = '#post'; }" title="{postrow.L_INSERT_AUTHOR_QUOTE}">{postrow.POSTER_NAME}</span></strong></span>
 <div class="postdetails">{postrow.POSTER_RANK}<br />
 {postrow.RANK_IMAGE}
 {postrow.POSTER_AVATAR}<br /><br />
@@ -38,54 +38,54 @@
 {postrow.POSTER_POSTS}<br />
 {postrow.POSTER_HELPS}
 {postrow.POSTER_FROM}</div>
-<img src="templates/phpbbSilver/images/spacer.gif" alt="" width="150" height="1" /> 
+<img src="templates/phpbbSilver/images/spacer.gif" alt=""   /> 
 </td>
-<td class="post_content {postrow.ROW_CLASS}" valign="top"> 
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<td class="post_content {postrow.ROW_CLASS}" v> 
+<table    >
 <tr> 
-<td width="100%" class="postdetails"><a href="{postrow.U_MINI_POST}"><img src="{postrow.MINI_POST_IMG}" width="12" height="9" alt="{postrow.L_MINI_POST_ALT}" title="{postrow.L_MINI_POST_ALT}" border="0" /></a>&nbsp;{L_POSTED}: {postrow.POST_DATE}<br />{postrow.POST_SUBJECT}</td>
-	<td align="right" nowrap valign="top">{postrow.AHM_IMG} {postrow.QUICK_QUOTE_IMG} {postrow.QUOTE_IMG} {postrow.SPELLING_IMG} {postrow.EDIT_IMG} {postrow.DELETE_IMG} {postrow.SPLIT_IMG} {postrow.REPORT_IMG} {postrow.HISTORY_IMG} {postrow.IP_IMG} &nbsp;&nbsp;<a href="#top"><img src="templates/phpbbSilver/images/icon_up.gif" width="16" height="18" border="0" alt="^" /></a></td>
+<td  class="postdetails"><a href="{postrow.U_MINI_POST}"><img src="{postrow.MINI_POST_IMG}"   alt="{postrow.L_MINI_POST_ALT}" title="{postrow.L_MINI_POST_ALT}"  /></a>&nbsp;{L_POSTED}: {postrow.POST_DATE}<br />{postrow.POST_SUBJECT}</td>
+	<td   v>{postrow.AHM_IMG} {postrow.QUICK_QUOTE_IMG} {postrow.QUOTE_IMG} {postrow.SPELLING_IMG} {postrow.EDIT_IMG} {postrow.DELETE_IMG} {postrow.SPLIT_IMG} {postrow.REPORT_IMG} {postrow.HISTORY_IMG} {postrow.IP_IMG} &nbsp;&nbsp;<a href="#top"><img src="templates/phpbbSilver/images/icon_up.gif"    alt="^" /></a></td>
 </tr>
 </table>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table    >
 <tr> 
-<td valign="top" class="postbody" onmouseup="if (document.getSelection &amp;&amp; document.getSelection() || document.selection &amp;&amp; document.selection.createRange &amp;&amp; document.selection.createRange().text) quoteAuthor = &quot;{postrow.POSTER_NAME}&quot;"> 
+<td v class="postbody" onmouseup="if (document.getSelection &amp;&amp; document.getSelection() || document.selection &amp;&amp; document.selection.createRange &amp;&amp; document.selection.createRange().text) quoteAuthor = &quot;{postrow.POSTER_NAME}&quot;"> 
 <hr />
 {postrow.MESSAGE}
 <br />&nbsp;</td>
 </tr>
 <tr> 
-<td valign="bottom" class="genmed"><div class="signature">{postrow.SIGNATURE}</div><span class="gensmall">{postrow.EDITED_MESSAGE} {postrow.HELPS}</span></td>
+<td v class="genmed"><div class="signature">{postrow.SIGNATURE}</div><span class="gensmall">{postrow.EDITED_MESSAGE} {postrow.HELPS}</span></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr id="post{postrow.U_POST_ID}_1">
-<td class="post_content {postrow.ROW_CLASS}" align="center" valign="middle"><span class="genmed">&nbsp;{postrow.POSTER_STATUS}&nbsp;</span></td>
-<td class="post_content {postrow.ROW_CLASS}" valign="middle"> 
-<table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td>
-	<table cellspacing="0" cellpadding="0" border="0">
+<td class="post_content {postrow.ROW_CLASS}"  v><span class="genmed">&nbsp;{postrow.POSTER_STATUS}&nbsp;</span></td>
+<td class="post_content {postrow.ROW_CLASS}" v> 
+<table    ><tr><td>
+	<table   >
 	<tr>
-	<td valign="middle">{postrow.PROFILE_IMG} {postrow.PM_IMG} {postrow.EMAIL_IMG} {postrow.WWW_IMG} {postrow.AIM_IMG} {postrow.YIM_IMG} {postrow.MSN_IMG}</td>
+	<td v>{postrow.PROFILE_IMG} {postrow.PM_IMG} {postrow.EMAIL_IMG} {postrow.WWW_IMG} {postrow.AIM_IMG} {postrow.YIM_IMG} {postrow.MSN_IMG}</td>
 	<td>&nbsp;</td>
-	<td valign="top">
-		<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse">
+	<td v>
+		<table    >
 		<tr>
-		<td height="19"><div style="position:relative">{postrow.GG_IMG}<div style="position:absolute;left:3px;top:-1px">{postrow.GG_STATUS_IMG}</div></div></td>
+		<td ><div >{postrow.GG_IMG}<div >{postrow.GG_STATUS_IMG}</div></div></td>
 		<td>&nbsp;</td>
-		<td><div style="position:relative">{postrow.TLEN_IMG}<div style="position:absolute;left:3px;top:-1px">{postrow.TLEN_STATUS_IMG}</div></div></td>
+		<td><div >{postrow.TLEN_IMG}<div >{postrow.TLEN_STATUS_IMG}</div></div></td>
 		<td>&nbsp;</td>
-		<td><div style="position:relative">{postrow.JABBER_IMG}<div style="position:absolute;left:3px;top:-1px">{postrow.JABBER_STATUS_IMG}</div></div></td>
+		<td><div >{postrow.JABBER_IMG}<div >{postrow.JABBER_STATUS_IMG}</div></div></td>
 		<td>&nbsp;</td>
-		<td><div style="position:relative">{postrow.SKYPE_IMG}<div style="position:absolute;left:3px;top:-1px">{postrow.SKYPE_STATUS_IMG}</div></div></td>
+		<td><div >{postrow.SKYPE_IMG}<div >{postrow.SKYPE_STATUS_IMG}</div></div></td>
 		<td>&nbsp;</td>
-		<td><div style="position:relative">{postrow.ICQ_IMG}<div style="position:absolute;left:3px;top:-1px">{postrow.ICQ_STATUS_IMG}</div></div></td>
+		<td><div >{postrow.ICQ_IMG}<div >{postrow.ICQ_STATUS_IMG}</div></div></td>
 		</tr>
 		</table>
 	</td>
 	</tr>
 	</table>
-</td><td class="post_content" align="right" valign="top" nowrap="nowrap">{postrow.USER_AGENT}</td></tr></table>
+</td><td class="post_content"  v ="">{postrow.USER_AGENT}</td></tr></table>
 
 </td>
 </tr>
@@ -102,14 +102,14 @@ document.write('<tr><td colspan="2" class="view_first_post {postrow.ROW_CLASS}">
 </script>
 <!-- END switch_first_post -->
 <tr>
-<td class="spaceRow" colspan="2" height="1"><img src="templates/phpbbSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+<td class="spaceRow" colspan="2" ><img src="templates/phpbbSilver/images/spacer.gif" alt=""   /></td>
 </tr>
 <!-- END postrow -->
 <tr> 
-<td class="catbottom" colspan="2" height="28"> 
-<table cellspacing="0" cellpadding="0" border="0" align="center">
+<td class="catbottom" colspan="2" > 
+<table    >
 <tr> 
-<td align="center"><form method="post" action="{S_POST_DAYS_ACTION}" style="display: inline"><span class="gensmall">{L_DISPLAY_POSTS}: {S_SELECT_POST_DAYS}&nbsp;{S_SELECT_POST_ORDER}&nbsp; 
+<td ><form method="post" action="{S_POST_DAYS_ACTION}" ><span class="gensmall">{L_DISPLAY_POSTS}: {S_SELECT_POST_DAYS}&nbsp;{S_SELECT_POST_ORDER}&nbsp; 
 <input type="submit" value="{L_GO}" class="liteoption" name="submit" />
 </span></form></td>
 </tr>
@@ -118,20 +118,20 @@ document.write('<tr><td colspan="2" class="view_first_post {postrow.ROW_CLASS}">
 </tr>
 </table>
 
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
+<table    >
 <tr> 
-<td nowrap><a href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}" border="0" alt="{L_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}" height="25" width="82" /></a></td>
-<td width="100%" class="nav">&nbsp;<a href="{U_INDEX}">{L_INDEX}</a> &raquo; <a href="{U_VIEW_FORUM}"><strong>{FORUM_NAME}</strong></a></td>
-<td class="nav" nowrap>{PAGINATION}</td>
+<td ><a href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}"  alt="{L_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}"   /></a></td>
+<td  class="nav">&nbsp;<a href="{U_INDEX}">{L_INDEX}</a> &raquo; <a href="{U_VIEW_FORUM}"><strong>{FORUM_NAME}</strong></a></td>
+<td class="nav" >{PAGINATION}</td>
 </tr>
 </table>
 
 {QUICKREPLY_OUTPUT}
 
-<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<table    >
 <tr> 
-<td class="nav" valign="top">{PAGINATION}
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<td class="nav" v>{PAGINATION}
+<table    >
 <tr> 
 <td>&nbsp;</td>
 </tr>
@@ -140,7 +140,7 @@ document.write('<tr><td colspan="2" class="view_first_post {postrow.ROW_CLASS}">
 </tr>
 </table>
 {S_TOPIC_ADMIN}</td>
-<td class="gensmall" align="right" valign="top"><strong>{S_WATCH_TOPIC}</strong><br />
+<td class="gensmall"  v><strong>{S_WATCH_TOPIC}</strong><br />
 <a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a><br />
 <a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a><br />
 {S_AUTH_LIST} </td>
