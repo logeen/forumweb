@@ -25,40 +25,35 @@
 		<!-- END switch_user_logged_in -->
 </ul>
 
-<table     class="forumline">
-  <tr> 
-	
-<th colspan="2" class="thcornerl"  >&nbsp;{L_FORUM}&nbsp;</th>
-	
-<th class="thtop" >&nbsp;{L_TOPICS}&nbsp;</th>
-	
-<th class="thtop" >&nbsp;{L_POSTS}&nbsp;</th>
-	<th class="thcornerr" >&nbsp;{L_LASTPOST}&nbsp;</th>
-  </tr>
-  <!-- BEGIN catrow -->
-  <tr> 
-	
-<td class="catleft" colspan="2" ><a href="{catrow.U_VIEWCAT}" class="cattitle">{catrow.CAT_DESC}</a></td>
-	
-<td class="rowpic" colspan="3">&nbsp;</td>
-  </tr>
-  <!-- BEGIN forumrow -->
-  <tr {catrow.forumrow.ROW_ID} onmouseover="this.className = 'row_hover'" onmouseout="this.className = ''"> 
-	
-<td class="row1" ><a href="{catrow.forumrow.U_FORUM_FOLDER}"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}"    alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}" /></a></td>
-	
-<td class="row1" ><a href="{catrow.forumrow.U_VIEWFORUM}" class="forumlink">{catrow.forumrow.FORUM_NAME}</a><br />
-<span class="genmed">{catrow.forumrow.FORUM_DESC}<br />
-</span><span class="gensmall">{catrow.forumrow.L_MODERATOR} {catrow.forumrow.MODERATORS}</span></td>
-	
-<td class="row2" ><span class="gensmall">{catrow.forumrow.TOPICS}</span></td>
-	
-<td class="row2" ><span class="gensmall">{catrow.forumrow.POSTS}</span></td>
-	
-<td class="row2"  > <span class="gensmall">{catrow.forumrow.LAST_POST}</span></td>
-  </tr>
-  <!-- END forumrow -->
-  <!-- END catrow -->
+<table class="forumline">
+	<thead>
+		<tr>
+			<th colspan="2">{L_FORUM}</th>
+			<th>{L_TOPICS}</th>	
+			<th>{L_POSTS}</th>
+			<th>{L_LASTPOST}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- BEGIN catrow -->
+		<tr> 
+			<th colspan="5"><a href="{catrow.U_VIEWCAT}" class="cattitle">{catrow.CAT_DESC}</a></th>
+		</tr>
+		<!-- BEGIN forumrow -->
+		<tr {catrow.forumrow.ROW_ID}> 
+			<td class="row1" ><a href="{catrow.forumrow.U_FORUM_FOLDER}"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}"    alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}"></a></td>
+			<td class="row1" >
+				<p><a href="{catrow.forumrow.U_VIEWFORUM}" class="forumlink">{catrow.forumrow.FORUM_NAME}</a></p>
+				<p class="genmed">{catrow.forumrow.FORUM_DESC}</p>
+				<p class="gensmall">{catrow.forumrow.L_MODERATOR} {catrow.forumrow.MODERATORS}</p>
+			</td>	
+			<td>{catrow.forumrow.TOPICS}</td>
+			<td>{catrow.forumrow.POSTS}</td>
+			<td>{catrow.forumrow.LAST_POST}</td>
+		</tr>
+		<!-- END forumrow -->
+		<!-- END catrow -->
+	</tbody>
 </table>
 <div>
 	<strong><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></strong>
@@ -92,7 +87,18 @@
 		</fieldset>
 	</form>
 <!-- END switch_user_logged_out -->
+<!-- :target z CSS 3 nie starczy?-->
 <script>
+function initTabs(id)
+{
+	var as=document.getElementById(id).getElementsByTagName('a');
+	for(var i=0;i<as.length;i++)
+	{
+		var a=as[i];
+		a.onclick=function() {return false;};
+		a.onmousedown=function() {console.log('switch');return tab_switch(this); };
+	}
+}
 function tab_switch(a) {
 	a.unselectable = 'on';
 	var tab = a.parentNode;
@@ -112,12 +118,13 @@ function tab_switch(a) {
 	return false;
 }
 </script>
-<ul class="tabs">
-<li class="tab_active"><a href="#popular" onclick="return false" onmousedown="return tab_switch(this)">{L_POPULAR}</a></li>
-<li><a href="#read" onclick="return false" onmousedown="return tab_switch(this)">{L_READ}</a></li>
-<li><a href="#helpful" onclick="return false" onmousedown="return tab_switch(this)">{L_HELPFUL}</a></li>
-<li><a href="#recommended" onclick="return false" onmousedown="return tab_switch(this)">{L_RECOMMENDED}</a></li>
+<ul class="tabs" id="tabs1">
+<li class="tab_active"><a href="#popular">{L_POPULAR}</a></li>
+<li><a href="#read" onclick="return false">{L_READ}</a></li>
+<li><a href="#helpful" onclick="return false">{L_HELPFUL}</a></li>
+<li><a href="#recommended" onclick="return false">{L_RECOMMENDED}</a></li>
 </ul>
+<script>initTabs('tabs1');</script>
 <div id="popular" class="tab_content">
 <ul>
 <!-- BEGIN popularrow -->
