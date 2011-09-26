@@ -2,24 +2,20 @@
 <script type="text/javascript" src="./s/stat.js"></script>
 <noscript><div><img src="./s/stat.php" alt=""  /></div></noscript>
 
-<table    >
-<tr><td colspan="2" >
+<ol>
 	<!-- BEGIN contest_place1_banner_row -->
-	<a href="http://{contest_place1_banner_row.URL}"><img src="{contest_place1_banner_row.BANNER}"    alt="Zdobywca I miejsca w konkursie WWW" title="Zdobywca I miejsca w konkursie WWW"></a>
+	<li><a href="http://{contest_place1_banner_row.URL}"><img src="{contest_place1_banner_row.BANNER}"    alt="Zdobywca I miejsca w konkursie WWW" title="Zdobywca I miejsca w konkursie WWW"></a>
 	<!-- END contest_place1_banner_row -->
 	<!-- BEGIN contest_place1_row -->
-	<big>[<a href="http://{contest_place1_row.URL}" title="Zdobywca I miejsca w konkursie WWW"><b>{contest_place1_row.URL}</b></a>]</big>
+	<big>[<a href="http://{contest_place1_row.URL}" title="Zdobywca I miejsca w konkursie WWW"><b>{contest_place1_row.URL}</b></a>]</big></li>
 	<!-- END contest_place1_row -->
-</td></tr>
-<tr v>
 	<!-- BEGIN contest_place2_row -->
-	<td >[<a href="http://{contest_place2_row.URL}" title="Zdobywca II miejsca w konkursie WWW"><b>{contest_place2_row.URL}</b></a>]</td>
+	<li>[<a href="http://{contest_place2_row.URL}" title="Zdobywca II miejsca w konkursie WWW"><b>{contest_place2_row.URL}</b></a>]</li>
 	<!-- END contest_place2_row -->
 	<!-- BEGIN contest_place3_row -->
-	<td >[<a href="http://{contest_place3_row.URL}" title="Zdobywca III miejsca w konkursie WWW">{contest_place3_row.URL}</a>]</td>
+	<li>[<a href="http://{contest_place3_row.URL}" title="Zdobywca III miejsca w konkursie WWW">{contest_place3_row.URL}</a>]</li>
 	<!-- END contest_place3_row -->
-</tr>
-</table>
+</ol>
 
 {ADMIN_LINK}
 <footer id="footer">
@@ -38,17 +34,8 @@ Powered by <a href="http://www.phpbb.com/" class="copyright">phpBB</a>
 &copy; phpBB Group 
 {TRANSLATION_INFO}<br />
 Uruchamianie kodu dziêki <a href="http://sphere-research.com" class="copyright">Sphere Research Labs</a> w ramach <a href="http://ideone.com" class="copyright">ideone.com</a></span>
-<a name="bot"></a>
-
-<div ><a href="http://www.phpbb-graph.com"><font>Style created freely by Cyber-MX</font></a> <b >::</b> Modified by logeen <b >::</b> <strong>Sponsor: <a href="http://pactum.pl">Biuro&nbsp;Rachunkowe</a></strong></div>
+<div id="bot"><a href="http://www.phpbb-graph.com"><font>Style created freely by Cyber-MX</font></a> <b >::</b> Modified by logeen <b >::</b> <strong>Sponsor: <a href="http://pactum.pl">Biuro&nbsp;Rachunkowe</a></strong></div>
 </footer>
-</td></tr></table> </td></tr></table>
-		</td>
-	</tr>
-</table>
-
-
-
 </div> <!-- #content -->
 
 

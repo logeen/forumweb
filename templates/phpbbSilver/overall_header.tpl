@@ -77,13 +77,4 @@
 
 
 	<div id="content">
-		
-
 		<!-- Tutaj bêdzie zawarto¶æ, ale jak na razie trzeba oczy¶ciæ co nie co wiêc zostawiam tabelkê -->
-
-
-
-
-<table    >
-<tr>
-<td >
