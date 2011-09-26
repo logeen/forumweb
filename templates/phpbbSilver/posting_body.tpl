@@ -19,6 +19,13 @@ w_help = "{L_BBCODE_W_HELP}";
 a_help = "{L_BBCODE_A_HELP}";
 s_help = "{L_BBCODE_S_HELP}";
 f_help = "{L_BBCODE_F_HELP}";
+st_help = "{L_BBCODE_ST_HELP}";//strikethrough
+sp_help = "{L_BBCODE_SP_HELP}";//sup
+sb_help = "{L_BBCODE_ST_HELP}";//sub
+t_help = "{L_BBCODE_T_HELP}"; //tt
+r_help = "{L_BBCODE_R_HELP}"; //rem
+m_help = "{L_BBCODE_E_HELP}"; //mail
+wysiwyg_help = "{L_BBCODE_WYSIWYG_HELP}" //wysiwyg
 
 // Shows the help messages in the helpline window
 function helpline(help) {
@@ -140,16 +147,16 @@ function checkForm() {
 			<li><button type="button" class="button" accesskey="b" name="addbbcode0" onClick="if (!editor.insert('b')) bbstyle(0)" onMouseOver="helpline('b')">&nbsp;<span >B</span><span id="addbbcode1" >*</span>&nbsp;</button></li>
 			<li><button type="button" class="button" accesskey="i" name="addbbcode2" onClick="if (!editor.insert('i')) bbstyle(2)" onMouseOver="helpline('i')">&nbsp;<span >I</span><span id="addbbcode3" >*</span>&nbsp;</button></li>
 			<li><button type="button" class="button" accesskey="u" name="addbbcode4" onClick="if (!editor.insert('u')) bbstyle(4)" onMouseOver="helpline('u')">&nbsp;<span >U</span><span id="addbbcode5" >*</span>&nbsp;</button></li>
-			<li><button type="button" class="button" accesskey="s" name="addbbcode1" onClick="if (!editor.insert('s')) bbstyle(18)">&nbsp;<span >S</span><span id="addbbcode19" >*</span>&nbsp;</button></li>
-			<li><button type="button" class="button" name="addbbcode3" onClick="if (!editor.insert('sup')) bbstyle(20)">&nbsp;A<span >n</span><span id="addbbcode21" >*</span>&nbsp;</button></li>
-			<li><button type="button" class="button" name="addbbcode5" onClick="if (!editor.insert('sub')) bbstyle(22)">&nbsp;A<span >n</span><span id="addbbcode23" >*</span>&nbsp;</button></li>
-			<li><button type="button" class="button" accesskey="t" name="addbbcode28" onClick="if (!editor.insert('tt')) bbstyle(28)"><tt>TT</tt><span id="addbbcode29" >*</span></button></li>
+			<li><button type="button" class="button" accesskey="s" name="addbbcode1" onClick="if (!editor.insert('s')) bbstyle(18)" onMouseOver="helpline('st')">&nbsp;<span >S</span><span id="addbbcode19" >*</span>&nbsp;</button></li>
+			<li><button type="button" class="button" name="addbbcode3" onClick="if (!editor.insert('sup')) bbstyle(20)" onMouseOver="helpline('sp')">&nbsp;A<span >n</span><span id="addbbcode21" >*</span>&nbsp;</button></li>
+			<li><button type="button" class="button" name="addbbcode5" onClick="if (!editor.insert('sub')) bbstyle(22)" onMouseOver="helpline('sb')">&nbsp;A<span >n</span><span id="addbbcode23" >*</span>&nbsp;</button></li>
+			<li><button type="button" class="button" accesskey="t" name="addbbcode28" onClick="if (!editor.insert('tt')) bbstyle(28)" onMouseOver="helpline('t')"><tt>TT</tt><span id="addbbcode29" >*</span></button></li>
 			<li><button type="button" class="button" accesskey="q" name="addbbcode6" onClick="if (!editor.insert('quote')) bbstyle(6)" onMouseOver="helpline('q')">Quote<span id="addbbcode7" >*</span></button></li>
 			<li><button type="button" class="button" accesskey="c" name="addbbcode8" onClick="if (!editor.insert('code')) bbstyle(8)" onMouseOver="helpline('c')">Code<span id="addbbcode9" >*</span></button><button type="button" class="button" accesskey="r" name="addbbcode25" onClick="if (!editor.insert('rem')) bbstyle(24)">//<span id="addbbcode25" >*</span></button></li>
 			<li><button type="button" class="button" accesskey="l" name="addbbcode10" onClick="if (!editor.insert('ul')) bbstyle(10)" onMouseOver="helpline('l')">List<span id="addbbcode11" >*</span></button><button type="button" class="button" accesskey="o" name="addbbcode12" onClick="if (!editor.insert('ol')) bbstyle(12)" onMouseOver="helpline('o')">List=<span id="addbbcode13" >*</span></button><button type="button" class="button" accesskey="8" onClick="if (!editor.isActive()) emoticon('[*]')">*</button></li>
 			<li><button type="button" class="button" accesskey="p" name="addbbcode14" onClick="if (!editor.insert('img')) bbstyle(14)" onMouseOver="helpline('p')">Img<span id="addbbcode15" >*</span></button></li>
 			<li><button type="button" class="button" accesskey="w" name="addbbcode16" onClick="if (!editor.insert('a')) bbstyle(16)" onMouseOver="helpline('w')">URL<span id="addbbcode17" >*</span></button></li>
-			<li><button type="button" class="button" accesskey="m" name="addbbcode26" onClick="if (!editor.insert('email')) bbstyle(26)">Email<span id="addbbcode27" >*</span></button></li>
+			<li><button type="button" class="button" accesskey="m" name="addbbcode26" onClick="if (!editor.insert('email')) bbstyle(26)" onMouseOver="helpline('m')">Email<span id="addbbcode27" >*</span></button></li>
 		</ul>
 	</ul>
 	<ul class="inline">
@@ -320,6 +327,7 @@ if (Editor.isSupported())
 		}
 		return false;
 	};
+	switchEditor.onmouseover = helpline('wysiwyg');
 	document.getElementById('closeTags').parentNode.insertBefore(switchEditor, document.getElementById('closeTags'));
 	switchEditor.parentNode.insertBefore(document.createTextNode(' ['), switchEditor);
 	document.getElementById('closeTags').parentNode.insertBefore(document.createTextNode('] '), document.getElementById('closeTags'));
