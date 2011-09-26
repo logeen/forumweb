@@ -21,11 +21,11 @@ s_help = "{L_BBCODE_S_HELP}";
 f_help = "{L_BBCODE_F_HELP}";
 st_help = "{L_BBCODE_ST_HELP}";//strikethrough
 sp_help = "{L_BBCODE_SP_HELP}";//sup
-sb_help = "{L_BBCODE_ST_HELP}";//sub
+sb_help = "{L_BBCODE_SB_HELP}";//sub
 t_help = "{L_BBCODE_T_HELP}"; //tt
 r_help = "{L_BBCODE_R_HELP}"; //rem
 m_help = "{L_BBCODE_E_HELP}"; //mail
-wysiwyg_help = "{L_BBCODE_WYSIWYG_HELP}" //wysiwyg
+wysiwyg_help = "{L_BBCODE_WYSIWYG_HELP}"; //wysiwyg
 
 // Shows the help messages in the helpline window
 function helpline(help) {
