@@ -1,35 +1,29 @@
-
-<table    >
-<tr> 
-<td v class="gensmall"> 
-<!-- BEGIN switch_user_logged_in -->
-{LAST_VISIT_DATE}<br />
-<!-- END switch_user_logged_in -->
-<div id="current_time"></div>
-<script type="text/javascript">
-<!--
-(function updateCurrentTime()
-{
-	var currentTime = new Date(new Date() - (-new Date().getTimezoneOffset() * 60000 - {TIME_ZONE} * 3600000));
-	document.getElementById('current_time').innerHTML = '{L_CURRENT_TIME}'.replace(/%s/, (currentTime.getDate() < 10 ? '0' : '') + currentTime.getDate() + '.' + (currentTime.getMonth() < 9 ? '0' : '') + (currentTime.getMonth() + 1) + '.' + currentTime.getFullYear() + ' ' + (currentTime.getHours() < 10 ? '0' : '') + currentTime.getHours() + ':' + (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes() + '<br />');
+<div class="left">
+	<!-- BEGIN switch_user_logged_in -->
+		<small>{LAST_VISIT_DATE}</small>
+	<!-- END switch_user_logged_in -->
+	<div id="current_time"></div>
+	<script>
+	(function updateCurrentTime()
+	{
+		var currentTime = new Date(new Date() - (-new Date().getTimezoneOffset() * 60000 - {TIME_ZONE} * 3600000));
+		document.getElementById('current_time').innerHTML = '{L_CURRENT_TIME}'.replace(/%s/, (currentTime.getDate() < 10 ? '0' : '') + currentTime.getDate() + '.' + (currentTime.getMonth() < 9 ? '0' : '') + (currentTime.getMonth() + 1) + '.' + currentTime.getFullYear() + ' ' + (currentTime.getHours() < 10 ? '0' : '') + currentTime.getHours() + ':' + (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes() + '<br />');
 	window.setTimeout(updateCurrentTime, 1000);
-})();
-//-->
-</script>
-<a href="{U_INDEX}" class="nav">{L_INDEX}</a></td>
-<td  v class="gensmall"> 
-<!-- BEGIN switch_user_logged_in -->
-<a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a><br />
-<a href="{U_SEARCH_SELF}" class="gensmall">{L_SEARCH_SELF}</a><br />
-<!-- END switch_user_logged_in -->
-<a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a><br />
-<!-- BEGIN switch_user_logged_in -->
-<a href="{U_MARK_READ}"><strong>{L_MARK_FORUMS_READ}</strong></a>
-<div><a href="#new1">{L_SKIP_TO_NEW}</a></div>
-<!-- END switch_user_logged_in -->
-</td>
-</tr>
-</table>
+	})();
+	</script>
+	<a href="{U_INDEX}" class="nav">{L_INDEX}</a>
+</div>
+<ul class="right">
+		<!-- BEGIN switch_user_logged_in -->
+			<li><a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a></li>
+			<li><a href="{U_SEARCH_SELF}" class="gensmall">{L_SEARCH_SELF}</a></li>
+		<!-- END switch_user_logged_in -->
+			<li><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a></li>
+		<!-- BEGIN switch_user_logged_in -->
+		<li><a href="{U_MARK_READ}"><b>{L_MARK_FORUMS_READ}</b></a></li>
+		<li><a href="#new1">{L_SKIP_TO_NEW}</a></li>
+		<!-- END switch_user_logged_in -->
+</ul>
 
 <table     class="forumline">
   <tr> 
