@@ -1,16 +1,16 @@
-<p><a href="subscribe.php"><img src="rss.gif" alt="RSS"  /></a> <a href="{U_MOBILE_VERSION}" title="{L_MOBILE_VERSION}" rel="nofollow"><img src="mobile.gif" alt="{L_MOBILE_VERSION}"  /></a></p>
+<p><a href="subscribe.php"><img src="rss.gif" alt="RSS"></a> <a href="{U_MOBILE_VERSION}" title="{L_MOBILE_VERSION}" rel="nofollow"><img src="mobile.gif" alt="{L_MOBILE_VERSION}"></a></p>
 <script type="text/javascript" src="./s/stat.js"></script>
-<noscript><div><img src="./s/stat.php" alt=""  /></div></noscript>
+<noscript><img src="./s/stat.php" alt=""></noscript>
 
 <ol>
 	<!-- BEGIN contest_place1_banner_row -->
-	<li><a href="http://{contest_place1_banner_row.URL}"><img src="{contest_place1_banner_row.BANNER}"    alt="Zdobywca I miejsca w konkursie WWW" title="Zdobywca I miejsca w konkursie WWW"></a>
+	<li class="content-banner"><a href="http://{contest_place1_banner_row.URL}"><img src="{contest_place1_banner_row.BANNER}"    alt="Zdobywca I miejsca w konkursie WWW" title="Zdobywca I miejsca w konkursie WWW"></a></li>
 	<!-- END contest_place1_banner_row -->
 	<!-- BEGIN contest_place1_row -->
-	<big>[<a href="http://{contest_place1_row.URL}" title="Zdobywca I miejsca w konkursie WWW"><b>{contest_place1_row.URL}</b></a>]</big></li>
+	<li>[<a href="http://{contest_place1_row.URL}" title="Zdobywca I miejsca w konkursie WWW"><strong>{contest_place1_row.URL}</strong></a>]</li>
 	<!-- END contest_place1_row -->
 	<!-- BEGIN contest_place2_row -->
-	<li>[<a href="http://{contest_place2_row.URL}" title="Zdobywca II miejsca w konkursie WWW"><b>{contest_place2_row.URL}</b></a>]</li>
+	<li>[<a href="http://{contest_place2_row.URL}" title="Zdobywca II miejsca w konkursie WWW"><strong>{contest_place2_row.URL}</strong></a>]</li>
 	<!-- END contest_place2_row -->
 	<!-- BEGIN contest_place3_row -->
 	<li>[<a href="http://{contest_place3_row.URL}" title="Zdobywca III miejsca w konkursie WWW">{contest_place3_row.URL}</a>]</li>
@@ -32,9 +32,9 @@
 // -->
 Powered by <a href="http://www.phpbb.com/" class="copyright">phpBB</a> 
 &copy; phpBB Group 
-{TRANSLATION_INFO}<br />
+{TRANSLATION_INFO}<br>
 Uruchamianie kodu dziêki <a href="http://sphere-research.com" class="copyright">Sphere Research Labs</a> w ramach <a href="http://ideone.com" class="copyright">ideone.com</a></span>
-<div id="bot"><a href="http://www.phpbb-graph.com"><font>Style created freely by Cyber-MX</font></a> <b >::</b> Modified by logeen <b >::</b> <strong>Sponsor: <a href="http://pactum.pl">Biuro&nbsp;Rachunkowe</a></strong></div>
+<div id="bot"><a href="http://www.phpbb-graph.com">Style created freely by Cyber-MX</a> <b >::</b> Modified by logeen <b >::</b> <strong>Sponsor: <a href="http://pactum.pl">Biuro&nbsp;Rachunkowe</a></strong></div>
 </footer>
 </div> <!-- #content -->
 

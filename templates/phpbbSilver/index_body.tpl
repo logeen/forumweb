@@ -60,59 +60,39 @@
   <!-- END forumrow -->
   <!-- END catrow -->
 </table>
-
-<br />
-
-<table    ><tr><td  v>
-
-<table     class="forumline">
-<tr> 
-<td class="cathead" colspan="2" ><a href="{U_VIEWONLINE}" class="cattitle">{L_WHO_IS_ONLINE}</a></td>
-</tr>
-<tr> 
-<td class="row1" rowspan="3"><img src="templates/phpbbSilver/images/whosonline.gif" alt="{L_WHO_IS_ONLINE}" title="{L_WHO_IS_ONLINE}"   /></td>
-<td class="row1" ><span class="gensmall">{TOTAL_POSTS}<br />
-{TOTAL_USERS}<br />
-{NEWEST_USER}</span> </td>
-</tr>
-<tr> 
-<td class="row1"><span class="gensmall">{TOTAL_USERS_ONLINE} &nbsp; [&nbsp;<strong>{L_WHOSONLINE_ADMIN}</strong>&nbsp;] &nbsp; [&nbsp;<strong>{L_WHOSONLINE_MOD}</strong>&nbsp;]<br />
-{RECORD_USERS}<br />
-{LOGGED_IN_USER_LIST}</span></td>
-</tr>
-<tr> 
-<td class="row1"><span class="gensmall"><a href="{U_ONLINE}">Online</a>: {L_ONLINE_EXPLAIN}</span></td>
-</tr>
-</table>
+<div>
+	<strong><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></strong>
+	<!--<img src="templates/phpbbSilver/images/whosonline.gif" alt="{L_WHO_IS_ONLINE}" title="{L_WHO_IS_ONLINE}"> obrazek do CSS-->
+	<!--staty to chyba lista, nie?-->
+	<ul>
+		<li>{TOTAL_POSTS}</li>
+		<li>{TOTAL_USERS}</li>
+		<li>{NEWEST_USER}</li>
+	</ul>
+	<ul>
+		<li>{TOTAL_USERS_ONLINE} [<b>{L_WHOSONLINE_ADMIN}</b>] [<b>{L_WHOSONLINE_MOD}</b>]</li>
+		<li>{RECORD_USERS}</li>
+		<li>{LOGGED_IN_USER_LIST}</li>
+	</ul>
+	<p><a href="{U_ONLINE}">Online</a>: {L_ONLINE_EXPLAIN}</p>
+</div>
 
 <!-- BEGIN switch_user_logged_out -->
-<br />
-<form method="post" action="{S_LOGIN_ACTION}">
-  <table     class="forumline">
-	<tr> 
-	  
-<td class="cathead" ><span class="cattitle">{L_LOGIN_LOGOUT}</span></td>
-	</tr>
-	<tr> 
-	  
-<td class="row1" ><span class="gensmall">{L_USERNAME}: 
-<input class="post" type="text" name="username" size="10" />
-&nbsp;&nbsp;&nbsp;{L_PASSWORD}: 
-<input class="post" type="password" name="password" size="10" />
-		<!-- BEGIN switch_allow_autologin -->
-		&nbsp;&nbsp; &nbsp;&nbsp;<label for="label__autologin">{L_AUTO_LOGIN}</label> 
-		<input class="text" type="checkbox" id="label__autologin" name="autologin" />
-		<!-- END switch_allow_autologin -->
-		&nbsp;&nbsp;&nbsp; 
-		<input type="submit" class="mainoption" name="login" value="{L_LOGIN}" />
-		</span> </td>
-	</tr>
-  </table>
-</form>
+	<form method="post" action="{S_LOGIN_ACTION}">
+		<fieldset>
+			<legend>{L_LOGIN_LOGOUT}</legend>  
+			<ul class="inline">
+				<li><label>{L_USERNAME}: <input class="post" type="text" name="username" size="10"></label></li>
+				<li><label>{L_PASSWORD}: <input class="post" type="password" name="password" size="10"></label></li>
+				<!-- BEGIN switch_allow_autologin -->
+				<li><label>{L_AUTO_LOGIN} <input class="text" type="checkbox" name="autologin"></label></li>
+				<!-- END switch_allow_autologin -->
+				<li><button type="submit" class="mainoption" name="login" value="1">{L_LOGIN}</button></li>
+			</ul>
+		</fieldset>
+	</form>
 <!-- END switch_user_logged_out -->
-
-</td><td rowspan="2" v >
-<script type="text/javascript"><!--
+<script>
 function tab_switch(a) {
 	a.unselectable = 'on';
 	var tab = a.parentNode;
@@ -131,7 +111,7 @@ function tab_switch(a) {
 	}
 	return false;
 }
-//--></script>
+</script>
 <ul class="tabs">
 <li class="tab_active"><a href="#popular" onclick="return false" onmousedown="return tab_switch(this)">{L_POPULAR}</a></li>
 <li><a href="#read" onclick="return false" onmousedown="return tab_switch(this)">{L_READ}</a></li>
@@ -162,21 +142,8 @@ function tab_switch(a) {
 <div id="recommended" class="tab_content" >
 <iframe src="http://www.facebook.com/plugins/activity.php?site=www.forumweb.pl&amp;width=500&amp;height=225&amp;header=false&amp;colorscheme=light&amp;font=verdana&amp;border_color=%23fff&amp;recommendations=true&amp;ref=activity" scrolling="no" frame  allowTransparency="true"></iframe>
 </div>
-</td></tr><tr><td  v>
-
-<br  />
-
-<table   >
-<tr> 
-<td  ><img src="templates/phpbbSilver/images/folder_new.gif" alt="{L_NEW_POSTS}" title="{L_NEW_POSTS}"  /></td>
-<td class="gensmall">{L_NEW_POSTS}</td>
-<td>&nbsp;</td>
-<td  ><img src="templates/phpbbSilver/images/folder.gif" alt="{L_NO_NEW_POSTS}" title="{L_NO_NEW_POSTS}"   /></td>
-<td class="gensmall">{L_NO_NEW_POSTS}</td>
-<td>&nbsp;</td>
-<td  ><img src="templates/phpbbSilver/images/folder_lock.gif" alt="{L_FORUM_LOCKED}" title="{L_FORUM_LOCKED}"   /></td>
-<td class="gensmall">{L_FORUM_LOCKED}</td>
-</tr>
-</table>
-
-</td></tr></table>
+<ul class="inline"> 
+	<li><img src="templates/phpbbSilver/images/folder_new.gif" alt="{L_NEW_POSTS}" title="{L_NEW_POSTS}"> <small>{L_NEW_POSTS}</small></li>
+	<li><img src="templates/phpbbSilver/images/folder.gif" alt="{L_NO_NEW_POSTS}" title="{L_NO_NEW_POSTS}"> <small>{L_NO_NEW_POSTS}</small></li>
+	<li><img src="templates/phpbbSilver/images/folder_lock.gif" alt="{L_FORUM_LOCKED}" title="{L_FORUM_LOCKED}"><small>{L_FORUM_LOCKED}</small></li>
+</ul>
