@@ -3,8 +3,6 @@ article czy section?
 
 przyciski sa zle.  najchetniej widzialbym je w jednej linii, ale po obu stronach.
 
-obecnie: zgadzam sie \n\n nie zgadzam sie
-
 -Kwpolska
 -->
 <p>
