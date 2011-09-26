@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="pl" class="no-js">
+<!--[if lt IE 9 ]><html lang="pl" class="no-js ie"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="pl" class="no-js"><!--<![endif]-->
 <head>
 	<meta charset="{S_CONTENT_ENCODING}">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script> <!--http://paulirish.com/2009/avoiding-the-fouc-v3/-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <!--IMO lepiej do nag³ówków HTTP-->
 	{META}{META_ROBOTS}
 	<meta name="title" content="{META_TITLE}">
 	<meta property="og:title" content="{META_TITLE}">
@@ -17,7 +19,10 @@
 	<link href="{rssrow.HREF}" rel="alternate" type="application/rss+xml" title="{rssrow.TITLE}">
 	<!-- END rssrow -->
 	<link rel="stylesheet" href="templates/phpbbSilver/css/style.css">
-	<script src="templates/phpbbSilver/js/modernizr-2.0.6.min.js"></script>
+	<!--<script src="templates/phpbbSilver/js/modernizr-2.0.6.min.js"></script> Po co? Nie korzystamy z ¿adnych zaawansowanych mechanizmów HTML 5 - jak zaczniemy korzystaæ, to dodamy-->
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<!-- BEGIN switch_autodetect_version -->
 	<script>
 	if (screen && screen.width && screen.width < 800 && !/[?&]mobile([=&]|$)/.test(window.location.search)) window.location.href = window.location.protocol + '//' + window.location.hostname + window.location.pathname + window.location.search + (window.location.search == '' ? '?' : '&') + 'mobile' + (screen.height < 480 ? '=mini' : '') + window.location.hash;

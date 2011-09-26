@@ -56,19 +56,18 @@ Uruchamianie kodu dziêki <a href="http://sphere-research.com" class="copyright">
 <!-- BEGIN switch_notifications -->
 <script src="{NOTIFIER_JS}"></script>
 <script>
-<!--
 new Notifier('{U_NOTIFICATIONS}', '{USER_LAST_NOTIFICATION}', {NOTIFICATIONS_JSON});
-//-->
 </script>
 <!-- END switch_notifications -->
 <div id="linkor"><!--<a href="http://tekstowo.info">Teksty piosenek</a> <a href="http://www.laff.pl">Darmowe fora</a>--> {LINKOR}
 </div>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.6.2.min.js"><\/script>')</script>
+<!--
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.6.4.min.js"><\/script>')</script>
 
 <script defer src="templates/phpbbSilver/js/plugins.js"></script>
 <script defer src="templates/phpbbSilver/js/script.js"></script>
-
+Nie ma na razie potrzeby includowaæ jQuery
+-->
 </body>
 </html>
