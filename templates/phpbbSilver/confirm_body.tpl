@@ -1,29 +1,25 @@
- 
-<table    >
-<tr> 
-<td class="nav"><a href="{U_INDEX}">{L_INDEX}</a></td>
-</tr>
-</table>
-<table class="forumline"    >
-<tr> 
-<th class="thHead" >{MESSAGE_TITLE}</th>
-</tr>
-<tr> 
-<td class="row1" > 
-<form action="{S_CONFIRM_ACTION}" method="post">
-<span class="gen"><br />
-{MESSAGE_TEXT}<br />
-<br />
-{S_HIDDEN_FIELDS} 
-<input type="submit" name="confirm" value="{L_YES}" class="mainoption" />
-&nbsp;&nbsp; 
-<input type="submit" name="cancel" value="{L_NO}" class="liteoption" />
-</span> 
-</form>
-</td>
-</tr>
-<tr>
-<td class="catbottom"  >&nbsp;</td>
-</tr>
-</table>
-<br  />
+<!--
+article czy section?
+
+przyciski sa zle.  najchetniej widzialbym je w jednej linii, ale po obu stronach.
+
+obecnie: zgadzam sie \n\n nie zgadzam sie
+
+-Kwpolska
+-->
+<p>
+<a href="{U_INDEX}" class="nav">{L_INDEX}</a>
+</p>
+
+<article>
+    <header>{MESSAGE_TITLE}</header>
+    <form action="{S_CONFIRM_ACTION}" method="post">
+        <section>
+            {MESSAGE_TEXT} {S_HIDDEN_FIELDS}
+        </section>
+        <footer>
+            <input type="submit" name="confirm" value="{L_YES}" class="mainoption left">
+            <input type="submit" name="cancel" value="{L_NO}" class="liteoption right">
+        </footer>
+    </form>
+</article>
