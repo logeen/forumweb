@@ -41,8 +41,8 @@
 		</tr>
 		<!-- BEGIN forumrow -->
 		<tr {catrow.forumrow.ROW_ID}> 
-			<td class="row1" ><a href="{catrow.forumrow.U_FORUM_FOLDER}"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}"    alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}"></a></td>
-			<td class="row1" >
+			<td><a href="{catrow.forumrow.U_FORUM_FOLDER}"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}"    alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}"></a></td>
+			<td>
 				<p><a href="{catrow.forumrow.U_VIEWFORUM}" class="forumlink">{catrow.forumrow.FORUM_NAME}</a></p>
 				<p class="genmed">{catrow.forumrow.FORUM_DESC}</p>
 				<p class="gensmall">{catrow.forumrow.L_MODERATOR} {catrow.forumrow.MODERATORS}</p>
@@ -56,7 +56,7 @@
 	</tbody>
 </table>
 <div>
-	<strong><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></strong>
+	<b><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></b>
 	<!--<img src="templates/phpbbSilver/images/whosonline.gif" alt="{L_WHO_IS_ONLINE}" title="{L_WHO_IS_ONLINE}"> obrazek do CSS-->
 	<!--staty to chyba lista, nie?-->
 	<ul>

@@ -1,6 +1,9 @@
-<h1><a class="maintitle" href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a></h1>
-<div class="gensmall" >{MODERATOR}</div>{S_TOPIC_ADMIN}
-{PAGINATION}
+<section>
+	<header class="left">
+		<h1><a class="maintitle" href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a></h1>
+		<p>{MODERATOR}</p>{S_TOPIC_ADMIN}
+		{PAGINATION}
+	</header>
 <ul class="right">
 	<li><a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a></li>
 	<li><a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a></li>
@@ -18,8 +21,8 @@
 <th class="thright"   >{L_MESSAGE}</th>-->
 		<!-- BEGIN postrow -->
 		<!--Mikroformaty?-->
-		<article id="post{postrow.U_POST_ID}_0"> <!--<div>-->
-			<div class="post_content {postrow.ROW_CLASS}">
+		<article id="post{postrow.U_POST_ID}_0" {postrow.ROW_CLASS}> <!--<div>-->
+			<div class="post_content">
 				<strong onclick="if (document.post &amp;&amp; document.post.message) { if (!editor || !editor.insert('b', null, '{postrow.POSTER_NAME}')) emoticon('[b]{postrow.POSTER_NAME}[/b]'); window.location.href = '#post'; }" title="{postrow.L_INSERT_AUTHOR_QUOTE}">{postrow.POSTER_NAME}</strong>
 				<ul class="postdetails">
 					<li>{postrow.POSTER_RANK}</li>
@@ -34,15 +37,15 @@
 				</ul>
 				<p>{postrow.POSTER_STATUS}</p>
 			</div>
-			<header class="post_content {postrow.ROW_CLASS}"> <!--<div>--> 
+			<header class="post_content"> <!--<div>--> 
 				<p>
-					<a href="{postrow.U_MINI_POST}"><img src="{postrow.MINI_POST_IMG}"   alt="{postrow.L_MINI_POST_ALT}" title="{postrow.L_MINI_POST_ALT}"  /></a> {L_POSTED}: {postrow.POST_DATE}</p>
+					<a href="{postrow.U_MINI_POST}"><img src="{postrow.MINI_POST_IMG}"   alt="{postrow.L_MINI_POST_ALT}" title="{postrow.L_MINI_POST_ALT}"  /></a> {L_POSTED}: <time>{postrow.POST_DATE}</time></p>
 					<p class="left">{postrow.POST_SUBJECT}</p> <!--to mo¿e byæ nag³ówek-->
 					<p class="right">{postrow.AHM_IMG} {postrow.QUICK_QUOTE_IMG} {postrow.QUOTE_IMG} {postrow.SPELLING_IMG} {postrow.EDIT_IMG} {postrow.DELETE_IMG} {postrow.SPLIT_IMG} {postrow.REPORT_IMG} {postrow.HISTORY_IMG} {postrow.IP_IMG} <a href="#top"><img src="templates/phpbbSilver/images/icon_up.gif" alt="^"></a></p>
 			</header>
-			<div class="postbody" onmouseup="if (document.getSelection &amp;&amp; document.getSelection() || document.selection &amp;&amp; document.selection.createRange &amp;&amp; document.selection.createRange().text) quoteAuthor = &quot;{postrow.POSTER_NAME}&quot;" id="{postrow.U_POST_ID}"> 
+			<section class="postbody" onmouseup="if (document.getSelection &amp;&amp; document.getSelection() || document.selection &amp;&amp; document.selection.createRange &amp;&amp; document.selection.createRange().text) quoteAuthor = &quot;{postrow.POSTER_NAME}&quot;" id="{postrow.U_POST_ID}"> 
 				{postrow.MESSAGE}
-			</div>
+			</section>
 			<footer class="signature">{postrow.SIGNATURE} <span class="gensmall">{postrow.EDITED_MESSAGE} {postrow.HELPS}</span></footer> <!--<div>-->
 			<ul id="post{postrow.U_POST_ID}_1">
 				<li>{postrow.PROFILE_IMG}</li>
@@ -61,22 +64,24 @@
 				<li>{postrow.ICQ_IMG}{postrow.ICQ_STATUS_IMG}</li>
 				<li>{postrow.USER_AGENT}</li>
 			</ul>
-			<!-- BEGIN switch_first_post -->
-			<!-- TODO: przepisaæ na now± strukturê
+	</article>
+	<!-- BEGIN switch_first_post -->
 			<script>
 			for (var i = 0; document.getElementById('post{postrow.U_POST_ID}_' + i); i++)
 			{
 				document.getElementById('post{postrow.U_POST_ID}_' + i).style.display = 'none';
 				document.getElementById('post{postrow.U_POST_ID}_' + i).className += ' first_post'
 			}
-				document.write('<tr><td colspan="2" class="view_first_post {postrow.ROW_CLASS}"><a href="" onclick="this.parentNode.parentNode.style.display = \'none\'; for (var i = 0; document.getElementById(\'post{postrow.U_POST_ID}_\' + i); i++) document.getElementById(\'post{postrow.U_POST_ID}_\' + i).style.display = \'\'; return false"><b>{L_VIEW_FIRST_POST}...</b></a></td></tr>');
-		</script>-->
+			document.write('<p class="view_first_post"><a href="javascript:void(0);" onclick="this.parentNode.style.display=\'none\'; for (var i = 0; document.getElementById(\'post{postrow.U_POST_ID}_\' + i); i++) document.getElementById(\'post{postrow.U_POST_ID}_\' + i).style.display = \'\'; return false"><b>{L_VIEW_FIRST_POST}...</b></a></p>');
+		</script>
 		<!-- END switch_first_post -->
-	</article>
 	<!-- END postrow -->
 	</section>
-	<form method="post" action="{S_POST_DAYS_ACTION}" ><span class="gensmall">{L_DISPLAY_POSTS}: {S_SELECT_POST_DAYS} {S_SELECT_POST_ORDER} 
-<button type="submit" value="1" class="liteoption" name="submit">{L_GO}</button>
+	<form method="post" action="{S_POST_DAYS_ACTION}" class="inline">
+		<fieldset>
+			<label>{L_DISPLAY_POSTS}: {S_SELECT_POST_DAYS}</label> {S_SELECT_POST_ORDER} 
+			<button type="submit" value="1" class="liteoption" name="submit">{L_GO}</button>
+		</fieldset>
 </form>
 <p class="left">
 	<a href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}"  alt="{L_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}"></a>
@@ -105,3 +110,4 @@ var foldbox_lang = {
 };
 </script>
 <script src="{FOLDBOX_JS}"></script>
+</section>
