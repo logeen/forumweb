@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--[if lt IE 9 ]><html lang="pl" class="no-js ie"><![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="pl" class="no-js"><!--<![endif]-->
+<!--[if lt IE 9 ]><html lang="pl" class="no-js ie" dir="{S_CONTENT_DIRECTION}"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="pl" class="no-js" dir="{S_CONTENT_DIRECTION}"><!--<![endif]-->
 <head>
 	<meta charset="{S_CONTENT_ENCODING}">
 	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script> <!--http://paulirish.com/2009/avoiding-the-fouc-v3/-->

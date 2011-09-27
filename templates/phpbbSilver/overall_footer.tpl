@@ -48,13 +48,9 @@ new Notifier('{U_NOTIFICATIONS}', '{USER_LAST_NOTIFICATION}', {NOTIFICATIONS_JSO
 <!-- END switch_notifications -->
 <div id="linkor"><!--<a href="http://tekstowo.info">Teksty piosenek</a> <a href="http://www.laff.pl">Darmowe fora</a>--> {LINKOR}
 </div>
-<!--
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-1.6.4.min.js"><\/script>')</script>
-
-<script defer src="templates/phpbbSilver/js/plugins.js"></script>
-<script defer src="templates/phpbbSilver/js/script.js"></script>
-Nie ma na razie potrzeby includowaæ jQuery
--->
+<script defer async src="templates/phpbbSilver/js/plugins.js"></script>
+<script defer async src="templates/phpbbSilver/js/script.js"></script>
 </body>
 </html>

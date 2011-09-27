@@ -9,7 +9,7 @@
 
 	The phpBB Group
 // -->
-Powered by <a href="http://www.phpbb.com/" target="_phpbb" class="copyright">phpBB</a> &copy; phpBB Group
+Powered by <a href="http://www.phpbb.com/" class="copyright">phpBB</a> &copy; phpBB Group
 </div>
 </body>
 </html>
