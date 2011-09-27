@@ -19,7 +19,7 @@ function refresh_username(selected_username)
 			<input type="text" name="search_username" id="search_username" value="{USERNAME}" class="post" />
 		</label>
 		
-		<input type="submit" name="search" value="{L_SEARCH}" class="liteoption" />
+		<button type="submit" name="search" class="liteoption">{L_SEARCH}</button>
 
 		<p class="gensmall">{L_SEARCH_EXPLAIN}</p>
 		
