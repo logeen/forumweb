@@ -1,36 +1,19 @@
-
-<form action="{S_PROFILE_ACTION}" method="post">
-<table    >
-<tr> 
-<td class="nav"><a href="{U_INDEX}">{L_INDEX}</a></td>
-</tr>
-</table>
-  
-<table     class="forumline">
-<tr> 
-<th class="thhead" colspan="2" >{L_SEND_PASSWORD}</th>
-</tr>
-<tr> 
-<td class="row2" colspan="2"><span class="gensmall">{L_ITEMS_REQUIRED}</span></td>
-</tr>
-<tr> 
-<td class="row1" >{L_USERNAME}: *</td>
-<td class="row2" > 
-<input type="text" class="post"  name="username" size="25" maxlength="40" value="{USERNAME}" />
-</td>
-</tr>
-<tr> 
-<td class="row1">{L_EMAIL_ADDRESS}: *</td>
-<td class="row2"> 
-<input type="text" class="post"  name="email" size="25" maxlength="255" value="{EMAIL}" />
-</td>
-</tr>
-<tr> 
-<td class="catbottom" colspan="2"  >{S_HIDDEN_FIELDS} 
-<input type="submit" name="submit" value="{L_SUBMIT}" class="mainoption" />
-&nbsp;&nbsp; 
-<input type="reset" value="{L_RESET}" name="reset" class="liteoption" />
-</td>
-</tr>
-</table>
+<!-- kod ukradziony z login_body.tpl. -->
+<p class="nav"><a href="{U_INDEX}">{L_INDEX}</a></p>
+<form action="{S_PROFILE_ACTION}" method="post" class="forumline">
+	<fieldset>
+		<legend>{L_SEND_PASSWORD}</legend>
+		<p class="gensmall">{L_ITEMS_REQUIRED}</p> <!--a moze cos innego?-->
+		<dl>
+			<dt><label for="login_username">{L_USERNAME}: *</label></dt>
+			<dd><input type="text" name="username" size="25" maxlength="40" value="{USERNAME}" id="pwd_username" class="post" required></dd> <!--mozna tez login_username -->
+			<dt><label for="login_password">{L_EMAIL_ADDRESS}: *</label></dt>
+			<dd><input type="text" name="username" size="25" maxlength="40" value="{EMAIL}" id="pwd_email" class="post" required></dd>
+		</dl>
+		<div>
+			{S_HIDDEN_FIELDS}
+			<button type="submit" name="submit" class="mainoption" value="1">{L_SUBMIT}</button>
+			<button type="reset" name="reset" class="liteoption">{L_RESET}</button>
+		</div>
+	</fieldset>
 </form>
