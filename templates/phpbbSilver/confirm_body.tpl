@@ -1,7 +1,7 @@
 
-<nav class="breadcrumb">
+<p class="breadcrumb">
 	<a href="{U_INDEX}">{L_INDEX}</a>
-</nav>
+</p>
 
 <section class="notification confirm">
 	<h1>{MESSAGE_TITLE}</h1>
