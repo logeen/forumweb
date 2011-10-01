@@ -51,6 +51,6 @@ new Notifier('{U_NOTIFICATIONS}', '{USER_LAST_NOTIFICATION}', {NOTIFICATIONS_JSO
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-1.6.4.min.js"><\/script>')</script>
 <script defer async src="templates/phpbbSilver/js/plugins.js"></script>
-<script defer async src="templates/phpbbSilver/js/script.js"></script>
+<script defer async src="templates/phpbbSilver/js/scripts.js"></script>
 </body>
 </html>

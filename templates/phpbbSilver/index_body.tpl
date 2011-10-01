@@ -25,36 +25,35 @@
 		<!-- END switch_user_logged_in -->
 </ul>
 
-<table class="forumline">
-	<thead>
-		<tr>
-			<th colspan="2">{L_FORUM}</th>
-			<th>{L_TOPICS}</th>	
-			<th>{L_POSTS}</th>
-			<th>{L_LASTPOST}</th>
-		</tr>
-	</thead>
-	<tbody>
+<section>
+	<h1 class="hidden">Lista forów</h1>
 		<!-- BEGIN catrow -->
-		<tr> 
-			<th colspan="5"><a href="{catrow.U_VIEWCAT}" class="cattitle">{catrow.CAT_DESC}</a></th>
-		</tr>
-		<!-- BEGIN forumrow -->
-		<tr {catrow.forumrow.ROW_ID}> 
-			<td><a href="{catrow.forumrow.U_FORUM_FOLDER}"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}"    alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}"></a></td>
+		<section class="category">
+			<h1><a href="{catrow.U_VIEWCAT}">{catrow.CAT_DESC}</a></h1>
+			<!-- BEGIN forumrow -->
+			<article class="forum" {catrow.forumrow.ROW_ID}>
+				<header>
+					<h2><a href="{catrow.forumrow.U_VIEWFORUM}" class="forumlink">{catrow.forumrow.FORUM_NAME}</a></h2>
+					<p>{catrow.forumrow.FORUM_DESC}</p>
+					<p>{catrow.forumrow.L_MODERATOR} {catrow.forumrow.MODERATORS}</p>
+				</header>
+				<dl>
+				<!--<td><a href="{catrow.forumrow.U_FORUM_FOLDER}"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}"    alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}"></a></td>
 			<td>
-				<p><a href="{catrow.forumrow.U_VIEWFORUM}" class="forumlink">{catrow.forumrow.FORUM_NAME}</a></p>
-				<p class="genmed">{catrow.forumrow.FORUM_DESC}</p>
-				<p class="gensmall">{catrow.forumrow.L_MODERATOR} {catrow.forumrow.MODERATORS}</p>
-			</td>	
-			<td>{catrow.forumrow.TOPICS}</td>
-			<td>{catrow.forumrow.POSTS}</td>
-			<td>{catrow.forumrow.LAST_POST}</td>
-		</tr>
-		<!-- END forumrow -->
+				ten obrazek to mo¿na waln¹æ w CSS jako t³o = niech kod bêdzie jak najbardziej uniwersalny (czyli wszystko, co siê da jako IR, ¿eby mo¿na by³o przez CSS ustawiæ dos³ownie wszystko)
+				-->
+					<dt>{L_TOPICS}</dt>
+					<dd>{catrow.forumrow.TOPICS}</dd>
+					<dt>{L_POSTS}</dt>
+					<dd>{catrow.forumrow.POSTS}</dd>
+					<dt>{L_LASTPOST}</dt>
+					<dd>{catrow.forumrow.LAST_POST}</dd>
+				</dl>
+			</article>
+			<!-- END forumrow -->
+		</section>
 		<!-- END catrow -->
-	</tbody>
-</table>
+</section>
 <div>
 	<b><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></b>
 	<!--<img src="templates/phpbbSilver/images/whosonline.gif" alt="{L_WHO_IS_ONLINE}" title="{L_WHO_IS_ONLINE}"> obrazek do CSS-->
@@ -88,43 +87,12 @@
 	</form>
 <!-- END switch_user_logged_out -->
 <!-- :target z CSS 3 nie starczy?-->
-<script>
-function initTabs(id)
-{
-	var as=document.getElementById(id).getElementsByTagName('a');
-	for(var i=0;i<as.length;i++)
-	{
-		var a=as[i];
-		a.onclick=function() {return false;};
-		a.onmousedown=function() {console.log('switch');return tab_switch(this); };
-	}
-}
-function tab_switch(a) {
-	a.unselectable = 'on';
-	var tab = a.parentNode;
-	tab.unselectable = 'on';
-	if (!/(^|\s)tab_active(\s|$)/.test(tab.className)) {
-		var tabs = tab.parentNode.getElementsByTagName('li');
-		for (var i = 0; i < tabs.length; ++i) {
-			if (/(^|\s)tab_active(\s|$)/.test(tabs[i].className)) {
-				tabs[i].className = (' ' + tabs[i].className + ' ').replace(/\s+tab_active\s+/g, ' ').replace(/\s{2,}/g, ' ');
-				document.getElementById(tabs[i].getElementsByTagName('a')[0].href.replace(/^[^#]*#/, '')).style.display = 'none';
-				break;
-			}
-		}
-		tab.className += ' tab_active';
-		document.getElementById(a.href.replace(/^[^#]*#/, '')).style.display = '';
-	}
-	return false;
-}
-</script>
 <ul class="tabs" id="tabs1">
-<li class="tab_active"><a href="#popular">{L_POPULAR}</a></li>
-<li><a href="#read" onclick="return false">{L_READ}</a></li>
-<li><a href="#helpful" onclick="return false">{L_HELPFUL}</a></li>
-<li><a href="#recommended" onclick="return false">{L_RECOMMENDED}</a></li>
+	<li class="tab_active"><a href="#popular">{L_POPULAR}</a></li>
+	<li><a href="#read" onclick="return false">{L_READ}</a></li>
+	<li><a href="#helpful" onclick="return false">{L_HELPFUL}</a></li>
+	<li><a href="#recommended" onclick="return false">{L_RECOMMENDED}</a></li>
 </ul>
-<script>initTabs('tabs1');</script>
 <div id="popular" class="tab_content">
 <ul>
 <!-- BEGIN popularrow -->

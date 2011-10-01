@@ -1,517 +1,412 @@
-<script type="text/javascript" src="md5.js"></script>
-<form action="{S_PROFILE_ACTION}" {S_FORM_ENCTYPE} method="post" onsubmit="fillClient(this)">
-<input type="hidden" name="screen" value="" />
-<input type="hidden" name="client" value="" />
-
-{ERROR_BOX}
-
-<table    >
-<tr> 
-<td class="nav"><a href="{U_INDEX}">{L_INDEX}</a></td>
-</tr>
-</table>
-
-<table     class="forumline">
-<tr id="info0"> 
-<th class="thhead" colspan="2" ><a href="#info0">{L_REGISTRATION_INFO}</a></th>
-</tr>
-<tr> 
-<td class="row2" colspan="2"><span class="gensmall">{L_ITEMS_REQUIRED}</span></td>
-</tr>
-<tr> 
-<td class="row1" >{L_USERNAME}: *</td>
-<td class="row2" > 
-<!-- BEGIN switch_username_change -->
-<input type="text" class="post"  name="username" size="25" maxlength="25" value="{USERNAME}" />
-<!-- END switch_username_change -->
-<!-- BEGIN switch_no_username_change -->
-<input type="text" class="post"  name="username" size="25" maxlength="25" value="{USERNAME}" readonly="readonly" /><br />
-<span class="gensmall">{L_USERNAME_CHANGE_EXPLAIN}</span>
-<!-- END switch_no_username_change -->
-</td>
-</tr>
-<tr> 
-<td class="row1">{L_EMAIL_ADDRESS}: *</td>
-<td class="row2"> 
-<input type="text" class="post"  name="email" size="25" maxlength="255" value="{EMAIL}" />
-</td>
-</tr>
-<!-- BEGIN switch_edit_profile -->
-<tr> 
-<td class="row1">{L_CURRENT_PASSWORD}: *<br />
-<span class="gensmall">{L_CONFIRM_PASSWORD_EXPLAIN}</span></td>
-<td class="row2"> 
-<input type="password" class="post"  name="cur_password" size="25" maxlength="100" value="{CUR_PASSWORD}" />
-</td>
-</tr>
-<!-- END switch_edit_profile -->
-<tr> 
-<td class="row1">{L_NEW_PASSWORD}: *<br />
-<span class="gensmall">{L_PASSWORD_IF_CHANGED}</span></td>
-<td class="row2"> 
-<input type="password" class="post"  name="new_password" size="25" maxlength="100" value="{NEW_PASSWORD}" />
-</td>
-</tr>
-<tr> 
-<td class="row1">{L_CONFIRM_PASSWORD}: * <br />
-<span class="gensmall">{L_PASSWORD_CONFIRM_IF_CHANGED}</span></td>
-<td class="row2"> 
-<input type="password" class="post"  name="password_confirm" size="25" maxlength="100" value="{PASSWORD_CONFIRM}" />
-</td>
-</tr>
-	<!-- Visual Confirmation -->
-	<!-- BEGIN switch_confirm -->
-	<tr>
-		<td class="row1" colspan="2" ><span class="gensmall">{L_CONFIRM_CODE_IMPAIRED}</span><br /><br />{CONFIRM_IMG}<br /><br /></td>
-	</tr>
-	<tr> 
-	  <td class="row1"><span class="gen">{L_CONFIRM_CODE}: * </span><br /><span class="gensmall">{L_CONFIRM_CODE_EXPLAIN}</span></td>
-	  <td class="row2"><div><big><strong >{L_CONFIRM_CODE_INFORMATION}</strong></big></div><input type="text" class="post"  name="confirm_code" size="6" maxlength="6" value="" /></td>
-	</tr>
-	<!-- END switch_confirm -->
-<tr> 
-<td class="catsides" colspan="2" >&nbsp;</td>
-</tr>
-<tr id="info1"> 
-<th class="thsides" colspan="2" ><a href="#info1">{L_PROFILE_INFO}</a></th>
-</tr>
-<tr> 
-<td class="row2" colspan="2"><span class="gensmall">{L_PROFILE_INFO_NOTICE}</span></td>
-</tr>
-<tr> 
-<td class="row1" >{L_ICQ_NUMBER}:</td>
-<td class="row2"> 
-<input type="text" name="icq" class="post"   size="10" maxlength="15" value="{ICQ}" />
-</td>
-</tr>
-<tr>
-<td class="row1">{L_GG}:</td>
-<td class="row2"> 
-<input type="text" class="post"   name="gg" size="20" maxlength="255" value="{GG}" />
-</td>
-</tr>
-<tr>
-<td class="row1">{L_TLEN}:</td>
-<td class="row2"> 
-<input type="text" class="post"   name="tlen" size="20" maxlength="255" value="{TLEN}" />
-</td>
-</tr>
-<tr>
-<td class="row1">{L_JABBER}:</td>
-<td class="row2"> 
-<input type="text" class="post"   name="jabber" size="20" maxlength="255" value="{JABBER}" />
-</td>
-</tr>
-<tr>
-<td class="row1">{L_SKYPE}:</td>
-<td class="row2"> 
-<input type="text" class="post"   name="skype" size="20" maxlength="255" value="{SKYPE}" />
-</td>
-</tr>
-<tr> 
-<td class="row1">{L_AIM}:</td>
-<td class="row2"> 
-<input type="text" class="post"   name="aim" size="20" maxlength="255" value="{AIM}" />
-</td>
-</tr>
-<td class="row1">{L_MESSENGER}:</td>
-<td class="row2"> 
-<input type="text" class="post"   name="msn" size="20" maxlength="255" value="{MSN}" />
-</td>
-</tr>
-<tr>
-<td class="row1">{L_YAHOO}:</td>
-<td class="row2"> 
-<input type="text" class="post"   name="yim" size="20" maxlength="255" value="{YIM}" />
-</td>
-</tr>
-<tr>
-<td class="row1">{L_FACEBOOK}:<div class="gensmall">{L_FACEBOOK_EXPLAIN}</div></td>
-<td class="row2"> 
-<input type="text" class="post"   name="facebook" size="20" maxlength="255" value="{FACEBOOK}" />
-</td>
-</tr>
-<tr> 
-<td class="row1">{L_WEBSITE}:</td>
-<td class="row2"> 
-<input type="text" class="post"   name="website" size="25" maxlength="255" value="{WEBSITE}" />
-</td>
-</tr>
-<tr> 
-<td class="row1">{L_LOCATION}:</td>
-<td class="row2"> 
-<input type="text" class="post"   name="location" size="25" maxlength="100" value="{LOCATION}" />
-</td>
-</tr>
-<tr> 
-<td class="row1">{L_OCCUPATION}:</td>
-<td class="row2"> 
-<input type="text" class="post"   name="occupation" size="25" maxlength="100" value="{OCCUPATION}" />
-</td>
-</tr>
-<tr> 
-<td class="row1">{L_INTERESTS}:</td>
-<td class="row2"> 
-<input type="text" class="post"   name="interests" size="35" maxlength="150" value="{INTERESTS}" />
-</td>
-</tr>
-<!-- Start add - Gender MOD -->
-<tr> 
-      <td class="row1">{L_GENDER}:</td> 
-      <td class="row2"> 
-      <input type="radio" id="label__gender__0" {LOCK_GENDER} name="gender" value="0" {GENDER_NO_SPECIFY_CHECKED}/> 
-      <label for="label__gender__0">{L_GENDER_NOT_SPECIFY}</label>&nbsp;&nbsp; 
-      <input type="radio" id="label__gender__1" name="gender" value="1" {GENDER_MALE_CHECKED}/> 
-      <label for="label__gender__1">{L_GENDER_MALE}</label>&nbsp;&nbsp; 
-      <input type="radio" id="label__gender__2" name="gender" value="2" {GENDER_FEMALE_CHECKED}/> 
-      <label for="label__gender__2">{L_GENDER_FEMALE}</label></td> 
-</tr>
-<!-- End add - Gender MOD -->
-<tr> 
-	<td class="row1">{L_DATE_OF_BIRTH}:</td>
-	<td class="row2">{BIRTH}</td>
-</tr>
-<tr> 
-<td class="row1">{L_SIGNATURE}:<br />
-<span class="gensmall">{L_SIGNATURE_EXPLAIN}<br />
-<br />
-{HTML_STATUS}<br />
-{BBCODE_STATUS}<br />
-{SMILIES_STATUS}</span></td>
-<td class="row2">
-<script type="text/javascript">
-<!--
-function maxlength(el, maxSize)
-{
-	if (!el.onblur) el.onblur = el.onclick = el.onmousedown = el.onmouseup = el.keypress = el.onkeydown = el.onkeyup = el.onmouseover = el.onmouseout = el.onfocus;
-	if (el.value.length < maxSize) el.maxlengthvalue = null;
-	else if (el.value.length == maxSize) el.maxlengthvalue = el.value;
-	else el.maxlengthvalue = el.value = (el.maxlengthvalue ? el.maxlengthvalue : el.value.substring(0, maxSize));
-}
-//-->
-</script>
-<textarea name="signature"  rows="6" cols="30" class="post" onfocus="maxlength(this, {MAX_SIG_CHARS})">{SIGNATURE}</textarea>
-</td>
-</tr>
-<tr> 
-<td class="catSides" colspan="2" >&nbsp;</td>
-</tr>
-<tr id="info2"> 
-<th class="thsides" colspan="2" ><a href="#info2">{L_PREFERENCES}</a></th>
-</tr>
-<tr> 
-<td class="row1" >{L_PUBLIC_VIEW_EMAIL}:</td>
-<td class="row2"> 
-<input type="radio" id="label__viewemail__1" name="viewemail" value="1" {VIEW_EMAIL_YES} />
-<label for="label__viewemail__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__viewemail__0" name="viewemail" value="0" {VIEW_EMAIL_NO} />
-<label for="label__viewemail__0">{L_NO}</label></td>
-</tr>
-<tr> 
-<td class="row1">{L_PUBLIC_VIEW_CLIENT}:</td>
-<td class="row2"> 
-<input type="radio" id="label__viewclient__1" name="viewclient" value="1" {VIEW_CLIENT_YES} />
-<label for="label__viewclient__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__viewclient__0" name="viewclient" value="0" {VIEW_CLIENT_NO} />
-<label for="label__viewclient__0">{L_NO}</label></td>
-</tr>
-<tr> 
-<td class="row1">{L_HIDE_USER}:</td>
-<td class="row2"> 
-<input type="radio" id="label__hideonline__1" name="hideonline" value="1" {HIDE_USER_YES} />
-<label for="label__hideonline__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__hideonline__0" name="hideonline" value="0" {HIDE_USER_NO} />
-<label for="label__hideonline__0">{L_NO}</label></td>
-</tr>
-<tr> 
-<td class="row1">{L_NOTIFY_ON_REPLY}:<br />
-<span class="gensmall">{L_NOTIFY_ON_REPLY_EXPLAIN}</span></td>
-<td class="row2"> 
-<input type="radio" id="label__notifyreply__1" name="notifyreply" value="1" {NOTIFY_REPLY_YES} />
-<label for="label__notifyreply__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__notifyreply__0" name="notifyreply" value="0" {NOTIFY_REPLY_NO} />
-<label for="label__notifyreply__0">{L_NO}</label></td>
-</tr>
-<tr> 
-<td class="row1">{L_NOTIFY_ON_PRIVMSG}:</td>
-<td class="row2"> 
-<input type="radio" id="label__notifypm__1" name="notifypm" value="1" {NOTIFY_PM_YES} />
-<label for="label__notifypm__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__notifypm__0" name="notifypm" value="0" {NOTIFY_PM_NO} />
-<label for="label__notifypm__0">{L_NO}</label></td>
-</tr>
-<tr> 
-<td class="row1">{L_POPUP_ON_PRIVMSG}:<br />
-<span class="gensmall">{L_POPUP_ON_PRIVMSG_EXPLAIN}</span></td>
-<td class="row2"> 
-<input type="radio" id="label__popup_pm__1" name="popup_pm" value="1" {POPUP_PM_YES} />
-<label for="label__popup_pm__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__popup_pm__0" name="popup_pm" value="0" {POPUP_PM_NO} />
-<label for="label__popup_pm__0">{L_NO}</label></td>
-</tr>
-<tr> 
-<td class="row1">{L_MAIL_ON_WATCHED_REPLY}:<br />
-<span class="gensmall">{L_MAIL_ON_WATCHED_REPLY_EXPLAIN}</span></td>
-<td class="row2"> 
-<input type="radio" id="label__notify_watch__1" name="notify_watch" value="1" {NOTIFY_WATCH_YES} />
-<label for="label__notify_watch__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__notify_watch__0" name="notify_watch" value="0" {NOTIFY_WATCH_NO} />
-<label for="label__popup_pm__0">{L_NO}</label></td>
-</tr>
-<tr> 
-<td class="row1">{L_NOTIFICATION_COUNTER}:</td>
-<td class="row2"> 
-<input type="radio" id="label__notification__1" name="notification" value="1" {NOTIFICATION_YES} />
-<label for="label__notification__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__notification__0" name="notification" value="0" {NOTIFICATION_NO} />
-<label for="label__notification__0">{L_NO}</label></td>
-</tr>
-<tr> 
-<td class="row1">{L_POSTING_REDIRECT}:</td>
-<td class="row2"> 
-<input type="radio" id="label__posting_redirect__0" name="posting_redirect" value="0" {POSTING_REDIRECT_0} />
-<label for="label__posting_redirect__0">{L_POSTING_REDIRECT_DEFAULT}</label><br /> 
-<input type="radio" id="label__posting_redirect__1" name="posting_redirect" value="1" {POSTING_REDIRECT_1} />
-<label for="label__posting_redirect__1">{L_POSTING_REDIRECT_POST}</label><br />
-<input type="radio" id="label__posting_redirect__2" name="posting_redirect" value="2" {POSTING_REDIRECT_2} />
-<label for="label__posting_redirect__2">{L_POSTING_REDIRECT_TOPIC_POST}</label><br />
-<input type="radio" id="label__posting_redirect__3" name="posting_redirect" value="3" {POSTING_REDIRECT_3} />
-<label for="label__posting_redirect__3">{L_POSTING_REDIRECT_TOPIC}</label><br />
-<input type="radio" id="label__posting_redirect__4" name="posting_redirect" value="4" {POSTING_REDIRECT_4} />
-<label for="label__posting_redirect__4">{L_POSTING_REDIRECT_FORUM}</label><br />
-<input type="radio" id="label__posting_redirect__5" name="posting_redirect" value="5" {POSTING_REDIRECT_5} />
-<label for="label__posting_redirect__5">{L_POSTING_REDIRECT_INDEX}</label>
-</tr>
-<tr> 
-<td class="row1">{L_HIDE_QUICK_REPLY}:</td>
-<td class="row2"> 
-<input type="radio" id="label__hide_quick_reply__1" name="hide_quick_reply" value="1" {HIDE_QUICK_REPLY_YES} />
-<label for="label__hide_quick_reply__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__hide_quick_reply__0" name="hide_quick_reply" value="0" {HIDE_QUICK_REPLY_NO} />
-<label for="label__hide_quick_reply__0">{L_NO}</label></td>
-</tr>
-<!-- BEGIN switch_report -->
-<tr> 
-	<td class="row1">{switch_report.L_NO_REPORT_POPUP}:</td>
-	<td class="row2"> 
-	<input type="radio" id="label__no_report_popup__0" name="no_report_popup" value="0" {switch_report.NO_REPORT_POPUP_YES} />
-	<label for="label__no_report_popup__0">{L_YES}</label>&nbsp;&nbsp; 
-	<input type="radio" id="label__no_report_popup__1" name="no_report_popup" value="1" {switch_report.NO_REPORT_POPUP_NO} />
-	<label for="label__no_report_popup__1">{L_NO}</label></td>
-</tr>
-<tr> 
-	<td class="row1">{switch_report.L_NO_REPORT_MAIL}:</td>
-	<td class="row2"> 
-	<input type="radio" id="label__no_report_mail__0" name="no_report_mail" value="0" {switch_report.NO_REPORT_MAIL_YES} />
-	<label for="label__no_report_mail__0">{L_YES}</label>&nbsp;&nbsp; 
-	<input type="radio" id="label__no_report_mail__1" name="no_report_mail" value="1" {switch_report.NO_REPORT_MAIL_NO} />
-	<label for="label__no_report_mail__1">{L_NO}</label></td>
-</tr>
-<!-- END switch_report -->
-<tr> 
-<td class="row1">{L_ALWAYS_ADD_SIGNATURE}:</td>
-<td class="row2"> 
-<input type="radio" id="label__attachsig__1" name="attachsig" value="1" {ALWAYS_ADD_SIGNATURE_YES} />
-<label for="label__attachsig__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__attachsig__0" name="attachsig" value="0" {ALWAYS_ADD_SIGNATURE_NO} />
-<label for="label__attachsig__0">{L_NO}</label></td>
-</tr>
-<tr> 
-	<td class="row1">{L_SHOW_MY_TOPICS}:</td>
-	<td class="row2"> 
-	<input type="radio" id="label__mytopics__1" name="mytopics" value="1" {SHOW_MY_TOPICS_YES} />
-	<label for="label__mytopics__1">{L_YES}</label>&nbsp;&nbsp; 
-	<input type="radio" id="label__mytopics__0" name="mytopics" value="0" {SHOW_MY_TOPICS_NO} />
-	<label for="label__mytopics__0">{L_NO}</label></td>
-</tr>
-<tr> 
-	  <td class="row1">{L_CHANGE_GG_LINK}:</td>
-	  <td class="row2"> 
-		<input type="radio" id="label__gg_mod__1" name="gg_mod" value="1" {GG_MOD_YES} />
-		<label for="label__gg_mod__1">{L_BRAMKA_GG}</label>&nbsp;&nbsp; 
-		<input type="radio" id="label__gg_mod__0" name="gg_mod" value="0" {GG_MOD_NO} />
-		<label for="label__gg_mod__0">{L_OKNO_GG}</label></td>
-	</tr>
-<tr> 
-<td class="row1">{L_ALWAYS_ALLOW_BBCODE}:</td>
-<td class="row2"> 
-<input type="radio" id="label__allowbbcode__1" name="allowbbcode" value="1" {ALWAYS_ALLOW_BBCODE_YES} />
-<label for="label__allowbbcode__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__allowbbcode__0" name="allowbbcode" value="0" {ALWAYS_ALLOW_BBCODE_NO} />
-<label for="label__allowbbcode__0">{L_NO}</label></td>
-</tr>
-<tr> 
-<td class="row1">{L_ALWAYS_ALLOW_HTML}:</td>
-<td class="row2"> 
-<input type="radio" id="label__allowhtml__1" name="allowhtml" value="1" {ALWAYS_ALLOW_HTML_YES} />
-<label for="label__allowhtml__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__allowhtml__0" name="allowhtml" value="0" {ALWAYS_ALLOW_HTML_NO} />
-<label for="label__allowhtml__0">{L_NO}</label></td>
-</tr>
-<tr> 
-<td class="row1">{L_ALWAYS_ALLOW_SMILIES}:</td>
-<td class="row2"> 
-<input type="radio" id="label__allowsmilies__1" name="allowsmilies" value="1" {ALWAYS_ALLOW_SMILIES_YES} />
-<label for="label__allowsmilies__1">{L_YES}</label>&nbsp;&nbsp; 
-<input type="radio" id="label__allowsmilies__0" name="allowsmilies" value="0" {ALWAYS_ALLOW_SMILIES_NO} />
-<label for="label__allowsmilies__0">{L_NO}</label></td>
-</tr>
-<tr> 
-<td class="row1">{L_BOARD_LANGUAGE}:</td>
-<td class="row2"><span class="gensmall">{LANGUAGE_SELECT}</span></td>
-</tr>
-<tr> 
-<td class="row1">{L_BOARD_STYLE}:</td>
-<td class="row2"><span class="gensmall">{STYLE_SELECT}</span></td>
-</tr>
-<tr> 
-<td class="row1">{L_TIMEZONE}:</td>
-<td class="row2"><span class="gensmall">{TIMEZONE_SELECT}<br />
-<input type="checkbox" id="label__dst" name="dst" value="1" {S_DST} />&nbsp;<label for="label__dst">{L_DST}</label><br />
-<input type="checkbox" id="label__autoswitch_dst" name="autoswitch_dst" value="1" {S_AUTOSWITCH_DST} />&nbsp;<label for="label__autoswitch_dst">{L_AUTOSWITCH_DST}</label></span></td>
-</tr>
-<tr> 
-<td class="row1">{L_DATE_FORMAT}:<br />
-<span class="gensmall">{L_DATE_FORMAT_EXPLAIN}</span></td>
-<td class="row2"> 
-<input type="text" name="dateformat" value="{DATE_FORMAT}" maxlength="14" class="post" />
-</td>
-</tr>
-<!-- BEGIN switch_avatar_block -->
-<tr> 
-<td class="catsides" colspan="2" >&nbsp;</td>
-</tr>
-<tr id="info3"> 
-<th class="thsides" colspan="2" ><a href="#info3">{L_AVATAR_PANEL}</a></th>
-</tr>
-<tr> 
-<td class="row1" colspan="2"> 
-<table     >
-<tr> 
-<td  class="gensmall">{L_AVATAR_EXPLAIN}</td>
-<td  class="gensmall">{L_CURRENT_IMAGE}<br />
-{AVATAR}<br />
-<input type="checkbox" id="label__avatardel" name="avatardel" />
-&nbsp;<label for="label__avatardel">{L_DELETE_AVATAR}</label></td>
-</tr>
-</table>
-</td>
-</tr>
-<!-- BEGIN switch_avatar_local_upload -->
-<tr> 
-<td class="row1">{L_UPLOAD_AVATAR_FILE}:</td>
-<td class="row2"> 
-<input type="hidden" name="MAX_FILE_SIZE" value="{AVATAR_SIZE}" />
-<input type="file" name="avatar" class="post"  />
-</td>
-</tr>
-<!-- END switch_avatar_local_upload -->
-<!-- BEGIN switch_avatar_remote_upload -->
-<tr> 
-<td class="row1">{L_UPLOAD_AVATAR_URL}:<br />
-<span class="gensmall">{L_UPLOAD_AVATAR_URL_EXPLAIN}</span></td>
-<td class="row2"> 
-<input type="text" name="avatarurl" size="40" class="post"  />
-</td>
-</tr>
-<!-- END switch_avatar_remote_upload -->
-<!-- BEGIN switch_avatar_remote_link -->
-<tr> 
-<td class="row1">{L_LINK_REMOTE_AVATAR}:<br />
-<span class="gensmall">{L_LINK_REMOTE_AVATAR_EXPLAIN}</span></td>
-<td class="row2"> 
-<input type="text" name="avatarremoteurl" size="40" class="post"  />
-</td>
-</tr>
-<!-- END switch_avatar_remote_link -->
-<!-- BEGIN switch_avatar_local_gallery -->
-<tr> 
-<td class="row1">{L_AVATAR_GALLERY}:</td>
-<td class="row2"> 
-<input type="submit" name="avatargallery" value="{L_SHOW_GALLERY}" class="liteoption" />
-</td>
-</tr>
-<!-- END switch_avatar_local_gallery -->
-<!-- END switch_avatar_block -->
-<tr class="tfoot"> 
-<td class="catbottom" colspan="2"  >{S_HIDDEN_FIELDS} 
-<input type="submit" name="submit" value="{L_SUBMIT}" class="mainoption" />
-&nbsp;&nbsp; 
-<input type="reset" value="{L_RESET}" name="reset" class="liteoption" />
-</td>
-</tr>
-</table>
+<script src="md5.js"></script>
+<p class="breadcrumb"><a href="{U_INDEX}">{L_INDEX}</a></p>
+<form action="{S_PROFILE_ACTION}" {S_FORM_ENCTYPE} method="post" id="profile_addform" class="accordion">
+	{ERROR_BOX}
+	<fieldset  id="info0">
+		<legend><a href="#info0">{L_REGISTRATION_INFO}</a></legend>
+		<div>
+			<input type="hidden" name="screen" value="">
+			<input type="hidden" name="client" value="">
+			<p>{L_ITEMS_REQUIRED}</p>
+			<dt><label for="profile_username">{L_USERNAME}:</label> *</dt>
+			<dd> 
+				<!-- BEGIN switch_username_change -->
+				<input type="text"   name="username" size="25" maxlength="25" value="{USERNAME}" id="profile_username" required>
+				<!-- END switch_username_change -->
+				<!-- BEGIN switch_no_username_change -->
+				<input type="text"   name="username" size="25" maxlength="25" value="{USERNAME}" readonly="readonly" id="profile_username">
+				<p class="explain">{L_USERNAME_CHANGE_EXPLAIN}</p>
+				<!-- END switch_no_username_change -->
+			</dd> 
+			<dt><label for="profile_email">{L_EMAIL_ADDRESS}:</label> *</dt>
+			<dd> 
+				<input type="email"   name="email" size="25" maxlength="255" value="{EMAIL}" id="profile_email" required>
+			</dd>
+			<!-- BEGIN switch_edit_profile --> 
+			<dt>
+				<label for="profile_currpass">{L_CURRENT_PASSWORD}:</label> *
+				<p class="explain">{L_CONFIRM_PASSWORD_EXPLAIN}</p>
+			</dt>
+			<dd> 
+				<input type="password"   name="cur_password" size="25" maxlength="100" value="{CUR_PASSWORD}" id="profile_currpass" required>
+			</dd>
+			<!-- END switch_edit_profile --> 
+			<dt>
+				<label for="profile_pass">{L_NEW_PASSWORD}:</label> *
+				<p>{L_PASSWORD_IF_CHANGED}</p>
+			</dt>
+			<dd> 
+				<input type="password"   name="new_password" size="25" maxlength="100" value="{NEW_PASSWORD}" id="profile_pass" required>
+			</dd> 
+			<dt>
+				<label for="profile_pass2">{L_CONFIRM_PASSWORD}:</label> *
+				<p>{L_PASSWORD_CONFIRM_IF_CHANGED}</p>
+			</dt>
+			<dd> 
+				<input type="password"   name="password_confirm" size="25" maxlength="100" value="{PASSWORD_CONFIRM}" id="profile_pass2" required>
+			</dd>
+			<!-- Visual Confirmation -->
+			<!-- BEGIN switch_confirm -->
+			<dt>
+				<p>{L_CONFIRM_CODE_IMPAIRED}</p><p>{CONFIRM_IMG}</p>
+				<p><label for="profile_code">{L_CONFIRM_CODE}:</label> *</p>
+				<p class="explain">{L_CONFIRM_CODE_EXPLAIN}</p>
+			</dt>
+			<dd>
+				<b>{L_CONFIRM_CODE_INFORMATION}</b>
+				<input type="text"   name="confirm_code" size="6" maxlength="6" value="" id="profile_code" required>
+			</dd>
+			<!-- END switch_confirm -->
+		</dl>
+		</div>
+	</fieldset>
+	<fieldset id="info1"> 
+		<legend><a href="#info1">{L_PROFILE_INFO}</a></legend>
+		<div>
+			<p>{L_PROFILE_INFO_NOTICE}</p>
+			<dl>
+				<dt><label for="profile_icq">{L_ICQ_NUMBER}:</label></dt>
+				<dd> 
+					<input type="text" name="icq"    size="10" maxlength="15" value="{ICQ}" id="profile_icq">
+				</dd>
+				<dt><label for="profile_gg">{L_GG}:</label></dt>
+				<dd> 
+					<input type="text"    name="gg" size="20" maxlength="255" value="{GG}" id="profile_gg">
+				</dd>
+				<dt><label for="profile_tlen">{L_TLEN}:</label></dt>
+				<dd> 
+					<input type="text"    name="tlen" size="20" maxlength="255" value="{TLEN}" id="profile_tlen">
+				</dd>
+				<dt><label for="profile_jabber">{L_JABBER}:</label></dt>
+				<dd> 
+					<input type="text"    name="jabber" size="20" maxlength="255" value="{JABBER}" id="profile_jabber">
+				</dd>
+				<dt><label for="profile_skype">{L_SKYPE}:</label></dt>
+				<dd> 
+					<input type="text"    name="skype" size="20" maxlength="255" value="{SKYPE}" id="profile_skype">
+				</dd>
+				<dt><label for="profile_aim">{L_AIM}:</label></dt>
+				<dd> 
+					<input type="text"    name="aim" size="20" maxlength="255" value="{AIM}" id="profile_aim">
+				</dd>
+				<dt><label for="profile_msn">{L_MESSENGER}:</label></dt>
+				<dd>
+					<input type="text"    name="msn" size="20" maxlength="255" value="{MSN}" id="profile_msn">
+				</dd>
+				<dt><label for="profile_yahoo">{L_YAHOO}:</label></dt>
+				<dd> 
+					<input type="text"    name="yim" size="20" maxlength="255" value="{YIM}" id="profile_yahoo">
+				</dd>
+				<dt>
+					<label for="profile_face">{L_FACEBOOK}:</label>
+					<p class="explain">{L_FACEBOOK_EXPLAIN}</p>
+				</dt>
+				<dd> 
+					<input type="text"    name="facebook" size="20" maxlength="255" value="{FACEBOOK}" id="profile_face">
+				</dd>
+				<dt><label for="profile_site">{L_WEBSITE}:</label></dt>
+				<dd> 
+					<input type="text"    name="website" size="25" maxlength="255" value="{WEBSITE}" id="profile_site">
+				</dd> 
+				<dt><label for="profile_location">{L_LOCATION}:</label></dt>
+				<dd> 
+					<input type="text"    name="location" size="25" maxlength="100" value="{LOCATION}" id="profile_location">
+				</dd>
+				<dt><label for="profile_occup">{L_OCCUPATION}:</label></dt>
+				<dd> 
+					<input type="text"    name="occupation" size="25" maxlength="100" value="{OCCUPATION}" id="profile_occup">
+				</dd> 
+				<dt><label for="profile_interests">{L_INTERESTS}:</label></dt>
+				<dd> 
+					<input type="text"    name="interests" size="35" maxlength="150" value="{INTERESTS}" id="profile_interests">
+				</dd>
+				<!-- Start add - Gender MOD -->
+				<dt>{L_GENDER}:</dt> 
+				<dd>
+					<ul>
+						<li><label><input type="radio" {LOCK_GENDER} name="gender" value="0" {GENDER_NO_SPECIFY_CHECKED}> {L_GENDER_NOT_SPECIFY}</label></li>
+						<li><label><input type="radio" name="gender" value="1" {GENDER_MALE_CHECKED}> {L_GENDER_MALE}</label></li> 
+						<li><label><input type="radio" name="gender" value="2" {GENDER_FEMALE_CHECKED}> {L_GENDER_FEMALE}</label></li> 
+					</ul>
+				</dd>
+				<!-- End add - Gender MOD -->
+				<dt>{L_DATE_OF_BIRTH}:</dt>
+				<dd>{BIRTH}</dd>
+				<dt>
+					<label for="profile_sign">{L_SIGNATURE}:</label>
+					<p class="explain">{L_SIGNATURE_EXPLAIN}<p>
+					<ul>
+						<li>{HTML_STATUS}</li>
+						<li>{BBCODE_STATUS}</li>
+						<li>{SMILIES_STATUS}</li>
+					</ul>
+				</dt>
+				<dd>
+					<textarea name="signature"  rows="6" cols="30" class="maxlength" maxlength="{MAX_SIG_CHARS}" id="profile_sign">{SIGNATURE}</textarea>
+				</dd>
+			</dl>
+		</div>
+	</fieldset>
+	<fieldset id="info2"> 
+		<legend><a href="#info2">{L_PREFERENCES}</a></legend>
+		<div>
+			<dl>
+				<dt>{L_PUBLIC_VIEW_EMAIL}:</dt>
+				<dd> 
+					<ul>
+						<li><label><input type="radio" name="viewemail" value="1" {VIEW_EMAIL_YES}> {L_YES}</label></li> 
+						<li><label><input type="radio" name="viewemail" value="0" {VIEW_EMAIL_NO}> {L_NO}</label></li>
+					</ul>
+				</dd>
+				<dt>{L_PUBLIC_VIEW_CLIENT}:</dt>	
+				<dd> 
+					<ul>
+						<li><label><input type="radio" name="viewclient" value="1" {VIEW_CLIENT_YES}> {L_YES}</label></li>
+						<li><label><input type="radio" name="viewclient" value="0" {VIEW_CLIENT_NO}> {L_NO}</label></li>
+					</ul>
+				</dd>
+				<dt>{L_HIDE_USER}:</dt>
+				<dd>
+					<ul>
+						<li><label><input type="radio" name="hideonline" value="1" {HIDE_USER_YES}> {L_YES}</label></li> 
+						<li><label><input type="radio" name="hideonline" value="0" {HIDE_USER_NO}> {L_NO}</label></li>
+					</ul>
+				</dd>
+				<dt>
+					<p>{L_NOTIFY_ON_REPLY}:</p>
+					<p class="explain">{L_NOTIFY_ON_REPLY_EXPLAIN}</p>
+				</dt>
+				<dd>
+					<ul>
+						<li><label><input type="radio" name="notifyreply" value="1" {NOTIFY_REPLY_YES}> {L_YES}</label></li> 
+						<li><label><input type="radio" name="notifyreply" value="0" {NOTIFY_REPLY_NO}> {L_NO}</label></li>
+					</ul>
+				</dd>
+				<dt>{L_NOTIFY_ON_PRIVMSG}:</dt>
+				<dd> 
+					<ul>
+						<li><label><input type="radio" name="notifypm" value="1" {NOTIFY_PM_YES}> {L_YES}</label></li> 
+						<li><label><input type="radio" name="notifypm" value="0" {NOTIFY_PM_NO}> {L_NO}</label></li>
+					</ul>
+				</dd>
+				<dt>
+					<p>{L_POPUP_ON_PRIVMSG}:</p>
+					<p class="explain">{L_POPUP_ON_PRIVMSG_EXPLAIN}</p>
+				</dt>
+				<dd> 
+					<ul>
+						<li><label><input type="radio" name="popup_pm" value="1" {POPUP_PM_YES}> {L_YES}</label></li> 
+						<li><label><input type="radio" name="popup_pm" value="0" {POPUP_PM_NO}> {L_NO}</label></li>
+					</ul>
+				</dd>
+				<dt>
+					<p>{L_MAIL_ON_WATCHED_REPLY}:</p>
+					<p class="explain">{L_MAIL_ON_WATCHED_REPLY_EXPLAIN}</span>
+				</dt>
+				<dd> 
+					<ul>
+						<li><label><input type="radio" name="notify_watch" value="1" {NOTIFY_WATCH_YES}> {L_YES}</label></li> 
+						<li><label><input type="radio" name="notify_watch" value="0" {NOTIFY_WATCH_NO}> {L_NO}</label></li>
+					</ul>
+				</dd> 
+			<dt>{L_NOTIFICATION_COUNTER}:</dt>
+			<dd>
+				<ul>
+					<li><label><input type="radio" name="notification" value="1" {NOTIFICATION_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="notification" value="0" {NOTIFICATION_NO}> {L_NO}</label></li>
+				</ul>
+			</dd> 
+			<dt>{L_POSTING_REDIRECT}:</dt>
+			<dd>
+				<ul>
+					<li><label><input type="radio" name="posting_redirect" value="0" {POSTING_REDIRECT_0}> {L_POSTING_REDIRECT_DEFAULT}</label></li> 
+					<li><label><input type="radio" name="posting_redirect" value="1" {POSTING_REDIRECT_1}> {L_POSTING_REDIRECT_POST}</label></li>
+					<li><label><input type="radio" name="posting_redirect" value="2" {POSTING_REDIRECT_2}> {L_POSTING_REDIRECT_TOPIC_POST}</label></li>
+					<li><label><input type="radio" name="posting_redirect" value="3" {POSTING_REDIRECT_3}>{L_POSTING_REDIRECT_TOPIC}</label></li>
+					<li><label><input type="radio" name="posting_redirect" value="4" {POSTING_REDIRECT_4}> {L_POSTING_REDIRECT_FORUM}</label></li>
+					<li><label><input type="radio" id="label__posting_redirect__5" name="posting_redirect" value="5" {POSTING_REDIRECT_5}> {L_POSTING_REDIRECT_INDEX}</label></li>
+				</ul>
+			</dd> 
+			<dt>{L_HIDE_QUICK_REPLY}:</dt>
+			<dd>
+				<ul>
+					<li><label><input type="radio" name="hide_quick_reply" value="1" {HIDE_QUICK_REPLY_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="hide_quick_reply" value="0" {HIDE_QUICK_REPLY_NO}> {L_NO}</label></li>
+				</ul>
+			</dd>
+			<!-- BEGIN switch_report -->
+			<dt>{switch_report.L_NO_REPORT_POPUP}:</dt>
+			<dd> 
+				<ul>
+					<li><label><input type="radio" name="no_report_popup" value="0" {switch_report.NO_REPORT_POPUP_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="no_report_popup" value="1" {switch_report.NO_REPORT_POPUP_NO}> {L_NO}</label></li>
+				</ul>
+			</dd>
+			<dt>{switch_report.L_NO_REPORT_MAIL}:</dt>
+			<dd>
+				<ul>
+					<li><label><input type="radio" name="no_report_mail" value="0" {switch_report.NO_REPORT_MAIL_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="no_report_mail" value="1" {switch_report.NO_REPORT_MAIL_NO}> {L_NO}</label></li>
+				</ul>
+			</dd>
+			<!-- END switch_report -->
+			<dt>{L_ALWAYS_ADD_SIGNATURE}:</dt>
+			<dd>
+				<ul>
+					<li><label><input type="radio" name="attachsig" value="1" {ALWAYS_ADD_SIGNATURE_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="attachsig" value="0" {ALWAYS_ADD_SIGNATURE_NO}> {L_NO}</label></li>
+				</ul>
+			</dd>
+			<dt>{L_SHOW_MY_TOPICS}:</td>
+			<dd>
+				<ul>
+					<li><label><input type="radio" name="mytopics" value="1" {SHOW_MY_TOPICS_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="mytopics" value="0" {SHOW_MY_TOPICS_NO}> {L_NO}</label></li>
+				</ul>
+			</dd>
+			<dt>{L_CHANGE_GG_LINK}:</dt>
+			<dd>
+				<ul>
+					<li><label><input type="radio" name="gg_mod" value="1" {GG_MOD_YES}> {L_BRAMKA_GG}</label></li> 
+					<li><label><input type="radio" name="gg_mod" value="0" {GG_MOD_NO}> {L_OKNO_GG}</label></li>
+				</ul>
+			</dd>
+			<dt>{L_ALWAYS_ALLOW_BBCODE}:</dt>
+			<dd>
+				<ul>
+					<li><label><input type="radio" name="allowbbcode" value="1" {ALWAYS_ALLOW_BBCODE_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="allowbbcode" value="0" {ALWAYS_ALLOW_BBCODE_NO}> {L_NO}</label></li>
+				</ul>
+			</dd> 
+			<dt>{L_ALWAYS_ALLOW_HTML}:</dt>
+			<dd> 
+				<ul>
+					<li><label><input type="radio" name="allowhtml" value="1" {ALWAYS_ALLOW_HTML_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="allowhtml" value="0" {ALWAYS_ALLOW_HTML_NO}> {L_NO}</label></li>
+				</ul>
+			</dd>
+			<dt>{L_ALWAYS_ALLOW_SMILIES}:</dt>
+			<dd>
+				<ul>
+					<li><label><input type="radio" name="allowsmilies" value="1" {ALWAYS_ALLOW_SMILIES_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" id="label__allowsmilies__0" name="allowsmilies" value="0" {ALWAYS_ALLOW_SMILIES_NO}> {L_NO}</label></li>
+				</ul>
+			</dd>
+			<dt>{L_BOARD_LANGUAGE}:</dt>
+			<dd>{LANGUAGE_SELECT}</dd>
+			<dt>{L_BOARD_STYLE}:</dt>
+			<dd>{STYLE_SELECT}</dd>
+			<dt>{L_TIMEZONE}:</dt>
+			<dd>
+				<ul>
+					<li>{TIMEZONE_SELECT}</li>
+					<li><label><input type="checkbox" name="dst" value="1" {S_DST}> {L_DST}</label></li>
+					<li><label><input type="checkbox" name="autoswitch_dst" value="1" {S_AUTOSWITCH_DST}> {L_AUTOSWITCH_DST}</label></li>
+				</ul>
+			</dd> 
+			<dt>
+				<label for="profile_datef">{L_DATE_FORMAT}:</label>
+				<p class="explain">{L_DATE_FORMAT_EXPLAIN}</p>
+			</dt>
+			<dd>
+				<input type="text" name="dateformat" value="{DATE_FORMAT}" maxlength="14" id="profile_datef">
+			</dd>
+		</div>
+	</fieldset>
+	<!-- BEGIN switch_avatar_block -->
+	<fieldset id="info3">		
+		<legend><a href="#info3">{L_AVATAR_PANEL}</a></legend>
+		<div>
+			<p class="explain">{L_AVATAR_EXPLAIN}</p>
+			<figure class="right">
+				{AVATAR}
+				<figcaption>
+					<p>{L_CURRENT_IMAGE}</p>
+					<label><input type="checkbox" id="label__avatardel" name="avatardel"> {L_DELETE_AVATAR}</label>
+				</figcaption>
+			</figure>
+			<dl>
+				<!-- BEGIN switch_avatar_local_upload -->
+				<dt><label for="profile_avatarl">{L_UPLOAD_AVATAR_FILE}:</label></dt>
+				<dd> 
+					<input type="hidden" name="MAX_FILE_SIZE" value="{AVATAR_SIZE}">
+					<input type="file" name="avatar" id="profile_avatarl">
+				</dd>
+				<!-- END switch_avatar_local_upload -->
+				<!-- BEGIN switch_avatar_remote_upload --> 
+				<dt>
+					<label for="profile_avatarr">{L_UPLOAD_AVATAR_URL}:</label>
+					<p class="explain">{L_UPLOAD_AVATAR_URL_EXPLAIN}</p>
+				</dt>
+				<dd> 
+					<input type="url" name="avatarurl" size="40" id="profile_avatarr">
+				</dd>
+				<!-- END switch_avatar_remote_upload -->
+				<!-- BEGIN switch_avatar_remote_link -->
+				<dt>
+					<label for="profile_avataruri">{L_LINK_REMOTE_AVATAR}:</label>
+					<p class="explain">{L_LINK_REMOTE_AVATAR_EXPLAIN}</p>
+				</dt>
+				<dd> 
+					<input type="url" name="avatarremoteurl" size="40" id="profile_avataruri">
+				</dd>
+				<!-- END switch_avatar_remote_link -->
+				<!-- BEGIN switch_avatar_local_gallery -->
+				<dt><label for="profile_avatargal">{L_AVATAR_GALLERY}:</label></dt>
+				<dd> 
+					<button type="submit" name="avatargallery" value="1">{L_SHOW_GALLERY}</button>
+				</dd>
+				<!-- END switch_avatar_local_gallery -->
+			</dl>
+		</div>
+	</fieldset>
+	<!-- END switch_avatar_block -->
+	<div> 
+		{S_HIDDEN_FIELDS} 
+		<button type="submit" name="submit" value="1">{L_SUBMIT}</button>
+		<!--<input type="reset" value="{L_RESET}" name="reset" class="liteoption" />-->
+	</div>
 </form>
-<br />
-
 <!-- BEGIN switch_user_logged_in -->
-<form method="post" name="post" action="{U_BLOCK_USER}">
-<table     class="forumline">
-<tr id="info4">
-	<th class="thHead"  colspan="2"><a href="#info4">{BLOCK_USERS}</a></th>
-</tr>
-<tr>
-	<td class="row1" ><span class="gen">{L_BLOCK_USERS_LIST}:</span></td>
-	<td class="row2" ><span class="gen"><a href = "{U_BLOCK_USERS_LIST}" onclick="javascript:window.open('{U_BLOCK_USERS_LIST}', '_phpbbsearch', 'HEIGHT=250,resizable=yes,WIDTH=600');return false;" class="mainmenu">{L_BLOCK_USERS_LIST}</a></span></td>
-</tr>
-<tr>
-	<td class="row1"> <span class="gen">{L_NICK_BLOCK_USER}:</span> * </td>
-	<td class="row2"><input type="text" class="post" name="username" maxlength="50" size="20" />&nbsp;&nbsp;&nbsp;<input type="submit" name="usersubmit" value="{L_FIND_USER}" class="liteoption" onClick="window.open('{U_SEARCH_USER}', '_phpbbsearch', 'HEIGHT=250,resizable=yes,WIDTH=400');return false;" /></td>
-</tr>
-<tr>
-	<td class="row1"> <span class="gen">{L_BLOCK_TYPE}:</span> * </td>
-	<td class="row2">
-		<input type="checkbox" id="label__block__post" name="block[]" value="{BLOCK_POST}" /> <label for="label__block__post">{L_BLOCK_POSTS}</label><br />
-		<input type="checkbox" id="label__block__pm" name="block[]" value="{BLOCK_PM}" onclick="document.getElementById('block_pm').style.display = this.checked ? '' : 'none'" /> <label for="label__block__pm">{L_BLOCK_PMS}</label>
-	</td>
-</tr>
-<tr id="block_pm">
-	<td class="row1" v> <span class="gen">{L_BLOCK_DESCRIPTION}:</span><br /> <span class="gensmall">{L_BLOCK_DESCRIPTION_INFO}</span> </td>
-	<td class="row2"> <textarea name="blockdesc"   rows="6" cols="30" class="post"></textarea> </td>
-</tr>
-<tr>
-	<td class="catBottom" colspan="2"  ><input type="submit" name="submituser" value="{L_BLOCK}" class="mainoption" />&nbsp;&nbsp;<input type="reset" value="{L_RESET}" name="reset" class="liteoption" /></td>
-</tr>
-</table>
+<form method="post" action="{U_BLOCK_USER}" class="accordion"><!-- name="post"-->
+	<fieldset id="info4">
+		<legend><a href="#info4">{BLOCK_USERS}</a></legend>
+		<div>
+			<dl>
+				<dt>{L_BLOCK_USERS_LIST}:</dt>
+				<dd>
+					<a href="{U_BLOCK_USERS_LIST}" class="popup" data-height="250" data-width="600">{L_BLOCK_USERS_LIST}</a>
+				</dd>
+				<dt><label for="profile_blocknick">{L_NICK_BLOCK_USER}:</label> *</dt>
+				<dd>
+					<input type="text"  name="username" maxlength="50" size="20">
+					<button type="submit" name="usersubmit" value="1" class="popup" data-url="{U_SEARCH_USER}" data-width="400">{L_FIND_USER}</button>
+				</dd>
+				<dt><label for="profile_blocktype">{L_BLOCK_TYPE}:</label> * </dt>
+				<dd>
+					<ul>
+						<li><label><input type="checkbox" name="block[]" value="{BLOCK_POST}"> {L_BLOCK_POSTS}</label><li>
+						<li><label><input type="checkbox" name="block[]" value="{BLOCK_PM}" onclick="document.getElementById('block_pm').style.display = this.checked ? '' : 'none'" class="switcher" data-target="#block_pm"> {L_BLOCK_PMS}</label></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl id="block_pm" class="switch">
+				<dt>
+					<label for="profile_blockpm">{L_BLOCK_DESCRIPTION}:</label>
+					<p class="explain">{L_BLOCK_DESCRIPTION_INFO}</p>
+				</dt>
+				<dd>
+					<textarea name="blockdesc" rows="6" cols="30" id="profile_blockpm"></textarea>
+				</dd>
+			</dl>
+		</div>
+	</fieldset>
+	<div>
+		<button type="submit" name="submituser" value="1">{L_BLOCK}</button>
+		<!--<input type="reset" value="{L_RESET}" name="reset" class="liteoption">-->
+	</div>
 </form>
-<script type="text/javascript">
-<!--
-document.getElementById('block_pm').style.display = 'none';
-//-->
-</script>
 <!-- END switch_user_logged_in -->
 <!-- BEGIN switch_add_profile -->
-<script type="text/javascript">
-<!--
-for (var i = 0, item; (item = document.getElementById('info' + i)); ++i) {
-	item.getElementsByTagName('a')[0].onclick = function() {
-		var currentNode = this.parentNode;
-		while (!/^info\d+$/.test(currentNode.id)) {
-			currentNode = currentNode.parentNode;
-		} 
-		for (var i = 0, el; (el = document.getElementById('info' + i)); ++i) {
-			var node = el.nextSibling;
-			while (node && !/^info\d+$/.test(node.id) && !/(^|\s)tfoot(\s|$)/.test(node.className)) {
-				if (!/^#/.test(node.nodeName)) node.style.display = el == currentNode ? '' : 'none'; 
-				node = node.nextSibling;
-			}
-		}
-		return false;
-	};
-	if (i > 0) {
-		var node = item.nextSibling;
-		while (node && !/^info\d+$/.test(node.id) && !/(^|\s)tfoot(\s|$)/.test(node.className)) {
-			if (!/^#/.test(node.nodeName)) node.style.display = 'none'; 
-			node = node.nextSibling;
-		}
-	}
-}
-//-->
-</script>
-<!-- END switch_add_profile -->
-
-<table    >
-<tr> 
-<td class="nav"><a href="{U_INDEX}">{L_INDEX}</a></td>
-</tr>
-</table>
+<!-- END switch_add_profile --> 
+<p class="breadcrumb"><a href="{U_INDEX}">{L_INDEX}</a></p>
