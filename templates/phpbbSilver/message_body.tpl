@@ -1,5 +1,5 @@
 
-<div class="message_body">
+<div class="message_body-tpl">
 	<nav class="breadcrumb">
 		<ul>
 			<li><a href="{U_INDEX}">{L_INDEX}</a></li>
