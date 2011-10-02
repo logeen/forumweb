@@ -88,10 +88,15 @@ function checkForm() {
 
 {POST_PREVIEW_BOX}
 
-<p class="nav"><a href="{U_INDEX}">{L_INDEX}</a> 
-<!-- BEGIN switch_not_privmsg -->
-&raquo; <a href="{U_VIEW_FORUM}">{FORUM_NAME}</a>
-<!-- END switch_not_privmsg -->
+<nav class="breadcrumb">
+	<ul>
+		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+		<!-- BEGIN switch_not_privmsg -->
+		<li><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></li>
+		<!-- END switch_not_privmsg -->
+	</ul>
+</nav>
+
 </p>
 <form action="{S_POST_ACTION}" method="post" name="post" onsubmit="if (this.confirm_code &amp;&amp; this.confirm_code.value == '') { window.alert('{L_EMPTY_CONFIRM_CODE}'); return false } return checkForm(this)">
 <fieldset>
@@ -296,12 +301,17 @@ function checkForm() {
 </fieldset>
 </form>
 {TOPIC_REVIEW_BOX}
-<p class="nav"><a href="{U_INDEX}">{L_INDEX} 
+<nav class="breadcrumb">
+	<ul>
+		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+		<!-- BEGIN switch_not_privmsg -->
+		<li><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></li>
+	<!-- END switch_not_privmsg -->
+	</ul>
+</nav>
 <!-- BEGIN switch_not_privmsg -->
-&raquo; <a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></p>
-<p>{JUMPBOX}
+<p>{JUMPBOX}</p>
 <!-- END switch_not_privmsg -->
-</p>
 <script>
 var editor = new Editor(document.post.message, 'editor postbody');
 if (Editor.isSupported())

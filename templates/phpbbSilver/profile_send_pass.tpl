@@ -1,5 +1,9 @@
 <!-- kod ukradziony z login_body.tpl. -->
-<p class="nav"><a href="{U_INDEX}">{L_INDEX}</a></p>
+<nav class="breadcrumb">
+	<ul>
+		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+	</ul>
+</nav>
 <form action="{S_PROFILE_ACTION}" method="post" class="forumline">
 	<fieldset>
 		<legend>{L_SEND_PASSWORD}</legend>

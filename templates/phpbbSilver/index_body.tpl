@@ -11,7 +11,11 @@
 	window.setTimeout(updateCurrentTime, 1000);
 	})();
 	</script>
-	<a href="{U_INDEX}" class="nav">{L_INDEX}</a>
+	<nav class="breadcrumb">
+		<ul>
+			<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+		</ul>
+	</nav>
 </div>
 <ul class="right">
 		<!-- BEGIN switch_user_logged_in -->

@@ -1,4 +1,8 @@
-<p class="nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a></p>
+<nav class="breadcrumb">
+	<ul>
+		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+	</ul>
+</nav>
 
 <article>
 	<header>{SITENAME} &mdash; {REGISTRATION}</header>
