@@ -413,4 +413,8 @@
 <!-- END switch_user_logged_in -->
 <!-- BEGIN switch_add_profile -->
 <!-- END switch_add_profile --> 
-<p class="breadcrumb"><a href="{U_INDEX}">{L_INDEX}</a></p>
+<nav class="breadcrumb">
+	<ul>
+		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+	</ul>
+</nav>
