@@ -1,4 +1,8 @@
-<p class="nav"><a href="{U_INDEX}">{L_INDEX}</a></p>
+<nav class="breadcrumb">
+	ul>
+		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+	</ul>
+</nav>
 <form action="{S_LOGIN_ACTION}" method="post" class="forumline">
 	<fieldset>
 		<legend>{L_ENTER_PASSWORD}</legend>

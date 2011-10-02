@@ -1,5 +1,9 @@
 <script src="md5.js"></script>
-<p class="breadcrumb"><a href="{U_INDEX}">{L_INDEX}</a></p>
+<nav class="breadcrumb">
+    <ul>
+        <li><a href="{U_INDEX}">{L_INDEX}</a></li>
+    </ul>
+</nav>
 <form action="{S_PROFILE_ACTION}" {S_FORM_ENCTYPE} method="post" id="profile_addform" class="accordion">
 	{ERROR_BOX}
 	<fieldset  id="info0">
