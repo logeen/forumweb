@@ -1,5 +1,6 @@
 
-<section class="notification error">
-	<p>{ERROR_MESSAGE}</p>
-</section>
-
+<div class="error_body">
+	<section class="message error">
+		{ERROR_MESSAGE}
+	</section>
+</div>
