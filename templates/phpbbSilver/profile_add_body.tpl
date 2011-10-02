@@ -1,8 +1,8 @@
 <script src="md5.js"></script>
 <nav class="breadcrumb">
-    <ul>
-        <li><a href="{U_INDEX}">{L_INDEX}</a></li>
-    </ul>
+	<ul>
+		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+	</ul>
 </nav>
 <form action="{S_PROFILE_ACTION}" {S_FORM_ENCTYPE} method="post" id="profile_addform" class="accordion">
 	{ERROR_BOX}
@@ -71,58 +71,58 @@
 			<dl>
 				<dt><label for="profile_icq">{L_ICQ_NUMBER}:</label></dt>
 				<dd> 
-					<input type="text" name="icq"    size="10" maxlength="15" value="{ICQ}" id="profile_icq">
+					<input type="text" name="icq" size="10" maxlength="15" value="{ICQ}" id="profile_icq">
 				</dd>
 				<dt><label for="profile_gg">{L_GG}:</label></dt>
 				<dd> 
-					<input type="text"    name="gg" size="20" maxlength="255" value="{GG}" id="profile_gg">
+					<input type="text" name="gg" size="20" maxlength="255" value="{GG}" id="profile_gg">
 				</dd>
 				<dt><label for="profile_tlen">{L_TLEN}:</label></dt>
 				<dd> 
-					<input type="text"    name="tlen" size="20" maxlength="255" value="{TLEN}" id="profile_tlen">
+					<input type="text" name="tlen" size="20" maxlength="255" value="{TLEN}" id="profile_tlen">
 				</dd>
 				<dt><label for="profile_jabber">{L_JABBER}:</label></dt>
 				<dd> 
-					<input type="text"    name="jabber" size="20" maxlength="255" value="{JABBER}" id="profile_jabber">
+					<input type="text" name="jabber" size="20" maxlength="255" value="{JABBER}" id="profile_jabber">
 				</dd>
 				<dt><label for="profile_skype">{L_SKYPE}:</label></dt>
 				<dd> 
-					<input type="text"    name="skype" size="20" maxlength="255" value="{SKYPE}" id="profile_skype">
+					<input type="text" name="skype" size="20" maxlength="255" value="{SKYPE}" id="profile_skype">
 				</dd>
 				<dt><label for="profile_aim">{L_AIM}:</label></dt>
 				<dd> 
-					<input type="text"    name="aim" size="20" maxlength="255" value="{AIM}" id="profile_aim">
+					<input type="text" name="aim" size="20" maxlength="255" value="{AIM}" id="profile_aim">
 				</dd>
 				<dt><label for="profile_msn">{L_MESSENGER}:</label></dt>
 				<dd>
-					<input type="text"    name="msn" size="20" maxlength="255" value="{MSN}" id="profile_msn">
+					<input type="text" name="msn" size="20" maxlength="255" value="{MSN}" id="profile_msn">
 				</dd>
 				<dt><label for="profile_yahoo">{L_YAHOO}:</label></dt>
 				<dd> 
-					<input type="text"    name="yim" size="20" maxlength="255" value="{YIM}" id="profile_yahoo">
+					<input type="text" name="yim" size="20" maxlength="255" value="{YIM}" id="profile_yahoo">
 				</dd>
 				<dt>
 					<label for="profile_face">{L_FACEBOOK}:</label>
 					<p class="explain">{L_FACEBOOK_EXPLAIN}</p>
 				</dt>
 				<dd> 
-					<input type="text"    name="facebook" size="20" maxlength="255" value="{FACEBOOK}" id="profile_face">
+					<input type="text" name="facebook" size="20" maxlength="255" value="{FACEBOOK}" id="profile_face">
 				</dd>
 				<dt><label for="profile_site">{L_WEBSITE}:</label></dt>
 				<dd> 
-					<input type="text"    name="website" size="25" maxlength="255" value="{WEBSITE}" id="profile_site">
+					<input type="text" name="website" size="25" maxlength="255" value="{WEBSITE}" id="profile_site">
 				</dd> 
 				<dt><label for="profile_location">{L_LOCATION}:</label></dt>
 				<dd> 
-					<input type="text"    name="location" size="25" maxlength="100" value="{LOCATION}" id="profile_location">
+					<input type="text" name="location" size="25" maxlength="100" value="{LOCATION}" id="profile_location">
 				</dd>
 				<dt><label for="profile_occup">{L_OCCUPATION}:</label></dt>
 				<dd> 
-					<input type="text"    name="occupation" size="25" maxlength="100" value="{OCCUPATION}" id="profile_occup">
+					<input type="text" name="occupation" size="25" maxlength="100" value="{OCCUPATION}" id="profile_occup">
 				</dd> 
 				<dt><label for="profile_interests">{L_INTERESTS}:</label></dt>
 				<dd> 
-					<input type="text"    name="interests" size="35" maxlength="150" value="{INTERESTS}" id="profile_interests">
+					<input type="text" name="interests" size="35" maxlength="150" value="{INTERESTS}" id="profile_interests">
 				</dd>
 				<!-- Start add - Gender MOD -->
 				<dt>{L_GENDER}:</dt> 
