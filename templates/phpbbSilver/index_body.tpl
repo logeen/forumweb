@@ -1,5 +1,5 @@
 <div class="index_body_tpl">
-<div class="left">
+<div>
 	<!-- BEGIN switch_user_logged_in -->
 		<small>{LAST_VISIT_DATE}</small>
 	<!-- END switch_user_logged_in -->
@@ -18,7 +18,7 @@
 		</ul>
 	</nav>
 </div>
-<ul class="right">
+<ul>
 		<!-- BEGIN switch_user_logged_in -->
 			<li><a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a></li>
 			<li><a href="{U_SEARCH_SELF}" class="gensmall">{L_SEARCH_SELF}</a></li>
@@ -80,7 +80,7 @@
 	<form method="post" action="{S_LOGIN_ACTION}">
 		<fieldset>
 			<legend>{L_LOGIN_LOGOUT}</legend>  
-			<ul class="inline">
+			<ul>
 				<li><label>{L_USERNAME}: <input class="post" type="text" name="username" size="10"></label></li>
 				<li><label>{L_PASSWORD}: <input class="post" type="password" name="password" size="10"></label></li>
 				<!-- BEGIN switch_allow_autologin -->
@@ -122,7 +122,7 @@
 <div id="recommended" class="tab_content" >
 <iframe src="http://www.facebook.com/plugins/activity.php?site=www.forumweb.pl&amp;width=500&amp;height=225&amp;header=false&amp;colorscheme=light&amp;font=verdana&amp;border_color=%23fff&amp;recommendations=true&amp;ref=activity" scrolling="no" frame  allowTransparency="true"></iframe>
 </div>
-<ul class="inline"> 
+<ul> 
 	<li><img src="templates/phpbbSilver/images/folder_new.gif" alt="{L_NEW_POSTS}" title="{L_NEW_POSTS}"> <small>{L_NEW_POSTS}</small></li>
 	<li><img src="templates/phpbbSilver/images/folder.gif" alt="{L_NO_NEW_POSTS}" title="{L_NO_NEW_POSTS}"> <small>{L_NO_NEW_POSTS}</small></li>
 	<li><img src="templates/phpbbSilver/images/folder_lock.gif" alt="{L_FORUM_LOCKED}" title="{L_FORUM_LOCKED}"><small>{L_FORUM_LOCKED}</small></li>

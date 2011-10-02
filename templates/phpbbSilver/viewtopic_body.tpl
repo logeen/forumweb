@@ -1,16 +1,16 @@
 <div class="viewtopic_body_tpl">
 <section class="topic">
-	<header class="left">
+	<header>
 		<h1><a class="maintitle" href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a></h1>
 		<p>{MODERATOR}</p>{S_TOPIC_ADMIN}
 		{PAGINATION}
 	</header>
-<ul class="right">
+<ul>
 	<li><a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a></li>
 	<li><a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a></li>
 	<li><b>{S_WATCH_TOPIC}</b></li>
 </ul>
-<ul class="inline">
+<ul>
 	<li><a href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}"  alt="{L_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}"></a></li>
 	<!-- BEGIN switch_auth_public -->
 	<li><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.forumweb.pl%2Fviewtopic.php%3Ft={TOPIC_ID}&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=recommend&amp;colorscheme=light&amp;height=21&amp;ref=recommend" scrolling="no" frame  allowTransparency="true"></iframe></li> 
@@ -47,8 +47,8 @@
 				<p>{postrow.POSTER_STATUS}</p>
 				<p>
 					<a href="{postrow.U_MINI_POST}"><img src="{postrow.MINI_POST_IMG}"   alt="{postrow.L_MINI_POST_ALT}" title="{postrow.L_MINI_POST_ALT}"  /></a> {L_POSTED}: <time datetime="{postrow.POST_DATE}">{postrow.POST_DATE}</time></p>
-					<h2 class="left">{postrow.POST_SUBJECT}</h2>
-					<p class="right">{postrow.AHM_IMG} {postrow.QUICK_QUOTE_IMG} {postrow.QUOTE_IMG} {postrow.SPELLING_IMG} {postrow.EDIT_IMG} {postrow.DELETE_IMG} {postrow.SPLIT_IMG} {postrow.REPORT_IMG} {postrow.HISTORY_IMG} {postrow.IP_IMG} <a href="#top"><img src="templates/phpbbSilver/images/icon_up.gif" alt="^"></a></p>
+					<h2>{postrow.POST_SUBJECT}</h2>
+					<p>{postrow.AHM_IMG} {postrow.QUICK_QUOTE_IMG} {postrow.QUOTE_IMG} {postrow.SPELLING_IMG} {postrow.EDIT_IMG} {postrow.DELETE_IMG} {postrow.SPLIT_IMG} {postrow.REPORT_IMG} {postrow.HISTORY_IMG} {postrow.IP_IMG} <a href="#top"><img src="templates/phpbbSilver/images/icon_up.gif" alt="^"></a></p>
 			</header>
 			<section class="postbody" id="{postrow.U_POST_ID}"> 
 				{postrow.MESSAGE}
@@ -84,7 +84,7 @@
 			<button type="submit" value="1" name="submit">{L_GO}</button>
 		</fieldset>
 </form>
-<div class="left">
+<div>
 	<p><a href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}"  alt="{L_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}"></a></p>
 	<nav class="breadcrumb">
 		<ul>
@@ -93,7 +93,7 @@
 		</ul>
 	</nav>
 </div>
-<p class="right">{PAGINATION}</p>
+<p>{PAGINATION}</p>
 
 {QUICKREPLY_OUTPUT}
 

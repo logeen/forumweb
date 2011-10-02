@@ -1,3 +1,4 @@
+<div class="quick_reply_tpl">
 <!-- BEGIN quick_reply -->
 <script>
 var empty_message = '{L_EMPTY_MESSAGE}'
@@ -201,3 +202,4 @@ if (Editor.isSupported())
 }
 </script>
 <!-- END quick_reply -->
+</div>
