@@ -1,4 +1,4 @@
-<section>
+<div class="vieforum_body_tpl">
 <header class="left">
 	<h1><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></h1>
 	{PAGINATION}
@@ -9,14 +9,18 @@
 	<li><b><a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a></b></li>
 	<li><a href="#new1">{L_SKIP_TO_NEW}</a></li>
 </ul>
-<ul class="inline">
-	<li><a href="{U_POST_NEW_TOPIC}"><img src="{POST_IMG}"  alt="{L_POST_NEW_TOPIC}" title="{L_POST_NEW_TOPIC}"></a></li>
-	<li class="breadcrumb"><a href="{U_INDEX}">{L_INDEX}</a> &raquo; <a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></li>
-</ul>
+<div>
+	<a href="{U_POST_NEW_TOPIC}"><img src="{POST_IMG}"  alt="{L_POST_NEW_TOPIC}" title="{L_POST_NEW_TOPIC}"></a>
+	<nav class="breadcrumb">
+		<ul>
+			<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+			<li><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></li>
+		</ul>
+	</nav>
+</div>
 <section>
 	<h1>Lista tematów</h1>
 	<!-- BEGIN switch_prefix -->
-	<!--potrzebne to w ogóle?!-->
 	<form method="post" action="{PREFIX_ACTION}">
 		<fieldset>
 			<input type="hidden" name="mode" value="prefix">
@@ -29,7 +33,7 @@
 	</form>
 	<!-- END switch_prefix -->
 	<!-- BEGIN topicrow -->
-	<article id="{topicrow.ROW_ID}"> <!--class="{topicrow.ROW_CLASS}"--> 
+	<article> <!--class="{topicrow.ROW_CLASS}"--> 
 				<!--<a href="{topicrow.U_VIEW_TOPIC}" ><img src="{topicrow.TOPIC_FOLDER_IMG}"   alt="{topicrow.L_TOPIC_FOLDER_ALT}" title="{topicrow.L_TOPIC_FOLDER_ALT}">{topicrow.MY_TOPIC_IMG}</a> imo do CSS-->
 		<header>
 				<h2>{topicrow.NEWEST_POST_IMG}{topicrow.TOPIC_TYPE}<a href="{topicrow.U_VIEW_TOPIC}">{topicrow.TOPIC_TITLE}</a></h2>
@@ -57,7 +61,13 @@
 	</fieldset>
 </form>
 <div class="left"> 
-	<p><a href="{U_POST_NEW_TOPIC}"><img src="{POST_IMG}"  alt="{L_POST_NEW_TOPIC}" title="{L_POST_NEW_TOPIC}"></a> <a href="{U_INDEX}">{L_INDEX}</a> &raquo; <a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></p>
+	<p><a href="{U_POST_NEW_TOPIC}"><img src="{POST_IMG}"  alt="{L_POST_NEW_TOPIC}" title="{L_POST_NEW_TOPIC}"></a></p>
+	<nav class="breadcrumb">
+		<ul>
+			<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+			<li><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></li>
+		</ul>
+	</nav>
 	<p{PAGINATION}</p>
 	<p>{JUMPBOX}</p>
 </div>
@@ -85,4 +95,4 @@
 	<dd>{L_NO_NEW_POSTS_LOCKED}</dd>
 </dl>		
 <p class="right">{S_AUTH_LIST}</p>
-</section>
+</div>

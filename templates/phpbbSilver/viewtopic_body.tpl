@@ -1,3 +1,4 @@
+<div class="viewtopic_body_tpl">
 <section class="topic">
 	<header class="left">
 		<h1><a class="maintitle" href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a></h1>
@@ -14,8 +15,14 @@
 	<!-- BEGIN switch_auth_public -->
 	<li><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.forumweb.pl%2Fviewtopic.php%3Ft={TOPIC_ID}&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=recommend&amp;colorscheme=light&amp;height=21&amp;ref=recommend" scrolling="no" frame  allowTransparency="true"></iframe></li> 
 	<!-- END switch_auth_public -->
-	<li class="breadcrumb"><a href="{U_INDEX}">{L_INDEX}</a> 
-&raquo; <a href="{U_VIEW_FORUM}" class="nav"><strong>{FORUM_NAME}</strong></a></li>
+	<li>
+		<nav class="breadcrumb">
+			<ul>
+				<li><a href="{U_INDEX}">{L_INDEX}</a></li> 
+				<li><a href="{U_VIEW_FORUM}" class="nav">{FORUM_NAME}</a></li>
+			</ul>
+		</nav>
+	</li>
 </ul>
 <section> <!--<div>-->
 	{POLL_DISPLAY} 
@@ -79,7 +86,12 @@
 </form>
 <div class="left">
 	<p><a href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}"  alt="{L_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}"></a></p>
-	<p class="breadcrumb"><a href="{U_INDEX}">{L_INDEX}</a> &raquo; <a href="{U_VIEW_FORUM}"><strong>{FORUM_NAME}</strong></a></p>
+	<nav class="breadcrumb">
+		<ul>
+			<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+			<li><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></li>
+		</ul>
+	</nav>
 </div>
 <p class="right">{PAGINATION}</p>
 
@@ -105,3 +117,4 @@ var foldbox_lang = {
 </script>
 <script src="{FOLDBOX_JS}"></script>
 </section>
+</div>

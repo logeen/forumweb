@@ -1,3 +1,4 @@
+<div class="index_body_tpl">
 <div class="left">
 	<!-- BEGIN switch_user_logged_in -->
 		<small>{LAST_VISIT_DATE}</small>
@@ -11,7 +12,11 @@
 	window.setTimeout(updateCurrentTime, 1000);
 	})();
 	</script>
-	<a href="{U_INDEX}" class="nav">{L_INDEX}</a>
+	<nav class="breadcrumb">
+		<ul>
+			<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+		</ul>
+	</nav>
 </div>
 <ul class="right">
 		<!-- BEGIN switch_user_logged_in -->
@@ -122,3 +127,4 @@
 	<li><img src="templates/phpbbSilver/images/folder.gif" alt="{L_NO_NEW_POSTS}" title="{L_NO_NEW_POSTS}"> <small>{L_NO_NEW_POSTS}</small></li>
 	<li><img src="templates/phpbbSilver/images/folder_lock.gif" alt="{L_FORUM_LOCKED}" title="{L_FORUM_LOCKED}"><small>{L_FORUM_LOCKED}</small></li>
 </ul>
+</div>
