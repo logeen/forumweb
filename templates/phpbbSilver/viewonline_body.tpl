@@ -17,7 +17,7 @@
 <!-- BEGIN reg_user_row -->
 <tr> 
 <td  class="{reg_user_row.ROW_CLASS}">&nbsp;<a href="{reg_user_row.U_USER_PROFILE}">{reg_user_row.USERNAME}</a>&nbsp;</td>
-<td    class="{reg_user_row.ROW_CLASS}">&nbsp;{reg_user_row.LASTUPDATE}&nbsp;</td>
+<td    class="{reg_user_row.ROW_CLASS}">&nbsp;<time datetime="{reg_user_row.LASTUPDATE_DATETIME}">{reg_user_row.LASTUPDATE}</time>&nbsp;</td>
 <td  class="{reg_user_row.ROW_CLASS}" >&nbsp;<a href="{reg_user_row.U_FORUM_LOCATION}">{reg_user_row.FORUM_LOCATION}</a>&nbsp;</td>
 </tr>
 <!-- END reg_user_row -->
@@ -30,7 +30,7 @@
 <!-- BEGIN guest_user_row -->
 <tr> 
 <td  class="{guest_user_row.ROW_CLASS}">&nbsp;{guest_user_row.USERNAME}&nbsp;</td>
-<td    class="{guest_user_row.ROW_CLASS}">&nbsp;{guest_user_row.LASTUPDATE}&nbsp;</td>
+<td    class="{guest_user_row.ROW_CLASS}">&nbsp;<time datetime="{guest_user_row.LASTUPDATE_DATETIME}">{guest_user_row.LASTUPDATE}</time>&nbsp;</td>
 <td  class="{guest_user_row.ROW_CLASS}" >&nbsp;<a href="{guest_user_row.U_FORUM_LOCATION}">{guest_user_row.FORUM_LOCATION}</a>&nbsp;</td>
 </tr>
 <!-- END guest_user_row -->

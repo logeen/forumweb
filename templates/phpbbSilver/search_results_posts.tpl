@@ -28,7 +28,7 @@
 <img src="templates/phpbbSilver/images/spacer.gif" alt=""   /> 
 </td>
 <td  v class="row1"><img src="{searchresults.MINI_POST_IMG}"   alt="{searchresults.L_MINI_POST_ALT}" title="{searchresults.L_MINI_POST_ALT}"  /><span class="postdetails">{L_FORUM}:&nbsp;<b><a href="{searchresults.U_FORUM}" class="postdetails">{searchresults.FORUM_NAME}</a></b>&nbsp; 
-&nbsp;{L_POSTED}: {searchresults.POST_DATE}&nbsp; &nbsp;{L_SUBJECT}: <strong><a href="{searchresults.U_POST}">{searchresults.POST_SUBJECT}</a></strong></span></td>
+&nbsp;{L_POSTED}: <time datetime="{searchresults.POST_DATE_DATETIME}">{searchresults.POST_DATE}</time>&nbsp; &nbsp;{L_SUBJECT}: <strong><a href="{searchresults.U_POST}">{searchresults.POST_SUBJECT}</a></strong></span></td>
 </tr>
 <tr> 
 <td v class="row1"><span class="postbody">{searchresults.MESSAGE}</span></td>

@@ -39,7 +39,7 @@
 				</ul>
 				<p>{postrow.POSTER_STATUS}</p>
 				<p>
-					<a href="{postrow.U_MINI_POST}"><img src="{postrow.MINI_POST_IMG}"   alt="{postrow.L_MINI_POST_ALT}" title="{postrow.L_MINI_POST_ALT}"  /></a> {L_POSTED}: <time>{postrow.POST_DATE}</time></p>
+					<a href="{postrow.U_MINI_POST}"><img src="{postrow.MINI_POST_IMG}"   alt="{postrow.L_MINI_POST_ALT}" title="{postrow.L_MINI_POST_ALT}"  /></a> {L_POSTED}: <time datetime="{postrow.POST_DATE}">{postrow.POST_DATE}</time></p>
 					<h2 class="left">{postrow.POST_SUBJECT}</h2>
 					<p class="right">{postrow.AHM_IMG} {postrow.QUICK_QUOTE_IMG} {postrow.QUOTE_IMG} {postrow.SPELLING_IMG} {postrow.EDIT_IMG} {postrow.DELETE_IMG} {postrow.SPLIT_IMG} {postrow.REPORT_IMG} {postrow.HISTORY_IMG} {postrow.IP_IMG} <a href="#top"><img src="templates/phpbbSilver/images/icon_up.gif" alt="^"></a></p>
 			</header>

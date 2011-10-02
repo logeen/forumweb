@@ -34,7 +34,7 @@
 		<header>
 				<h2>{topicrow.NEWEST_POST_IMG}{topicrow.TOPIC_TYPE}<a href="{topicrow.U_VIEW_TOPIC}">{topicrow.TOPIC_TITLE}</a></h2>
 				<p>{topicrow.GOTO_PAGE}</p>
-				<p>{L_AUTHOR}: <span class="author">{topicrow.TOPIC_AUTHOR}</span> (<time>{topicrow.FIRST_POST_TIME}</time>)</p>
+				<p>{L_AUTHOR}: <span class="author">{topicrow.TOPIC_AUTHOR}</span> (<time datetime="{topicrow.FIRST_POST_TIME_DATETIME}">{topicrow.FIRST_POST_TIME}</time>)</p>
 		</header>
 			<dl>
 				<dt>{L_REPLIES}</dt>
@@ -42,7 +42,7 @@
 				<dt>{L_VIEWS}</dt>
 				<dd>{topicrow.VIEWS}</dd>
 				<dt>{L_LASTPOST}</dt>
-				<dd>{topicrow.LAST_POST_AUTHOR} (<time>{topicrow.LAST_POST_TIME}</time>) {topicrow.LAST_POST_IMG}</dd>
+				<dd>{topicrow.LAST_POST_AUTHOR} (<time datetime="{topicrow.LAST_POST_TIME_DATETIME}">{topicrow.LAST_POST_TIME}</time>) {topicrow.LAST_POST_IMG}</dd>
 			</dl>
 	</article>
 	<!-- END topicrow -->

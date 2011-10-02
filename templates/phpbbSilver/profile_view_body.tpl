@@ -40,9 +40,9 @@
 					<header>{L_ABOUT_USER}</header>
 					<dl>
 						<dt>{L_JOINED}:</dt>
-						<dd>{JOINED}</dd>
+						<dd><time datetime="{JOINED_DATETIME}">{JOINED}</time></dd>
 						<dt>{L_LASTVISIT}:</dt>
-						<dd>{LASTVISIT}</dd>
+						<dd><time datetime="{LASTVISIT_DATETIME}">{LASTVISIT}</time></dd>
 						<dt>{L_LANGUAGE}:</dt>
 						<dd>{LANGUAGE}</dd>
 						<dt>{L_TIMEZONE}:</dt>

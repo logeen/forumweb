@@ -28,7 +28,7 @@
 <td class="row1" ><span class="name">{searchresults.TOPIC_AUTHOR}</span></td>
 <td class="row2" ><span class="postdetails">{searchresults.REPLIES}</span></td>
 <td class="row1" ><span class="postdetails">{searchresults.VIEWS}</span></td>
-<td class="row2"  ><span class="postdetails">{searchresults.LAST_POST_TIME}<br />
+<td class="row2"  ><span class="postdetails"><time datetime="{searchresults.LAST_POST_TIME_DATETIME}">{searchresults.LAST_POST_TIME}</time><br />
 {searchresults.LAST_POST_AUTHOR} {searchresults.LAST_POST_IMG}</span></td>
 </tr>
 <!-- END searchresults -->

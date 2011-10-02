@@ -7,7 +7,7 @@
 	<tr> 
 		
 <td class="row1"><img src="templates/phpbbSilver/images/icon_minipost.gif" alt="{L_POST}"   /><span class="postdetails">{L_POSTED}: 
-{POST_DATE} &nbsp;&nbsp;&nbsp; {L_POST_SUBJECT}: {POST_SUBJECT}</span></td>
+<time datetime="{POST_DATE_DATETIME}">{POST_DATE}</time> &nbsp;&nbsp;&nbsp; {L_POST_SUBJECT}: {POST_SUBJECT}</span></td>
 	</tr>
 	<tr> 
 		<td class="row1"><table    >

@@ -48,8 +48,8 @@
 <td class="{memberrow.ROW_CLASS}"  v>{memberrow.GG_STATUS_IMG}</td>
 <td class="{memberrow.ROW_CLASS}"  v>{memberrow.TLEN_STATUS_IMG}</td>
 <td class="{memberrow.ROW_CLASS}" >{memberrow.FROM}</td>
-<td class="{memberrow.ROW_CLASS}" ><span class="gensmall">{memberrow.JOINED}</span></td>
-<td class="{memberrow.ROW_CLASS}" ><span class="gensmall">{memberrow.LASTVISIT}</span></td>
+<td class="{memberrow.ROW_CLASS}" ><span class="gensmall"><time datetime="{memberrow.JOINED_DATETIME}">{memberrow.JOINED}</time></span></td>
+<td class="{memberrow.ROW_CLASS}" ><span class="gensmall"><time datetime="{memberrow.LASTVISIT_DATETIME}">{memberrow.LASTVISIT}</time></span></td>
 <td class="{memberrow.ROW_CLASS}" ><span class="gensmall">{memberrow.AGE}</span></td>
 <td class="{memberrow.ROW_CLASS}" >{memberrow.POSTS}</td>
 <td class="{memberrow.ROW_CLASS}" >{memberrow.HELPS}</td>

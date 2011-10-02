@@ -22,7 +22,7 @@
 <table    >
 <tr> 
 <td class="postdetails"><img src="templates/phpbbSilver/images/icon_minipost.gif" alt="{L_POST}"  >{L_POSTED}: 
-{postrow.POST_DATE}&nbsp;&nbsp;&nbsp;&nbsp;{L_POST_SUBJECT}: {postrow.POST_SUBJECT}</td>
+<time datetime="{postrow.POST_DATE_DATETIME}">{postrow.POST_DATE}</time>&nbsp;&nbsp;&nbsp;&nbsp;{L_POST_SUBJECT}: {postrow.POST_SUBJECT}</td>
 </tr>
 <tr> 
 <td colspan="2" v class="postbody"> 

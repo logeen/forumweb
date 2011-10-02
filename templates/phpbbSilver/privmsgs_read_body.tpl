@@ -35,7 +35,7 @@
 </tr>
 <tr> 
 <td class="row2"><span class="genmed">{L_POSTED}:</span></td>
-<td class="row2" colspan="2"><span class="genmed">{POST_DATE}</span></td>
+<td class="row2" colspan="2"><span class="genmed"><time datetime="{POST_DATE_DATETIME}">{POST_DATE}</time></span></td>
 </tr>
 <tr> 
 <td class="row2"><span class="genmed">{L_SUBJECT}:</span></td>

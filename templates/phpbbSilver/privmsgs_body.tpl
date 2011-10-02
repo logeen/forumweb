@@ -49,7 +49,7 @@
 <td class="{listrow.ROW_CLASS}"  ><a href="{listrow.U_PRIVMSG_FOLDER}"><img src="{listrow.PRIVMSG_FOLDER_IMG}"   alt="{listrow.L_PRIVMSG_FOLDER_ALT}" title="{listrow.L_PRIVMSG_FOLDER_ALT}"  /></a></td>
 <td class="{listrow.ROW_CLASS}">&nbsp;<a href="{listrow.U_READ}" class="topictitle">{listrow.SUBJECT}</a></td>
 <td   class="{listrow.ROW_CLASS}">&nbsp;<a href="{listrow.U_FROM_USER_PROFILE}" class="name">{listrow.FROM}</a></td>
-<td   class="{listrow.ROW_CLASS}"><span class="postdetails">{listrow.DATE}</span></td>
+<td   class="{listrow.ROW_CLASS}"><span class="postdetails"><time datetime="{listrow.DATE_DATETIME}">{listrow.DATE}</time></span></td>
 <td   class="{listrow.ROW_CLASS}"><span class="postdetails"> 
 <input type="checkbox" name="mark[]2" value="{listrow.S_MARK_ID}" />
 </span></td>

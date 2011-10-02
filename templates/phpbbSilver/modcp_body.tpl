@@ -27,7 +27,7 @@
 <td class="row1" ><img src="{topicrow.TOPIC_FOLDER_IMG}"   alt="{topicrow.L_TOPIC_FOLDER_ALT}" title="{topicrow.L_TOPIC_FOLDER_ALT}" /></td>
 <td class="row1">&nbsp;<span class="topictitle">{topicrow.TOPIC_TYPE}<a href="{topicrow.U_VIEW_TOPIC}" class="topictitle">{topicrow.TOPIC_TITLE}</a></span></td>
 <td class="row2" ><span class="postdetails">{topicrow.REPLIES}</span></td>
-<td class="row1" ><span class="postdetails">{topicrow.LAST_POST_TIME}</span></td>
+<td class="row1" ><span class="postdetails"><time datetime="{topicrow.LAST_POST_TIME_DATETIME}">{topicrow.LAST_POST_TIME}</time></span></td>
 <td class="row2" > 
 <input type="checkbox" name="topic_id_list[]" value="{topicrow.TOPIC_ID}" />
 </td>

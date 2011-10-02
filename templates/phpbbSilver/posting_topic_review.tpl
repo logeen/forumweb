@@ -45,7 +45,7 @@ topic_review_open.opened = false;
 			<tr> 
 				
 <td ><img src="{switch_iframe_mode.postrow.MINI_POST_IMG}"   alt="{switch_iframe_mode.postrow.L_MINI_POST_ALT}" title="{switch_iframe_mode.postrow.L_MINI_POST_ALT}"  /><span class="postdetails">{L_POSTED}: 
-{switch_iframe_mode.postrow.POST_DATE}</span></td>
+<time datetime="{switch_iframe_mode.postrow.POST_DATE_DATETIME}">{switch_iframe_mode.postrow.POST_DATE}</time></span></td>
 			</tr>
 			<tr> 
 				<td colspan="2"><hr /></td>
