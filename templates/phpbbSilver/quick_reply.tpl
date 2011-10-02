@@ -1,4 +1,5 @@
 <!-- BEGIN quick_reply -->
+<div class="quict_reply-tpl">
 <script>
 var empty_message = '{L_EMPTY_MESSAGE}'
 ,last_message = "{quick_reply.LAST_MESSAGE}"
@@ -35,34 +36,34 @@ var empty_message = '{L_EMPTY_MESSAGE}'
 			</p>
 			<p><a href="{U_MORE_SMILIES}" onclick="window.open('{U_MORE_SMILIES}', '_phpbbsmilies', 'HEIGHT=300,resizable=yes,scrollbars=yes,width=250');return false;" target="_phpbbsmilies" class="nav">{L_MORE_SMILIES}</a></p>
 		<dd>
-				<textarea name="message" rows="15" cols="80" tabindex="3" class="post"  onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" class="left"></textarea>
-				<div class="right">
-					<ul class="inline">
-						<li><button type="button" accesskey="b" name="addbbcode0"  onClick="if (!editor.insert('b')) bbstyle(0)"><span >B</span><span id="addbbcode1" >*</span></button></li>
-						<li><button type="button" accesskey="i" name="addbbcode2"  onClick="if (!editor.insert('i')) bbstyle(2)"><span >I</span><span id="addbbcode3" >*</span></button></li>
-						<li><button type="button" accesskey="u" name="addbbcode4"  onClick="if (!editor.insert('u')) bbstyle(4)"><span >U</span><span id="addbbcode5" >*</span></button></li>
+				<textarea name="message" rows="15" cols="80" tabindex="3" class="post" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);"></textarea>
+				<div>
+					<ul>
+						<li><button type="button" accesskey="b" name="addbbcode0"  onClick="if (!editor.insert('b')) bbstyle(0)"><span>B</span><span id="addbbcode1">*</span></button></li>
+						<li><button type="button" accesskey="i" name="addbbcode2"  onClick="if (!editor.insert('i')) bbstyle(2)"><span>I</span><span id="addbbcode3">*</span></button></li>
+						<li><button type="button" accesskey="u" name="addbbcode4"  onClick="if (!editor.insert('u')) bbstyle(4)"><span>U</span><span id="addbbcode5">*</span></button></li>
 					</ul>
-					<ul class="inline">
-						<li><button type="button" accesskey="s" name="addbbcode1"  onClick="if (!editor.insert('s')) bbstyle(18)"><span >S</span><span id="addbbcode19" >*</span></button></li>
-						<li><button type="button" name="addbbcode3"  onClick="if (!editor.insert('sup')) bbstyle(20)">A<span >n</span><span id="addbbcode21" >*</span></button></li>
-						<li><button type="button" name="addbbcode5"  onClick="if (!editor.insert('sub')) bbstyle(22)">A<span >n</span><span id="addbbcode23" >*</span></button></li>
+					<ul>
+						<li><button type="button" accesskey="s" name="addbbcode1"  onClick="if (!editor.insert('s')) bbstyle(18)"><span>S</span><span id="addbbcode19">*</span></button></li>
+						<li><button type="button" name="addbbcode3"  onClick="if (!editor.insert('sup')) bbstyle(20)">A<span>n</span><span id="addbbcode21">*</span></button></li>
+						<li><button type="button" name="addbbcode5"  onClick="if (!editor.insert('sub')) bbstyle(22)">A<span>n</span><span id="addbbcode23">*</span></button></li>
 					</ul>
-					<ul class="inline">
-						<li><button type="button" accesskey="t" name="addbbcode28"  onClick="if (!editor.insert('tt')) bbstyle(28)"><tt>TT</tt><span id="addbbcode29" >*</span></button></li>
-						<li><button type="button" accesskey="q" name="addbbcode6"  onClick="if (!editor.insert('quote')) bbstyle(6)">Quote<span id="addbbcode7" >*</span></button></li>
-						<li><button type="button" accesskey="c" name="addbbcode8"  onClick="if (!editor.insert('code')) bbstyle(8)">Code<span id="addbbcode9" >*</span></button></li>
+					<ul>
+						<li><button type="button" accesskey="t" name="addbbcode28"  onClick="if (!editor.insert('tt')) bbstyle(28)"><tt>TT</tt><span id="addbbcode29">*</span></button></li>
+						<li><button type="button" accesskey="q" name="addbbcode6"  onClick="if (!editor.insert('quote')) bbstyle(6)">Quote<span id="addbbcode7">*</span></button></li>
+						<li><button type="button" accesskey="c" name="addbbcode8"  onClick="if (!editor.insert('code')) bbstyle(8)">Code<span id="addbbcode9">*</span></button></li>
 					</ul>
-					<ul class="inline">
-						<li><button type="button" accesskey="l" name="addbbcode10"  onClick="if (!editor.insert('ul')) bbstyle(10)">List<span id="addbbcode11" >*</span></button></li>
-						<li><button type="button" accesskey="o" name="addbbcode12"  onClick="if (!editor.insert('ol')) bbstyle(12)">List=<span id="addbbcode13" >*</span></button></li>
+					<ul>
+						<li><button type="button" accesskey="l" name="addbbcode10"  onClick="if (!editor.insert('ul')) bbstyle(10)">List<span id="addbbcode11">*</span></button></li>
+						<li><button type="button" accesskey="o" name="addbbcode12"  onClick="if (!editor.insert('ol')) bbstyle(12)">List=<span id="addbbcode13">*</span></button></li>
 						<li><button type="button" accesskey="8"  onClick="if (!editor.isActive()) emoticon('[*]')">*</button></li>
 					</ul>
-					<ul class="inline">
-						<li><button type="button" accesskey="p" name="addbbcode14"  onClick="if (!editor.insert('img')) bbstyle(14)">Img<span id="addbbcode15" >*</span></button></li>
-						<li><button type="button" accesskey="w" name="addbbcode16"  onClick="if (!editor.insert('a')) bbstyle(16)">URL<span id="addbbcode17" >*</span></button></li>
-						<li><button type="button" accesskey="m" name="addbbcode26"  onClick="if (!editor.insert('email')) bbstyle(26)">Email<span id="addbbcode27" >*</span></button></li>
+					<ul>
+						<li><button type="button" accesskey="p" name="addbbcode14"  onClick="if (!editor.insert('img')) bbstyle(14)">Img<span id="addbbcode15">*</span></button></li>
+						<li><button type="button" accesskey="w" name="addbbcode16"  onClick="if (!editor.insert('a')) bbstyle(16)">URL<span id="addbbcode17">*</span></button></li>
+						<li><button type="button" accesskey="m" name="addbbcode26"  onClick="if (!editor.insert('email')) bbstyle(26)">Email<span id="addbbcode27">*</span></button></li>
 					</ul>
-					<p><button type="button" name="quoteselected" value="" onclick="quoteSelection()" onmouseover="if (document.getSelection) selectedText = document.getSelection()">{L_QUOTE_SELECTED}</button> <button type="button" accesskey="r" name="addbbcode25"  onClick="if (!editor.insert('rem')) bbstyle(24)">//<span id="addbbcode25" >*</span></button></p>
+					<p><button type="button" name="quoteselected" value="" onclick="quoteSelection()" onmouseover="if (document.getSelection) selectedText = document.getSelection()">{L_QUOTE_SELECTED}</button> <button type="button" accesskey="r" name="addbbcode25"  onClick="if (!editor.insert('rem')) bbstyle(24)">//<span id="addbbcode25">*</span></button></p>
 					<p>
 						<select name="addbbcode24"  onChange="if (!editor.insert('color', this.value)) bbfontstyle('[color=' + this.options[this.selectedIndex].value + ']', '[/color]'); this.selectedIndex = 0">
 							<option  value="{T_BODY_TEXT}" class="genmed">{L_COLOR_DEFAULT}</option>
@@ -170,7 +171,7 @@ var empty_message = '{L_EMPTY_MESSAGE}'
 		</div>
 	</fieldset>
 </form>
-<script >
+<script>
 var editor = new Editor(document.post.message, 'editor postbody');
 if (Editor.isSupported())
 {
@@ -200,4 +201,5 @@ if (Editor.isSupported())
 	document.getElementById('closeTags').parentNode.insertBefore(document.createTextNode('] '), document.getElementById('closeTags'));
 }
 </script>
+</div>
 <!-- END quick_reply -->

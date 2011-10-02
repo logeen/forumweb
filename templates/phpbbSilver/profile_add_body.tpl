@@ -1,5 +1,10 @@
+<div class="profile_add_body-tpl">
 <script src="md5.js"></script>
-<p class="breadcrumb"><a href="{U_INDEX}">{L_INDEX}</a></p>
+<nav class="breadcrumb">
+	<ul>
+		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+	</ul>
+</nav>
 <form action="{S_PROFILE_ACTION}" {S_FORM_ENCTYPE} method="post" id="profile_addform" class="accordion">
 	{ERROR_BOX}
 	<fieldset  id="info0">
@@ -318,7 +323,7 @@
 		<legend><a href="#info3">{L_AVATAR_PANEL}</a></legend>
 		<div>
 			<p class="explain">{L_AVATAR_EXPLAIN}</p>
-			<figure class="right">
+			<figure>
 				{AVATAR}
 				<figcaption>
 					<p>{L_CURRENT_IMAGE}</p>
@@ -409,4 +414,9 @@
 <!-- END switch_user_logged_in -->
 <!-- BEGIN switch_add_profile -->
 <!-- END switch_add_profile --> 
-<p class="breadcrumb"><a href="{U_INDEX}">{L_INDEX}</a></p>
+<nav class="breadcrumb">
+	<ul>
+		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+	</ul>
+</nav>
+</div>

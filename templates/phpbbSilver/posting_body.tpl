@@ -1,7 +1,8 @@
+<div class="posting_body-tpl">
 <script src="md5.js"></script>
 <script src="{QUICK_REPLY_JS}"></script>
 <script src="{EDITOR_JS}"></script>
-<script >
+<script>
 // bbCode control by
 // subBlue design
 // www.subBlue.com
@@ -88,7 +89,11 @@ function checkForm() {
 
 {POST_PREVIEW_BOX}
 
-<p class="nav"><a href="{U_INDEX}">{L_INDEX}</a> 
+<nav class="breadcrumb">
+	<ul>
+		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+	</ul>
+</nav> 
 <!-- BEGIN switch_not_privmsg -->
 &raquo; <a href="{U_VIEW_FORUM}">{FORUM_NAME}</a>
 <!-- END switch_not_privmsg -->
@@ -143,7 +148,7 @@ function checkForm() {
 		</script>
 	</dt>
 	<dd> 
-		<ul class="inline"> 
+		<ul> 
 			<li><button type="button" accesskey="b" name="addbbcode0" onClick="if (!editor.insert('b')) bbstyle(0)" onMouseOver="helpline('b')">&nbsp;<span >B</span><span id="addbbcode1" >*</span>&nbsp;</button></li>
 			<li><button type="button" accesskey="i" name="addbbcode2" onClick="if (!editor.insert('i')) bbstyle(2)" onMouseOver="helpline('i')">&nbsp;<span >I</span><span id="addbbcode3" >*</span>&nbsp;</button></li>
 			<li><button type="button" accesskey="u" name="addbbcode4" onClick="if (!editor.insert('u')) bbstyle(4)" onMouseOver="helpline('u')">&nbsp;<span >U</span><span id="addbbcode5" >*</span>&nbsp;</button></li>
@@ -159,7 +164,7 @@ function checkForm() {
 			<li><button type="button" accesskey="m" name="addbbcode26" onClick="if (!editor.insert('email')) bbstyle(26)" onMouseOver="helpline('m')">Email<span id="addbbcode27" >*</span></button></li>
 		</ul>
 	</ul>
-	<ul class="inline">
+	<ul>
 		<li>
 			<label>{L_FONT_COLOR}:
 			<select name="addbbcode24" onChange="if (!editor.insert('color', this.value)) bbfontstyle('[color=' + this.options[this.selectedIndex].value + ']', '[/color]'); this.selectedIndex = 0" onMouseOver="helpline('s')">
@@ -194,7 +199,7 @@ function checkForm() {
 		</li>
 		<li><a id="closeTags" href="javascript:bbstyle(-1)" onClick="if (editor.isActive()) return false" onMouseOver="helpline('a')">{L_BBCODE_CLOSE_TAGS}</a></li>
 	</ul>
-	<ul class="inline">
+	<ul>
 		<li>
 			<select onChange="var insert = this.value.split('||'); insert = insert[this.form.short_code.checked &amp;&amp; typeof insert[1] != 'undefined' ? 1 : 0].replace(/\\n/g, '\n').replace(/\\t/g, '\t').split('|'); if (!editor.insertText(insert[0], typeof insert[1] == 'undefined' ? '' : insert[1])) bbfontstyle(insert[0], typeof insert[1] == 'undefined' ? '' : insert[1]); this.value = ''">
 		<option value="">----- {L_SELECT} -----</option>
@@ -296,7 +301,11 @@ function checkForm() {
 </fieldset>
 </form>
 {TOPIC_REVIEW_BOX}
-<p class="nav"><a href="{U_INDEX}">{L_INDEX} 
+<nav class="breadcrumb">
+	<ul>
+		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+	</ul>
+</nav> 
 <!-- BEGIN switch_not_privmsg -->
 &raquo; <a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></p>
 <p>{JUMPBOX}
@@ -333,3 +342,4 @@ if (Editor.isSupported())
 	document.getElementById('closeTags').parentNode.insertBefore(document.createTextNode('] '), document.getElementById('closeTags'));
 }
 </script>
+</div>

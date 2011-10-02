@@ -1,5 +1,4 @@
-<!-- tutaj mam watpliwosci co usunac etc., bo nie znam JS / Siwy96 -->
-
+<div class="search_username-tpl">
 <script language="javascript" type="text/javascript">
 <!--
 function refresh_username(selected_username)
@@ -39,3 +38,4 @@ function refresh_username(selected_username)
 		</p>
 	</fieldset>
 </form>
+</div>
