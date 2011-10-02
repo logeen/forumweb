@@ -1,4 +1,4 @@
-<div class="quick_reply_tpl">
+<div class="quick_reply-tpl">
 <!-- BEGIN quick_reply -->
 <script>
 var empty_message = '{L_EMPTY_MESSAGE}'

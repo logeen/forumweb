@@ -1,3 +1,4 @@
+<div class="profile_add_body-tpl">
 <script src="md5.js"></script>
 <nav class="breadcrumb">
 	<ul>
@@ -418,3 +419,4 @@
 		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
 	</ul>
 </nav>
+</div>

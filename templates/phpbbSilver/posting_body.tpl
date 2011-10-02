@@ -1,3 +1,4 @@
+<div class="posting_body-tpl">
 <script src="md5.js"></script>
 <script src="{QUICK_REPLY_JS}"></script>
 <script src="{EDITOR_JS}"></script>
@@ -343,3 +344,4 @@ if (Editor.isSupported())
 	document.getElementById('closeTags').parentNode.insertBefore(document.createTextNode('] '), document.getElementById('closeTags'));
 }
 </script>
+</div>

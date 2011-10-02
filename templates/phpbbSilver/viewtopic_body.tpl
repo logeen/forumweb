@@ -1,4 +1,4 @@
-<div class="viewtopic_body_tpl">
+<div class="viewtopic_body-tpl">
 <section class="topic">
 	<header>
 		<h1><a class="maintitle" href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a></h1>

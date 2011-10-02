@@ -1,4 +1,4 @@
-<div class="index_body_tpl">
+<div class="index_body-tpl">
 <div>
 	<!-- BEGIN switch_user_logged_in -->
 		<small>{LAST_VISIT_DATE}</small>

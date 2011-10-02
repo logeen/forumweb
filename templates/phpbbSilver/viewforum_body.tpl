@@ -1,4 +1,4 @@
-<div class="vieforum_body_tpl">
+<div class="vieforum_body-tpl">
 <header class="left">
 	<h1><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></h1>
 	{PAGINATION}
