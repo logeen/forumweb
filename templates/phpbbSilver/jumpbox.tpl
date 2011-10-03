@@ -1,3 +1,5 @@
+<div class="jumpbox-tpl">
+	<nav>
 		<form action="{S_JUMPBOX_ACTION}">
 			<fieldset>
 				<dl>
@@ -7,3 +9,5 @@
 				</dl>
 			</fieldset>
 		</form>
+	</nav>
+</div>

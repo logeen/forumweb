@@ -1,6 +1,5 @@
-
 <div class="error_body-tpl">
 	<section class="message error">
-		{ERROR_MESSAGE}
+		<div class="message_text">{ERROR_MESSAGE}</div>
 	</section>
 </div>

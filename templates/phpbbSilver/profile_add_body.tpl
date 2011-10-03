@@ -323,7 +323,7 @@
 		<legend><a href="#info3">{L_AVATAR_PANEL}</a></legend>
 		<div>
 			<p class="explain">{L_AVATAR_EXPLAIN}</p>
-			<figure class="right">
+			<figure>
 				{AVATAR}
 				<figcaption>
 					<p>{L_CURRENT_IMAGE}</p>

@@ -1,4 +1,3 @@
-
 <div class="faq_body-tpl">
 
 	<nav class="breadcrumb">
@@ -40,5 +39,4 @@
 	</nav>
 
 	{JUMPBOX}
-
 </div>

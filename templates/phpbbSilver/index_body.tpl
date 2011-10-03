@@ -91,7 +91,6 @@
 		</fieldset>
 	</form>
 <!-- END switch_user_logged_out -->
-<!-- :target z CSS 3 nie starczy?-->
 <ul class="tabs" id="tabs1">
 	<li class="tab_active"><a href="#popular">{L_POPULAR}</a></li>
 	<li><a href="#read" onclick="return false">{L_READ}</a></li>

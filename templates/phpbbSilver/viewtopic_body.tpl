@@ -78,7 +78,7 @@
 	<!-- END switch_first_post -->
 	<!-- END postrow -->
 	</section>
-	<form method="post" action="{S_POST_DAYS_ACTION}" class="inline">
+	<form method="post" action="{S_POST_DAYS_ACTION}">
 		<fieldset>
 			<label>{L_DISPLAY_POSTS}: {S_SELECT_POST_DAYS}</label> {S_SELECT_POST_ORDER} 
 			<button type="submit" value="1" name="submit">{L_GO}</button>

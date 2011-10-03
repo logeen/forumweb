@@ -30,7 +30,7 @@
 	<!-- END switch_autodetect_version -->
 </head>
 <body>
-
+<div class="overall_header-tpl">
 	<header id="top" role="banner">
 		<h1><a href="{U_INDEX}"><img src="templates/phpbbSilver/images/logo.png" alt="Forumweb.pl - Przyjazne forum webmasterskie" title="Forumweb.pl - Przyjazne forum webmasterskie"></a></h1>
 		<div class="sites">Oficjalne forum serwisu: <a href="http://kurshtml.edu.pl">kurshtml.edu.pl</a></div>
@@ -74,7 +74,7 @@
 		<div>{REKLAMA_A2}</div>
 		<div>{REKLAMA_B1}</div>
 	</section>
-
+</div>
 
 	<div id="content">
 		<!-- Tutaj bêdzie zawarto¶æ, ale jak na razie trzeba oczy¶ciæ co nie co wiêc zostawiam tabelkê -->

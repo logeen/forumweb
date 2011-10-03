@@ -1,5 +1,4 @@
-<div class="quick_reply-tpl">
-<!-- BEGIN quick_reply -->
+<!-- BEGIN quick_reply --><div class="quick_reply-tpl">
 <script>
 var empty_message = '{L_EMPTY_MESSAGE}'
 ,last_message = "{quick_reply.LAST_MESSAGE}"
@@ -36,29 +35,29 @@ var empty_message = '{L_EMPTY_MESSAGE}'
 			</p>
 			<p><a href="{U_MORE_SMILIES}" onclick="window.open('{U_MORE_SMILIES}', '_phpbbsmilies', 'HEIGHT=300,resizable=yes,scrollbars=yes,width=250');return false;" target="_phpbbsmilies" class="nav">{L_MORE_SMILIES}</a></p>
 		<dd>
-				<textarea name="message" rows="15" cols="80" tabindex="3" class="post"  onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" class="left"></textarea>
-				<div class="right">
-					<ul class="inline">
+				<textarea name="message" rows="15" cols="80" tabindex="3" class="post"  onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);"></textarea>
+				<div>
+					<ul>
 						<li><button type="button" accesskey="b" name="addbbcode0"  onClick="if (!editor.insert('b')) bbstyle(0)"><span >B</span><span id="addbbcode1" >*</span></button></li>
 						<li><button type="button" accesskey="i" name="addbbcode2"  onClick="if (!editor.insert('i')) bbstyle(2)"><span >I</span><span id="addbbcode3" >*</span></button></li>
 						<li><button type="button" accesskey="u" name="addbbcode4"  onClick="if (!editor.insert('u')) bbstyle(4)"><span >U</span><span id="addbbcode5" >*</span></button></li>
 					</ul>
-					<ul class="inline">
+					<ul>
 						<li><button type="button" accesskey="s" name="addbbcode1"  onClick="if (!editor.insert('s')) bbstyle(18)"><span >S</span><span id="addbbcode19" >*</span></button></li>
 						<li><button type="button" name="addbbcode3"  onClick="if (!editor.insert('sup')) bbstyle(20)">A<span >n</span><span id="addbbcode21" >*</span></button></li>
 						<li><button type="button" name="addbbcode5"  onClick="if (!editor.insert('sub')) bbstyle(22)">A<span >n</span><span id="addbbcode23" >*</span></button></li>
 					</ul>
-					<ul class="inline">
+					<ul>
 						<li><button type="button" accesskey="t" name="addbbcode28"  onClick="if (!editor.insert('tt')) bbstyle(28)"><tt>TT</tt><span id="addbbcode29" >*</span></button></li>
 						<li><button type="button" accesskey="q" name="addbbcode6"  onClick="if (!editor.insert('quote')) bbstyle(6)">Quote<span id="addbbcode7" >*</span></button></li>
 						<li><button type="button" accesskey="c" name="addbbcode8"  onClick="if (!editor.insert('code')) bbstyle(8)">Code<span id="addbbcode9" >*</span></button></li>
 					</ul>
-					<ul class="inline">
+					<ul>
 						<li><button type="button" accesskey="l" name="addbbcode10"  onClick="if (!editor.insert('ul')) bbstyle(10)">List<span id="addbbcode11" >*</span></button></li>
 						<li><button type="button" accesskey="o" name="addbbcode12"  onClick="if (!editor.insert('ol')) bbstyle(12)">List=<span id="addbbcode13" >*</span></button></li>
 						<li><button type="button" accesskey="8"  onClick="if (!editor.isActive()) emoticon('[*]')">*</button></li>
 					</ul>
-					<ul class="inline">
+					<ul>
 						<li><button type="button" accesskey="p" name="addbbcode14"  onClick="if (!editor.insert('img')) bbstyle(14)">Img<span id="addbbcode15" >*</span></button></li>
 						<li><button type="button" accesskey="w" name="addbbcode16"  onClick="if (!editor.insert('a')) bbstyle(16)">URL<span id="addbbcode17" >*</span></button></li>
 						<li><button type="button" accesskey="m" name="addbbcode26"  onClick="if (!editor.insert('email')) bbstyle(26)">Email<span id="addbbcode27" >*</span></button></li>
@@ -201,5 +200,5 @@ if (Editor.isSupported())
 	document.getElementById('closeTags').parentNode.insertBefore(document.createTextNode('] '), document.getElementById('closeTags'));
 }
 </script>
-<!-- END quick_reply -->
 </div>
+<!-- END quick_reply -->

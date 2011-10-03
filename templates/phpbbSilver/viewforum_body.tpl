@@ -1,9 +1,7 @@
-<div class="vieforum_body-tpl">
-<header class="left">
-	<h1><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></h1>
+<div class="view-forum_body-tpl"><header>	<h1><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></h1>
 	{PAGINATION}
 </header>
-<ul class="right">
+<ul>
 	<li>{L_MODERATOR}: {MODERATORS}</li>
 	<li>{LOGGED_IN_USER_LIST}</li>
 	<li><b><a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a></b></li>
@@ -54,13 +52,13 @@
 	<p>{L_NO_TOPICS}</p>
 	<!-- END switch_no_topics -->
 </section>
-<form method="post" action="{S_POST_DAYS_ACTION}" class="inline">
+<form method="post" action="{S_POST_DAYS_ACTION}">
 	<fieldset>
 		<label>{L_DISPLAY_TOPICS}: {S_SELECT_TOPIC_DAYS}</label> 
 		<button type="submit" value="1" name="submit">{L_GO}</button>
 	</fieldset>
 </form>
-<div class="left"> 
+<div> 
 	<p><a href="{U_POST_NEW_TOPIC}"><img src="{POST_IMG}"  alt="{L_POST_NEW_TOPIC}" title="{L_POST_NEW_TOPIC}"></a></p>
 	<nav class="breadcrumb">
 		<ul>
@@ -71,12 +69,12 @@
 	<p{PAGINATION}</p>
 	<p>{JUMPBOX}</p>
 </div>
-<ul class="right">
+<ul>
 	<li><b><a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a></b></li>
 	<li>{L_MODERATOR}: {MODERATORS}</li>
 	<li>{LOGGED_IN_USER_LIST}</li>
 </ul>
-<dl class="left">
+<dl>
 	<dt><img src="{FOLDER_NEW_IMG}" alt="{L_NEW_POSTS}" title="{L_NEW_POSTS}"></dt>
 	<dd>{L_NEW_POSTS}</dd>
 	<dt><img src="{FOLDER_IMG}" alt="{L_NO_NEW_POSTS}" title="{L_NO_NEW_POSTS}"></dt>
@@ -94,5 +92,5 @@
 	<dt><img src="{FOLDER_LOCKED_IMG}" alt="{L_NO_NEW_POSTS_LOCKED}" title="{L_NO_NEW_POSTS_LOCKED}"></dt>
 	<dd>{L_NO_NEW_POSTS_LOCKED}</dd>
 </dl>		
-<p class="right">{S_AUTH_LIST}</p>
+<p>{S_AUTH_LIST}</p>
 </div>
