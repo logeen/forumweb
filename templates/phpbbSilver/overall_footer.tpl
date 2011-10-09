@@ -9,16 +9,16 @@
 
 				<ol class="contest">
 					<!-- BEGIN contest_place1_banner_row -->
-					<li class="contest_banner"><a href="http://{contest_place1_banner_row.URL}"><img src="{contest_place1_banner_row.BANNER}"    alt="Zdobywca I miejsca w konkursie WWW" title="Zdobywca I miejsca w konkursie WWW"></a></li>
+					<li value="1" class="contest_banner"><a href="http://{contest_place1_banner_row.URL}"><img src="{contest_place1_banner_row.BANNER}" alt="Zdobywca I miejsca w konkursie WWW" width="400" height="50" title="Zdobywca I miejsca w konkursie WWW"></a></li>
 					<!-- END contest_place1_banner_row -->
 					<!-- BEGIN contest_place1_row -->
-					<li>[<a href="http://{contest_place1_row.URL}" title="Zdobywca I miejsca w konkursie WWW"><strong>{contest_place1_row.URL}</strong></a>]</li>
+					<li value="1"><big><a href="http://{contest_place1_row.URL}" title="Zdobywca I miejsca w konkursie WWW"><strong>{contest_place1_row.URL}</strong></a></big></li>
 					<!-- END contest_place1_row -->
 					<!-- BEGIN contest_place2_row -->
-					<li>[<a href="http://{contest_place2_row.URL}" title="Zdobywca II miejsca w konkursie WWW"><strong>{contest_place2_row.URL}</strong></a>]</li>
+					<li value="2"><a href="http://{contest_place2_row.URL}" title="Zdobywca II miejsca w konkursie WWW"><strong>{contest_place2_row.URL}</strong></a></li>
 					<!-- END contest_place2_row -->
 					<!-- BEGIN contest_place3_row -->
-					<li>[<a href="http://{contest_place3_row.URL}" title="Zdobywca III miejsca w konkursie WWW">{contest_place3_row.URL}</a>]</li>
+					<li value="3"><a href="http://{contest_place3_row.URL}" title="Zdobywca III miejsca w konkursie WWW">{contest_place3_row.URL}</a></li>
 					<!-- END contest_place3_row -->
 				</ol>
 
