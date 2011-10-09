@@ -69,9 +69,8 @@ class Template {
 		$indexed = array_key_exists(0, $data);
 		foreach ($data as $name => $value)
 		{
-			$type = gettype($value);
-			echo '<' . $tag . ' type="' . $type . '"' . ($indexed ? '' : ' name="' . htmlspecialchars($name) . '"') . '>';
-				echo $type == 'array' ? $this->display_data($value) : htmlspecialchars($value);
+			echo '<' . $tag . ($indexed ? '' : ' name="' . htmlspecialchars($name) . '"') . '>';
+				echo is_array($value) ? $this->display_data($value) : htmlspecialchars($value);
 			echo '</' . $tag . '>';
 		}
 	}
