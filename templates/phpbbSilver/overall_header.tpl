@@ -19,6 +19,7 @@
 		<link href="{rssrow.HREF}" rel="alternate" type="application/rss+xml" title="{rssrow.TITLE}">
 		<!-- END rssrow -->
 		<link rel="stylesheet" href="templates/{T_TEMPLATE_NAME}/{T_HEAD_STYLESHEET}">
+		<link rel="stylesheet" href="css/normalize.css">
 		<!--[if lt IE 9]>
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->

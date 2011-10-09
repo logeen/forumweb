@@ -6,5 +6,6 @@
 {META}
 <title>{SITENAME} :: {PAGE_TITLE}</title>
 <link rel="stylesheet" href="templates/phpbbSilver/{T_HEAD_STYLESHEET}">
+<link rel="stylesheet" href="css/normalize.css">
 </head>
 <body id="top">

@@ -13,6 +13,7 @@
 		for(var i=0;i<as.length;i++)
 		{
 			var a=as[i];
+			if (i > 0) $('#' + a.href.replace(/^[^#]*#/, '')).hide();
 			$(a).click(function() 
 			{
 				return false;
