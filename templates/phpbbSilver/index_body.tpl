@@ -22,7 +22,7 @@
 		</ul>
 	</nav>
 
-	<ul>
+	<ul class="actions">
 		<!-- BEGIN switch_user_logged_in -->
 		<li><a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a></li>
 		<li><a href="{U_SEARCH_SELF}" class="gensmall">{L_SEARCH_SELF}</a></li>
@@ -42,7 +42,7 @@
 			<article class="forum" {catrow.forumrow.ROW_ID}>
 				<header>
 					<h2><span>{L_FORUM}</span> <a href="{catrow.forumrow.U_VIEWFORUM}" class="forumlink">{catrow.forumrow.FORUM_NAME}</a></h2>
-					<a href="{catrow.forumrow.U_FORUM_FOLDER}" class="{catrow.forumrow.FORUM_FOLDER_CLASS}" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}">{catrow.forumrow.L_FORUM_FOLDER_ALT}</a>
+					<div class="folder"><a href="{catrow.forumrow.U_FORUM_FOLDER}" class="{catrow.forumrow.FORUM_FOLDER_CLASS}" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}">{catrow.forumrow.L_FORUM_FOLDER_ALT}</a></div>
 					<p>{catrow.forumrow.FORUM_DESC}</p>
 					<p><small>{catrow.forumrow.L_MODERATOR} {catrow.forumrow.MODERATORS}</small></p>
 				</header>
