@@ -1,5 +1,4 @@
 <div class="faq_body-tpl">
-
 	<nav class="breadcrumb">
 		<ul>
 			<li><a href="{U_INDEX}">{L_INDEX}</a></li>
