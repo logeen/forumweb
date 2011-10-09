@@ -2,11 +2,8 @@
 	<nav>
 		<form action="{S_JUMPBOX_ACTION}">
 			<fieldset>
-				<dl>
-					<dt>{L_JUMP_TO}:</dt>
-					<dd>{S_JUMPBOX_SELECT}</dd>
-					<dd><button type="submit">{L_GO}</button></dd>
-				</dl>
+				<label>{L_JUMP_TO}: {S_JUMPBOX_SELECT}
+				<button type="submit">{L_GO}</button>
 			</fieldset>
 		</form>
 	</nav>
