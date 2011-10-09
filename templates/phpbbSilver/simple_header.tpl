@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" dir="{S_CONTENT_DIRECTION}">
+<html lang="{S_CONTENT_LANGUAGE}" dir="{S_CONTENT_DIRECTION}">
 <head>
 <meta charset="{S_CONTENT_ENCODING}">
 <meta name="Robots" content="noindex, follow">
