@@ -1,8 +1,8 @@
 <div class="privmsgs_popup-tpl">
-	<div>
+	<section class="message">
 		<div class="message_text">{L_MESSAGE}</div>
-		<p><a href="#" id="closer">{L_CLOSE_WINDOW}</a></p>
-	</div>
+		<footer><a href="#" id="closer">{L_CLOSE_WINDOW}</a></footer>
+	</section>
 	<script>
 	document.getElementById('closer').onclick=function(){window.close(); return false;}
 	function jump_to_inbox()
