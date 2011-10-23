@@ -100,8 +100,10 @@
 					</dl>
 				</dd>
 			</dl>
-			<button type="submit" name="rss">{L_ADD_RSS}</button>
-			<button type="button">{L_ADD_SIDEBAR}</button>
+			<div>
+				<button type="submit" name="rss">{L_ADD_RSS}</button>
+				<button type="button">{L_ADD_SIDEBAR}</button>
+			</div>
 		</fieldset>
 	</form>
 </div>
