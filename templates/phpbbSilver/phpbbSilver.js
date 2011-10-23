@@ -110,7 +110,7 @@
 	function initController(c, mode)
 	{
 		var controllers={
-			'viewtopic.php':function()
+			'viewtopic':function()
 			{
 				var as=$('article')
 				,f=as.filter(':first')
@@ -134,7 +134,7 @@
 				f.after('<p class="view_first_post"><a href="javascript:void(0);" onclick="this.style.display=\'none\'; document.getElementById(\''+fid+'\').style.display = \'block\'; return false"><b>Poka¿ pierwsz¹ wiadomoœæ...</b></a></p>');
 				f.hide();
 			},
-			'subscribe.php':function()
+			'subscribe':function()
 			{
 				var forum_url = location.href.substring(0, location.href.lastIndexOf('/')+1);
 		
@@ -205,7 +205,7 @@
 	initForms();
 	initTabs();
 	var c=document.location.pathname.split(/\//)
-	,c=c[c.length-1]
+	,c=c[c.length-1].replace(/\.[^.]+$/, '')
 	,m=document.location.search.match(/[?&]mode=([^&]*)/),
 	m=m?m[1]:null;
 	initController(c,m);
