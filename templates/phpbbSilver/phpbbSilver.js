@@ -181,7 +181,7 @@
 				}
 				
 				var f = $(document.sidebar);
-				f.find('[type="submit"]').parent().find('a').click(function()
+				f.find('[type="button"]').click(function()
 				{
 					addSidebar(this, panel_title, make_URL('panel.php'));
 					return false;

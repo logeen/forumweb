@@ -100,8 +100,8 @@
 			</dd>
 		</dl>
 		<div>
-			[<a href="javascript:void%200">{L_ADD_SIDEBAR}</a>]
 			<button type="submit" name="rss">{L_ADD_RSS}</button>
+			<button type="button">{L_ADD_SIDEBAR}</button>
 		</div>
 	</form>
 </div>
