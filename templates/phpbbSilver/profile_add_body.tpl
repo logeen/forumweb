@@ -5,9 +5,13 @@
 		<li><a href="{U_INDEX}">{L_INDEX}</a></li>
 	</ul>
 </nav>
-<form action="{S_PROFILE_ACTION}" {S_FORM_ENCTYPE} method="post" id="profile_addform" class="accordion">
+<form action="{S_PROFILE_ACTION}" {S_FORM_ENCTYPE} method="post" id="profile_addform"
+<!-- BEGIN switch_add_profile -->
+ class="accordion"
+<!-- END switch_add_profile --> 
+>
 	{ERROR_BOX}
-	<fieldset  id="info0">
+	<fieldset id="info0">
 		<legend><a href="#info0">{L_REGISTRATION_INFO}</a></legend>
 		<div>
 			<input type="hidden" name="screen" value="">
@@ -16,16 +20,16 @@
 			<dt><label for="profile_username">{L_USERNAME}:</label> *</dt>
 			<dd> 
 				<!-- BEGIN switch_username_change -->
-				<input type="text"   name="username" size="25" maxlength="25" value="{USERNAME}" id="profile_username" required>
+				<input type="text" name="username" size="25" maxlength="25" value="{USERNAME}" id="profile_username" required>
 				<!-- END switch_username_change -->
 				<!-- BEGIN switch_no_username_change -->
-				<input type="text"   name="username" size="25" maxlength="25" value="{USERNAME}" readonly="readonly" id="profile_username">
+				<input type="text" name="username" size="25" maxlength="25" value="{USERNAME}" readonly="readonly" id="profile_username">
 				<p class="explain">{L_USERNAME_CHANGE_EXPLAIN}</p>
 				<!-- END switch_no_username_change -->
 			</dd> 
 			<dt><label for="profile_email">{L_EMAIL_ADDRESS}:</label> *</dt>
 			<dd> 
-				<input type="email"   name="email" size="25" maxlength="255" value="{EMAIL}" id="profile_email" required>
+				<input type="email" name="email" size="25" maxlength="255" value="{EMAIL}" id="profile_email" required>
 			</dd>
 			<!-- BEGIN switch_edit_profile --> 
 			<dt>
@@ -33,7 +37,7 @@
 				<p class="explain">{L_CONFIRM_PASSWORD_EXPLAIN}</p>
 			</dt>
 			<dd> 
-				<input type="password"   name="cur_password" size="25" maxlength="100" value="{CUR_PASSWORD}" id="profile_currpass" required>
+				<input type="password" name="cur_password" size="25" maxlength="100" value="{CUR_PASSWORD}" id="profile_currpass" required>
 			</dd>
 			<!-- END switch_edit_profile --> 
 			<dt>
@@ -41,14 +45,14 @@
 				<p>{L_PASSWORD_IF_CHANGED}</p>
 			</dt>
 			<dd> 
-				<input type="password"   name="new_password" size="25" maxlength="100" value="{NEW_PASSWORD}" id="profile_pass" required>
+				<input type="password" name="new_password" size="25" maxlength="100" value="{NEW_PASSWORD}" id="profile_pass" required>
 			</dd> 
 			<dt>
 				<label for="profile_pass2">{L_CONFIRM_PASSWORD}:</label> *
 				<p>{L_PASSWORD_CONFIRM_IF_CHANGED}</p>
 			</dt>
 			<dd> 
-				<input type="password"   name="password_confirm" size="25" maxlength="100" value="{PASSWORD_CONFIRM}" id="profile_pass2" required>
+				<input type="password" name="password_confirm" size="25" maxlength="100" value="{PASSWORD_CONFIRM}" id="profile_pass2" required>
 			</dd>
 			<!-- Visual Confirmation -->
 			<!-- BEGIN switch_confirm -->
@@ -59,7 +63,7 @@
 			</dt>
 			<dd>
 				<b>{L_CONFIRM_CODE_INFORMATION}</b>
-				<input type="text"   name="confirm_code" size="6" maxlength="6" value="" id="profile_code" required>
+				<input type="text" name="confirm_code" size="6" maxlength="6" value="" id="profile_code" required>
 			</dd>
 			<!-- END switch_confirm -->
 		</dl>
@@ -147,7 +151,7 @@
 					</ul>
 				</dt>
 				<dd>
-					<textarea name="signature"  rows="6" cols="30" class="maxlength" maxlength="{MAX_SIG_CHARS}" id="profile_sign">{SIGNATURE}</textarea>
+					<textarea name="signature" rows="6" cols="30" class="maxlength" maxlength="{MAX_SIG_CHARS}" id="profile_sign">{SIGNATURE}</textarea>
 				</dd>
 			</dl>
 		</div>
@@ -384,7 +388,7 @@
 				</dd>
 				<dt><label for="profile_blocknick">{L_NICK_BLOCK_USER}:</label> *</dt>
 				<dd>
-					<input type="text"  name="username" maxlength="50" size="20">
+					<input type="text" name="username" maxlength="50" size="20">
 					<button type="submit" name="usersubmit" value="1" class="popup" data-url="{U_SEARCH_USER}" data-width="400">{L_FIND_USER}</button>
 				</dd>
 				<dt><label for="profile_blocktype">{L_BLOCK_TYPE}:</label> * </dt>

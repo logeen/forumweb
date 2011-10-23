@@ -107,7 +107,7 @@
 	/********************************
 	Kontrolery
 	********************************/
-	function initController(c)
+	function initController(c, mode)
 	{
 		var controllers={
 			'viewtopic.php':function()
@@ -192,7 +192,11 @@
 				});
 			}
 		}
-		controllers[c]();
+		
+		if (controllers[c])
+		{
+			controllers[c](mode);
+		}
 	}
 	/********************************
 	Onload
@@ -201,6 +205,8 @@
 	initForms();
 	initTabs();
 	var c=document.location.pathname.split(/\//)
-	,c=c[c.length-1];
-	initController(c);
+	,c=c[c.length-1]
+	,m=document.location.search.match(/[?&]mode=([^&]*)/),
+	m=m?m[1]:null;
+	initController(c,m);
 }(document));
