@@ -16,7 +16,7 @@
 			</dl>
 			<div>
 				{S_HIDDEN_FIELDS}
-				<button type="submit" name="submit" class="mainoption" value="1">{L_SUBMIT}</button>
+				<button type="submit" name="submit" class="mainoption" value="{L_SUBMIT}">{L_SUBMIT}</button>
 				<button type="reset" name="reset" class="liteoption">{L_RESET}</button>
 			</div>
 		</fieldset>

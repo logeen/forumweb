@@ -164,9 +164,9 @@ var empty_message = '{L_EMPTY_MESSAGE}'
 		<div>
 			<input type="hidden" name="mode" value="reply">
 			<input type="hidden" name="t" value="{quick_reply.TOPIC_ID}">
-			<button type="submit" name="preview" class="liteoption" value="1">{L_PREVIEW}</button>
-			<button type="submit" name="preview" class="liteoption" value="1">{L_SPELLING}</button>
-			<button type="submit" name="post" class="mainoption" value="1">Wy¶lij</button>
+			<button type="submit" name="preview" class="liteoption" value="{L_PREVIEW}">{L_PREVIEW}</button>
+			<button type="submit" name="preview" class="liteoption" value="{L_SPELLING}">{L_SPELLING}</button>
+			<button type="submit" name="post" class="mainoption" value="{L_SUBMIT}">{L_SUBMIT}</button>
 		</div>
 	</fieldset>
 </form>

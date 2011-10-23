@@ -295,9 +295,9 @@ function checkForm() {
 
 <div>
 	{S_HIDDEN_FORM_FIELDS}
-	<button type="submit" tabindex="5" name="preview" class="mainoption" value="1">{L_PREVIEW}</button>
+	<button type="submit" tabindex="5" name="preview" class="mainoption" value="{L_PREVIEW}">{L_PREVIEW}</button>
 	<button type="submit" name="preview" class="mainoption" value="1">{L_SPELLING}</button> 
-	<button type="submit" tabindex="6" name="post" class="mainoption" value="1">{L_SUBMIT}</button>
+	<button type="submit" tabindex="6" name="post" class="mainoption" value="{L_SUBMIT}">{L_SUBMIT}</button>
 </div>
 </fieldset>
 </form>
