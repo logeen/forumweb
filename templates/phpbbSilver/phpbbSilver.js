@@ -85,7 +85,7 @@
 		$('[type="radio"|"checkbox"].switcher').click(function()
 		{
 			var t=$(this)
-			$(t.attr('data-target')).css({display:t.attr('checked')?'':'none'});
+			$(t.data('target')).css({display:t.attr('checked')?'':'none'});
 		});
 		$('form .switch').hide();
 	}
@@ -97,11 +97,11 @@
 		$('.popup').click(function(e)
 		{
 			var t=$(this)
-			,u=t.attr('data-url')?t.attr('data-url'):t.attr('href')
-			,w=t.attr('data-width')?t.attr('data-width'):600
-			,h=t.attr('data-height')?t.attr('data-height'):250;
+			,u=t.data('url')?t.data('url'):t.attr('href')
+			,w=t.data('width')?t.data('width'):600
+			,h=t.data('height')?t.data('height'):250;
 			e.preventDefault();
-			window.open(t.attr('href'), '_phpbbsearch', 'HEIGHT='+w+',WIDTH='+h+',resizable=yes');
+			window.open(t.attr('href'), '_phpbbsearch', 'HEIGHT='+h+',WIDTH='+w+',resizable=yes');
 		});
 	}
 	/********************************

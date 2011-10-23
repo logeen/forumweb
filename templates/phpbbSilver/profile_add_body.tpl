@@ -384,7 +384,7 @@
 			<dl>
 				<dt>{L_BLOCK_USERS_LIST}:</dt>
 				<dd>
-					<a href="{U_BLOCK_USERS_LIST}" class="popup" data-height="250" data-width="600">{L_BLOCK_USERS_LIST}</a>
+					<a href="{U_BLOCK_USERS_LIST}" class="popup" data-height="250" data-width="400">{L_BLOCK_USERS_LIST}</a>
 				</dd>
 				<dt><label for="profile_blocknick">{L_NICK_BLOCK_USER}:</label> *</dt>
 				<dd>
