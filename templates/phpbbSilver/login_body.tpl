@@ -18,7 +18,7 @@
 			</dl>
 			<div>
 				{S_HIDDEN_FIELDS} 
-				<button type="submit" name="login" class="mainoption" value="1">{L_LOGIN}</button>
+				<button type="submit" name="login" class="mainoption" value="{L_LOGIN}">{L_LOGIN}</button>
 				<a href="{U_SEND_PASSWORD}">{L_SEND_PASSWORD}</a>
 			</div>
 		</fieldset>

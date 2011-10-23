@@ -363,7 +363,7 @@
 				<!-- BEGIN switch_avatar_local_gallery -->
 				<dt><label for="profile_avatargal">{L_AVATAR_GALLERY}:</label></dt>
 				<dd> 
-					<button type="submit" name="avatargallery" value="1">{L_SHOW_GALLERY}</button>
+					<button type="submit" name="avatargallery" value="{L_SHOW_GALLERY}">{L_SHOW_GALLERY}</button>
 				</dd>
 				<!-- END switch_avatar_local_gallery -->
 			</dl>
@@ -372,7 +372,7 @@
 	<!-- END switch_avatar_block -->
 	<div> 
 		{S_HIDDEN_FIELDS} 
-		<button type="submit" name="submit" value="1">{L_SUBMIT}</button>
+		<button type="submit" name="submit" value="{L_SUBMIT}">{L_SUBMIT}</button>
 		<!--<input type="reset" value="{L_RESET}" name="reset" class="liteoption" />-->
 	</div>
 </form>
@@ -389,7 +389,7 @@
 				<dt><label for="profile_blocknick">{L_NICK_BLOCK_USER}:</label> *</dt>
 				<dd>
 					<input type="text" name="username" maxlength="50" size="20">
-					<button type="submit" name="usersubmit" value="1" class="popup" data-url="{U_SEARCH_USER}" data-width="400">{L_FIND_USER}</button>
+					<button type="submit" name="usersubmit" value="{L_FIND_USER}" class="popup" data-url="{U_SEARCH_USER}" data-width="400">{L_FIND_USER}</button>
 				</dd>
 				<dt><label for="profile_blocktype">{L_BLOCK_TYPE}:</label> * </dt>
 				<dd>
@@ -411,7 +411,7 @@
 		</div>
 	</fieldset>
 	<div>
-		<button type="submit" name="submituser" value="1">{L_BLOCK}</button>
+		<button type="submit" name="submituser" value="{L_BLOCK}">{L_BLOCK}</button>
 		<!--<input type="reset" value="{L_RESET}" name="reset" class="liteoption">-->
 	</div>
 </form>
