@@ -11,11 +11,11 @@
 			{AGREEMENT}
 		</section>
 		<footer>
-			<a href="{U_AGREE_OVER13}">{AGREE_OVER_13}</a><br>
-			<br>
-			<a href="{U_AGREE_UNDER13}">{AGREE_UNDER_13}</a><br>
-			<br>
-			<a href="{U_INDEX}">{DO_NOT_AGREE}</a></div>
+			<ul>
+				<li><a href="{U_AGREE_OVER13}">{AGREE_OVER_13}</a></li>
+				<li><a href="{U_AGREE_UNDER13}">{AGREE_UNDER_13}</a></li>
+				<li><a href="{U_INDEX}">{DO_NOT_AGREE}</a></li>
+			</ul>
 		</footer>
 	</article>
 	
