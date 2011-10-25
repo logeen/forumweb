@@ -13,7 +13,8 @@
 						<a href="{U_INDEX}">{L_INDEX}</a>						
 						</li>	 					
 					</ul>				
-				</nav></td>		
+				</nav>
+			</td>		
 		</tr>	
 	</table>	
 	<table class="forumline">		
@@ -38,31 +39,38 @@
 			<td class="row1">				
 				<div>					
 					<img src="{searchresults.TOPIC_FOLDER_IMG}" alt="{searchresults.L_TOPIC_FOLDER_ALT}" title="{searchresults.L_TOPIC_FOLDER_ALT}" />{searchresults.MY_TOPIC_IMG} 				
-				</div></td>			
+				</div>
+			</td>			
 			<td class="row1">				
 				<span class="forumlink">					
 					<a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_NAME}</a>				
-				</span></td>			
+				</span>
+			</td>			
 			<td class="row2">				
 				<span class="topictitle">{searchresults.NEWEST_POST_IMG}{searchresults.TOPIC_TYPE} 					
 					<a href="{searchresults.U_VIEW_TOPIC}">{searchresults.TOPIC_TITLE}</a>				
 				</span><br />				
 				<span class="gensmall">{searchresults.GOTO_PAGE} 				
-				</span></td>			
+				</span>
+			</td>			
 			<td class="row1">				
 				<span class="name">{searchresults.TOPIC_AUTHOR} 				
-				</span></td>			
+				</span>
+			</td>			
 			<td class="row2">				
 				<span class="postdetails">{searchresults.REPLIES} 				
-				</span></td>			
+				</span>
+			</td>			
 			<td class="row1">				
 				<span class="postdetails">{searchresults.VIEWS} 				
-				</span></td>			
+				</span>
+			</td>			
 			<td class="row2">				
 				<span class="postdetails">					
 					<time datetime="{searchresults.LAST_POST_TIME_DATETIME}">{searchresults.LAST_POST_TIME} 					
 					</time><br />{searchresults.LAST_POST_AUTHOR} {searchresults.LAST_POST_IMG} 				
-				</span></td>		
+				</span>
+			</td>		
 		</tr>		
 		<!-- END searchresults -->		
 		<tr>   			
@@ -78,7 +86,8 @@
 						<a href="{U_INDEX}">{L_INDEX}</a>						
 						</li>	 					
 					</ul>				
-				</nav>{PAGINATION}<br /><br />{JUMPBOX}</td>		
+				</nav>{PAGINATION}<br /><br />{JUMPBOX}
+			</td>		
 		</tr>	
 	</table>
 </div>
