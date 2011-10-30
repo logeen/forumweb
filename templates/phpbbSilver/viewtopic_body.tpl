@@ -123,6 +123,29 @@
 
 	{QUICKREPLY_OUTPUT}
 
+	<!-- BEGIN switch_related_topics -->
+	<section class="relatd_topics">
+		<h1>{L_RELATED_TOPICS}</h1>
+		<ul>
+	<!-- END switch_related_topics -->
+			<!-- BEGIN relatedrow -->
+			<li class="{relatedrow.ROW_CLASS}">{relatedrow.NEWEST_POST_IMG} <a href="{relatedrow.U_VIEW_TOPIC}" title="{relatedrow.FORUM_NAME}">{relatedrow.TOPIC_TITLE}</a></li>
+			<!-- END relatedrow -->
+	<!-- BEGIN switch_related_topics -->
+		</ul>
+		<dl>
+			<dt>{L_TAGS}:</dt>
+			<dd>
+	<!-- END switch_related_topics -->
+		<!-- BEGIN tagrow -->
+		<a href="{tagrow.U_VIEW_TAG}" title="{tagrow.TAG_COUNT}">{tagrow.TAG_NAME}</a>{tagrow.SEPARATOR}
+		<!-- END tagrow -->
+	<!-- BEGIN switch_related_topics -->
+			</dd>
+		</dl>
+	</section>
+	<!-- END switch_related_topics -->
+
 	{PAGINATION}
 	{JUMPBOX}
 	{S_TOPIC_ADMIN}

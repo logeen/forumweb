@@ -100,9 +100,10 @@
 	<div class="tabline">
 		<ul class="tabs">
 			<li class="tab_active"><a href="#popular">{L_POPULAR}</a></li>
-			<li><a href="#read" onclick="return false">{L_READ}</a></li>
-			<li><a href="#helpful" onclick="return false">{L_HELPFUL}</a></li>
-			<li><a href="#recommended" onclick="return false">{L_RECOMMENDED}</a></li>
+			<li><a href="#read">{L_READ}</a></li>
+			<li><a href="#helpful">{L_HELPFUL}</a></li>
+			<li><a href="#recommended">{L_RECOMMENDED}</a></li>
+			<li><a href="#related">{L_RELATED}</a></li>
 		</ul>
 		<div id="popular" class="tab_content">
 			<ul>
@@ -127,6 +128,11 @@
 		</div>
 		<div id="recommended" class="tab_content">
 			<iframe src="http://www.facebook.com/plugins/activity.php?site=www.forumweb.pl&amp;width=500&amp;height=225&amp;header=false&amp;colorscheme=light&amp;font=verdana&amp;border_color=%23fff&amp;recommendations=true&amp;ref=activity" scrolling="no" frameborder="0" width="500" height="225" allowTransparency="true"></iframe>
+		</div>
+		<div id="related" class="tab_content">
+			<!-- BEGIN relatedrow -->
+			<a href="{relatedrow.U_VIEW_TAG}" title="{relatedrow.TAG_COUNT}" class="{relatedrow.SIZE_CLASS}">{relatedrow.TAG_NAME}</a>{relatedrow.SEPARATOR}
+			<!-- END relatedrow -->
 		</div>
 	</div>
 
