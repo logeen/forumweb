@@ -42,6 +42,32 @@
 			</dl>
 		</section>
 		<section>
+			<h2>{L_OBSERVING} {USERNAME}</h2>
+			<dl>
+				<dt>{L_OBSERVES}</dt>
+				<dd>{OBSERVES}</dd>
+				<dt>{L_IS_OBSERVED}</dt>
+				<dd>{IS_OBSERVED}</dd>
+				<!-- BEGIN switch_user_not_self -->
+				<dt>{L_OBSERVE_USER}</dt>
+				<dd>
+					{switch_user_not_self.OBSERVE}
+					<p class="explain">{L_OBSERVE_USER_EXPLAIN}</p>
+				</dd>
+				<!-- END switch_user_not_self -->
+				<!-- BEGIN switch_user_self -->
+				<dt>{L_YOU_OBSERVE}</dt>
+				<dd>
+					<ul>
+						<!-- BEGIN observerow -->
+						<li>{switch_user_self.observerow.STOP_OBSERVING} <a href="{switch_user_self.observerow.U_VIEWPROFILE}">{switch_user_self.observerow.USERNAME}</a></li>
+						<!-- END observerow -->
+					</ul>
+				</dd>
+				<!-- END switch_user_self -->
+			</dl>
+		</section>
+		<section>
 			<h2>{L_ABOUT_USER}</h2>
 			<dl>
 				<dt>{L_JOINED}:</dt>
