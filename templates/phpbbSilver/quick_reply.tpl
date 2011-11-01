@@ -38,14 +38,14 @@ var empty_message = '{L_EMPTY_MESSAGE}'
 				<textarea name="message" rows="15" cols="80" tabindex="3" class="post"  onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);"></textarea>
 				<div>
 					<ul>
-						<li><button type="button" accesskey="b" name="addbbcode0"  onClick="if (!editor.insert('b')) bbstyle(0)"><span >B</span><span id="addbbcode1" >*</span></button></li>
-						<li><button type="button" accesskey="i" name="addbbcode2"  onClick="if (!editor.insert('i')) bbstyle(2)"><span >I</span><span id="addbbcode3" >*</span></button></li>
-						<li><button type="button" accesskey="u" name="addbbcode4"  onClick="if (!editor.insert('u')) bbstyle(4)"><span >U</span><span id="addbbcode5" >*</span></button></li>
+						<li><button type="button" accesskey="b" name="addbbcode0"  onClick="if (!editor.insert('b')) bbstyle(0)"><span>B</span><span id="addbbcode1" >*</span></button></li>
+						<li><button type="button" accesskey="i" name="addbbcode2"  onClick="if (!editor.insert('i')) bbstyle(2)"><span>I</span><span id="addbbcode3" >*</span></button></li>
+						<li><button type="button" accesskey="u" name="addbbcode4"  onClick="if (!editor.insert('u')) bbstyle(4)"><span>U</span><span id="addbbcode5" >*</span></button></li>
 					</ul>
 					<ul>
-						<li><button type="button" accesskey="s" name="addbbcode1"  onClick="if (!editor.insert('s')) bbstyle(18)"><span >S</span><span id="addbbcode19" >*</span></button></li>
-						<li><button type="button" name="addbbcode3"  onClick="if (!editor.insert('sup')) bbstyle(20)">A<span >n</span><span id="addbbcode21" >*</span></button></li>
-						<li><button type="button" name="addbbcode5"  onClick="if (!editor.insert('sub')) bbstyle(22)">A<span >n</span><span id="addbbcode23" >*</span></button></li>
+						<li><button type="button" accesskey="s" name="addbbcode1"  onClick="if (!editor.insert('s')) bbstyle(18)"><span>S</span><span id="addbbcode19" >*</span></button></li>
+						<li><button type="button" name="addbbcode3"  onClick="if (!editor.insert('sup')) bbstyle(20)">A<span>sup</span><span id="addbbcode21" >*</span></button></li>
+						<li><button type="button" name="addbbcode5"  onClick="if (!editor.insert('sub')) bbstyle(22)">A<span>sub</span><span id="addbbcode23" >*</span></button></li>
 					</ul>
 					<ul>
 						<li><button type="button" accesskey="t" name="addbbcode28"  onClick="if (!editor.insert('tt')) bbstyle(28)"><tt>TT</tt><span id="addbbcode29" >*</span></button></li>
