@@ -1,30 +1,30 @@
-<div class="memberlist_body-tpl">	
-	<form action="{S_MODE_ACTION}" method="post" class="user-search">		
+<div class="memberlist_body-tpl">
+	<form action="{S_MODE_ACTION}" method="post" class="user_search">
 		<fieldset>
-			<input type="hidden" name="mode" value="search">		
-			<label for="username">{L_USERNAME}</label>
-			<input type="text" name="username" id="username" value="{USERNAME}">
+			<input type="hidden" name="mode" value="search">
+			<label for="label__username">{L_USERNAME}</label>
+			<input type="text" name="username" id="label__username" value="{USERNAME}">
 			<button>{L_SEARCH}</button>
-			<small>{L_SEARCH_AUTHOR_EXPLAIN}</small>
+			<p class="explain">{L_SEARCH_AUTHOR_EXPLAIN}</p>
 		</fieldset>
 	</form>
 	<!-- BEGIN switch_admin_option -->
 	<form method="post" action="{S_ADMIN_ACTION}">
-		<input type="hidden" name="mode" value="save" />
-		<input type="hidden" name="submit" value="1" />
-		<input type="hidden" name="username" value="." />
-		<input type="hidden" name="deleteuser" value="1" />
+		<input type="hidden" name="mode" value="save">
+		<input type="hidden" name="submit" value="1">
+		<input type="hidden" name="username" value=".">
+		<input type="hidden" name="deleteuser" value="1">
 		<!-- END switch_admin_option -->
 
-		<nav class="breadcrumb">	 						
-			<ul>		 							
-				<li><a href="{U_INDEX}">{L_INDEX}</a></li>	 						
+		<nav class="breadcrumb">
+			<ul>
+				<li><a href="{U_INDEX}">{L_INDEX}</a></li>
 			</ul>
 		</nav>
-				
-		<table class="user-list">
+		
+		<table>
 			<thead>
-				<tr>  
+				<tr>
 					<th>#</th>
 					<th>{L_PM}</th>
 					<th>{L_USERNAME}</th>
@@ -40,15 +40,15 @@
 					<th>{L_WEBSITE}</th>
 					<!-- BEGIN switch_admin_option -->
 					<th>{L_SELECT}</th>
-					<!-- END switch_admin_option -->	
+					<!-- END switch_admin_option -->
 				</tr>
 			</thead>
 			<!-- BEGIN memberrow -->
 			<tr>
 				<td>{memberrow.ROW_NUMBER}</td>
-				<td>{memberrow.PM_IMG}</td>
+				<td><span class="profile_pm">{memberrow.PM}</span></td>
 				<td><a href="{memberrow.U_VIEWPROFILE}">{memberrow.USERNAME}</a></td>
-				<td>{memberrow.EMAIL_IMG}</td>
+				<td><span class="profile_email">{memberrow.EMAIL}</span></td>
 				<td>{memberrow.GG_STATUS_IMG}</td>
 				<td>{memberrow.TLEN_STATUS_IMG}</td>
 				<td>{memberrow.FROM}</td>
@@ -57,44 +57,51 @@
 				<td>{memberrow.AGE}</td>
 				<td>{memberrow.POSTS}</td>
 				<td>{memberrow.HELPS}</td>
-				<td>{memberrow.WWW_IMG}</td>
+				<td><span class="profile_www">{memberrow.WWW}</span></td>
 				<!-- BEGIN switch_admin_option -->
-				<td><input type="checkbox" name="id[]" value="{memberrow.USER_ID}" /></td>
+				<td><input type="checkbox" name="id[]" value="{memberrow.USER_ID}"></td>
 				<!-- END switch_admin_option -->
 			</tr>
 			<!-- END memberrow -->
 			<!-- BEGIN switch_admin_option -->
 			<tr>
 				<td class="catbottom" colspan="14">
-					<input type="submit" name="remove" value="{L_REMOVE_SELECTED}" class="mainoption" /></td>			
-			</tr>			
-			<!-- END switch_admin_option -->		
-		</table>		
-	<!-- BEGIN switch_admin_option -->	
-	</form>	
-	<!-- END switch_admin_option -->	
-	<form method="post" action="{S_MODE_ACTION}" class="sort">		
+					<input type="submit" name="remove" value="{L_REMOVE_SELECTED}" class="mainoption"></td>
+			</tr>
+			<!-- END switch_admin_option -->
+		</table>
+	<!-- BEGIN switch_admin_option -->
+	</form>
+	<!-- END switch_admin_option -->
+	
+	<form method="post" action="{S_MODE_ACTION}" class="sort">
 		<fieldset>
 			<legend>{L_SUBMIT}</legend>
-			<div>
-				<label for="mode">{L_SELECT_SORT_METHOD}</label>{S_MODE_SELECT}
-			</div>
-			<div>
-				<label for="order">{L_ORDER}</label>{S_ORDER_SELECT}
-			</div>	
-			<button>{L_SUBMIT}</button>	
+			<ul>
+				<li>
+					<label>
+						{L_SELECT_SORT_METHOD}
+						{S_MODE_SELECT}
+					</label>
+				</li>
+				<li>
+					<label>
+						{L_ORDER}
+						{S_ORDER_SELECT}
+					</label>
+				</li>
+			</ul>
+			<button>{L_SUBMIT}</button>
 		</fieldset>
 	</form>
-
-
-	<nav class="breadcrumb">	 						
-		<ul>		 							
-			<li><a href="{U_INDEX}">{L_INDEX}</a></li>	 						
+	
+	<nav class="breadcrumb">
+		<ul>
+			<li><a href="{U_INDEX}">{L_INDEX}</a></li>
 		</ul>
 	</nav>
-
-
+	
 	{PAGINATION}
-
-
+	
 	{JUMPBOX}
+</div>
