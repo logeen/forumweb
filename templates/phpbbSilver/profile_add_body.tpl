@@ -224,6 +224,13 @@
 					<li><label><input type="radio" name="notification" value="1" {NOTIFICATION_YES}> {L_YES}</label></li> 
 					<li><label><input type="radio" name="notification" value="0" {NOTIFICATION_NO}> {L_NO}</label></li>
 				</ul>
+			</dd>
+			<dt>{L_MARK_NEW_POSTS}:</dt>
+			<dd>
+				<ul>
+					<li><label><input type="radio" name="new_posts" value="0" {NEW_POSTS_0}> {L_NEW_POSTS_LAST_VISIT}</label></li> 
+					<li><label><input type="radio" name="new_posts" value="1" {NEW_POSTS_1}> {L_NEW_POSTS_PERMANENT}</label></li>
+				</ul>
 			</dd> 
 			<dt>{L_POSTING_REDIRECT}:</dt>
 			<dd>
