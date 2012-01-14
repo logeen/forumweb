@@ -228,8 +228,14 @@
 			<dt>{L_MARK_NEW_POSTS}:</dt>
 			<dd>
 				<ul>
-					<li><label><input type="radio" name="new_posts" value="0" {NEW_POSTS_0}> {L_NEW_POSTS_LAST_VISIT}</label></li> 
-					<li><label><input type="radio" name="new_posts" value="1" {NEW_POSTS_1}> {L_NEW_POSTS_PERMANENT}</label></li>
+					<li>
+						<label><input type="radio" name="new_posts" value="0" {NEW_POSTS_0}> {L_NEW_POSTS_LAST_VISIT}</label>
+						<p class="explain">{L_NEW_POSTS_LAST_VISIT_EXPLAIN}</p>
+					</li> 
+					<li>
+						<label><input type="radio" name="new_posts" value="1" {NEW_POSTS_1}> {L_NEW_POSTS_PERMANENT}</label>
+						<p class="explain">{L_NEW_POSTS_PERMANENT_EXPLAIN}</p>
+					</li>
 				</ul>
 			</dd> 
 			<dt>{L_POSTING_REDIRECT}:</dt>
