@@ -25,7 +25,8 @@
 	<ul class="actions">
 		<!-- BEGIN switch_user_logged_in -->
 		<li><a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a></li>
-		<li><a href="{U_SEARCH_SELF}" class="gensmall">{L_SEARCH_SELF}</a></li>
+		<li><a href="{U_SEARCH_UNREAD}">{L_SEARCH_UNREAD}</a></li>
+		<li><a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a></li>
 		<!-- END switch_user_logged_in -->
 		<li><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a></li>
 		<!-- BEGIN switch_user_logged_in -->
