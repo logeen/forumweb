@@ -105,6 +105,7 @@
 			<li><a href="#helpful">{L_HELPFUL}</a></li>
 			<li><a href="#recommended">{L_RECOMMENDED}</a></li>
 			<li><a href="#related">{L_RELATED}</a></li>
+			<li><a href="#observe">{L_OBSERVE}</a></li>
 		</ul>
 		<div id="popular" class="tab_content">
 			<ul>
@@ -135,6 +136,16 @@
 			<a href="{relatedrow.U_VIEW_TAG}" title="{relatedrow.TAG_COUNT}" class="{relatedrow.SIZE_CLASS}">{relatedrow.TAG_NAME}</a>{relatedrow.SEPARATOR}
 			<!-- END relatedrow -->
 		</div>
+		<div id="observe" class="tab_content">
+			<ul>
+				<!-- BEGIN observerow -->
+					<li class="{observerow.ROW_CLASS}">
+						{observerow.AVATAR_IMG} <a href="{observerow.U_PROFILE}">{observerow.USERNAME}</a>
+						<div>{observerow.OBSERVE}</div>
+					</li>
+				<!-- END observerow -->
+			</ul>
+			</div>
 	</div>
 
 	<ul class="legend"> 
