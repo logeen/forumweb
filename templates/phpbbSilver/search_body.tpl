@@ -1,12 +1,15 @@
 <div class="search_body-tpl">
+
 	<nav class="breadcrumb">
 		<ul>
 			<li><a href="{U_INDEX}">{L_INDEX}</a></li>
 		</ul>
 	</nav>
+
 	<form action="{S_SEARCH_ACTION}" method="POST">
+
 		<fieldset>
-			<legend>{L_SEARCH_QUERY} </legend>
+			<legend>{L_SEARCH_QUERY}</legend>
 			<dl>
 				<dt>
 					<label for="search_keywords">{L_SEARCH_KEYWORDS}</label>
@@ -33,6 +36,7 @@
 				</dd>
 			</dl>
 		</fieldset>
+
 		<fieldset>
 			<legend>{L_SEARCH_OPTIONS}</legend>
 			<dl>
@@ -45,11 +49,11 @@
 				<dd>
 					<select class="post" name="search_time" id="search_time">{S_TIME_OPTIONS}</select>
 					<label>
-						<input type="radio" name="search_fields" value="all" checked="checked"/>
+						<input type="radio" name="search_fields" value="all" checked="checked">
 						{L_SEARCH_MESSAGE_TITLE}
 					</label>
 					<label>
-						<input type="radio" name="search_fields" value="msgonly" />
+						<input type="radio" name="search_fields" value="msgonly">
 						{L_SEARCH_MESSAGE_ONLY}
 					</label>
 				</dd>
@@ -62,14 +66,14 @@
 				<dt><label for="sort_by">{L_SORT_BY}</label></dt>
 				<dd>
 					<select class="post" name="sort_by" id="sort_by">{S_SORT_OPTIONS}</select>
-					<label><input type="radio" name="sort_dir" value="ASC" /> {L_SORT_ASCENDING}</label>
-					<label><input type="radio" name="sort_dir" value="DESC" checked /> {L_SORT_DESCENDING}</label>
+					<label><input type="radio" name="sort_dir" value="ASC"> {L_SORT_ASCENDING}</label>
+					<label><input type="radio" name="sort_dir" value="DESC" checked="checked"> {L_SORT_DESCENDING}</label>
 				</dd>
 
 				<dt><label>{L_DISPLAY_RESULTS}</label></dt>
 				<dd>
-					<label><input type="radio" name="show_results" value="posts" /> {L_POSTS}</label>
-					<label><input type="radio" name="show_results" value="topics" /> {L_TOPICS}</label>
+					<label><input type="radio" name="show_results" value="posts"> {L_POSTS}</label>
+					<label><input type="radio" name="show_results" value="topics"> {L_TOPICS}</label>
 				</dd>
 
 				<dt><label for="return_chars">{L_RETURN_FIRST}</label></dt>
