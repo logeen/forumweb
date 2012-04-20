@@ -19,7 +19,7 @@
 		</ul>
 	</nav>
 
-	<dl>
+	<dl class="legend">
 		<dt>{INBOX_IMG}</dt>
 		<dd>{INBOX}</dd>
 		<dt>{SENTBOX_IMG}</dt>
@@ -37,7 +37,7 @@
 		<fieldset>
 			<legend><label for="msgdays">{L_DISPLAY_MESSAGES}</label></legend>
 			<select name="msgdays" id="msgdays">{S_SELECT_MSG_DAYS}</select>
-			<input type="submit" value="{L_GO}" name="submit_msgdays" />
+			<input type="submit" value="{L_GO}" name="submit_msgdays">
 		</fieldset>
 
 		<!-- BEGIN listrow -->
@@ -45,13 +45,15 @@
 				<header>
 					<h2><a href="{listrow.U_READ}">{listrow.SUBJECT}</a></h2>
 					<div class="folder">
-						<img src="{listrow.PRIVMSG_FOLDER_IMG}" alt="{listrow.L_PRIVMSG_FOLDER_ALT}" title="{listrow.L_PRIVMSG_FOLDER_ALT}" /></a>
+						<a href="{listrow.U_READ}">
+							<img src="{listrow.PRIVMSG_FOLDER_IMG}" alt="{listrow.L_PRIVMSG_FOLDER_ALT}" title="{listrow.L_PRIVMSG_FOLDER_ALT}">
+						</a>
 					</div>
-					<div class="mark"><input type="checkbox" name="mark[]2" value="{listrow.S_MARK_ID}" /></div>
+					<div class="mark"><input type="checkbox" name="mark[]2" value="{listrow.S_MARK_ID}"></div>
 				</header>
 				<dl>
 					<dt>{L_FROM_OR_TO}</dt>
-					<dd><a href="{listrow.U_FROM_USER_PROFILE}" class="name">{listrow.FROM}</a></dd>
+					<dd><a href="{listrow.U_FROM_USER_PROFILE}">{listrow.FROM}</a></dd>
 
 					<dt>{L_DATE}</dt>
 					<dd><time datetime="{listrow.DATE_DATETIME}">{listrow.DATE}</time></dd>
@@ -67,12 +69,12 @@
 			{S_HIDDEN_FIELDS}
 			<div>
 				<!-- BEGIN switch_box_size_notice --> {BOX_SIZE_STATUS} <!-- END switch_box_size_notice -->
-				<a href="javascript:select_switch(true);">{L_MARK_ALL}</a> ::
-				<a href="javascript:select_switch(false);">{L_UNMARK_ALL}</a>
+				<a href="javascript:select_switch(true)">{L_MARK_ALL}</a> ::
+				<a href="javascript:select_switch(false)">{L_UNMARK_ALL}</a>
 			</div>
-			<input type="submit" name="save" value="{L_SAVE_MARKED}" class="mainoption" />
-			<input type="submit" name="delete" value="{L_DELETE_MARKED}" />
-			<input type="submit" name="deleteall" value="{L_DELETE_ALL}" />
+			<input type="submit" name="save" value="{L_SAVE_MARKED}">
+			<input type="submit" name="delete" value="{L_DELETE_MARKED}">
+			<input type="submit" name="deleteall" value="{L_DELETE_ALL}">
 		</div>
 
 		{POST_PM_IMG}
