@@ -35,12 +35,12 @@ function helpline(help) {
 
 function checkForm() {
 
-	formErrors = false;    
+	formErrors = false;
 
 	if (document.post.message.value.length < 2) {
 		formErrors = "{L_EMPTY_MESSAGE}";
 	}
-	
+
 	if (document.post.prefix && (document.post.subject.value.indexOf("[") != 0 || document.post.subject.value.indexOf("]") < 2) && !document.post.prefix.value) {
 		alert('{L_NO_PREFIX_MESSAGE}');
 		return false;
@@ -114,7 +114,7 @@ function checkForm() {
 			<button type="button" onclick="document.getElementById('confirm_code_img').src = 'confirm_code.png.php?' + escape(new Date())">{L_REFRESH}</button>
 		</dd>
 		<!-- END switch_confirm_code -->
-		<!-- BEGIN switch_username_select --> 
+		<!-- BEGIN switch_username_select -->
 		<dt><label for="post_username">{L_USERNAME}</label></dt>
 		<dd>
 			<input type="text" class="post" tabindex="1" name="username" size="25" maxlength="25" value="{USERNAME}" id="post_username">
@@ -123,7 +123,7 @@ function checkForm() {
 		<!-- BEGIN switch_privmsg -->
 		<dt><label for="post_user_priv">{L_USERNAME}</label></dt>
 		<dd>
-			<input type="text"  class="post" name="username" maxlength="25" size="25" tabindex="1" value="{USERNAME}" id="post_user_priv"> 
+			<input type="text"  class="post" name="username" maxlength="25" size="25" tabindex="1" value="{USERNAME}" id="post_user_priv">
 			<button type="submit" name="usersubmit" value="{L_FIND_USERNAME}" class="liteoption" onClick="window.open('{U_SEARCH_USER}', '_phpbbsearch', 'HEIGHT=250,resizable=yes,WIDTH=400');return false;">{L_FIND_USERNAME}</button>
 			<p>{USER_LASTVISIT}</p>
 		</dd>
@@ -133,14 +133,14 @@ function checkForm() {
 	<dt><label for="post_body">{L_MESSAGE_BODY}</label>
 		<!--td colspan="{S_SMILIES_COLSPAN}" class="gensmall">--><p><b>{L_EMOTICONS}</b></p><!--</td>-->
 		<!-- BEGIN smilies_row -->
-		<p>	
+		<p>
 			<!-- BEGIN smilies_col -->
 			<a href="javascript:emoticon(' {smilies_row.smilies_col.SMILEY_CODE} ')" onclick="if (editor.insertText(' {smilies_row.smilies_col.SMILEY_CODE} ')) return false"><img src="{smilies_row.smilies_col.SMILEY_IMG}"  alt="{smilies_row.smilies_col.SMILEY_DESC}" title="{smilies_row.smilies_col.SMILEY_DESC}"></a>
 			<!-- END smilies_col -->
 		</p>
 		<!-- END smilies_row -->
 		<!-- BEGIN switch_smilies_extra -->
-		<p> 
+		<p>
 			<a href="{U_MORE_SMILIES}" onclick="window.open('{U_MORE_SMILIES}', '_phpbbsmilies', 'HEIGHT=250,resizable=yes,scrollbars=yes,WIDTH=300');return false;" target="_phpbbsmilies" class="nav">{L_MORE_SMILIES}</a>
 		</p>
 		<!-- END switch_smilies_extra -->
@@ -148,8 +148,8 @@ function checkForm() {
 			document.write("<a id=\"roll\" href=\"javascript:void(0)\" style=\"text-decoration: none; font-weight: bold; font-size: 30px\" onclick=\"if (document.post.message.rows < 30) { if (Editor.isSupported()) editor.getElement().style.height = '450px'; document.post.message.rows = 30; document.post.message.parentNode.width = '100%'; if (document.getElementById && document.getElementById('roll').innerHTML) setTimeout('document.getElementById(\\'roll\\').innerHTML = \\'&nbsp;&nbsp;&laquo;&nbsp;&nbsp;\\'', 1); } else { if (Editor.isSupported()) editor.getElement().style.height = ''; document.post.message.rows = 15;  document.post.message.parentNode.width = 685; if (document.getElementById && document.getElementById('roll').innerHTML) setTimeout('document.getElementById(\\'roll\\').innerHTML = \\'&nbsp;&nbsp;&raquo;&nbsp;&nbsp;\\'', 1); } return false\">&nbsp;&nbsp;&raquo;&nbsp;&nbsp;<"+"/a>");
 		</script>
 	</dt>
-	<dd> 
-		<ul> 
+	<dd>
+		<ul>
 			<li><button type="button" accesskey="b" name="addbbcode0" onClick="if (!editor.insert('b')) bbstyle(0)" onMouseOver="helpline('b')">&nbsp;<span>B</span><span id="addbbcode1" >*</span>&nbsp;</button></li>
 			<li><button type="button" accesskey="i" name="addbbcode2" onClick="if (!editor.insert('i')) bbstyle(2)" onMouseOver="helpline('i')">&nbsp;<span>I</span><span id="addbbcode3" >*</span>&nbsp;</button></li>
 			<li><button type="button" accesskey="u" name="addbbcode4" onClick="if (!editor.insert('u')) bbstyle(4)" onMouseOver="helpline('u')">&nbsp;<span>U</span><span id="addbbcode5" >*</span>&nbsp;</button></li>
@@ -188,7 +188,7 @@ function checkForm() {
 			</label>
 		</li>
 		<li>
-			<label>{L_FONT_SIZE}: 
+			<label>{L_FONT_SIZE}:
 			<select name="addbbcode26" onChange="if (this.selectedIndex) if (!editor.insert('size', this.value)) bbfontstyle('[size=' + this.options[this.selectedIndex].value + ']', '[/size]'); this.selectedIndex = 0" onMouseOver="helpline('f')">
 				<option value="0" class="genmed">{L_FONT_SIZE}</option>
 				<option value="7" class="genmed">{L_FONT_TINY}</option>
@@ -265,7 +265,7 @@ function checkForm() {
 		</ul>
 	</dt>
 	<dd>
-		<ul> 
+		<ul>
 		<!-- BEGIN switch_html_checkbox -->
 			<li><label><input type="checkbox" name="disable_html" {S_HTML_CHECKED}> {L_DISABLE_HTML}</label></li>
 		<!-- END switch_html_checkbox -->
@@ -275,7 +275,7 @@ function checkForm() {
 		<!-- BEGIN switch_smilies_checkbox -->
 			<li><label><input type="checkbox" name="disable_smilies" {S_SMILIES_CHECKED}> {L_DISABLE_SMILIES}</label></li>
 		<!-- END switch_smilies_checkbox -->
-		<!-- BEGIN switch_signature_checkbox --> 
+		<!-- BEGIN switch_signature_checkbox -->
 			<li><label><input type="checkbox" name="attach_sig" {S_SIGNATURE_CHECKED}> {L_ATTACH_SIGNATURE}</label></li>
 		<!-- END switch_signature_checkbox -->
 		<!-- BEGIN switch_notify_checkbox -->
@@ -296,7 +296,7 @@ function checkForm() {
 <div>
 	{S_HIDDEN_FORM_FIELDS}
 	<button type="submit" tabindex="5" name="preview" class="mainoption" value="{L_PREVIEW}">{L_PREVIEW}</button>
-	<button type="submit" name="preview" class="mainoption" value="1">{L_SPELLING}</button> 
+	<button type="submit" name="preview" class="mainoption" value="1">{L_SPELLING}</button>
 	<button type="submit" tabindex="6" name="post" class="mainoption" value="{L_SUBMIT}">{L_SUBMIT}</button>
 </div>
 </fieldset>
@@ -311,7 +311,7 @@ function checkForm() {
 	</ul>
 </nav>
 <!-- BEGIN switch_not_privmsg -->
-<p>{JUMPBOX}</p>
+{JUMPBOX}
 <!-- END switch_not_privmsg -->
 <script>
 var editor = new Editor(document.post.message, 'editor postbody');

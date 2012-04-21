@@ -14,26 +14,26 @@
 		{
 			var a=as[i];
 			if (i > 0) $('#' + a.href.replace(/^[^#]*#/, '')).hide();
-			$(a).click(function() 
+			$(a).click(function()
 			{
 				return false;
-			}).mousedown(function() 
+			}).mousedown(function()
 			{
-				console.log('switch');return tab_switch(this); 
+				console.log('switch');return tab_switch(this);
 			});
 		}
 	}
-	function tab_switch(a) 
+	function tab_switch(a)
 	{
 		a.unselectable = 'on';
 		var tab = a.parentNode;
 		tab.unselectable = 'on';
-		if (!/(^|\s)tab_active(\s|$)/.test(tab.className)) 
+		if (!/(^|\s)tab_active(\s|$)/.test(tab.className))
 		{
 			var tabs = tab.parentNode.getElementsByTagName('li');
-			for (var i = 0; i < tabs.length; ++i) 
+			for (var i = 0; i < tabs.length; ++i)
 			{
-				if (/(^|\s)tab_active(\s|$)/.test(tabs[i].className)) 
+				if (/(^|\s)tab_active(\s|$)/.test(tabs[i].className))
 				{
 					tabs[i].className = (' ' + tabs[i].className + ' ').replace(/\s+tab_active\s+/g, ' ').replace(/\s{2,}/g, ' ');
 					d.getElementById(tabs[i].getElementsByTagName('a')[0].href.replace(/^[^#]*#/, '')).style.display = 'none';
@@ -120,15 +120,15 @@
 				console.log(f);
 				a.click(function()
 				{
-					if (document.post && document.post.message) 
-					{ 
+					if (document.post && document.post.message)
+					{
 						if (!editor || !editor.insert('b', null, this.innerHTML))
-							emoticon('[b]'+this.innerHTML+'[/b]'); window.location.href = '#post'; 
+							emoticon('[b]'+this.innerHTML+'[/b]'); window.location.href = '#post';
 					}
 				});
 				c.mouseup(function()
 				{
-					if (document.getSelection && document.getSelection() || document.selection && document.selection.createRange && document.selection.createRange().text) 
+					if (document.getSelection && document.getSelection() || document.selection && document.selection.createRange && document.selection.createRange().text)
 						quoteAuthor =$(this).parent().find('header .author').text();
 				});
 				f.after('<p class="view_first_post"><a href="javascript:void(0);" onclick="this.style.display=\'none\'; document.getElementById(\''+fid+'\').style.display = \'block\'; return false"><b>Poka¿ pierwsz¹ wiadomoœæ...</b></a></p>');
@@ -137,49 +137,49 @@
 			'subscribe':function()
 			{
 				var forum_url = location.href.substring(0, location.href.lastIndexOf('/')+1);
-		
+
 				function make_URL(URL) {
 					URL += (URL.indexOf('?') == -1 ? '?' : '&') +
-						(document.sidebar.topics.checked ? 'topics&' : '') + 
+						(document.sidebar.topics.checked ? 'topics&' : '') +
 						'n=' + document.sidebar.n.value +
 						'&m=' + document.sidebar.m.value +
 						(URL.indexOf('rss') != -1 ? '&t=' + document.sidebar.t.value : '') +
 						'&s=' + document.sidebar.s.value +
 						'&l=' + (document.sidebar.l.checked ? 1 : 0) +
 						(document.sidebar.u ? '&u=' + document.sidebar.u.value : '');
-					
+
 					for (var i = 0, f = ''; i < document.forms['sidebar'].elements.length; i++) {
 						if (document.forms['sidebar'].elements[i].name == 'f[]' && document.forms['sidebar'].elements[i].checked) f += ',' + document.forms['sidebar'].elements[i].value;
 					}
 					if (f != '') URL += '&f=' + f.substring(1);
-					
+
 					return URL + panel_suffix;
 				}
-			
+
 				function addSidebar(SidebarTag, Title, URL) {
 					URL = forum_url + URL;
-					
-					if ((typeof window.sidebar == "object") && (typeof window.sidebar.addPanel == "function")) { 
-						window.sidebar.addPanel(Title, URL, ""); 
-						return true; 
-					} 
-					else if ((navigator.userAgent.indexOf("Opera") != -1) && (navigator.userAgent.indexOf("Opera 5") == -1)) { 
-						SidebarTag.setAttribute("title", Title); 
-						SidebarTag.setAttribute("href", URL); 
-						SidebarTag.setAttribute("rel", "sidebar"); 
-						return true; 
-					} 
+
+					if ((typeof window.sidebar == "object") && (typeof window.sidebar.addPanel == "function")) {
+						window.sidebar.addPanel(Title, URL, "");
+						return true;
+					}
+					else if ((navigator.userAgent.indexOf("Opera") != -1) && (navigator.userAgent.indexOf("Opera 5") == -1)) {
+						SidebarTag.setAttribute("title", Title);
+						SidebarTag.setAttribute("href", URL);
+						SidebarTag.setAttribute("rel", "sidebar");
+						return true;
+					}
 					else if (window.external) {
 						window.external.addFavorite(URL, Title);
 						return true;
-					} 
-					else { 
+					}
+					else {
 						//alert("Panel jest dostêpny wy³±cznie w Mozilli/Netscape 6 lub Operze 6...");
-						window.location.href = URL; 
-						return false; 
-					} 
+						window.location.href = URL;
+						return false;
+					}
 				}
-				
+
 				var f = $(document.sidebar);
 				f.find('[type="button"]').click(function()
 				{
@@ -192,7 +192,7 @@
 				});
 			}
 		}
-		
+
 		if (controllers[c])
 		{
 			controllers[c](mode);

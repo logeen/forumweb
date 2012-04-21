@@ -13,7 +13,7 @@
 				window.setTimeout(updateCurrentTime, 1000);
 			})();
 			</script>
-		</li>					
+		</li>
 	</ul>
 
 	<nav class="breadcrumb">
@@ -83,7 +83,7 @@
 	<form method="post" action="{S_LOGIN_ACTION}">
 		<fieldset>
 			<legend>{L_LOGIN_LOGOUT}</legend>
-			<dl>  
+			<dl>
 				<dt><label for="label__username">{L_USERNAME}</label></dt>
 				<dd><input type="text" id="label__username" name="username" size="10"></dd>
 				<dt><label for="label__password">{L_PASSWORD}</label></dt>
@@ -148,7 +148,7 @@
 			</div>
 	</div>
 
-	<ul class="legend"> 
+	<ul class="legend">
 		<li class="legend_folder_new">{L_NEW_POSTS}</li>
 		<li class="legend_folder">{L_NO_NEW_POSTS}</li>
 		<li class="legend_folder_lock">{L_FORUM_LOCKED}</li>

@@ -37,7 +37,7 @@
 			<!-- END switch_prefix -->
 
 			<!-- BEGIN topicrow -->
-			<article class="{topicrow.ROW_CLASS}"> 
+			<article class="{topicrow.ROW_CLASS}">
 				<header>
 					<h2><span>{L_TOPICS}</span> {topicrow.NEWEST_POST_IMG}{topicrow.TOPIC_TYPE}<a href="{topicrow.U_VIEW_TOPIC}">{topicrow.TOPIC_TITLE}</a></h2>
 					<div class="folder"><a href="{topicrow.U_VIEW_TOPIC}" class="{topicrow.TOPIC_FOLDER_CLASS}" title="{topicrow.L_TOPIC_FOLDER_ALT}">{topicrow.L_TOPIC_FOLDER_ALT}</a> <span class="{topicrow.MY_TOPIC_CLASS}">{topicrow.MY_TOPIC_ALT}</span></div>
@@ -61,7 +61,7 @@
 
 			<form method="post" action="{S_POST_DAYS_ACTION}">
 				<fieldset>
-					<label>{L_DISPLAY_TOPICS}: {S_SELECT_TOPIC_DAYS}</label> 
+					<label>{L_DISPLAY_TOPICS}: {S_SELECT_TOPIC_DAYS}</label>
 					<button type="submit" value="{L_GO}" name="submit">{L_GO}</button>
 				</fieldset>
 			</form>

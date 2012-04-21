@@ -21,17 +21,17 @@
 		<p class="post_reply_topic"><a href="{U_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}">{L_POST_REPLY_TOPIC}</a></p>
 
 		<!-- BEGIN switch_auth_public -->
-		<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.forumweb.pl%2Fviewtopic.php%3Ft={TOPIC_ID}&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=recommend&amp;colorscheme=light&amp;height=21&amp;ref=recommend" scrolling="no" frameborder="0" width="110" height="21" allowTransparency="true"></iframe> 
+		<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.forumweb.pl%2Fviewtopic.php%3Ft={TOPIC_ID}&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=recommend&amp;colorscheme=light&amp;height=21&amp;ref=recommend" scrolling="no" frameborder="0" width="110" height="21" allowTransparency="true"></iframe>
 		<!-- END switch_auth_public -->
 
 		<nav class="breadcrumb">
 			<ul>
-				<li><a href="{U_INDEX}">{L_INDEX}</a></li> 
+				<li><a href="{U_INDEX}">{L_INDEX}</a></li>
 				<li><a href="{U_VIEW_FORUM}" class="nav">{FORUM_NAME}</a></li>
 			</ul>
 		</nav>
 
-		{POLL_DISPLAY} 
+		{POLL_DISPLAY}
 
 		<!-- BEGIN postrow -->
 		<article id="{postrow.U_POST_ID}" class="{postrow.ROW_CLASS}">
@@ -99,10 +99,10 @@
 			</footer>
 		</article>
 		<!-- END postrow -->
-	
+
 		<form method="post" action="{S_POST_DAYS_ACTION}">
 			<fieldset>
-				<label>{L_DISPLAY_POSTS}: {S_SELECT_POST_DAYS}</label> {S_SELECT_POST_ORDER} 
+				<label>{L_DISPLAY_POSTS}: {S_SELECT_POST_DAYS}</label> {S_SELECT_POST_ORDER}
 				<button type="submit" value="{L_GO}" name="submit">{L_GO}</button>
 			</fieldset>
 		</form>

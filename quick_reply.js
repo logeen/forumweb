@@ -148,10 +148,10 @@ function bbstyle(bbnumber) {
 		document.post.message.focus();
 		return;
 	}
-	
+
 	if (document.selection && document.selection.createRange)
 		theSelection = document.selection.createRange().text; // Get text selection
-			
+
 	if (theSelection && document.post.message.value.indexOf(document.selection.createRange().text) != -1) {
 		// Add tags around selection
 		document.selection.createRange().text = bbtags[bbnumber] + theSelection + bbtags[bbnumber+1];
@@ -168,7 +168,7 @@ function bbstyle(bbnumber) {
 		theSelection = '';
 		return;
 	}
-	
+
 	// Find last occurance of an open tag the same as the one just clicked
 	for (i = 0; i < bbcode.length; i++) {
 		if (bbcode[i] == bbnumber+1) {
@@ -196,14 +196,14 @@ function bbstyle(bbnumber) {
 			document.post.message.focus();
 			return;
 	} else { // Open tags
-	
+
 		if (imageTag && (bbnumber != 14)) {		// Close image tag before adding another
 			document.post.message.value += bbtags[15];
 			lastValue = arraypop(bbcode) - 1;	// Remove the close image tag from the list
 			//document.post.addbbcode14.value = "Img";	// Return button back to normal state
 			imageTag = false;
 		}
-		
+
 		// Open tag
 		if (document.post.message.caretPos) document.post.message.caretPos.text = bbtags[bbnumber];
 		else if (document.post.message.setSelectionRange && typeof document.post.message.selectionStart != 'undefined' && typeof document.post.message.selectionEnd != 'undefined') {

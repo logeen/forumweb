@@ -10,19 +10,19 @@ class HttpRequest
 	public $responseText;
 	public $status;
 	public $statusText;
-	
+
 	private $sock;
 	private $timeout;
 	private $method;
 	private $url;
 	private $requestHeaders = '';
 	private $responseHeaders = array();
-	
+
 	function __construct($timeout=30)
 	{
 		$this->timeout = $timeout;
 	}
-	
+
 	function open($method, $url)
 	{
 		$this->method = $method;
@@ -31,12 +31,12 @@ class HttpRequest
 		$this->sock = @ fSockOpen($this->url['host'], array_key_exists('port', $this->url) ? $this->url['port'] : 80, $errno, $errstr, $this->timeout);
 		if (!$this->sock) throw new Exception($errstr, $errno);
 	}
-	
+
 	function setRequestHeader($name, $value)
 	{
 		$this->requestHeaders .= "$name: $value\r\n";
 	}
-	
+
 	function send($data='')
 	{
 		if ($this->sock)
@@ -49,7 +49,7 @@ class HttpRequest
 				"\r\n" .
 				$data
 			);
-			
+
 			$this->responseText = '';
 			$this->status = null;
 			$this->statusText = null;
@@ -75,17 +75,17 @@ class HttpRequest
 				}
 			}
 			fClose($this->sock);
-			
+
 			if (array_key_exists('Transfer-Encoding', $this->responseHeaders) && preg_match('/(^|[,\s])chunked([,\s]|$)/i', $this->responseHeaders['Transfer-Encoding'])) $this->responseText = preg_replace("/^[a-f0-9]+[^\r\n]*\r?\n|\r?\n0+[^\r\n]*[\r\n]+$/i", '', $this->responseText);
 		}
 	}
-	
+
 	function getResponseHeader($name)
 	{
 		$name = $this->capitalize($name);
 		return array_key_exists($name, $this->responseHeaders) ? $this->responseHeaders[$name] : null;
 	}
-	
+
 	function getAllResponseHeaders()
 	{
 		$headers = '';
@@ -95,7 +95,7 @@ class HttpRequest
 		}
 		return $headers;
 	}
-	
+
 	private function capitalize($text)
 	{
 		return preg_replace('/(^|[^0-9A-Za-z_])([a-z])/e', 'str_replace(\'\\\\"\', \'"\', \'$1\') . strToUpper(\'$2\')', strToLower($text));

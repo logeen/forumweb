@@ -1,17 +1,17 @@
-<tr> 
+<tr>
 <th class="thhead" colspan="2" >{L_RATING}</th>
 </tr>
-<tr> 
+<tr>
 <td class="row2" colspan="2"><br  />
 <!-- BEGIN switch_poll_vote -->
 <form method="POST" action="{S_POLL_ACTION}">
 <!-- END switch_poll_vote -->
 <table    >
-<tr> 
+<tr>
 <td colspan="4"  class="gen">{POLL_QUESTION}</td>
 </tr>
-<tr> 
-<td > 
+<tr>
+<td >
 <table   >
 <!-- BEGIN poll_option -->
 <tr>
@@ -28,9 +28,9 @@
 <!-- END switch_poll_vote -->
 <td>
 <td>{poll_option.POLL_OPTION_CAPTION}</td>
-<td> 
+<td>
 <table   >
-<tr> 
+<tr>
 <td><img src="templates/phpbbSilver/images/vote_lcap.gif"  alt=""  /></td>
 <td><img src="{poll_option.POLL_OPTION_IMG}"   alt="{poll_option.POLL_OPTION_PERCENT}" title="{poll_option.POLL_OPTION_PERCENT}" /></td>
 <td><img src="templates/phpbbSilver/images/vote_rcap.gif"  alt=""  /></td>
@@ -44,12 +44,12 @@
 </table>
 </td>
 </tr>
-<tr> 
+<tr>
 <td colspan="4"  class="gen">{L_TOTAL_VOTES} : {TOTAL_VOTES}</td>
 </tr>
 <!-- BEGIN switch_poll_vote -->
-<tr> 
-<td colspan="4" > 
+<tr>
+<td colspan="4" >
 <input type="submit" name="submit" value="{L_SUBMIT_VOTE}" class="liteoption" />
 </td>
 </tr>

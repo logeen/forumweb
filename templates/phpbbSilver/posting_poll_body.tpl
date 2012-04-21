@@ -7,7 +7,7 @@
                 <span class="genmed">
                     <input type="text" name="poll_option_text[{poll_option_rows.S_POLL_OPTION_NUM}]" size="50" class="post" maxlength="255" value="{poll_option_rows.POLL_OPTION}" />
 						</span>&nbsp;
-							<input type="submit" name="edit_poll_option" value="{L_UPDATE_OPTION}" class="liteoption" /> 
+							<input type="submit" name="edit_poll_option" value="{L_UPDATE_OPTION}" class="liteoption" />
 								<input type="submit" name="del_poll_option[{poll_option_rows.S_POLL_OPTION_NUM}]" value="{L_DELETE_OPTION}" class="liteoption" />
 			</td>
 	</tr>

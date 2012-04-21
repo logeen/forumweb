@@ -9,18 +9,18 @@ var Editor = function(textarea, className)
 	var instance = this;
 	var editor = null;
 	var range = null;
-	
+
 	this.isActive = function()
 	{
 		if (!Editor.isSupported()) return false;
 		return editor.style.display != 'none';
 	};
-	
+
 	this.getElement = function()
 	{
 		return editor;
 	};
-	
+
 	this.bbcode2html = function()
 	{
 		if (!Editor.isSupported()) return false;
@@ -50,7 +50,7 @@ var Editor = function(textarea, className)
 		editor.innerHTML = html + '<br /><br />';
 		return true;
 	};
-	
+
 	this.html2bbcode = function()
 	{
 		if (!Editor.isSupported()) return false;
@@ -105,7 +105,7 @@ var Editor = function(textarea, className)
 		textarea.value = bbcode;
 		return true;
 	};
-	
+
 	this.activate = function()
 	{
 		if (!Editor.isSupported()) return false;
@@ -114,7 +114,7 @@ var Editor = function(textarea, className)
 		editor.style.display = '';
 		return true;
 	};
-	
+
 	this.passivate = function()
 	{
 		if (!Editor.isSupported()) return false;
@@ -123,7 +123,7 @@ var Editor = function(textarea, className)
 			textarea.style.display = '';
 		return true;
 	};
-	
+
 	this.insertText = function(startText, endText)
 	{
 		if (!Editor.isSupported() || !this.isActive()) return false;
@@ -155,7 +155,7 @@ var Editor = function(textarea, className)
 		}
 		return true;
 	};
-	
+
 	this.insert = function(tagName, attr, content)
 	{
 		if (!Editor.isSupported() || !this.isActive()) return false;
@@ -450,17 +450,17 @@ var Editor = function(textarea, className)
 		}
 		return true;
 	};
-	
+
 	function htmlspecialchars(text)
 	{
 		return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/</g, '&gt;').replace(/"/g, '&quot;');
 	}
-	
+
 	function text2html(text)
 	{
 		return htmlspecialchars(text).replace(/\r\n/g, '\n').replace(/\r/g, '\n').replace(/\n/g, '<br />');
 	}
-	
+
 	if (Editor.isSupported())
 	{
 		function isContentEditable()

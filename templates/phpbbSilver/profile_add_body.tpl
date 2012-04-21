@@ -8,7 +8,7 @@
 <form action="{S_PROFILE_ACTION}" {S_FORM_ENCTYPE} method="post" id="profile_addform"
 <!-- BEGIN switch_add_profile -->
  class="accordion"
-<!-- END switch_add_profile --> 
+<!-- END switch_add_profile -->
 >
 	{ERROR_BOX}
 	<fieldset id="info0">
@@ -18,7 +18,7 @@
 			<input type="hidden" name="client" value="">
 			<p>{L_ITEMS_REQUIRED}</p>
 			<dt><label for="profile_username">{L_USERNAME}:</label> *</dt>
-			<dd> 
+			<dd>
 				<!-- BEGIN switch_username_change -->
 				<input type="text" name="username" size="25" maxlength="25" value="{USERNAME}" id="profile_username" required>
 				<!-- END switch_username_change -->
@@ -26,32 +26,32 @@
 				<input type="text" name="username" size="25" maxlength="25" value="{USERNAME}" readonly="readonly" id="profile_username">
 				<p class="explain">{L_USERNAME_CHANGE_EXPLAIN}</p>
 				<!-- END switch_no_username_change -->
-			</dd> 
+			</dd>
 			<dt><label for="profile_email">{L_EMAIL_ADDRESS}:</label> *</dt>
-			<dd> 
+			<dd>
 				<input type="email" name="email" size="25" maxlength="255" value="{EMAIL}" id="profile_email" required>
 			</dd>
-			<!-- BEGIN switch_edit_profile --> 
+			<!-- BEGIN switch_edit_profile -->
 			<dt>
 				<label for="profile_currpass">{L_CURRENT_PASSWORD}:</label> *
 				<p class="explain">{L_CONFIRM_PASSWORD_EXPLAIN}</p>
 			</dt>
-			<dd> 
+			<dd>
 				<input type="password" name="cur_password" size="25" maxlength="100" value="{CUR_PASSWORD}" id="profile_currpass" required>
 			</dd>
-			<!-- END switch_edit_profile --> 
+			<!-- END switch_edit_profile -->
 			<dt>
 				<label for="profile_pass">{L_NEW_PASSWORD}:</label> *
 				<p>{L_PASSWORD_IF_CHANGED}</p>
 			</dt>
-			<dd> 
+			<dd>
 				<input type="password" name="new_password" size="25" maxlength="100" value="{NEW_PASSWORD}" id="profile_pass" required>
-			</dd> 
+			</dd>
 			<dt>
 				<label for="profile_pass2">{L_CONFIRM_PASSWORD}:</label> *
 				<p>{L_PASSWORD_CONFIRM_IF_CHANGED}</p>
 			</dt>
-			<dd> 
+			<dd>
 				<input type="password" name="password_confirm" size="25" maxlength="100" value="{PASSWORD_CONFIRM}" id="profile_pass2" required>
 			</dd>
 			<!-- Visual Confirmation -->
@@ -69,33 +69,33 @@
 		</dl>
 		</div>
 	</fieldset>
-	<fieldset id="info1"> 
+	<fieldset id="info1">
 		<legend><a href="#info1">{L_PROFILE_INFO}</a></legend>
 		<div>
 			<p>{L_PROFILE_INFO_NOTICE}</p>
 			<dl>
 				<dt><label for="profile_icq">{L_ICQ_NUMBER}:</label></dt>
-				<dd> 
+				<dd>
 					<input type="text" name="icq" size="10" maxlength="15" value="{ICQ}" id="profile_icq">
 				</dd>
 				<dt><label for="profile_gg">{L_GG}:</label></dt>
-				<dd> 
+				<dd>
 					<input type="text" name="gg" size="20" maxlength="255" value="{GG}" id="profile_gg">
 				</dd>
 				<dt><label for="profile_tlen">{L_TLEN}:</label></dt>
-				<dd> 
+				<dd>
 					<input type="text" name="tlen" size="20" maxlength="255" value="{TLEN}" id="profile_tlen">
 				</dd>
 				<dt><label for="profile_jabber">{L_JABBER}:</label></dt>
-				<dd> 
+				<dd>
 					<input type="text" name="jabber" size="20" maxlength="255" value="{JABBER}" id="profile_jabber">
 				</dd>
 				<dt><label for="profile_skype">{L_SKYPE}:</label></dt>
-				<dd> 
+				<dd>
 					<input type="text" name="skype" size="20" maxlength="255" value="{SKYPE}" id="profile_skype">
 				</dd>
 				<dt><label for="profile_aim">{L_AIM}:</label></dt>
-				<dd> 
+				<dd>
 					<input type="text" name="aim" size="20" maxlength="255" value="{AIM}" id="profile_aim">
 				</dd>
 				<dt><label for="profile_msn">{L_MESSENGER}:</label></dt>
@@ -103,39 +103,39 @@
 					<input type="text" name="msn" size="20" maxlength="255" value="{MSN}" id="profile_msn">
 				</dd>
 				<dt><label for="profile_yahoo">{L_YAHOO}:</label></dt>
-				<dd> 
+				<dd>
 					<input type="text" name="yim" size="20" maxlength="255" value="{YIM}" id="profile_yahoo">
 				</dd>
 				<dt>
 					<label for="profile_face">{L_FACEBOOK}:</label>
 					<p class="explain">{L_FACEBOOK_EXPLAIN}</p>
 				</dt>
-				<dd> 
+				<dd>
 					<input type="text" name="facebook" size="20" maxlength="255" value="{FACEBOOK}" id="profile_face">
 				</dd>
 				<dt><label for="profile_site">{L_WEBSITE}:</label></dt>
-				<dd> 
+				<dd>
 					<input type="text" name="website" size="25" maxlength="255" value="{WEBSITE}" id="profile_site">
-				</dd> 
+				</dd>
 				<dt><label for="profile_location">{L_LOCATION}:</label></dt>
-				<dd> 
+				<dd>
 					<input type="text" name="location" size="25" maxlength="100" value="{LOCATION}" id="profile_location">
 				</dd>
 				<dt><label for="profile_occup">{L_OCCUPATION}:</label></dt>
-				<dd> 
+				<dd>
 					<input type="text" name="occupation" size="25" maxlength="100" value="{OCCUPATION}" id="profile_occup">
-				</dd> 
+				</dd>
 				<dt><label for="profile_interests">{L_INTERESTS}:</label></dt>
-				<dd> 
+				<dd>
 					<input type="text" name="interests" size="35" maxlength="150" value="{INTERESTS}" id="profile_interests">
 				</dd>
 				<!-- Start add - Gender MOD -->
-				<dt>{L_GENDER}:</dt> 
+				<dt>{L_GENDER}:</dt>
 				<dd>
 					<ul>
 						<li><label><input type="radio" {LOCK_GENDER} name="gender" value="0" {GENDER_NO_SPECIFY_CHECKED}> {L_GENDER_NOT_SPECIFY}</label></li>
-						<li><label><input type="radio" name="gender" value="1" {GENDER_MALE_CHECKED}> {L_GENDER_MALE}</label></li> 
-						<li><label><input type="radio" name="gender" value="2" {GENDER_FEMALE_CHECKED}> {L_GENDER_FEMALE}</label></li> 
+						<li><label><input type="radio" name="gender" value="1" {GENDER_MALE_CHECKED}> {L_GENDER_MALE}</label></li>
+						<li><label><input type="radio" name="gender" value="2" {GENDER_FEMALE_CHECKED}> {L_GENDER_FEMALE}</label></li>
 					</ul>
 				</dd>
 				<!-- End add - Gender MOD -->
@@ -156,19 +156,19 @@
 			</dl>
 		</div>
 	</fieldset>
-	<fieldset id="info2"> 
+	<fieldset id="info2">
 		<legend><a href="#info2">{L_PREFERENCES}</a></legend>
 		<div>
 			<dl>
 				<dt>{L_PUBLIC_VIEW_EMAIL}:</dt>
-				<dd> 
+				<dd>
 					<ul>
-						<li><label><input type="radio" name="viewemail" value="1" {VIEW_EMAIL_YES}> {L_YES}</label></li> 
+						<li><label><input type="radio" name="viewemail" value="1" {VIEW_EMAIL_YES}> {L_YES}</label></li>
 						<li><label><input type="radio" name="viewemail" value="0" {VIEW_EMAIL_NO}> {L_NO}</label></li>
 					</ul>
 				</dd>
-				<dt>{L_PUBLIC_VIEW_CLIENT}:</dt>	
-				<dd> 
+				<dt>{L_PUBLIC_VIEW_CLIENT}:</dt>
+				<dd>
 					<ul>
 						<li><label><input type="radio" name="viewclient" value="1" {VIEW_CLIENT_YES}> {L_YES}</label></li>
 						<li><label><input type="radio" name="viewclient" value="0" {VIEW_CLIENT_NO}> {L_NO}</label></li>
@@ -177,7 +177,7 @@
 				<dt>{L_HIDE_USER}:</dt>
 				<dd>
 					<ul>
-						<li><label><input type="radio" name="hideonline" value="1" {HIDE_USER_YES}> {L_YES}</label></li> 
+						<li><label><input type="radio" name="hideonline" value="1" {HIDE_USER_YES}> {L_YES}</label></li>
 						<li><label><input type="radio" name="hideonline" value="0" {HIDE_USER_NO}> {L_NO}</label></li>
 					</ul>
 				</dd>
@@ -187,14 +187,14 @@
 				</dt>
 				<dd>
 					<ul>
-						<li><label><input type="radio" name="notifyreply" value="1" {NOTIFY_REPLY_YES}> {L_YES}</label></li> 
+						<li><label><input type="radio" name="notifyreply" value="1" {NOTIFY_REPLY_YES}> {L_YES}</label></li>
 						<li><label><input type="radio" name="notifyreply" value="0" {NOTIFY_REPLY_NO}> {L_NO}</label></li>
 					</ul>
 				</dd>
 				<dt>{L_NOTIFY_ON_PRIVMSG}:</dt>
-				<dd> 
+				<dd>
 					<ul>
-						<li><label><input type="radio" name="notifypm" value="1" {NOTIFY_PM_YES}> {L_YES}</label></li> 
+						<li><label><input type="radio" name="notifypm" value="1" {NOTIFY_PM_YES}> {L_YES}</label></li>
 						<li><label><input type="radio" name="notifypm" value="0" {NOTIFY_PM_NO}> {L_NO}</label></li>
 					</ul>
 				</dd>
@@ -202,9 +202,9 @@
 					<p>{L_POPUP_ON_PRIVMSG}:</p>
 					<p class="explain">{L_POPUP_ON_PRIVMSG_EXPLAIN}</p>
 				</dt>
-				<dd> 
+				<dd>
 					<ul>
-						<li><label><input type="radio" name="popup_pm" value="1" {POPUP_PM_YES}> {L_YES}</label></li> 
+						<li><label><input type="radio" name="popup_pm" value="1" {POPUP_PM_YES}> {L_YES}</label></li>
 						<li><label><input type="radio" name="popup_pm" value="0" {POPUP_PM_NO}> {L_NO}</label></li>
 					</ul>
 				</dd>
@@ -212,16 +212,16 @@
 					<p>{L_MAIL_ON_WATCHED_REPLY}:</p>
 					<p class="explain">{L_MAIL_ON_WATCHED_REPLY_EXPLAIN}</span>
 				</dt>
-				<dd> 
+				<dd>
 					<ul>
-						<li><label><input type="radio" name="notify_watch" value="1" {NOTIFY_WATCH_YES}> {L_YES}</label></li> 
+						<li><label><input type="radio" name="notify_watch" value="1" {NOTIFY_WATCH_YES}> {L_YES}</label></li>
 						<li><label><input type="radio" name="notify_watch" value="0" {NOTIFY_WATCH_NO}> {L_NO}</label></li>
 					</ul>
-				</dd> 
+				</dd>
 			<dt>{L_NOTIFICATION_COUNTER}:</dt>
 			<dd>
 				<ul>
-					<li><label><input type="radio" name="notification" value="1" {NOTIFICATION_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="notification" value="1" {NOTIFICATION_YES}> {L_YES}</label></li>
 					<li><label><input type="radio" name="notification" value="0" {NOTIFICATION_NO}> {L_NO}</label></li>
 				</ul>
 			</dd>
@@ -231,43 +231,43 @@
 					<li>
 						<label><input type="radio" name="new_posts" value="0" {NEW_POSTS_0}> {L_NEW_POSTS_LAST_VISIT}</label>
 						<p class="explain">{L_NEW_POSTS_LAST_VISIT_EXPLAIN}</p>
-					</li> 
+					</li>
 					<li>
 						<label><input type="radio" name="new_posts" value="1" {NEW_POSTS_1}> {L_NEW_POSTS_PERMANENT}</label>
 						<p class="explain">{L_NEW_POSTS_PERMANENT_EXPLAIN}</p>
 					</li>
 				</ul>
-			</dd> 
+			</dd>
 			<dt>{L_POSTING_REDIRECT}:</dt>
 			<dd>
 				<ul>
-					<li><label><input type="radio" name="posting_redirect" value="0" {POSTING_REDIRECT_0}> {L_POSTING_REDIRECT_DEFAULT}</label></li> 
+					<li><label><input type="radio" name="posting_redirect" value="0" {POSTING_REDIRECT_0}> {L_POSTING_REDIRECT_DEFAULT}</label></li>
 					<li><label><input type="radio" name="posting_redirect" value="1" {POSTING_REDIRECT_1}> {L_POSTING_REDIRECT_POST}</label></li>
 					<li><label><input type="radio" name="posting_redirect" value="2" {POSTING_REDIRECT_2}> {L_POSTING_REDIRECT_TOPIC_POST}</label></li>
 					<li><label><input type="radio" name="posting_redirect" value="3" {POSTING_REDIRECT_3}>{L_POSTING_REDIRECT_TOPIC}</label></li>
 					<li><label><input type="radio" name="posting_redirect" value="4" {POSTING_REDIRECT_4}> {L_POSTING_REDIRECT_FORUM}</label></li>
 					<li><label><input type="radio" id="label__posting_redirect__5" name="posting_redirect" value="5" {POSTING_REDIRECT_5}> {L_POSTING_REDIRECT_INDEX}</label></li>
 				</ul>
-			</dd> 
+			</dd>
 			<dt>{L_HIDE_QUICK_REPLY}:</dt>
 			<dd>
 				<ul>
-					<li><label><input type="radio" name="hide_quick_reply" value="1" {HIDE_QUICK_REPLY_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="hide_quick_reply" value="1" {HIDE_QUICK_REPLY_YES}> {L_YES}</label></li>
 					<li><label><input type="radio" name="hide_quick_reply" value="0" {HIDE_QUICK_REPLY_NO}> {L_NO}</label></li>
 				</ul>
 			</dd>
 			<!-- BEGIN switch_report -->
 			<dt>{switch_report.L_NO_REPORT_POPUP}:</dt>
-			<dd> 
+			<dd>
 				<ul>
-					<li><label><input type="radio" name="no_report_popup" value="0" {switch_report.NO_REPORT_POPUP_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="no_report_popup" value="0" {switch_report.NO_REPORT_POPUP_YES}> {L_YES}</label></li>
 					<li><label><input type="radio" name="no_report_popup" value="1" {switch_report.NO_REPORT_POPUP_NO}> {L_NO}</label></li>
 				</ul>
 			</dd>
 			<dt>{switch_report.L_NO_REPORT_MAIL}:</dt>
 			<dd>
 				<ul>
-					<li><label><input type="radio" name="no_report_mail" value="0" {switch_report.NO_REPORT_MAIL_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="no_report_mail" value="0" {switch_report.NO_REPORT_MAIL_YES}> {L_YES}</label></li>
 					<li><label><input type="radio" name="no_report_mail" value="1" {switch_report.NO_REPORT_MAIL_NO}> {L_NO}</label></li>
 				</ul>
 			</dd>
@@ -275,42 +275,42 @@
 			<dt>{L_ALWAYS_ADD_SIGNATURE}:</dt>
 			<dd>
 				<ul>
-					<li><label><input type="radio" name="attachsig" value="1" {ALWAYS_ADD_SIGNATURE_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="attachsig" value="1" {ALWAYS_ADD_SIGNATURE_YES}> {L_YES}</label></li>
 					<li><label><input type="radio" name="attachsig" value="0" {ALWAYS_ADD_SIGNATURE_NO}> {L_NO}</label></li>
 				</ul>
 			</dd>
 			<dt>{L_SHOW_MY_TOPICS}:</td>
 			<dd>
 				<ul>
-					<li><label><input type="radio" name="mytopics" value="1" {SHOW_MY_TOPICS_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="mytopics" value="1" {SHOW_MY_TOPICS_YES}> {L_YES}</label></li>
 					<li><label><input type="radio" name="mytopics" value="0" {SHOW_MY_TOPICS_NO}> {L_NO}</label></li>
 				</ul>
 			</dd>
 			<dt>{L_CHANGE_GG_LINK}:</dt>
 			<dd>
 				<ul>
-					<li><label><input type="radio" name="gg_mod" value="1" {GG_MOD_YES}> {L_BRAMKA_GG}</label></li> 
+					<li><label><input type="radio" name="gg_mod" value="1" {GG_MOD_YES}> {L_BRAMKA_GG}</label></li>
 					<li><label><input type="radio" name="gg_mod" value="0" {GG_MOD_NO}> {L_OKNO_GG}</label></li>
 				</ul>
 			</dd>
 			<dt>{L_ALWAYS_ALLOW_BBCODE}:</dt>
 			<dd>
 				<ul>
-					<li><label><input type="radio" name="allowbbcode" value="1" {ALWAYS_ALLOW_BBCODE_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="allowbbcode" value="1" {ALWAYS_ALLOW_BBCODE_YES}> {L_YES}</label></li>
 					<li><label><input type="radio" name="allowbbcode" value="0" {ALWAYS_ALLOW_BBCODE_NO}> {L_NO}</label></li>
 				</ul>
-			</dd> 
+			</dd>
 			<dt>{L_ALWAYS_ALLOW_HTML}:</dt>
-			<dd> 
+			<dd>
 				<ul>
-					<li><label><input type="radio" name="allowhtml" value="1" {ALWAYS_ALLOW_HTML_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="allowhtml" value="1" {ALWAYS_ALLOW_HTML_YES}> {L_YES}</label></li>
 					<li><label><input type="radio" name="allowhtml" value="0" {ALWAYS_ALLOW_HTML_NO}> {L_NO}</label></li>
 				</ul>
 			</dd>
 			<dt>{L_ALWAYS_ALLOW_SMILIES}:</dt>
 			<dd>
 				<ul>
-					<li><label><input type="radio" name="allowsmilies" value="1" {ALWAYS_ALLOW_SMILIES_YES}> {L_YES}</label></li> 
+					<li><label><input type="radio" name="allowsmilies" value="1" {ALWAYS_ALLOW_SMILIES_YES}> {L_YES}</label></li>
 					<li><label><input type="radio" id="label__allowsmilies__0" name="allowsmilies" value="0" {ALWAYS_ALLOW_SMILIES_NO}> {L_NO}</label></li>
 				</ul>
 			</dd>
@@ -325,7 +325,7 @@
 					<li><label><input type="checkbox" name="dst" value="1" {S_DST}> {L_DST}</label></li>
 					<li><label><input type="checkbox" name="autoswitch_dst" value="1" {S_AUTOSWITCH_DST}> {L_AUTOSWITCH_DST}</label></li>
 				</ul>
-			</dd> 
+			</dd>
 			<dt>
 				<label for="profile_datef">{L_DATE_FORMAT}:</label>
 				<p class="explain">{L_DATE_FORMAT_EXPLAIN}</p>
@@ -336,7 +336,7 @@
 		</div>
 	</fieldset>
 	<!-- BEGIN switch_avatar_block -->
-	<fieldset id="info3">		
+	<fieldset id="info3">
 		<legend><a href="#info3">{L_AVATAR_PANEL}</a></legend>
 		<div>
 			<p class="explain">{L_AVATAR_EXPLAIN}</p>
@@ -350,17 +350,17 @@
 			<dl>
 				<!-- BEGIN switch_avatar_local_upload -->
 				<dt><label for="profile_avatarl">{L_UPLOAD_AVATAR_FILE}:</label></dt>
-				<dd> 
+				<dd>
 					<input type="hidden" name="MAX_FILE_SIZE" value="{AVATAR_SIZE}">
 					<input type="file" name="avatar" id="profile_avatarl">
 				</dd>
 				<!-- END switch_avatar_local_upload -->
-				<!-- BEGIN switch_avatar_remote_upload --> 
+				<!-- BEGIN switch_avatar_remote_upload -->
 				<dt>
 					<label for="profile_avatarr">{L_UPLOAD_AVATAR_URL}:</label>
 					<p class="explain">{L_UPLOAD_AVATAR_URL_EXPLAIN}</p>
 				</dt>
-				<dd> 
+				<dd>
 					<input type="url" name="avatarurl" size="40" id="profile_avatarr">
 				</dd>
 				<!-- END switch_avatar_remote_upload -->
@@ -369,13 +369,13 @@
 					<label for="profile_avataruri">{L_LINK_REMOTE_AVATAR}:</label>
 					<p class="explain">{L_LINK_REMOTE_AVATAR_EXPLAIN}</p>
 				</dt>
-				<dd> 
+				<dd>
 					<input type="url" name="avatarremoteurl" size="40" id="profile_avataruri">
 				</dd>
 				<!-- END switch_avatar_remote_link -->
 				<!-- BEGIN switch_avatar_local_gallery -->
 				<dt><label for="profile_avatargal">{L_AVATAR_GALLERY}:</label></dt>
-				<dd> 
+				<dd>
 					<button type="submit" name="avatargallery" value="{L_SHOW_GALLERY}">{L_SHOW_GALLERY}</button>
 				</dd>
 				<!-- END switch_avatar_local_gallery -->
@@ -383,8 +383,8 @@
 		</div>
 	</fieldset>
 	<!-- END switch_avatar_block -->
-	<div> 
-		{S_HIDDEN_FIELDS} 
+	<div>
+		{S_HIDDEN_FIELDS}
 		<button type="submit" name="submit" value="{L_SUBMIT}">{L_SUBMIT}</button>
 		<!--<input type="reset" value="{L_RESET}" name="reset" class="liteoption" />-->
 	</div>
@@ -430,7 +430,7 @@
 </form>
 <!-- END switch_user_logged_in -->
 <!-- BEGIN switch_add_profile -->
-<!-- END switch_add_profile --> 
+<!-- END switch_add_profile -->
 <nav class="breadcrumb">
 	<ul>
 		<li><a href="{U_INDEX}">{L_INDEX}</a></li>

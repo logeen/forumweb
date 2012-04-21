@@ -21,7 +21,7 @@
 				<li><a href="{U_INDEX}">{L_INDEX}</a></li>
 			</ul>
 		</nav>
-		
+
 		<table>
 			<thead>
 				<tr>
@@ -73,7 +73,7 @@
 	<!-- BEGIN switch_admin_option -->
 	</form>
 	<!-- END switch_admin_option -->
-	
+
 	<form method="post" action="{S_MODE_ACTION}" class="sort">
 		<fieldset>
 			<legend>{L_SUBMIT}</legend>
@@ -94,14 +94,14 @@
 			<button>{L_SUBMIT}</button>
 		</fieldset>
 	</form>
-	
+
 	<nav class="breadcrumb">
 		<ul>
 			<li><a href="{U_INDEX}">{L_INDEX}</a></li>
 		</ul>
 	</nav>
-	
+
 	{PAGINATION}
-	
+
 	{JUMPBOX}
 </div>
