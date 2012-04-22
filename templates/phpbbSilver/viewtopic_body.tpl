@@ -16,6 +16,7 @@
 
 		<ul class="actions">
 			<li>{S_WATCH_TOPIC}</li>
+			<li>{FEED}</li>
 		</ul>
 
 		<p class="post_reply_topic"><a href="{U_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}">{L_POST_REPLY_TOPIC}</a></p>
@@ -151,6 +152,7 @@
 	{S_TOPIC_ADMIN}
 
 	<ul class="actions">
+		<li>{FEED}</li>
 		<li>{S_WATCH_TOPIC}</li>
 	</ul>
 

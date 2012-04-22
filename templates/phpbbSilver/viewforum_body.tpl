@@ -10,6 +10,7 @@
 			<li>{LOGGED_IN_USER_LIST}</li>
 			<li><a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a></li>
 			<li><a href="#new1">{L_SKIP_TO_NEW}</a></li>
+			<li>{FEED}</li>
 		</ul>
 
 		<p class="posts_new_topic"><a href="{U_POST_NEW_TOPIC}" class="{POST_CLASS}" title="{U_POST_NEW_TOPIC}">{L_POST_NEW_TOPIC}</a></p>
@@ -82,6 +83,7 @@
 		</footer>
 
 		<ul class="actions">
+			<li>{FEED}</li>
 			<li><a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a></li>
 			<li>{L_MODERATOR}: {MODERATORS}</li>
 			<li>{LOGGED_IN_USER_LIST}</li>

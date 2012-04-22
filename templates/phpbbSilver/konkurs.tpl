@@ -33,7 +33,7 @@
 									<!-- END linkrow --></b>
 							</span>
 							<div>
-								<a href="{U_RSS}">
+								<a href="{U_RSS}" rel="nofollow">
 									<img src="rss.gif" alt="{L_RSS}"></a>
 							</div>&nbsp; </td>
 					</tr>

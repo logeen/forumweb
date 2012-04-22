@@ -29,13 +29,13 @@ var Notifier = function(url, time, data)
 				}
 				if (typeof time == 'undefined' || !time || new Date(data.time) > new Date(time))
 				{
-					document.title = '(' + number + ') ' + title;
 					if (container.className.indexOf('notifications_notify') < 0) container.className += ' notifications_notify';
+					Tinycon.setBubble(number);					
 				}
 				else
 				{
-					document.title = title;
 					if (container.className.indexOf('notifications_notify') >= 0) container.className = container.className.replace(/\s*notifications_notify/, '');
+					Tinycon.setBubble(0);					
 				}
 				html = '<dt><a href="" onclick="Notifier.instances[\'' + htmlspecialchars(url.replace(/\\/g, '\\\\').replace(/'/g, '\\\'')) + '\'].toggle(' + (typeof data.time == 'undefined' ? 'null' : "'" + data.time + "'") + '); return false" unselectable="on">' + (number > 0 ? '<strong unselectable="on">' + number + '</strong>' : number) + '/' + data.data.length + '</a></dt>' + html;
 				container.innerHTML = html;
@@ -43,9 +43,9 @@ var Notifier = function(url, time, data)
 			}
 			else
 			{
-				document.title = title;
 				container.innerHTML = '';
 				container.style.display = 'none';
+				Tinycon.setBubble(0);				
 			}
 		}
 	};
@@ -76,7 +76,7 @@ var Notifier = function(url, time, data)
 							if (response && typeof response.error == 'undefined')
 							{
 								container.className = container.className.replace(/\s*notifications_notify/, '');
-								document.title = title;
+								Tinycon.setBubble(0);								
 							}
 						}
 					};
@@ -128,7 +128,6 @@ var Notifier = function(url, time, data)
 
 	Notifier.instances[url] = this;
 
-	var title = document.title;
 	var ajax = getAJAX();
 
 	var container = document.createElement('dl');

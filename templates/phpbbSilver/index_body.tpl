@@ -33,6 +33,7 @@
 		<li><a href="{U_MARK_READ}"><b>{L_MARK_FORUMS_READ}</b></a></li>
 		<li><a href="#new1">{L_SKIP_TO_NEW}</a></li>
 		<!-- END switch_user_logged_in -->
+		<li>{FEED}</li>
 	</ul>
 
 	<div class="forumline">
@@ -129,7 +130,7 @@
 			</ul>
 		</div>
 		<div id="recommended" class="tab_content">
-			<iframe src="http://www.facebook.com/plugins/activity.php?site=www.forumweb.pl&amp;width=500&amp;height=225&amp;header=false&amp;colorscheme=light&amp;font=verdana&amp;border_color=%23fff&amp;recommendations=true&amp;ref=activity" scrolling="no" frameborder="0" width="500" height="225" allowTransparency="true"></iframe>
+			<iframe src="http://www.facebook.com/plugins/activity.php?site=www.forumweb.pl&amp;width=500&amp;height=1225&amp;header=false&amp;colorscheme=light&amp;font=verdana&amp;border_color=%23fff&amp;recommendations=true&amp;ref=activity&amp;linktarget=_top&amp;action=like%2Crecommend" scrolling="no" frameborder="0" width="500" height="225" allowTransparency="true"></iframe>
 		</div>
 		<div id="related" class="tab_content">
 			<!-- BEGIN relatedrow -->
@@ -141,6 +142,12 @@
 				<!-- BEGIN observerow -->
 					<li class="{observerow.ROW_CLASS}">
 						{observerow.AVATAR_IMG} <a href="{observerow.U_PROFILE}">{observerow.USERNAME}</a>
+						<dl>
+							<dt>{L_POSTS}:</dt>
+							<dd>{observerow.POSTS}</dt>
+							<dt>{L_TOTAL_HELPS}:</dt>
+							<dd>{observerow.HELPS}</dd>
+						</dl>
 						<div>{observerow.OBSERVE}</div>
 					</li>
 				<!-- END observerow -->

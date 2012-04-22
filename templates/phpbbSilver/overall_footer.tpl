@@ -45,6 +45,7 @@
 		<div id="linkor">{LINKOR}</div>
 
 		<!-- BEGIN switch_notifications -->
+		<script src="{TINYCON_JS}"></script>
 		<script src="{NOTIFIER_JS}"></script>
 		<script>
 		new Notifier('{U_NOTIFICATIONS}', '{USER_LAST_NOTIFICATION}', {NOTIFICATIONS_JSON});
