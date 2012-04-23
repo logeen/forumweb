@@ -1,14 +1,4 @@
 <!-- BEGIN quick_reply --><div class="quick_reply-tpl">
-<script>
-var empty_message = '{L_EMPTY_MESSAGE}'
-,last_message = "{quick_reply.LAST_MESSAGE}"
-,last_message_subject = "{quick_reply.LAST_MESSAGE_SUBJECT}"
-,no_text_selected = '{L_NO_TEXT_SELECTED}';
-</script>
-<script src="md5.js"></script>
-<script src="{QUICK_REPLY_JS}"></script>
-<script src="{EDITOR_JS}"></script>
-
 <form action="{quick_reply.POST_ACTION}" method="post" id="post" name="post" onsubmit="if (this.confirm_code &amp;&amp; this.confirm_code.value == '') { window.alert('{L_EMPTY_CONFIRM_CODE}'); return false } return checkForm(this)">
 <fieldset>
 	<legend>{L_QUICK_REPLY}</legend>
@@ -20,7 +10,7 @@ var empty_message = '{L_EMPTY_MESSAGE}'
 		<dt><label for="quick_code">{L_CONFIRM_CODE}</label></dt>
 		<dd><input type="text" class="post" name="confirm_code" value="{CONFIRM_CODE}" size="5" id="quick_code">
 			<img id="confirm_code_img" src="confirm_code.png.php" alt="">
-			<button type="button" onclick="document.getElementById('confirm_code_img').src = 'confirm_code.png.php?' + escape(new Date())">{L_REFRESH}</button>
+			<button type="button" id="confirm_refresher">{L_REFRESH}</button>
 		</dd>
 		<dt><label for="quick_username">{L_USERNAME}</label></dt>
 		<dd><input type="text" class="post" tabindex="1" name="username" size="25" maxlength="25" id="quick_username"></dd>
@@ -30,41 +20,31 @@ var empty_message = '{L_EMPTY_MESSAGE}'
 		<dt>
 			<p>
 			<!-- BEGIN smilies -->
-			<img  src="{quick_reply.smilies.URL}"  onclick="if (!editor.insertText(' {quick_reply.smilies.CODE} ')) emoticon(' {quick_reply.smilies.CODE} ');" alt="{quick_reply.smilies.DESC}" title="{quick_reply.smilies.DESC}">
+			<img  src="{quick_reply.smilies.URL}" class="emoticon" data-emoticon="{quick_reply.smilies.CODE}" title="{quick_reply.smilies.DESC}">
 			<!-- END smilies -->
 			</p>
-			<p><a href="{U_MORE_SMILIES}" onclick="window.open('{U_MORE_SMILIES}', '_phpbbsmilies', 'HEIGHT=300,resizable=yes,scrollbars=yes,width=250');return false;" target="_phpbbsmilies" class="nav">{L_MORE_SMILIES}</a></p>
+			<p><a href="{U_MORE_SMILIES}" class="popup" data-target="_phpbbsmilies" class="nav popup">{L_MORE_SMILIES}</a></p>
 		<dd>
-				<textarea name="message" rows="15" cols="80" tabindex="3" class="post"  onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);"></textarea>
+				<textarea name="message" rows="15" cols="80" tabindex="3" class="post"></textarea>
 				<div>
-					<ul>
-						<li><button type="button" accesskey="b" name="addbbcode0"  onClick="if (!editor.insert('b')) bbstyle(0)"><span>B</span><span id="addbbcode1" >*</span></button></li>
-						<li><button type="button" accesskey="i" name="addbbcode2"  onClick="if (!editor.insert('i')) bbstyle(2)"><span>I</span><span id="addbbcode3" >*</span></button></li>
-						<li><button type="button" accesskey="u" name="addbbcode4"  onClick="if (!editor.insert('u')) bbstyle(4)"><span>U</span><span id="addbbcode5" >*</span></button></li>
+					<ul class="bbcode">
+						<li><button type="button" accesskey="b" data-tag="b">B</button></li>
+						<li><button type="button" accesskey="i" data-tag="i">I</button></li>
+						<li><button type="button" accesskey="u" data-tag="u">U</button></li>
+						<li><button type="button" accesskey="s" data-tag="s">S</button></li>
+						<li><button type="button" data-tag="sup">A<sup>sup</sup></button></li>
+						<li><button type="button" data-tag="sub">A<sub>sub</sub></button></li>
+						<li><button type="button" accesskey="t" data-tag="tt"><tt>TT</tt></button></li>
+						<li><button type="button" accesskey="q" data-tag="quote">Quote</button></li>
+						<li><button type="button" accesskey="c" data-tag="code">Code</button><button type="button" accesskey="r" data-tag="rem">//</button></li>
+						<li><button type="button" accesskey="l" data-tag="ul">List</button><button type="button" accesskey="o" data-tag="ol">List=</button><button type="button" accesskey="8" data-frag="[*]">*</button></li>
+						<li><button type="button" accesskey="p" data-tag="img">Img</button></li>
+						<li><button type="button" accesskey="w" data-tag="a" data-help="w">URL</button></li>
+						<li><button type="button" accesskey="m" data-tag="email">Email</button></li>
 					</ul>
-					<ul>
-						<li><button type="button" accesskey="s" name="addbbcode1"  onClick="if (!editor.insert('s')) bbstyle(18)"><span>S</span><span id="addbbcode19" >*</span></button></li>
-						<li><button type="button" name="addbbcode3"  onClick="if (!editor.insert('sup')) bbstyle(20)">A<span>sup</span><span id="addbbcode21" >*</span></button></li>
-						<li><button type="button" name="addbbcode5"  onClick="if (!editor.insert('sub')) bbstyle(22)">A<span>sub</span><span id="addbbcode23" >*</span></button></li>
-					</ul>
-					<ul>
-						<li><button type="button" accesskey="t" name="addbbcode28"  onClick="if (!editor.insert('tt')) bbstyle(28)"><tt>TT</tt><span id="addbbcode29" >*</span></button></li>
-						<li><button type="button" accesskey="q" name="addbbcode6"  onClick="if (!editor.insert('quote')) bbstyle(6)">Quote<span id="addbbcode7" >*</span></button></li>
-						<li><button type="button" accesskey="c" name="addbbcode8"  onClick="if (!editor.insert('code')) bbstyle(8)">Code<span id="addbbcode9" >*</span></button></li>
-					</ul>
-					<ul>
-						<li><button type="button" accesskey="l" name="addbbcode10"  onClick="if (!editor.insert('ul')) bbstyle(10)">List<span id="addbbcode11" >*</span></button></li>
-						<li><button type="button" accesskey="o" name="addbbcode12"  onClick="if (!editor.insert('ol')) bbstyle(12)">List=<span id="addbbcode13" >*</span></button></li>
-						<li><button type="button" accesskey="8"  onClick="if (!editor.isActive()) emoticon('[*]')">*</button></li>
-					</ul>
-					<ul>
-						<li><button type="button" accesskey="p" name="addbbcode14"  onClick="if (!editor.insert('img')) bbstyle(14)">Img<span id="addbbcode15" >*</span></button></li>
-						<li><button type="button" accesskey="w" name="addbbcode16"  onClick="if (!editor.insert('a')) bbstyle(16)">URL<span id="addbbcode17" >*</span></button></li>
-						<li><button type="button" accesskey="m" name="addbbcode26"  onClick="if (!editor.insert('email')) bbstyle(26)">Email<span id="addbbcode27" >*</span></button></li>
-					</ul>
-					<p><button type="button" name="quoteselected" value="" onclick="quoteSelection()" onmouseover="if (document.getSelection) selectedText = document.getSelection()">{L_QUOTE_SELECTED}</button> <button type="button" accesskey="r" name="addbbcode25"  onClick="if (!editor.insert('rem')) bbstyle(24)">//<span id="addbbcode25" >*</span></button></p>
+					<p><button type="button" class="quote">{L_QUOTE_SELECTED}</button></p>
 					<p>
-						<select name="addbbcode24"  onChange="if (!editor.insert('color', this.value)) bbfontstyle('[color=' + this.options[this.selectedIndex].value + ']', '[/color]'); this.selectedIndex = 0">
+						<select id="colorChoose">
 							<option  value="{T_BODY_TEXT}" class="genmed">{L_COLOR_DEFAULT}</option>
 							<option  value="darkred" class="genmed">{L_COLOR_DARK_RED}</option>
 							<option  value="red" class="genmed">{L_COLOR_RED}</option>
@@ -83,7 +63,7 @@ var empty_message = '{L_EMPTY_MESSAGE}'
 						</select>
 					</p>
 					<p>
-						<select name="addbbcode26"  onChange="if (this.selectedIndex) if (!editor.insert('size', this.value)) bbfontstyle('[size=' + this.options[this.selectedIndex].value + ']', '[/size]'); this.selectedIndex = 0">
+						<select id="fontChoose">
 							<option value="0" class="genmed">{L_FONT_SIZE}</option>
 							<option value="7" class="genmed">{L_FONT_TINY}</option>
 							<option value="9" class="genmed">{L_FONT_SMALL}</option>
@@ -93,7 +73,7 @@ var empty_message = '{L_EMPTY_MESSAGE}'
 						</select>
 					</p>
 					<p>
-						<select onChange="var insert = this.value.split('||'); insert = insert[this.form.short_code.checked &amp;&amp; typeof insert[1] != 'undefined' ? 1 : 0].replace(/\\n/g, '\n').replace(/\\t/g, '\t').split('|'); if (!editor.insertText(insert[0], typeof insert[1] == 'undefined' ? '' : insert[1])) bbfontstyle(insert[0], typeof insert[1] == 'undefined' ? '' : insert[1]); this.value = ''">
+						<select id="codeChoose">
 									<option value="">----- {L_SELECT} -----</option>
 									<option value="\t">[Tab]</option>
 									<optgroup label="XHTML">
@@ -144,10 +124,10 @@ var empty_message = '{L_EMPTY_MESSAGE}'
 								</select><br /><input type="checkbox" id="label__short_code" name="short_code" /> <label for="label__short_code">{L_SHORT_CODE}</label>
 				</p>
 				<p>
-					<script>
+					<!--<script>
 						if (document.post.message.rows) document.write("<a id=\"roll\" href=\"javascript:void(0)\" style=\"text-decoration: none; font-weight: bold\" onclick=\"if (document.post.message.rows < 30) { if (Editor.isSupported()) editor.getElement().style.height = '450px'; document.post.message.rows = 30; document.post.message.parentNode.width = '100%'; if (document.getElementById && document.getElementById('roll').innerHTML) setTimeout('document.getElementById(\\'roll\\').innerHTML = \\'&nbsp;&nbsp;&laquo;&nbsp;&nbsp;\\'', 1); } else { if (Editor.isSupported()) editor.getElement().style.height = '240px'; document.post.message.rows = 15; document.post.message.parentNode.width = 450; if (document.getElementById && document.getElementById('roll').innerHTML) setTimeout('document.getElementById(\\'roll\\').innerHTML = \\'&nbsp;&nbsp;&raquo;&nbsp;&nbsp;\\'', 1); } return false\">&nbsp;&nbsp;&raquo;&nbsp;&nbsp;<"+"/a>");
-					</script> 
-					<a id="closeTags" href="javascript:bbstyle(-1)" onclick="if (editor.isActive()) return false">{L_BBCODE_CLOSE_TAGS}</a>
+					</script>
+					<a id="closeTags" href="javascript:bbstyle(-1)" onclick="if (editor.isActive()) return false">{L_BBCODE_CLOSE_TAGS}</a>-->
 				</p>
 			</dd>
 			<dt>{L_HIDE_PANEL_IN_PROFILE}</dt>
@@ -170,7 +150,7 @@ var empty_message = '{L_EMPTY_MESSAGE}'
 		</div>
 	</fieldset>
 </form>
-<script >
+<!--<script >
 var editor = new Editor(document.post.message, 'editor postbody');
 if (Editor.isSupported())
 {
@@ -198,7 +178,18 @@ if (Editor.isSupported())
 	document.getElementById('closeTags').parentNode.insertBefore(switchEditor, document.getElementById('closeTags'));
 	switchEditor.parentNode.insertBefore(document.createTextNode(' ['), switchEditor);
 	document.getElementById('closeTags').parentNode.insertBefore(document.createTextNode('] '), document.getElementById('closeTags'));
-}
+}</script>-->
+<script>
+var errors={
+	confirm:'{L_EMPTY_CONFIRM_CODE}'
+	,empty : '{L_EMPTY_MESSAGE}'
+	,last : "{quick_reply.LAST_MESSAGE}"
+	,lastsubject : "{quick_reply.LAST_MESSAGE_SUBJECT}"
+	,noselected : '{L_NO_TEXT_SELECTED}'
+};
 </script>
+<script src="md5.js"></script>
+<!--<script src="{QUICK_REPLY_JS}"></script>-->
+<script src="templates/phpbbSilver/js/editor.js"></script>
 </div>
 <!-- END quick_reply -->

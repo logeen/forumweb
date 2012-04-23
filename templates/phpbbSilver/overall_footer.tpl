@@ -54,7 +54,7 @@
 		<script src="./s/stat.js"></script>
 		<noscript><img src="./s/stat.php" alt="" width="1" height="1"></noscript>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery-1.6.4.min.js"><\/script>')</script>
 		<!-- BEGIN scriptrow -->
 		<script defer async src="{scriptrow.SRC}"></script>

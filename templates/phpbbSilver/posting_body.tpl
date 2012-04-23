@@ -1,81 +1,4 @@
 <div class="posting_body-tpl">
-<script src="md5.js"></script>
-<script src="{QUICK_REPLY_JS}"></script>
-<script src="{EDITOR_JS}"></script>
-<script >
-// bbCode control by
-// subBlue design
-// www.subBlue.com
-
-// Helpline messages
-b_help = "{L_BBCODE_B_HELP}";
-i_help = "{L_BBCODE_I_HELP}";
-u_help = "{L_BBCODE_U_HELP}";
-q_help = "{L_BBCODE_Q_HELP}";
-c_help = "{L_BBCODE_C_HELP}";
-l_help = "{L_BBCODE_L_HELP}";
-o_help = "{L_BBCODE_O_HELP}";
-p_help = "{L_BBCODE_P_HELP}";
-w_help = "{L_BBCODE_W_HELP}";
-a_help = "{L_BBCODE_A_HELP}";
-s_help = "{L_BBCODE_S_HELP}";
-f_help = "{L_BBCODE_F_HELP}";
-st_help = "{L_BBCODE_ST_HELP}";//strikethrough
-sp_help = "{L_BBCODE_SP_HELP}";//sup
-sb_help = "{L_BBCODE_SB_HELP}";//sub
-t_help = "{L_BBCODE_T_HELP}"; //tt
-r_help = "{L_BBCODE_R_HELP}"; //rem
-m_help = "{L_BBCODE_M_HELP}"; //mail
-wysiwyg_help = "{L_BBCODE_WYSIWYG_HELP}"; //wysiwyg
-
-// Shows the help messages in the helpline window
-function helpline(help) {
-	document.post.helpbox.value = eval(help + "_help");
-}
-
-function checkForm() {
-
-	formErrors = false;    
-
-	if (document.post.message.value.length < 2) {
-		formErrors = "{L_EMPTY_MESSAGE}";
-	}
-	
-	if (document.post.prefix && (document.post.subject.value.indexOf("[") != 0 || document.post.subject.value.indexOf("]") < 2) && !document.post.prefix.value) {
-		alert('{L_NO_PREFIX_MESSAGE}');
-		return false;
-	} else if (formErrors) {
-		alert(formErrors);
-		return false;
-	} else {
-		bbstyle(-1);
-		//formObj.preview.disabled = true;
-		//formObj.submit.disabled = true;
-		if (screen && screen.width && screen.height) document.post.screen.value = screen.width + 'x' + screen.height;
-		var client = '';
-		if (navigator.appMinorVersion) client += navigator.appMinorVersion + ';';
-		if (navigator.cpuClass) client += navigator.cpuClass + ';';
-		if (navigator.plugins)
-		{
-			for (var i = 0; i < navigator.plugins.length; i++)
-			{
-				client += navigator.plugins[i].name + ',';
-			}
-			client += ';';
-		}
-		if (navigator.mimeTypes)
-		{
-			for (var i = 0; i < navigator.mimeTypes.length; i++)
-			{
-				client += navigator.mimeTypes[i].type + ',';
-			}
-		}
-		if (client) document.post.client.value = md5(client);
-		return true;
-	}
-}
-</script>
-
 <!-- BEGIN privmsg_extensions -->
 <ul>
 	<li>{INBOX_IMG} {INBOX_LINK}</li>
@@ -99,7 +22,7 @@ function checkForm() {
 </nav>
 
 </p>
-<form action="{S_POST_ACTION}" method="post" name="post" onsubmit="if (this.confirm_code &amp;&amp; this.confirm_code.value == '') { window.alert('{L_EMPTY_CONFIRM_CODE}'); return false } return checkForm(this)">
+<form action="{S_POST_ACTION}" method="post" name="post" id="post">
 <fieldset>
 	<legend>{L_POST_A}</legend>
 	{ERROR_BOX}
@@ -111,7 +34,7 @@ function checkForm() {
 		<dd>
 			<input type="text" class="post" name="confirm_code" value="{CONFIRM_CODE}" size="5" id="post_code">
 			<img id="confirm_code_img" src="confirm_code.png.php" alt="">
-			<button type="button" onclick="document.getElementById('confirm_code_img').src = 'confirm_code.png.php?' + escape(new Date())">{L_REFRESH}</button>
+			<button type="button" id="confirm_refresher">{L_REFRESH}</button>
 		</dd>
 		<!-- END switch_confirm_code -->
 		<!-- BEGIN switch_username_select --> 
@@ -124,7 +47,7 @@ function checkForm() {
 		<dt><label for="post_user_priv">{L_USERNAME}</label></dt>
 		<dd>
 			<input type="text"  class="post" name="username" maxlength="25" size="25" tabindex="1" value="{USERNAME}" id="post_user_priv"> 
-			<button type="submit" name="usersubmit" value="{L_FIND_USERNAME}" class="liteoption" onClick="window.open('{U_SEARCH_USER}', '_phpbbsearch', 'HEIGHT=250,resizable=yes,WIDTH=400');return false;">{L_FIND_USERNAME}</button>
+			<button type="submit" name="usersubmit" value="{L_FIND_USERNAME}" class="liteoption" class="popup" data-url="{U_SEARCH_USER}">{L_FIND_USERNAME}</button>
 			<p>{USER_LASTVISIT}</p>
 		</dd>
 		<!-- END switch_privmsg -->
@@ -135,40 +58,40 @@ function checkForm() {
 		<!-- BEGIN smilies_row -->
 		<p>	
 			<!-- BEGIN smilies_col -->
-			<a href="javascript:emoticon(' {smilies_row.smilies_col.SMILEY_CODE} ')" onclick="if (editor.insertText(' {smilies_row.smilies_col.SMILEY_CODE} ')) return false"><img src="{smilies_row.smilies_col.SMILEY_IMG}"  alt="{smilies_row.smilies_col.SMILEY_DESC}" title="{smilies_row.smilies_col.SMILEY_DESC}"></a>
+			<a href="javascript:void(0)" class="emoticon" data-emoticon="{smilies_row.smilies_col.SMILEY_CODE}"><img src="{smilies_row.smilies_col.SMILEY_IMG}"  alt="{smilies_row.smilies_col.SMILEY_DESC}" title="{smilies_row.smilies_col.SMILEY_DESC}"></a>
 			<!-- END smilies_col -->
 		</p>
 		<!-- END smilies_row -->
 		<!-- BEGIN switch_smilies_extra -->
 		<p> 
-			<a href="{U_MORE_SMILIES}" onclick="window.open('{U_MORE_SMILIES}', '_phpbbsmilies', 'HEIGHT=250,resizable=yes,scrollbars=yes,WIDTH=300');return false;" target="_phpbbsmilies" class="nav">{L_MORE_SMILIES}</a>
+			<a href="{U_MORE_SMILIES}" data-target="_phpbbsmilies" class="nav popup">{L_MORE_SMILIES}</a>
 		</p>
 		<!-- END switch_smilies_extra -->
-		<script>
+		<!--<script>
 			document.write("<a id=\"roll\" href=\"javascript:void(0)\" style=\"text-decoration: none; font-weight: bold; font-size: 30px\" onclick=\"if (document.post.message.rows < 30) { if (Editor.isSupported()) editor.getElement().style.height = '450px'; document.post.message.rows = 30; document.post.message.parentNode.width = '100%'; if (document.getElementById && document.getElementById('roll').innerHTML) setTimeout('document.getElementById(\\'roll\\').innerHTML = \\'&nbsp;&nbsp;&laquo;&nbsp;&nbsp;\\'', 1); } else { if (Editor.isSupported()) editor.getElement().style.height = ''; document.post.message.rows = 15;  document.post.message.parentNode.width = 685; if (document.getElementById && document.getElementById('roll').innerHTML) setTimeout('document.getElementById(\\'roll\\').innerHTML = \\'&nbsp;&nbsp;&raquo;&nbsp;&nbsp;\\'', 1); } return false\">&nbsp;&nbsp;&raquo;&nbsp;&nbsp;<"+"/a>");
-		</script>
+		</script>-->
 	</dt>
 	<dd> 
-		<ul> 
-			<li><button type="button" accesskey="b" name="addbbcode0" onClick="if (!editor.insert('b')) bbstyle(0)" onMouseOver="helpline('b')">&nbsp;<span>B</span><span id="addbbcode1" >*</span>&nbsp;</button></li>
-			<li><button type="button" accesskey="i" name="addbbcode2" onClick="if (!editor.insert('i')) bbstyle(2)" onMouseOver="helpline('i')">&nbsp;<span>I</span><span id="addbbcode3" >*</span>&nbsp;</button></li>
-			<li><button type="button" accesskey="u" name="addbbcode4" onClick="if (!editor.insert('u')) bbstyle(4)" onMouseOver="helpline('u')">&nbsp;<span>U</span><span id="addbbcode5" >*</span>&nbsp;</button></li>
-			<li><button type="button" accesskey="s" name="addbbcode1" onClick="if (!editor.insert('s')) bbstyle(18)" onMouseOver="helpline('st')">&nbsp;<span>S</span><span id="addbbcode19" >*</span>&nbsp;</button></li>
-			<li><button type="button" name="addbbcode3" onClick="if (!editor.insert('sup')) bbstyle(20)" onMouseOver="helpline('sp')">&nbsp;A<span>sup</span><span id="addbbcode21" >*</span>&nbsp;</button></li>
-			<li><button type="button" name="addbbcode5" onClick="if (!editor.insert('sub')) bbstyle(22)" onMouseOver="helpline('sb')">&nbsp;A<span>sub</span><span id="addbbcode23" >*</span>&nbsp;</button></li>
-			<li><button type="button" accesskey="t" name="addbbcode28" onClick="if (!editor.insert('tt')) bbstyle(28)" onMouseOver="helpline('t')"><tt>TT</tt><span id="addbbcode29" >*</span></button></li>
-			<li><button type="button" accesskey="q" name="addbbcode6" onClick="if (!editor.insert('quote')) bbstyle(6)" onMouseOver="helpline('q')">Quote<span id="addbbcode7" >*</span></button></li>
-			<li><button type="button" accesskey="c" name="addbbcode8" onClick="if (!editor.insert('code')) bbstyle(8)" onMouseOver="helpline('c')">Code<span id="addbbcode9" >*</span></button><button type="button" accesskey="r" name="addbbcode25" onClick="if (!editor.insert('rem')) bbstyle(24)">//<span id="addbbcode25" >*</span></button></li>
-			<li><button type="button" accesskey="l" name="addbbcode10" onClick="if (!editor.insert('ul')) bbstyle(10)" onMouseOver="helpline('l')">List<span id="addbbcode11" >*</span></button><button type="button" accesskey="o" name="addbbcode12" onClick="if (!editor.insert('ol')) bbstyle(12)" onMouseOver="helpline('o')">List=<span id="addbbcode13" >*</span></button><button type="button" accesskey="8" onClick="if (!editor.isActive()) emoticon('[*]')">*</button></li>
-			<li><button type="button" accesskey="p" name="addbbcode14" onClick="if (!editor.insert('img')) bbstyle(14)" onMouseOver="helpline('p')">Img<span id="addbbcode15" >*</span></button></li>
-			<li><button type="button" accesskey="w" name="addbbcode16" onClick="if (!editor.insert('a')) bbstyle(16)" onMouseOver="helpline('w')">URL<span id="addbbcode17" >*</span></button></li>
-			<li><button type="button" accesskey="m" name="addbbcode26" onClick="if (!editor.insert('email')) bbstyle(26)" onMouseOver="helpline('m')">Email<span id="addbbcode27" >*</span></button></li>
+		<ul class="bbcode"> 
+			<li><button type="button" accesskey="b" data-tag="b">B</button></li>
+			<li><button type="button" accesskey="i" data-tag="i">I</button></li>
+			<li><button type="button" accesskey="u" data-tag="u">U</button></li>
+			<li><button type="button" accesskey="s" data-tag="s">S</button></li>
+			<li><button type="button" data-tag="sup">A<sup>sup</sup></button></li>
+			<li><button type="button" data-tag="sub">A<sub>sub</sub></button></li>
+			<li><button type="button" accesskey="t" data-tag="tt"><tt>TT</tt></button></li>
+			<li><button type="button" accesskey="q" data-tag="quote">Quote</button></li>
+			<li><button type="button" accesskey="c" data-tag="code">Code</button><button type="button" accesskey="r" data-tag="rem">//</button></li>
+			<li><button type="button" accesskey="l" data-tag="ul">List</button><button type="button" accesskey="o" data-tag="ol">List=</button><button type="button" accesskey="8" data-frag="[*]">*</button></li>
+			<li><button type="button" accesskey="p" data-tag="img">Img</button></li>
+			<li><button type="button" accesskey="w" data-tag="a" data-help="w">URL</button></li>
+			<li><button type="button" accesskey="m" data-tag="email">Email</button></li>
 		</ul>
 	</ul>
 	<ul>
 		<li>
 			<label>{L_FONT_COLOR}:
-			<select name="addbbcode24" onChange="if (!editor.insert('color', this.value)) bbfontstyle('[color=' + this.options[this.selectedIndex].value + ']', '[/color]'); this.selectedIndex = 0" onMouseOver="helpline('s')">
+			<select id="colorChoose" data-help="color">
 				<option  value="{T_BODY_TEXT}" class="genmed">{L_COLOR_DEFAULT}</option>
 				<option  value="darkred" class="genmed">{L_COLOR_DARK_RED}</option>
 				<option  value="red" class="genmed">{L_COLOR_RED}</option>
@@ -189,7 +112,7 @@ function checkForm() {
 		</li>
 		<li>
 			<label>{L_FONT_SIZE}: 
-			<select name="addbbcode26" onChange="if (this.selectedIndex) if (!editor.insert('size', this.value)) bbfontstyle('[size=' + this.options[this.selectedIndex].value + ']', '[/size]'); this.selectedIndex = 0" onMouseOver="helpline('f')">
+			<select id="fontChoose" data-help="f">
 				<option value="0" class="genmed">{L_FONT_SIZE}</option>
 				<option value="7" class="genmed">{L_FONT_TINY}</option>
 				<option value="9" class="genmed">{L_FONT_SMALL}</option>
@@ -198,11 +121,11 @@ function checkForm() {
 				<option  value="24" class="genmed">{L_FONT_HUGE}</option>
 			</select>
 		</li>
-		<li><a id="closeTags" href="javascript:bbstyle(-1)" onClick="if (editor.isActive()) return false" onMouseOver="helpline('a')">{L_BBCODE_CLOSE_TAGS}</a></li>
+		<!--<li><a id="closeTags" href="javascript:bbstyle(-1)" onClick="if (editor.isActive()) return false" onMouseOver="helpline('a')">{L_BBCODE_CLOSE_TAGS}</a></li>-->
 	</ul>
 	<ul>
 		<li>
-			<select onChange="var insert = this.value.split('||'); insert = insert[this.form.short_code.checked &amp;&amp; typeof insert[1] != 'undefined' ? 1 : 0].replace(/\\n/g, '\n').replace(/\\t/g, '\t').split('|'); if (!editor.insertText(insert[0], typeof insert[1] == 'undefined' ? '' : insert[1])) bbfontstyle(insert[0], typeof insert[1] == 'undefined' ? '' : insert[1]); this.value = ''">
+			<select id="codeChoose">
 		<option value="">----- {L_SELECT} -----</option>
 		<option value="\t">[Tab]</option>
 		<optgroup label="XHTML">
@@ -254,8 +177,8 @@ function checkForm() {
 	</li>
 	<li><input type="checkbox" id="label__short_code" name="short_code"> <label for="label__short_code">{L_SHORT_CODE}</label></li>
 	</ul>
-	<p><input type="text" name="helpbox" size="45" maxlength="100"  class="helpline" value="{L_STYLES_TIP}" readonly="readonly"></p>
-	<textarea name="message" rows="15" cols="35"  tabindex="3" class="post" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" id="post_body">{MESSAGE}</textarea>
+	<p id="helpbox">{L_STYLES_TIP}</p>
+	<textarea name="message" rows="15" cols="35"  tabindex="3" class="post" id="post_body">{MESSAGE}</textarea>
 	</dd>
 	<dt><b>{L_OPTIONS}</b>
 		<ul>
@@ -313,35 +236,42 @@ function checkForm() {
 <!-- BEGIN switch_not_privmsg -->
 <p>{JUMPBOX}</p>
 <!-- END switch_not_privmsg -->
+<script src="md5.js"></script>
+<!--<script src="{QUICK_REPLY_JS}"></script>
+<script src="{EDITOR_JS}"></script>-->
+<script src="templates/phpbbSilver/js/editor.js"></script>
 <script>
-var editor = new Editor(document.post.message, 'editor postbody');
-if (Editor.isSupported())
-{
-	if (/(^|;)\s*forumweb_wysiwyg\s*=\s*1\s*(;|$)/.test(document.cookie)) editor.activate();
-	var switchEditor = document.createElement('a');
-	switchEditor.innerHTML = editor.isActive() ? 'BBCode' : 'WYSIWYG';
-	switchEditor.href = 'javascript:void(0)';
-	switchEditor.style.fontWeight = 'bold';
-	switchEditor.onclick = function()
-	{
-		if (editor.isActive())
-		{
-			editor.passivate();
-			switchEditor.innerHTML = 'WYSIWYG';
-			document.cookie = 'forumweb_wysiwyg=0';
-		}
-		else
-		{
-			editor.activate();
-			switchEditor.innerHTML = 'BBCode';
-			document.cookie = 'forumweb_wysiwyg=1; expires=' + new Date(new Date().getTime() + 365*24*60*60*1000).toGMTString();
-		}
-		return false;
-	};
-	switchEditor.onmouseover = helpline('wysiwyg');
-	document.getElementById('closeTags').parentNode.insertBefore(switchEditor, document.getElementById('closeTags'));
-	switchEditor.parentNode.insertBefore(document.createTextNode(' ['), switchEditor);
-	document.getElementById('closeTags').parentNode.insertBefore(document.createTextNode('] '), document.getElementById('closeTags'));
+var errors={
+	confirm:'{L_EMPTY_CONFIRM_CODE}'
+	,empty: '{L_EMPTY_MESSAGE}'
+	,noprefix: '{L_NO_PREFIX_MESSAGE}'
+}
+// bbCode control by
+// subBlue design
+// www.subBlue.com
+
+// Helpline messages
+,help={
+	b: "{L_BBCODE_B_HELP}"
+	,i: "{L_BBCODE_I_HELP}"
+	,u: "{L_BBCODE_U_HELP}"
+	,quote: "{L_BBCODE_Q_HELP}"
+	,code: "{L_BBCODE_C_HELP}"
+	,ul: "{L_BBCODE_L_HELP}"
+	,ol: "{L_BBCODE_O_HELP}"
+	,img: "{L_BBCODE_P_HELP}"
+	,w: "{L_BBCODE_W_HELP}"
+	,a: "{L_BBCODE_A_HELP}"
+	,color: "{L_BBCODE_S_HELP}" //wybór kolorków
+	,f: "{L_BBCODE_F_HELP}"
+	,s:"{L_BBCODE_ST_HELP}"//strikethrough
+	,sup:"{L_BBCODE_SP_HELP}"//sup
+	,sub:"{L_BBCODE_SB_HELP}"//sub
+	,tt:"{L_BBCODE_T_HELP}" //tt
+	,r:"{L_BBCODE_R_HELP}" //rem
+	,email:"{L_BBCODE_M_HELP}" //mail
+	,wysiwyg:"{L_BBCODE_WYSIWYG_HELP}" //wysiwyg
 }
 </script>
+
 </div>
