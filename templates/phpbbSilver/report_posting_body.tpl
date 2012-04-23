@@ -3,7 +3,7 @@
 	<script type="text/javascript"><!--
 function checkForm(form) {
 
-	formErrors = false;    
+	formErrors = false;
 
 	if (form.reason.value.length < 2)
 	{
@@ -16,9 +16,9 @@ function checkForm(form) {
 				break;
 			}
 		}
-		
+
 	}
-	
+
 	if (formErrors) {
 		alert(formErrors);
 		return false;
@@ -44,10 +44,10 @@ function checkForm(form) {
 						</tr>
 					</table>
 					<table cellpadding="3" cellspacing="1" class="forumline">
-						<tr> 
+						<tr>
 							<th class="thhead" colspan="2">{MESSAGE_TITLE}</th>
 						</tr>
-						<tr> 
+						<tr>
 							<td class="row1" valign="top"><span class="gen">{L_REPORT_REASON}</span><br /><span class="gensmall">{L_REPORT_REASON_EXPLAIN}</span></td>
 							<td class="row2" valign="top" width="685">
 								<!-- BEGIN reasonrow -->

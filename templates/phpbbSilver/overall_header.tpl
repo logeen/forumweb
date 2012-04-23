@@ -25,7 +25,7 @@
 		<![endif]-->
 		<!-- BEGIN switch_autodetect_version -->
 		<script>
-		if (screen && screen.width && screen.width < 800 && !/[?&]mobile([=&]|$)/.test(window.location.search)) window.location.href = window.location.protocol + '//' + window.location.hostname + window.location.pathname + window.location.search + (window.location.search == '' ? '?' : '&') + 'mobile' + (screen.height < 480 ? '=mini' : '') + window.location.hash;
+		if (screen && screen.width && screen.height && Math.max(screen.width, screen.height) < 800 && !/[?&]mobile([=&]|$)/.test(window.location.search)) window.location.href = window.location.protocol + '//' + window.location.hostname + window.location.pathname + window.location.search + (window.location.search == '' ? '?' : '&') + 'mobile' + (screen.height < 480 ? '=mini' : '') + window.location.hash;
 		</script>
 		<!-- END switch_autodetect_version -->
 	</head>

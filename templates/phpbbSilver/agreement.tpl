@@ -1,10 +1,10 @@
 <div class="agreement-tpl">
 	<nav class="breadcrumb">
 		<ul>
-			<li><a href="{U_INDEX}">{L_INDEX}</a></li> 
+			<li><a href="{U_INDEX}">{L_INDEX}</a></li>
 		</ul>
 	</nav>
-	
+
 	<article>
 		<h1>{SITENAME} - {REGISTRATION}</h1>
 		<section>
@@ -18,10 +18,10 @@
 			</ul>
 		</footer>
 	</article>
-	
+
 	<nav class="breadcrumb">
 		<ul>
-			<li><a href="{U_INDEX}">{L_INDEX}</a></li> 
+			<li><a href="{U_INDEX}">{L_INDEX}</a></li>
 		</ul>
 	</nav>
 </div>

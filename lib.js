@@ -25,7 +25,7 @@ function selectText(id)
 function fillClient(form)
 {
 		if (screen && screen.width && screen.height) form.elements['screen'].value = screen.width + 'x' + screen.height;
-		
+
 		var client = '';
 		if (navigator.appMinorVersion) client += navigator.appMinorVersion + ';';
 		if (navigator.cpuClass) client += navigator.cpuClass + ';';

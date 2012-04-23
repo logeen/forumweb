@@ -24,7 +24,7 @@ else if (window.ActiveXObject) {
 var spelling_el = null;
 
 function spelling_escape(word) {
-	for (var i = 0, word2 = '', length_ = word.length; i < length_; i++) {	
+	for (var i = 0, word2 = '', length_ = word.length; i < length_; i++) {
 		switch (word.charAt(i)) {
 			case '%': word2 += ' '; break;
 			case '¡': word2 += '%A1'; break;
@@ -94,7 +94,7 @@ function spelling_correct(word) {
 			txt = txt.replace(reg, '[color=red]' + word + '[/color]');
 		}
 		document.forms['post'].elements['message'].value = txt.substr(1, txt.length-2);
-		
+
 		var correct = function (isCorrect) {
 			for (var i = 0, length_ = spelling_el.parentNode.getElementsByTagName('span').length; i < length_; i++) {
 				if (spelling_el.parentNode.getElementsByTagName('span').item(i).childNodes.item(0).nodeValue == error) {
@@ -103,7 +103,7 @@ function spelling_correct(word) {
 				}
 			}
 		}
-		
+
 		if (ajax) {
 			ajax.open('GET', 'spelling.php?w=' + spelling_escape(word), true);
 			ajax.send('');
@@ -123,7 +123,7 @@ function spelling_suggestions(word) {
 	if (!ajax) return false;
 	ajax.open('GET', 'spelling.php?s=' + spelling_escape(word), true);
 	ajax.send('');
-	
+
 	var suggestions = function (suggestions) {
 		var suggestions = spelling_unescape(suggestions).split(' ');
 		var el = document.createElement('select');
@@ -147,7 +147,7 @@ function spelling_suggestions(word) {
 		elDiv.appendChild(el);
 		el.focus();
 	}
-	
+
 	if (ajax.readyState == 4) suggestions(ajax.responseText);
 	else {
 		ajax.onreadystatechange = function () {
@@ -159,7 +159,7 @@ function spelling_suggestions(word) {
 function spell(el, evnt) {
 	spelling_el = el;
 	var error = spelling_el.childNodes.item(0).nodeValue;
-	
+
 	var x = evnt.pageX;
 	var y = evnt.pageY;
 	if (typeof x == "undefined" || typeof y == "undefined") {
@@ -171,33 +171,33 @@ function spell(el, evnt) {
 		spelling_correct(window.prompt('', error));
 		return;
 	}
-	
+
 	if (!document.getElementById('spelling')) {
 		var dialog = document.createElement('form');
 		dialog.action = "javascript:void(0)";
 		dialog.onsubmit = function() { spelling_correct(document.getElementById('spelling').getElementsByTagName('input').item(0).value); document.getElementById('spelling').style.display = 'none'; document.getElementById('spelling').getElementsByTagName('select').item(0).style.display = 'none'; return false }
 		dialog.onreset = function() { document.getElementById('spelling').style.display = 'none'; document.getElementById('spelling').getElementsByTagName('select').item(0).style.display = 'none' };
 		dialog.id = "spelling";
-		
+
 		var element = document.createElement('input');
 		element.type = "text";
 		element.className = "post";
 		dialog.appendChild(element);
-		
+
 		element = document.createElement('input');
 		element.type = "submit";
 		element.value = spelling_lang["Confirm"];
 		element.className = "mainoption";
 		dialog.appendChild(element);
 		dialog.appendChild(document.createTextNode(' '));
-		
+
 		element = document.createElement('input');
 		element.type = "reset";
 		element.value = spelling_lang["Cancel"];
 		element.className = "liteoption";
 		dialog.appendChild(element);
 		dialog.appendChild(document.createTextNode(' '));
-		
+
 		element = document.createElement('input');
 		element.type = "button";
 		element.value = "?";
@@ -205,7 +205,7 @@ function spell(el, evnt) {
 		element.onclick = function() { if (document.getElementById('spelling').getElementsByTagName('input').item(0).value) { var el = document.getElementById('spelling').getElementsByTagName('select').item(0); el.options[0].text = '--- ' + spelling_lang["Wait"] + ' ---'; el.selectedIndex = 0; el.disabled = true; el.style.display = 'inline'; setTimeout("spelling_suggestions(document.getElementById('spelling').getElementsByTagName('input').item(0).value);", 1); } }
 		dialog.appendChild(element);
 		dialog.appendChild(document.createTextNode(' '));
-		
+
 		var elementDiv = document.createElement('div');
 		element = document.createElement('select');
 		element.onchange = function () { if (document.getElementById('spelling').getElementsByTagName('select').item(0).value) { document.getElementById('spelling').getElementsByTagName('input').item(0).value = document.getElementById('spelling').getElementsByTagName('select').item(0).options[document.getElementById('spelling').getElementsByTagName('select').item(0).selectedIndex].text; } }
@@ -216,13 +216,13 @@ function spell(el, evnt) {
 		element.appendChild(elementOption);
 		elementDiv.appendChild(element);
 		dialog.appendChild(elementDiv);
-		
+
 		element = document.createElement('a');
 		element.href = "spelling_add.php";
 		element.onclick = function() { if (!ajax) return true; spelling_add(document.getElementById('spelling').getElementsByTagName('input').item(0).value); spelling_correct(document.getElementById('spelling').getElementsByTagName('input').item(0).value); document.getElementById('spelling').style.display = 'none'; return false }
 		element.appendChild(document.createTextNode(spelling_lang["Add to dictionary"]));
 		dialog.appendChild(element);
-		
+
 		document.getElementsByTagName('form').item(0).parentNode.insertBefore(dialog, document.getElementsByTagName('form').item(0));
 	}
 	else {
@@ -231,10 +231,10 @@ function spell(el, evnt) {
 		document.getElementById('spelling').getElementsByTagName('input').item(3).value = "?";
 		document.getElementById('spelling').getElementsByTagName('select').item(0).style.display = 'none';
 	}
-	
+
 	var width = document.getElementById('spelling').offsetWidth;
 	if (typeof width == "undefined") width = 200;
-		
+
 	document.getElementById('spelling').style.display = 'block';
 	document.getElementById('spelling').style.left = x - width < 0 ? 0 : x - width;
 	document.getElementById('spelling').style.top = y + 15;

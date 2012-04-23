@@ -8,14 +8,14 @@
 
 <!-- BEGIN quote_username_open -->
 <table     >
-<tr> 
+<tr>
 	  <td><span class="genmed"><b>{USERNAME} {L_WROTE}:</b></span></td>
 	</tr>
 	<tr>
 	  <td class="quote"><!-- END quote_username_open -->
 <!-- BEGIN quote_open -->
 <table     >
-<tr> 
+<tr>
 	  <td><span class="genmed"><b>{L_QUOTE}:</b></span></td>
 	</tr>
 	<tr>
@@ -27,7 +27,7 @@
 
 <!-- BEGIN code_open -->
 <table     >
-	<tr class="code_view"> 
+	<tr class="code_view">
 	  <td><span class="genmed"><b>{L_CODE}:</b></span></td><td  class="gensmall"><b id="foldbox_code{ID}_link"></b>&nbsp;&nbsp; <a href="javascript:void(0)" onclick="this.innerHTML = selectText('{ID}') ? '{L_DESELECT}' : '{L_SELECT}'; return false">{L_SELECT}</a>&nbsp;&nbsp; <span class="viewbox" id="viewbox_{ID}"><a href="{U_VIEW}">{L_VIEW}</a></span>&nbsp;&nbsp; <span class="runbox" id="runbox_{ID}"><a href="{U_RUN}">{L_RUN}</a></span>&nbsp;&nbsp; <a href="{U_SAVE}">{L_SAVE}</a>{FORM}</td>
 	</tr>
 	<tr>

@@ -211,7 +211,7 @@ class Template {
 	 * iteration.
 	 */
 	function assign_block_vars($blockname, $vararray)
-	{	
+	{
 		if ($this->_format == 'xml')
 		{
 			$args = func_get_args();
@@ -254,7 +254,7 @@ class Template {
 	 * any existing variable assignment with the same name.
 	 */
 	function assign_vars($vararray)
-	{	
+	{
 		if ($this->_format == 'xml')
 		{
 			$args = func_get_args();
@@ -302,7 +302,7 @@ class Template {
 		}
 		$roots[] = dirname($this->root) . '/phpbbSilver';
 		$roots = array_unique($roots);
-		
+
 		foreach ($roots as $root)
 		{
 			// Check if it's an absolute or relative path.
@@ -310,13 +310,13 @@ class Template {
 			{
      		$file = ($rp_filename = phpbb_realpath($root . '/' . $filename)) ? $rp_filename : $filename;
 			}
-	
+
 			if (file_exists($file))
 			{
 				return $file;
 			}
 		}
-		
+
 		die("Template->make_filename(): Error - file $filename does not exist");
 	}
 
@@ -484,7 +484,7 @@ class Template {
 				}
 				else
 				{
-					$code_lines[$i] = '$' . $retvar . '.= \'' . $code_lines[$i] . '\' . "\\n";'; 
+					$code_lines[$i] = '$' . $retvar . '.= \'' . $code_lines[$i] . '\' . "\\n";';
 				}
 			}
 		}

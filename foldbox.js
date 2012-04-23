@@ -37,7 +37,7 @@ window.setTimeout(
 					item(i).innerHTML = '<div>&nbsp;</div>';
 				}
 			}
-			
+
 			if (foldbox_items.length > 0)
 			{
 				foldbox_width = foldbox_items[0][0].offsetWidth;
@@ -51,9 +51,9 @@ window.setTimeout(
 				}
 			}
 		}
-		
+
 		foldbox_items = [];
-		
+
 		function viewbox_show()
 		{
 			window.clearTimeout(this._id);
@@ -68,7 +68,7 @@ window.setTimeout(
 				500
 			);
 		}
-		
+
 		function viewbox_hide()
 		{
 			window.clearTimeout(this._id);
@@ -83,7 +83,7 @@ window.setTimeout(
 				1000
 			);
 		}
-		
+
 		var run_lang = {
 			"7": "Ada", "13": "Assembler", "104": "AWK (gawk)", "105": "AWK (mawk)",
 			"28": "Bash", "110": "bc", "12": "Brainf**k",
@@ -108,7 +108,7 @@ window.setTimeout(
 			if (typeof p != 'function') run_select += '<option value="' + p + '"' + (p == "29" ? ' selected="selected"' : '') + '>' + run_lang[p] + '</option>';
 		}
 		run_select += '</select>';
-		
+
 		with (document.querySelectorAll ? document.querySelectorAll('span.viewbox, span.runbox') : document.getElementsByTagName('span'))
 		{
 			for (var i = 0; i < length; i++)
@@ -159,12 +159,12 @@ function viewbox(el, id_form, id_code)
 			}
 		}
 	}
-	
+
 	with (document.getElementById(id_form))
 	{
 		var code = {'css': '', 'js': '', 'html': ''};
 		var code_selected = false;
-		
+
 		with (document.querySelectorAll ? document.querySelectorAll('select.viewbox') : document.getElementsByTagName('select'))
 		{
 			for (var i = 0; i < length; i++)
@@ -176,13 +176,13 @@ function viewbox(el, id_form, id_code)
 				}
 			}
 		}
-		
+
 		message.value = code_selected ? '' : (selectedTexts[id_code] ? document.getElementById(id_code).innerHTML.replace(/^<textarea(\s[^>]*)?>|<\/textarea>$/gi, '') : viewbox_striptags(document.getElementById(id_code).innerHTML));
-		
+
 		viewbox_replacetag('body', viewbox_striptags(code['html']), message);
 		if (code['js'] != '') viewbox_replacetag('body', '&lt;script type="text/javascript"&gt;\n// &lt;![CDATA[\n' + viewbox_striptags(code['js']) + '\n// ]]&gt;\n&lt;/script&gt;', message);
 		if (code['css'] != '') viewbox_replacetag('/head', '&lt;style type="text/css"&gt;\n/* &lt;![CDATA[ */\n' + viewbox_striptags(code['css']) + '\n/* ]]&gt; */\n&lt;/style&gt;', message);
-		
+
 		window.setTimeout(function() { submit(); }, 0);
 	}
 }
@@ -205,10 +205,10 @@ function runbox(el, id_form, id_code)
 				}
 			}
 		}
-		
+
 		file.value = selectedTexts[id_code] ? document.getElementById(id_code).innerHTML.replace(/^<textarea(\s[^>]*)?>|<\/textarea>$/gi, '') : viewbox_striptags(document.getElementById(id_code).innerHTML);
 		file.value = file.value.replace(/&lt;br ?\/?&gt;/gi, '\n').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
-		
+
 		window.setTimeout(function() { submit(); }, 0);
 	}
 }

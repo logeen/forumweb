@@ -1,18 +1,18 @@
-<tr> 
+<tr>
 <th class="thhead" colspan="2" >{L_RATING}</th>
 </tr>
 			<tr>
 				<td class="row2" colspan="2"><br  /><form method="POST" action="{S_POLL_ACTION}">
 <table    >
-<tr> 
+<tr>
 <td  class="gen">{POLL_QUESTION}</td>
 </tr>
-<tr> 
-<td > 
+<tr>
+<td >
 <table   >
 <!-- BEGIN poll_option -->
-<tr> 
-<td> 
+<tr>
+<td>
 <select name="vote_id[{poll_option.POLL_OPTION_ID}]">
 <option value="">-</option>
 <option value="1">1</option>
@@ -28,12 +28,12 @@
 </table>
 </td>
 </tr>
-<tr> 
-<td > 
+<tr>
+<td >
 <input type="submit" name="submit" value="{L_SUBMIT_VOTE}" class="liteoption" />
 </td>
 </tr>
-<tr> 
+<tr>
 <td  class="gensmall"><strong><a href="{U_VIEW_RESULTS}">{L_VIEW_RESULTS}</a></strong></td>
 </tr>
 </table>

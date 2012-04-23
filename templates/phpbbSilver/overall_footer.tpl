@@ -27,14 +27,14 @@
 						We request you retain the full copyright notice below including the link to www.phpbb.com.
 						This not only gives respect to the large amount of time given freely by the developers
 						but also helps build interest, traffic and use of phpBB. If you cannot (for good
-						reason) retain the full copyright we request you at least leave in place the 
+						reason) retain the full copyright we request you at least leave in place the
 						Powered by phpBB line, with phpBB linked to www.phpbb.com. If you refuse
-						to include even this then support on our forums may be affected. 
-					
+						to include even this then support on our forums may be affected.
+
 						The phpBB Group
 					// -->
-					Powered by <a href="http://www.phpbb.com/" class="copyright">phpBB</a> 
-					&copy; phpBB Group 
+					Powered by <a href="http://www.phpbb.com/" class="copyright">phpBB</a>
+					&copy; phpBB Group
 					{TRANSLATION_INFO}<br>
 					Uruchamianie kodu dziêki <a href="http://sphere-research.com" class="copyright">Sphere Research Labs</a> w ramach <a href="http://ideone.com" class="copyright">ideone.com</a></div>
 					<div id="bot"><strong>Sponsor: <a href="http://pactum.pl">Biuro&nbsp;Rachunkowe</a></strong></div>
@@ -45,6 +45,7 @@
 		<div id="linkor">{LINKOR}</div>
 
 		<!-- BEGIN switch_notifications -->
+		<script src="{TINYCON_JS}"></script>
 		<script src="{NOTIFIER_JS}"></script>
 		<script>
 		new Notifier('{U_NOTIFICATIONS}', '{USER_LAST_NOTIFICATION}', {NOTIFICATIONS_JSON});
