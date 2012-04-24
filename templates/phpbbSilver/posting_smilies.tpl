@@ -1,49 +1,37 @@
 <div class="posting_smilies-tpl">
-<script language="javascript" type="text/javascript">
-<!--
-function emoticon(text) {
-	text = ' ' + text + ' ';
-	if (opener.document.forms['post'].message.createTextRange && opener.document.forms['post'].message.caretPos) {
-		var caretPos = opener.document.forms['post'].message.caretPos;
-		caretPos.text = caretPos.text.charAt(caretPos.text.length - 1) == ' ' ? text + ' ' : text;
-		opener.document.forms['post'].message.focus();
-	} else {
-	opener.document.forms['post'].message.value  += text;
-	opener.document.forms['post'].message.focus();
-	}
-}
-//-->
-</script>
-	<table>
-		<tr>		<td>
-				<table     class="forumline">
-					<tr>
-						<th class="thHead">{L_EMOTICONS}
-						</th>
-					</tr>
-					<tr>				<td>
-							<table>
-								<!-- BEGIN smilies_row -->
-								<tr  v>
-									<!-- BEGIN smilies_col -->  						<td>
-										<a href="javascript:emoticon('{smilies_row.smilies_col.SMILEY_CODE}')">
-											<img src="{smilies_row.smilies_col.SMILEY_IMG}"  alt="{smilies_row.smilies_col.SMILEY_DESC}" title="{smilies_row.smilies_col.SMILEY_DESC}" /></a></td>
-									<!-- END smilies_col -->
-								</tr>
-								<!-- END smilies_row -->
-								<!-- BEGIN switch_smilies_extra -->
-								<tr>
-									<td class="nav" colspan="{S_SMILIES_COLSPAN}">
-										<a href="{U_MORE_SMILIES}" onclick="open_window('{U_MORE_SMILIES}', 250, 300);return false" target="_smilies">{L_MORE_SMILIES}</a></td>
-								</tr>
-								<!-- END switch_smilies_extra -->
-							</table></td>
-					</tr>
-					<tr>
-						<td class="genmed"><br />
-							<a href="javascript:window.close();">{L_CLOSE_WINDOW}</a></td>
-					</tr>
-				</table></td>
-		</tr>
-	</table>
+	<section>
+		<h1>{L_EMOTICONS}</h1>
+		<ul>
+			<!-- BEGIN smilies_row -->
+			<!-- BEGIN smilies_col --> 
+			<li><img src="{smilies_row.smilies_col.SMILEY_IMG}"  alt="{smilies_row.smilies_col.SMILEY_DESC}" title="{smilies_row.smilies_col.SMILEY_DESC}" data-emoticon="{smilies_row.smilies_col.SMILEY_CODE}"></li>
+			<!-- END smilies_col -->
+			<!-- END smilies_row -->
+		</ul>
+		<!-- BEGIN switch_smilies_extra -->
+		<p><a href="{U_MORE_SMILIES}" data-target="_smilies:" class="nav popup">{L_MORE_SMILIES}</a></p>
+		<!-- END switch_smilies_extra -->
+		<p><a href="javascript:window.close();" id="closeWindow">{L_CLOSE_WINDOW}</a></p>
+	</section>
+	<script>
+	$('img').click(function() 
+	{
+		var emot=$(this).attr('data-emoticon');
+		if (opener.document.forms['post'].message.createTextRange && opener.document.forms['post'].message.caretPos) 
+		{
+			var caretPos = opener.document.forms['post'].message.caretPos;
+			caretPos.text = caretPos.text.charAt(caretPos.text.length - 1) == ' ' ? text + ' ' : text;
+			opener.document.forms['post'].message.focus();
+		} 
+		else 
+		{
+			opener.document.forms['post'].message.value  += text;
+			opener.document.forms['post'].message.focus();
+		}
+	});
+	$('#closeWindow').click(function()
+	{
+		window.close();
+	});
+	</script>
 </div>

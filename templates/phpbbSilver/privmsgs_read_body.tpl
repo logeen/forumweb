@@ -37,9 +37,9 @@
 				{QUICK_QUOTE_IMG} {QUOTE_PM_IMG} {EDIT_PM_IMG}
 			</div>
 		</header>
-
+		<section class="postbody">
 		{MESSAGE}
-
+		</section>
 		<footer>
 			<form method="post" action="{S_PRIVMSGS_ACTION}">
 				{S_HIDDEN_FIELDS}

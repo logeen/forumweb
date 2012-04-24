@@ -1,54 +1,26 @@
 <div class="privmsgs_preview-tpl">
-	<table class="forumline">
-		<tr>
-			<th class="thhead" colspan="2" >{L_PREVIEW}
-			</th>
-		</tr>
-		<tr>
-			<td class="row2">
-				<span class="genmed">{L_FROM}:
-				</span></td>
-			<td  class="row2">
-				<span class="genmed">{MESSAGE_FROM}
-				</span></td>
-		</tr>
-		<tr>
-			<td class="row2">
-				<span class="genmed">{L_TO}:
-				</span></td>
-			<td class="row2">
-				<span class="genmed">{MESSAGE_TO}
-				</span></td>
-		</tr>
-		<tr>
-			<td class="row2">
-				<span class="genmed">{L_POSTED}:
-				</span></td>
-			<td class="row2">
-				<span class="genmed">{POST_DATE}
-				</span></td>
-		</tr>
-		<tr>
-			<td class="row2">
-				<span class="genmed">{L_SUBJECT}:
-				</span></td>
-			<td class="row2">
-				<span class="genmed">{POST_SUBJECT}
-				</span></td>
-		</tr>
-		<tr>
-			<td v colspan="2" class="row1">
-				<span class="postbody">{MESSAGE}
-				</span></td>
-		</tr>
-	</table><br  />
-<script type="text/javascript">
-<!--
-var foldbox_lang = {
-	'Unfold': '{L_UNFOLD}',
-	'Fold': '{L_FOLD}'
-};
-//-->
-</script>
-<script type="text/javascript" src="{FOLDBOX_JS}"></script>
+	<section>
+		<h1>{L_PREVIEW}</h1>
+		<article>
+			<header>
+				<h2>{POST_SUBJECT}</h2>
+				<dl>
+					<dt>{L_FROM}</dt>
+					<dd>{MESSAGE_FROM}</dd>
+					<dt>{L_TO}</dt>
+					<dd>{MESSAGE_TO}</dd>
+					<dt>{L_POSTED}</dt>
+					<dd><time datetime="{POST_DATE_DATETIME}">{POST_DATE}</time></dd>
+				</dl>
+			</header>
+			<section class="postbody">{MESSAGE}</section>
+		</article>
+		<script>
+		var foldbox_lang = {
+			'Unfold': '{L_UNFOLD}',
+			'Fold': '{L_FOLD}'
+		};
+		</script>
+		<script src="{FOLDBOX_JS}"></script>
+	</section>
 </div>
