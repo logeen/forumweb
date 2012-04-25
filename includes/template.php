@@ -191,6 +191,7 @@ class Template {
 		{
 			$args = func_get_args();
 			$this->display_method('assign_var_from_handle', $args);
+			return true;
 		}
 
 		// Compile it, with the "no echo statements" option on.
