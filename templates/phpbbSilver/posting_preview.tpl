@@ -1,38 +1,24 @@
 <div class="posting_preview-tpl">
-	<table class="forumline">
-		<tr>
-			<th  class="thHead">{L_PREVIEW}
-			</th>
-		</tr>
-		<tr>
-			<td class="row1">
-				<img src="templates/phpbbSilver/images/icon_minipost.gif" alt="{L_POST}"   />
-				<span class="postdetails">{L_POSTED}:
-					<time datetime="{POST_DATE_DATETIME}">{POST_DATE}
-					</time> &nbsp;&nbsp;&nbsp; {L_POST_SUBJECT}: {POST_SUBJECT}
-				</span></td>
-		</tr>
-		<tr>
-			<td class="row1">
-				<table>
-					<tr>				<td>
-							<span class="postbody">{MESSAGE}
-							</span>				</td>
-					</tr>
-				</table></td>
-		</tr>
-		<tr>
-			<td class="spaceRow">
-				<img src="templates/phpbbSilver/images/spacer.gif"   /></td>
-		</tr>
-	</table><br  />
-<script type="text/javascript">
-<!--
-var foldbox_lang = {
-	'Unfold': '{L_UNFOLD}',
-	'Fold': '{L_FOLD}'
-};
-//-->
-</script>
-<script type="text/javascript" src="{FOLDBOX_JS}"></script>
+	<section>
+		<h1>{L_PREVIEW}</h1>
+		<article>
+			<header>
+				<h2><img src="templates/phpbbSilver/images/icon_minipost.gif" alt="{L_POST}"> {L_POST_SUBJECT}: {POST_SUBJECT}</h2>
+				<dl>
+					<dt> {L_POSTED}:</dt>
+						<dd><time datetime="{POST_DATE_DATETIME}">{POST_DATE}</time></dd>
+				</dl>
+			</header>
+			<section class="postbody">
+				{MESSAGE}
+			</section>
+		</article>
+		<script>
+		var foldbox_lang = {
+			'Unfold': '{L_UNFOLD}',
+			'Fold': '{L_FOLD}'
+		};
+		</script>
+		<script src="{FOLDBOX_JS}"></script>
+	</section>
 </div>

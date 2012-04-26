@@ -1,5 +1,5 @@
 <!-- BEGIN quick_reply --><div class="quick_reply-tpl">
-<form action="{quick_reply.POST_ACTION}" method="post" id="post" name="post" onsubmit="if (this.confirm_code &amp;&amp; this.confirm_code.value == '') { window.alert('{L_EMPTY_CONFIRM_CODE}'); return false } return checkForm(this)">
+<form action="{quick_reply.POST_ACTION}" method="post" id="post" name="post">
 <fieldset>
 	<legend>{L_QUICK_REPLY}</legend>
 	<input type="hidden" name="sid" value="{quick_reply.SID}">

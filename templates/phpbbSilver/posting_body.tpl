@@ -213,9 +213,7 @@
 	</ul>
 	</dd>
 </dl>
-<fieldset>
 		{POLLBOX}
-
 <div>
 	{S_HIDDEN_FORM_FIELDS}
 	<button type="submit" tabindex="5" name="preview" class="mainoption" value="{L_PREVIEW}">{L_PREVIEW}</button>

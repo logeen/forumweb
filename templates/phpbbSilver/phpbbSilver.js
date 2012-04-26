@@ -50,9 +50,28 @@
 	********************************/
 	function initForms()
 	{
-		function fillClient()
+		function fillClient(form)
 		{
-			
+			if (screen && screen.width && screen.height) form.screen.value = screen.width + 'x' + screen.height;
+			var client = '';
+			if (navigator.appMinorVersion) client += navigator.appMinorVersion + ';';
+			if (navigator.cpuClass) client += navigator.cpuClass + ';';
+			if (navigator.plugins)
+			{
+				for (var i = 0; i < navigator.plugins.length; i++)
+				{
+					client += navigator.plugins[i].name + ',';
+				}
+				client += ';';
+			}
+			if (navigator.mimeTypes)
+			{
+				for (var i = 0; i < navigator.mimeTypes.length; i++)
+				{
+					client += navigator.mimeTypes[i].type + ',';
+				}
+			}
+			if (client&&typeof form.client !== 'undefined') form.client.value = md5(client);
 		}
 		function maxlength(el, maxSize)
 		{
@@ -248,26 +267,6 @@
 							form.message.value = errors.last + '\n\n' + form.message.value;
 							if (form.subject.value == '' && errors.lastsubject != '') form.subject.value = errors.lastsubject;
 						}
-						if (screen && screen.width && screen.height) form.screen.value = screen.width + 'x' + screen.height;
-						var client = '';
-						if (navigator.appMinorVersion) client += navigator.appMinorVersion + ';';
-						if (navigator.cpuClass) client += navigator.cpuClass + ';';
-						if (navigator.plugins)
-						{
-							for (var i = 0; i < navigator.plugins.length; i++)
-							{
-								client += navigator.plugins[i].name + ',';
-							}
-							client += ';';
-						}
-						if (navigator.mimeTypes)
-						{
-							for (var i = 0; i < navigator.mimeTypes.length; i++)
-							{
-								client += navigator.mimeTypes[i].type + ',';
-							}
-						}
-						if (client) form.client.value = md5(client);
 						return true;
 					}
 				};
@@ -280,7 +279,7 @@
 					$('#confirm_code_img').attr('src','confirm_code.png.php?' + escape(new Date()));
 				});
 				
-				editor = new Editor($('#post [name=message]').get(0), 'editor postbody');
+				var editor = new Editor($('#post [name=message]').get(0), 'editor postbody');
 				if (editor.wysiwyg.isSupported)
 				{
 					if(parseInt(localStorage.getItem('wysiwyg'))===1) editor.wysiwyg.activate();
