@@ -46,13 +46,13 @@
 				</header>
 				<dl>
 					<dt>{L_AUTHOR}</dt>
-					<dd><time datetime="{topicrow.FIRST_POST_TIME_DATETIME}">{topicrow.FIRST_POST_TIME}</time> {topicrow.TOPIC_AUTHOR}</dd>
+					<dd>{topicrow.TOPIC_AVATAR} <time datetime="{topicrow.FIRST_POST_TIME_DATETIME}">{topicrow.FIRST_POST_TIME}</time> {topicrow.TOPIC_AUTHOR}</dd>
 					<dt>{L_REPLIES}</dt>
 					<dd>{topicrow.REPLIES}</dd>
 					<dt>{L_VIEWS}</dt>
 					<dd>{topicrow.VIEWS}</dd>
 					<dt>{L_LASTPOST}</dt>
-					<dd><time datetime="{topicrow.LAST_POST_TIME_DATETIME}">{topicrow.LAST_POST_TIME}</time> {topicrow.LAST_POST_AUTHOR} {topicrow.LAST_POST_IMG}</dd>
+					<dd>{topicrow.LAST_POST_AVATAR} <time datetime="{topicrow.LAST_POST_TIME_DATETIME}">{topicrow.LAST_POST_TIME}</time> {topicrow.LAST_POST_AUTHOR} {topicrow.LAST_POST_IMG}</dd>
 				</dl>
 			</article>
 			<!-- END topicrow -->

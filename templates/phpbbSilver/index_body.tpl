@@ -54,7 +54,7 @@
 					<dt>{L_POSTS}</dt>
 					<dd>{catrow.forumrow.POSTS}</dd>
 					<dt>{L_LASTPOST}</dt>
-					<dd>{catrow.forumrow.LAST_POST}</dd>
+					<dd>{catrow.forumrow.LAST_POST_AVATAR} {catrow.forumrow.LAST_POST}</dd>
 				</dl>
 			</article>
 			<!-- END forumrow -->

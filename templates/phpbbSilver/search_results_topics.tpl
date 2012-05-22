@@ -54,6 +54,8 @@
 				</span>
 			</td>
 			<td class="row1">
+				{searchresults.TOPIC_AVATAR}
+				<time title="{searchresults.FIRST_POST_TIME_DATETIME}">{searchresults.FIRST_POST_TIME}</time><br />
 				<span class="name">{searchresults.TOPIC_AUTHOR}
 				</span>
 			</td>
@@ -66,6 +68,7 @@
 				</span>
 			</td>
 			<td class="row2">
+				{searchresults.LAST_POST_AVATAR}
 				<span class="postdetails">
 					<time datetime="{searchresults.LAST_POST_TIME_DATETIME}">{searchresults.LAST_POST_TIME}
 					</time><br />{searchresults.LAST_POST_AUTHOR} {searchresults.LAST_POST_IMG}
