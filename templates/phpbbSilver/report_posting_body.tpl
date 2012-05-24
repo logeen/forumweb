@@ -39,33 +39,32 @@ function checkForm(form) {
 			<input type="hidden" name="screen" value="">
 			<input type="hidden" name="client" value="">
 				
-		<fieldset id="report">
-			
-			<section class="left">
+		<fieldset>
 				<h5>{MESSAGE_TITLE}</h5>
-				<span class="gen">{L_REPORT_REASON}</span><br><span class="gensmall">{L_REPORT_REASON_EXPLAIN}</span>
-			</section>
+				<dl>
+				<dt><span class="gen">{L_REPORT_REASON}</span></dt>
+					<dd><span class="gensmall">{L_REPORT_REASON_EXPLAIN}</span></dd>
 			
-			<section class="right">
-				<ul class="reasons">
-					<!-- BEGIN reasonrow -->
-					<li><input type="checkbox" id="label__reasons__{reasonrow.NAME}" name="reasons[]" value="{reasonrow.VALUE}"> <label for="label__reasons__{reasonrow.NAME}">{reasonrow.DESCRIPTION}</label></li>
-					<!-- END reasonrow -->
-				</ul>
+					<dd>
+						<ul class="reasons">
+							<!-- BEGIN reasonrow -->
+							<li><input type="checkbox" id="label__reasons__{reasonrow.NAME}" name="reasons[]" value="{reasonrow.VALUE}"> <label for="label__reasons__{reasonrow.NAME}">{reasonrow.DESCRIPTION}</label></li>
+							<!-- END reasonrow -->
+						</ul>
+					</dd>
 				
-					<label for="label__reason"><strong>{L_OTHER_REPORT_REASON}:</strong></label>
-					<textarea id="label__reason" name="reason" cols="75" rows="5" style="width: 100%">{REASON}</textarea>
+				<dt><label for="label__reason"><strong>{L_OTHER_REPORT_REASON}:</strong></label></dt>
+					<dd><textarea id="label__reason" name="reason" cols="75" rows="5" style="width: 100%">{REASON}</textarea></dd>
 					
-					<section class="right">
-						<a href="{U_REGULATIONS}" onclick="with (document.getElementById('regulations').style) { display = display == 'none' ? 'block' : 'none'; }; return false"><strong>{L_REGULATIONS}...</strong></a>
-					</section>
+				<dt>
+					<a href="{U_REGULATIONS}" onclick="with (document.getElementById('regulations').style) { display = display == 'none' ? 'block' : 'none'; }; return false"><strong>{L_REGULATIONS}...</strong></a>
+				</dt>
 					
-					<section id="regulations">{REGULATIONS}</section>
+					<dd><section id="regulations">{REGULATIONS}</section></dd>
 					
-					<input type="submit" value="{L_SUBMIT}" class="mainoption">
-						
-					</section>
+				<dt><input type="submit" value="{L_SUBMIT}" class="mainoption"></dt>
+	
+			</dl>
 		</fieldset>
-		</form>
-		
+		</form>	
 </section>
