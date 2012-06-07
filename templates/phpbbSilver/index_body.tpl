@@ -1,4 +1,16 @@
 <div class="index_body-tpl">
+	<h2>{L_POPULAR}</h2>
+	<ul class="promo">
+		<!-- BEGIN promorow -->
+		<li>
+			<a href="{promorow.U_VIEW_POST}">
+				<img src="{promorow.POSTER_AVATAR}" alt="{promorow.POSTER_NAME}" title="{promorow.POSTER_NAME}" />
+				<span><b>{promorow.FORUM_NAME}</b> {promorow.TOPIC_TITLE}</span>
+			</a>
+		</li>
+		<!-- END promorow -->
+	</ul>
+
 	<ul>
 		<!-- BEGIN switch_user_logged_in -->
 		<li>{LAST_VISIT_DATE}</li>
