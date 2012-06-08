@@ -1,11 +1,11 @@
 <div class="index_body-tpl">
-	<h2>{L_POPULAR}</h2>
+	<h2>{L_POPULAR_TOPICS}</h2>
 	<ul class="promo">
 		<!-- BEGIN promorow -->
 		<li>
-			<a href="{promorow.U_VIEW_POST}">
-				<img src="{promorow.POSTER_AVATAR}" alt="{promorow.POSTER_NAME}" title="{promorow.POSTER_NAME}" />
-				<span><b>{promorow.FORUM_NAME}</b> {promorow.TOPIC_TITLE}</span>
+			<a href="{promorow.U_VIEW_POST}" title="{L_LASTPOST}">
+				<img src="{promorow.POSTER_AVATAR}" alt="{promorow.POSTER_NAME}" />
+				<strong><b>{promorow.FORUM_NAME}</b> {promorow.TOPIC_TITLE} <cite>{promorow.POSTER_NAME}</cite></strong>
 			</a>
 		</li>
 		<!-- END promorow -->
