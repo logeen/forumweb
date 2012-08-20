@@ -42,7 +42,7 @@ class HttpRequest
 		if ($this->sock)
 		{
 			fwrite($this->sock,
-				trim(strToUpper($this->method)) . " " . (array_key_exists('path', $this->url) ? $this->url['path'] : "") . (array_key_exists('query', $this->url) ? "?{$this->url['query']}" : "") . " HTTP/1.1\r\n" .
+				trim(strToUpper($this->method)) . " " . (array_key_exists('path', $this->url) ? $this->url['path'] : "") . (array_key_exists('query', $this->url) ? "?{$this->url['query']}" : "") . " HTTP/1.0\r\n" .
 				"Host: {$this->url['host']}\r\n" .
 				$this->requestHeaders .
 				(preg_match("/(^|\r\n)Connection: /", $this->requestHeaders) ? "" : "Connection: Close\r\n") .
