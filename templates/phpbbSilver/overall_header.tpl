@@ -5,7 +5,7 @@
 		<meta charset="{S_CONTENT_ENCODING}">
 		<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script> <!--http://paulirish.com/2009/avoiding-the-fouc-v3/-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		{META}{META_ROBOTS}
+		<base href="{BASE}">{META}{META_ROBOTS}
 		<meta name="title" content="{META_TITLE}">
 		<meta property="og:title" content="{META_TITLE}">
 		<meta property="og:type" content="website">
