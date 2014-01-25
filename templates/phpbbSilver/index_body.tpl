@@ -5,7 +5,7 @@
 		<li>
 			<a href="{promorow.U_VIEW_POST}" title="{L_LASTPOST}">
 				<img src="{promorow.POSTER_AVATAR}" alt="{promorow.POSTER_NAME}" />
-				<strong><b>{promorow.FORUM_NAME}</b> {promorow.TOPIC_TITLE} <cite>{promorow.POSTER_NAME}</cite></strong>
+				<strong>{promorow.FORUM_NAME} {promorow.TOPIC_TITLE} <cite>{promorow.POSTER_NAME}</cite></strong>
 			</a>
 		</li>
 		<!-- END promorow -->
