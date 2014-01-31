@@ -100,13 +100,13 @@
 			<!-- END switch_wyniki_nieoficjalne -->
 			<!-- BEGIN switch_wyniki -->
 			<td>
-				<strong>{wynikirow.switch_recenzent.switch_wyniki.OCENY_LICZBA}</strong>
+				<b>{wynikirow.switch_recenzent.switch_wyniki.OCENY_LICZBA}</b>
 				<!-- BEGIN switch_recenzent_admin --><b>
 					<a href="javascript:void(0)" title="{wynikirow.switch_recenzent.switch_wyniki.switch_recenzent_admin.COUNT}" onclick="with (document.getElementById('oceny{wynikirow.ID}').style) { if (display == 'none') { display = 'block'; this.innerHTML = '&laquo;'} else { display = 'none'; this.innerHTML = '&raquo;' } } return false">&raquo;</a></b>&nbsp;
 				<div id="oceny{wynikirow.ID}" class="gensmall">
 					<!-- BEGIN ocenyrow -->
 					<div>
-						<strong>{wynikirow.switch_recenzent.switch_wyniki.switch_recenzent_admin.ocenyrow.USERNAME}</strong>: {wynikirow.switch_recenzent.switch_wyniki.switch_recenzent_admin.ocenyrow.OCENA_PREZENTACJA}/{wynikirow.switch_recenzent.switch_wyniki.switch_recenzent_admin.ocenyrow.OCENA_TRESC}/{wynikirow.switch_recenzent.switch_wyniki.switch_recenzent_admin.ocenyrow.OCENA}%
+						<b>{wynikirow.switch_recenzent.switch_wyniki.switch_recenzent_admin.ocenyrow.USERNAME}</b>: {wynikirow.switch_recenzent.switch_wyniki.switch_recenzent_admin.ocenyrow.OCENA_PREZENTACJA}/{wynikirow.switch_recenzent.switch_wyniki.switch_recenzent_admin.ocenyrow.OCENA_TRESC}/{wynikirow.switch_recenzent.switch_wyniki.switch_recenzent_admin.ocenyrow.OCENA}%
 					</div>
 					<!-- END ocenyrow -->
 				</div>
@@ -119,7 +119,7 @@
 	</table>
 	<!-- BEGIN switch_recenzent_oceny -->
 	<p>
-		<a href="{switch_recenzent_oceny.U_TWOJE_OCENY}"><strong>{switch_recenzent_oceny.L_TWOJE_OCENY}</strong></a>
+		<a href="{switch_recenzent_oceny.U_TWOJE_OCENY}"><b>{switch_recenzent_oceny.L_TWOJE_OCENY}</b></a>
 	</p>
 	<!-- END switch_recenzent_oceny -->
 </section>
