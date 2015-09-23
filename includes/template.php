@@ -28,7 +28,7 @@
  */
 
 class Template {
-	var $classname = "Template";
+	var $classname = 'Template';
 
 	// variable that holds all the data we'll be substituting into
 	// the compiled templates.
@@ -43,7 +43,7 @@ class Template {
 	var $files = array();
 
 	// Root template directory.
-	var $root = "";
+	var $root = '';
 
 	// this will hash handle names to the compiled code for that handle.
 	var $compiled_code = array();
@@ -57,9 +57,9 @@ class Template {
 	 * Constructor. Simply sets the root dir.
 	 *
 	 */
-	function Template($root = ".")
+	function Template($root = '.')
 	{
-		if (isset($_GET['_format']) && $_GET['_format'] == 'xml') $this->_format = 'xml';
+		if (isset($_GET['_format']) && 'xml' === $_GET['_format']) $this->_format = 'xml';
 
 		$this->set_rootdir($root);
 	}
@@ -69,8 +69,8 @@ class Template {
 		$indexed = array_key_exists(0, $data);
 		foreach ($data as $name => $value)
 		{
-			echo '<' . $tag . ($indexed ? '' : ' name="' . htmlspecialchars($name) . '"') . '>';
-				echo is_array($value) ? $this->display_data($value) : htmlspecialchars($value);
+			echo '<' . $tag . ($indexed ? '' : ' name="' . htmlspecialchars($name, ENT_QUOTES, 'ISO-8859-2') . '"') . '>';
+				echo is_array($value) ? $this->display_data($value) : htmlspecialchars($value, ENT_QUOTES, 'ISO-8859-2');
 			echo '</' . $tag . '>';
 		}
 	}
@@ -82,12 +82,12 @@ class Template {
 		{
 			header('Content-Type: text/xml; charset=iso-8859-2');
 			echo
-				'<'.'?xml version="1.0" encoding="iso-8859-2"?'.'>' .
+				'<?xml version="1.0" encoding="iso-8859-2"?>',
 				'<result version="1.0">';
 			register_shutdown_function(create_function('', 'static $called = false; if (!$called) { echo "</result>"; $called = true; }'));
 			$initialized = true;
 		}
-		echo '<method name="' . htmlspecialchars($method) . '">';
+		echo '<method name="' . htmlspecialchars($method, ENT_QUOTES, 'ISO-8859-2') . '">';
 			$this->display_data($params, 'param');
 		echo '</method>';
 	}
@@ -121,7 +121,7 @@ class Template {
 	 */
 	function set_filenames($filename_array)
 	{
-		if ($this->_format == 'xml')
+		if ('xml' === $this->_format)
 		{
 			$args = func_get_args();
 			$this->display_method('set_filenames', $args);
@@ -150,10 +150,10 @@ class Template {
 	{
 		if (!$this->loadfile($handle))
 		{
-			die("Template->pparse(): Couldn't load template file for handle $handle");
+			exit ('Template->pparse(): Couldn\'t load template file for handle '.$handle);
 		}
 
-		if ($this->_format == 'xml')
+		if ('xml' === $this->_format)
 		{
 			$args = func_get_args();
 			$this->display_method('pparse', $args);
@@ -161,7 +161,7 @@ class Template {
 		}
 
 		// actually compile the template now.
-		if (!isset($this->compiled_code[$handle]) || empty($this->compiled_code[$handle]))
+		if (!isset($this->compiled_code[$handle][0]))
 		{
 			// Actually compile the code now.
 			$this->compiled_code[$handle] = $this->compile($this->uncompiled_code[$handle]);
@@ -184,10 +184,10 @@ class Template {
 	{
 		if (!$this->loadfile($handle))
 		{
-			die("Template->assign_var_from_handle(): Couldn't load template file for handle $handle");
+			exit ('Template->assign_var_from_handle(): Couldn\'t load template file for handle '.$handle);
 		}
 
-		if ($this->_format == 'xml')
+		if ('xml' === $this->_format)
 		{
 			$args = func_get_args();
 			$this->display_method('assign_var_from_handle', $args);
@@ -195,7 +195,7 @@ class Template {
 		}
 
 		// Compile it, with the "no echo statements" option on.
-		$_str = "";
+		$_str = '';
 		$code = $this->compile($this->uncompiled_code[$handle], true, '_str');
 
 		// evaluate the variable assignment.
@@ -213,22 +213,21 @@ class Template {
 	 */
 	function assign_block_vars($blockname, $vararray)
 	{
-		if ($this->_format == 'xml')
+		if ('xml' === $this->_format)
 		{
 			$args = func_get_args();
 			$this->display_method('assign_block_vars', $args);
 		}
 
-		if (strstr($blockname, '.'))
+		if (false!==strpos($blockname, '.'))
 		{
 			// Nested block.
 			$blocks = explode('.', $blockname);
-			$blockcount = sizeof($blocks) - 1;
 			$str = '$this->_tpldata';
-			for ($i = 0; $i < $blockcount; $i++)
+			for ($i = 0, $blockcount = count($blocks)-1; $i < $blockcount; $i++)
 			{
 				$str .= '[\'' . $blocks[$i] . '.\']';
-				eval('$lastiteration = sizeof(' . $str . ') - 1;');
+				eval('$lastiteration = count(' . $str . ') - 1;');
 				$str .= '[' . $lastiteration . ']';
 			}
 			// Now we add the block that we're actually assigning to.
@@ -256,7 +255,7 @@ class Template {
 	 */
 	function assign_vars($vararray)
 	{
-		if ($this->_format == 'xml')
+		if ('xml' === $this->_format)
 		{
 			$args = func_get_args();
 			$this->display_method('assign_vars', $args);
@@ -277,7 +276,7 @@ class Template {
 	 */
 	function assign_var($varname, $varval)
 	{
-		if ($this->_format == 'xml')
+		if ('xml' === $this->_format)
 		{
 			$args = func_get_args();
 			$this->display_method('assign_var', $args);
@@ -307,7 +306,7 @@ class Template {
 		foreach ($roots as $root)
 		{
 			// Check if it's an absolute or relative path.
-			if (substr($filename, 0, 1) != '/')
+			if ('/' !== $filename[0])
 			{
      		$file = ($rp_filename = phpbb_realpath($root . '/' . $filename)) ? $rp_filename : $filename;
 			}
@@ -318,7 +317,7 @@ class Template {
 			}
 		}
 
-		die("Template->make_filename(): Error - file $filename does not exist");
+		exit ("Template->make_filename(): Error - file $filename does not exist");
 	}
 
 
@@ -329,7 +328,7 @@ class Template {
 	function loadfile($handle)
 	{
 		// If the file for this handle is already loaded and compiled, do nothing.
-		if (isset($this->uncompiled_code[$handle]) && !empty($this->uncompiled_code[$handle]))
+		if (isset($this->uncompiled_code[$handle][0]))
 		{
 			return true;
 		}
@@ -337,15 +336,15 @@ class Template {
 		// If we don't have a file assigned to this handle, die.
 		if (!isset($this->files[$handle]))
 		{
-			die("Template->loadfile(): No file specified for handle $handle");
+			exit ("Template->loadfile(): No file specified for handle $handle");
 		}
 
 		$filename = $this->files[$handle];
 
-		$str = implode("", @file($filename));
-		if (empty($str))
+		$str = implode('', @file($filename));
+		if (!isset($str[0]))
 		{
-			die("Template->loadfile(): File $filename for handle $handle is empty");
+			exit ("Template->loadfile(): File $filename for handle $handle is empty");
 		}
 
 		$this->uncompiled_code[$handle] = $str;
@@ -365,16 +364,14 @@ class Template {
 	function compile($code, $do_not_echo = false, $retvar = '')
 	{
 		// replace \ with \\ and then ' with \'.
-		$code = str_replace('\\', '\\\\', $code);
-		$code = str_replace('\'', '\\\'', $code);
+		$code = str_replace(array('\\','\''), array('\\\\','\\\''), $code);
 
 		// change template varrefs into PHP varrefs
 
 		// This one will handle varrefs WITH namespaces
 		$varrefs = array();
 		preg_match_all('#\{(([a-z0-9\-_]+?\.)+?)([a-z0-9\-_]+?)\}#is', $code, $varrefs);
-		$varcount = sizeof($varrefs[1]);
-		for ($i = 0; $i < $varcount; $i++)
+		for ($i = 0, $varcount = count($varrefs[1]); $i < $varcount; $i++)
 		{
 			$namespace = $varrefs[1][$i];
 			$varname = $varrefs[3][$i];
@@ -391,29 +388,28 @@ class Template {
 
 		$block_nesting_level = 0;
 		$block_names = array();
-		$block_names[0] = ".";
+		$block_names[0] = '.';
 
 		// Second: prepend echo ', append ' . "\n"; to each line.
-		$line_count = sizeof($code_lines);
-		for ($i = 0; $i < $line_count; $i++)
+		for ($i = 0, $line_count = count($code_lines); $i < $line_count; $i++)
 		{
-			$code_lines[$i] = chop($code_lines[$i]);
+			$code_lines[$i] = rtrim($code_lines[$i]);
 			if (preg_match('#<!-- BEGIN (.*?) -->#', $code_lines[$i], $m))
 			{
 				$n[0] = $m[0];
 				$n[1] = $m[1];
 
 				// Added: dougk_ff7-Keeps templates from bombing if begin is on the same line as end.. I think. :)
-				if ( preg_match('#<!-- END (.*?) -->#', $code_lines[$i], $n) )
+				if (preg_match('#<!-- END (.*?) -->#', $code_lines[$i], $n))
 				{
 					$block_nesting_level++;
 					$block_names[$block_nesting_level] = $m[1];
 					if ($block_nesting_level < 2)
 					{
 						// Block is not nested.
-						$code_lines[$i] = '$_' . $n[1] . '_count = ( isset($this->_tpldata[\'' . $n[1] . '.\']) ) ?  sizeof($this->_tpldata[\'' . $n[1] . '.\']) : 0;';
+						$code_lines[$i] = '$_' . $n[1] . '_count = ( isset($this->_tpldata[\'' . $n[1] . '.\']) ) ?  count($this->_tpldata[\'' . $n[1] . '.\']) : 0;';
 						$code_lines[$i] .= "\n" . 'for ($_' . $n[1] . '_i = 0; $_' . $n[1] . '_i < $_' . $n[1] . '_count; $_' . $n[1] . '_i++)';
-						$code_lines[$i] .= "\n" . '{';
+						$code_lines[$i] .= "\n{";
 					}
 					else
 					{
@@ -427,9 +423,9 @@ class Template {
 						// current indices of all parent blocks.
 						$varref = $this->generate_block_data_ref($namespace, false);
 						// Create the for loop code to iterate over this block.
-						$code_lines[$i] = '$_' . $n[1] . '_count = ( isset(' . $varref . ') ) ? sizeof(' . $varref . ') : 0;';
+						$code_lines[$i] = '$_' . $n[1] . '_count = ( isset(' . $varref . ') ) ? count(' . $varref . ') : 0;';
 						$code_lines[$i] .= "\n" . 'for ($_' . $n[1] . '_i = 0; $_' . $n[1] . '_i < $_' . $n[1] . '_count; $_' . $n[1] . '_i++)';
-						$code_lines[$i] .= "\n" . '{';
+						$code_lines[$i] .= "\n{";
 					}
 
 					// We have the end of a block.
@@ -447,9 +443,9 @@ class Template {
 					if ($block_nesting_level < 2)
 					{
 						// Block is not nested.
-						$code_lines[$i] = '$_' . $m[1] . '_count = ( isset($this->_tpldata[\'' . $m[1] . '.\']) ) ? sizeof($this->_tpldata[\'' . $m[1] . '.\']) : 0;';
+						$code_lines[$i] = '$_' . $m[1] . '_count = ( isset($this->_tpldata[\'' . $m[1] . '.\']) ) ? count($this->_tpldata[\'' . $m[1] . '.\']) : 0;';
 						$code_lines[$i] .= "\n" . 'for ($_' . $m[1] . '_i = 0; $_' . $m[1] . '_i < $_' . $m[1] . '_count; $_' . $m[1] . '_i++)';
-						$code_lines[$i] .= "\n" . '{';
+						$code_lines[$i] .= "\n{";
 					}
 					else
 					{
@@ -463,9 +459,9 @@ class Template {
 						// current indices of all parent blocks.
 						$varref = $this->generate_block_data_ref($namespace, false);
 						// Create the for loop code to iterate over this block.
-						$code_lines[$i] = '$_' . $m[1] . '_count = ( isset(' . $varref . ') ) ? sizeof(' . $varref . ') : 0;';
+						$code_lines[$i] = '$_' . $m[1] . '_count = ( isset(' . $varref . ') ) ? count(' . $varref . ') : 0;';
 						$code_lines[$i] .= "\n" . 'for ($_' . $m[1] . '_i = 0; $_' . $m[1] . '_i < $_' . $m[1] . '_count; $_' . $m[1] . '_i++)';
-						$code_lines[$i] .= "\n" . '{';
+						$code_lines[$i] .= "\n{";
 					}
 				}
 			}
@@ -490,9 +486,8 @@ class Template {
 			}
 		}
 
-		// Bring it back into a single string of lines of code.
-		$code = implode("\n", $code_lines);
-		return $code	;
+		// Bring it back into a single string of lines of code and return.
+		return implode("\n", $code_lines);
 
 	}
 
@@ -507,7 +502,7 @@ class Template {
 	function generate_block_varref($namespace, $varname)
 	{
 		// Strip the trailing period.
-		$namespace = substr($namespace, 0, strlen($namespace) - 1);
+		$namespace = substr($namespace, 0, -1);
 
 		// Get a reference to the data block for this namespace.
 		$varref = $this->generate_block_data_ref($namespace, true);
@@ -534,11 +529,10 @@ class Template {
 	function generate_block_data_ref($blockname, $include_last_iterator)
 	{
 		// Get an array of the blocks involved.
-		$blocks = explode(".", $blockname);
-		$blockcount = sizeof($blocks) - 1;
+		$blocks = explode('.', $blockname);
 		$varref = '$this->_tpldata';
 		// Build up the string with everything but the last child.
-		for ($i = 0; $i < $blockcount; $i++)
+		for ($i = 0, $blockcount = count($blocks)-1; $i < $blockcount; $i++)
 		{
 			$varref .= '[\'' . $blocks[$i] . '.\'][$_' . $blocks[$i] . '_i]';
 		}
